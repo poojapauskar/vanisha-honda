@@ -24,7 +24,9 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
 
+</style>
 </head>
 <body ng-app="" style="overflow-x:hidden">
 
@@ -106,7 +108,7 @@
       <td>12345678</td>
       <td>Sales</td>
       <td>
-      <button class="mdl-button mdl-js-button mdl-button--raised">
+      <button onclick="open_modal()" class="mdl-button mdl-js-button mdl-button--raised">
         Edit
       </button>
       </td>
@@ -117,7 +119,7 @@
       <td>12345678</td>
       <td>Sales</td>
       <td>
-      <button class="mdl-button mdl-js-button mdl-button--raised">
+      <button onclick="open_modal()" class="mdl-button mdl-js-button mdl-button--raised">
         Edit
       </button>
       </td>
@@ -128,7 +130,7 @@
       <td>12345678</td>
       <td>Sales</td>
       <td>
-      <button class="mdl-button mdl-js-button mdl-button--raised">
+      <button onclick="open_modal()" class="mdl-button mdl-js-button mdl-button--raised">
         Edit
       </button>
       </td>
@@ -139,7 +141,7 @@
       <td>12345678</td>
       <td>Sales</td>
       <td>
-      <button class="mdl-button mdl-js-button mdl-button--raised">
+      <button onclick="open_modal()" class="mdl-button mdl-js-button mdl-button--raised">
         Edit
       </button>
       </td>
@@ -149,91 +151,118 @@
 </div>  
 
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
-<button type="button" class="mdl-button show-modal">Show Modal</button>
-  <dialog class="mdl-dialog" style="width:40%;text-align:center">
-    <div class="mdl-dialog__content">
-      <p>
-        Edit User
-      </p>
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span style="color:black" class="close">×</span>
+      <h2 style="text-align:center">Edit User</h2>
     </div>
-   
-    <div class="row">
+    <div class="modal-body">
+      <form action="#" style="text-align:center">
+          <div class="mdl-textfield mdl-js-textfield">
 
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
+          <div class="row">
+            <div class="col-sm-6" style="">
+                <div class="mdl-textfield mdl-js-textfield">
+                <label style="float: left;" for="sample1">Employee Id</label>
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                </div>
 
-  <div class="row">
-    <div class="col-sm-6">
-        <div class="mdl-textfield mdl-js-textfield">
-        <label style="float: left;" for="sample1">Employee Id</label>
-        <input class="mdl-textfield__input" type="text" id="sample1">
-        </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                <label style="float: left;" for="sample1">Name</label>
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                </div>
 
-        <div class="mdl-textfield mdl-js-textfield">
-        <label style="float: left;" for="sample1">Name</label>
-        <input class="mdl-textfield__input" type="text" id="sample1">
-        </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                <label style="float: left;" for="sample1">Email</label>
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                </div>
 
-        <div class="mdl-textfield mdl-js-textfield">
-        <label style="float: left;" for="sample1">Email</label>
-        <input class="mdl-textfield__input" type="text" id="sample1">
-        </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                <label style="float: left;" for="sample1">Mobile</label>
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                </div>
+            </div>
 
-        <div class="mdl-textfield mdl-js-textfield">
-        <label style="float: left;" for="sample1">Mobile</label>
-        <input class="mdl-textfield__input" type="text" id="sample1">
-        </div>
+            <div class="col-sm-6">
+                <div class="mdl-textfield mdl-js-textfield">
+                <label style="float: left;" for="sample1">Username</label>
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield">
+                <label style="float: left;" for="sample1">Password</label>
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield">
+                <label style="float: left;" for="sample1">Access Level</label>
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                </div>
+            </div>
+          </div>
+
+          </div>
+        </form>
     </div>
-
-    <div class="col-sm-6">
-        <div class="mdl-textfield mdl-js-textfield">
-        <label style="float: left;" for="sample1">Username</label>
-        <input class="mdl-textfield__input" type="text" id="sample1">
-        </div>
-
-        <div class="mdl-textfield mdl-js-textfield">
-        <label style="float: left;" for="sample1">Password</label>
-        <input class="mdl-textfield__input" type="text" id="sample1">
-        </div>
-
-        <div class="mdl-textfield mdl-js-textfield">
-        <label style="float: left;" for="sample1">Access Level</label>
-        <input class="mdl-textfield__input" type="text" id="sample1">
-        </div>
-    </div>
-  </div>
-</form>
-
-    </div>
-      <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
-       <div class="row">
+    <div class="modal-footer">
+      <div class="row">
+       <!--  <div class="col-sm-4">
+          <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Cancel</button>
+        </div> -->
         <div class="col-sm-4">
-          <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect close">Cancel</button>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-2">
           <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Save Changes</button>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-2">
           <button style="background-color:red;color:white" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Delete User</button>
+        </div>
+        <div class="col-sm-4">
         </div>
       </div>
     </div>
-  </dialog>
-  <script>
-    var dialog = document.querySelector('dialog');
-    var showModalButton = document.querySelector('.show-modal');
-    if (! dialog.showModal) {
-      dialogPolyfill.registerDialog(dialog);
-    }
-    showModalButton.addEventListener('click', function() {
-      dialog.showModal();
-    });
-    dialog.querySelector('.close').addEventListener('click', function() {
-      dialog.close();
-    });
-  </script>
+  </div>
+
+</div>
     
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+/*var btn = document.getElementById("myBtn");*/
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+/*btn.onclick = function() {
+    modal.style.display = "block";
+}*/
+
+/*document.getElementById("myBtn1").onclick = function() {
+    modal.style.display = "block";
+}*/
+
+function open_modal(){
+   modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 </body>
 </html>
