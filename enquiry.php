@@ -30,8 +30,11 @@
 
 <div class="row">
   <div class="col-sm-4">
+  <a href="admin_panel.php">
     <img style="width:13%;height:13%;margin-top:4%;margin-left:4%" src="images/sample_logo.jpg"></img>
-    <h6 style="margin-top:-5%;margin-left:19%">Vanisha Honda</h6>
+    <h6 style="color:black;margin-top:-5%;margin-left:19%">Vanisha Honda</h6>
+    <img style="width:9%;height:9%;margin-top:-23%;margin-left:48%" src="images/home.png"></img>
+  </a>
   </div>
   <div class="col-sm-4" style="text-align:center">
     <h5>Enquiry</h5>
