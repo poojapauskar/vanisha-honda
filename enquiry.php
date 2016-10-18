@@ -8,6 +8,17 @@
   <script src="bootstrap/js/jquery.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
 
+
+<!-- datepicker -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-aria.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.css">
+<script src="js/datepicker.js"></script>   
+
+
   <script src="js/material.min.js"></script>
   <link rel="stylesheet" href="css/material.indigo-pink.min.css">
 <link rel="stylesheet" href="css/style.css">
@@ -56,7 +67,24 @@
         </div>
       </form>
     </div>
-    <div class="col-sm-6">
+
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-5">
+
+<html ng-app="datepickerBasicUsage">
+<div ng-controller="AppCtrl" style=''>
+    <md-content>
+      From <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+      To <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+     <!--  <h4>Date-picker with min date and max date</h4>
+      <md-datepicker ng-model="myDate" placeholder="Enter date"
+                 md-min-date="minDate" md-max-date="maxDate"></md-datepicker> -->
+    </md-content>
+  </div>
+
+
+
     </div>
     <div class="col-sm-1">
       <button class="mdl-button mdl-js-button mdl-button--raised">
@@ -72,7 +100,111 @@
 </div>
 
     <!-- Textfield with Floating Label -->
-    
+
+<div class="row">
+<table  align="center" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+      <th>Mobile</th>
+      <th>Email</th>
+      <th>Vehicle</th>
+      <th>Colour</th>
+      <th>Enquiry Type</th>
+      <th>Finance</th>
+      <th>Exchange</th>
+      <th>Pincode</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
+      <td>91234567898</td>
+      <td>json@bitjini.com</td>
+      <td>Active</td>
+      <td>black</td>
+      <td>Hot</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>590008</td>
+      <td>Git</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
+      <td>91234567898</td>
+      <td>json@bitjini.com</td>
+      <td>Active</td>
+      <td>black</td>
+      <td>Hot</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>590008</td>
+      <td>Git</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
+      <td>91234567898</td>
+      <td>json@bitjini.com</td>
+      <td>Active</td>
+      <td>black</td>
+      <td>Hot</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>590008</td>
+      <td>Git</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
+      <td>91234567898</td>
+      <td>json@bitjini.com</td>
+      <td>Active</td>
+      <td>black</td>
+      <td>Hot</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>590008</td>
+      <td>Git</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
+      <td>91234567898</td>
+      <td>json@bitjini.com</td>
+      <td>Active</td>
+      <td>black</td>
+      <td>Hot</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>590008</td>
+      <td>Git</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
+      <td>91234567898</td>
+      <td>json@bitjini.com</td>
+      <td>Active</td>
+      <td>black</td>
+      <td>Hot</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>590008</td>
+      <td>Git</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
+      <td>91234567898</td>
+      <td>json@bitjini.com</td>
+      <td>Active</td>
+      <td>black</td>
+      <td>Hot</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>590008</td>
+      <td>Git</td>
+    </tr>
+  </tbody>
+</table>
+</div>  
     
 
 </body>
