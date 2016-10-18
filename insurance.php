@@ -37,7 +37,7 @@
   </a>
   </div>
   <div class="col-sm-4" style="text-align:center">
-    <h5>Enquiry</h5>
+    <h5>Insurance Renewal</h5>
   </div>
   <div class="col-sm-4">
   
@@ -57,7 +57,7 @@
     <div class="col-sm-2">
     </div>
     <div class="col-sm-2">
-      <h6 style="margin-top:-8%;font-weight:bold">Recent Enquiries</h6>
+      <h6 style="margin-top:-8%;font-weight:bold">Recent Renewal Requests</h6>
       <form action="#" style="margin-top:-20%">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
           <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
@@ -96,7 +96,7 @@
     </div>
     <div class="col-sm-1">
       <button class="mdl-button mdl-js-button mdl-button--raised">
-        Export/Print
+        Export/Print 
       </button>
     </div>
   </div>
@@ -112,98 +112,68 @@
       <th>Mobile</th>
       <th>Email</th>
       <th>Vehicle</th>
-      <th>Colour</th>
-      <th>Enquiry Type</th>
-      <th>Finance</th>
-      <th>Exchange</th>
-      <th>Pincode</th>
-      <th>Address</th>
+      <th>Vehicle No.</th>
+      <th>Policy No.</th>
+      <th>Renewal Amount</th>
+      <th>Payment Date</th>
+      <th>Expiry Date</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
-      <td>91234567898</td>
-      <td>json@bitjini.com</td>
-      <td>Active</td>
-      <td>black</td>
-      <td>Hot</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>590008</td>
-      <td>Git</td>
+      <td class="mdl-data-table__cell--non-numeric">Jason Matt</td>
+      <td>9123456789</td>
+      <td>jason@bitjini.com</td>
+      <td>Pleasure</td>
+      <td>hjkhk22333</td>
+      <td>87979hj</td>
+      <td>Rs.2000</td>
+      <td>12/4/2014</td>
+      <td>8/4/2015</td>
     </tr>
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
-      <td>91234567898</td>
-      <td>json@bitjini.com</td>
-      <td>Active</td>
-      <td>black</td>
-      <td>Hot</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>590008</td>
-      <td>Git</td>
+      <td class="mdl-data-table__cell--non-numeric">Jason Matt</td>
+      <td>9123456789</td>
+      <td>jason@bitjini.com</td>
+      <td>Pleasure</td>
+      <td>hjkhk22333</td>
+      <td>87979hj</td>
+      <td>Rs.2000</td>
+      <td>12/4/2014</td>
+      <td>8/4/2015</td>
     </tr>
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
-      <td>91234567898</td>
-      <td>json@bitjini.com</td>
-      <td>Active</td>
-      <td>black</td>
-      <td>Hot</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>590008</td>
-      <td>Git</td>
+      <td class="mdl-data-table__cell--non-numeric">Jason Matt</td>
+      <td>9123456789</td>
+      <td>jason@bitjini.com</td>
+      <td>Pleasure</td>
+      <td>hjkhk22333</td>
+      <td>87979hj</td>
+      <td>Rs.2000</td>
+      <td>12/4/2014</td>
+      <td>8/4/2015</td>
     </tr>
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
-      <td>91234567898</td>
-      <td>json@bitjini.com</td>
-      <td>Active</td>
-      <td>black</td>
-      <td>Hot</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>590008</td>
-      <td>Git</td>
+      <td class="mdl-data-table__cell--non-numeric">Jason Matt</td>
+      <td>9123456789</td>
+      <td>jason@bitjini.com</td>
+      <td>Pleasure</td>
+      <td>hjkhk22333</td>
+      <td>87979hj</td>
+      <td>Rs.2000</td>
+      <td>12/4/2014</td>
+      <td>8/4/2015</td>
     </tr>
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
-      <td>91234567898</td>
-      <td>json@bitjini.com</td>
-      <td>Active</td>
-      <td>black</td>
-      <td>Hot</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>590008</td>
-      <td>Git</td>
-    </tr>
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
-      <td>91234567898</td>
-      <td>json@bitjini.com</td>
-      <td>Active</td>
-      <td>black</td>
-      <td>Hot</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>590008</td>
-      <td>Git</td>
-    </tr>
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">Json Matt</td>
-      <td>91234567898</td>
-      <td>json@bitjini.com</td>
-      <td>Active</td>
-      <td>black</td>
-      <td>Hot</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>590008</td>
-      <td>Git</td>
+      <td class="mdl-data-table__cell--non-numeric">Jason Matt</td>
+      <td>9123456789</td>
+      <td>jason@bitjini.com</td>
+      <td>Pleasure</td>
+      <td>hjkhk22333</td>
+      <td>87979hj</td>
+      <td>Rs.2000</td>
+      <td>12/4/2014</td>
+      <td>8/4/2015</td>
     </tr>
   </tbody>
 </table>
