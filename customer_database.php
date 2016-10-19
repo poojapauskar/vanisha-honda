@@ -125,6 +125,53 @@
     <!-- Textfield with Floating Label -->
 
 
+
+<!-- Date Sorting -->
+
+<form>
+<input type="text" name="date1" id="date11"></input>
+<input type="text" name="date2" id="date22"></input>
+<button type="submit" onclick="myFunction()">Try it</button>
+</form>
+
+<script>
+function myFunction() {
+   var table = document.getElementById("example");
+  for (var i = 1, row; row = table.rows[i]; i++) {
+     //iterate through rows
+     //rows would be accessed using the "row" variable assigned in the for loop
+     /*for (var j = 0, col; col = row.cells[j]; j++) {*/
+      var dateFrom=document.getElementById('date11').value;
+      var dateTo=document.getElementById('date22').value;
+      var dateCheck=row.cells[9].innerText;
+
+      /*var dateFrom="02/07/2012";
+      var dateTo="02/08/2013";
+      var dateCheck="05/07/2014";*/
+
+      var d1 = dateFrom.split("/");
+      var d2 = dateTo.split("/");
+      var c = dateCheck.split("/");
+
+      var from = new Date(d1[2], parseInt(d1[1])-1, d1[0]);  // -1 because months are from 0 to 11
+      var to   = new Date(d2[2], parseInt(d2[1])-1, d2[0]);
+      var check = new Date(c[2], parseInt(c[1])-1, c[0]);
+
+      console.log(check > from && check < to)
+
+      if(check > from && check < to){ alert("bot are equal");}
+      else{
+         table.rows[i].style.display = "none";
+         alert("bot are unequal");
+      } // do it this way! (use + prefix for a variable that holds a date value)
+  }
+    /*alert("I am an alert box!");*/
+}
+</script>
+
+
+
+
 <div class="row">
 <!-- <div class="form-group pull-right">
 <input type="text" class="search form-control" placeholder="What you looking for?">
@@ -142,6 +189,7 @@
       <th>Mobile</th>
       <th>Email</th>
       <th>Address</th>
+      <th>Date</th>
     </tr>
     <!-- <tr class="warning no-result">
       <td colspan="4"><i class="fa fa-warning"></i> No result</td>
@@ -158,6 +206,7 @@
       <td>Rs.2000</td>
       <td>12/4/2014</td>
       <td>12/4/2014</td>
+      <td>02/07/2013</td>
     </tr>
     <tr>
       <td>Jason Matt123</td>
@@ -169,6 +218,7 @@
       <td>Rs.2000</td>
       <td>12/4/2014</td>
       <td>12/4/2014</td>
+      <td>02/07/2014</td>
     </tr>
 
   </tbody>
