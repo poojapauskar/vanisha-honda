@@ -33,6 +33,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+<!-- <link rel="stylesheet" href="css/datatable.css"> -->
+<!-- <script src="js/jquery1.js"></script> -->
+<script src="js/jquery2.js"></script>
+<script src="js/table2excel.js"></script>
+<script src="js/exportscript.js"></script>
+
+
 </head>
 <body ng-app="" style="overflow-x:hidden">
 
@@ -102,7 +109,7 @@
       </button>
     </div>
     <div class="col-sm-1">
-      <button class="mdl-button mdl-js-button mdl-button--raised">
+      <button id="btn-export" class="mdl-button mdl-js-button mdl-button--raised">
         Export/Print 
       </button>
     </div>
@@ -116,12 +123,13 @@
 
     <!-- Textfield with Floating Label -->
 
+
 <div class="row">
 <!-- <div class="form-group pull-right">
 <input type="text" class="search form-control" placeholder="What you looking for?">
 </div> -->
-<span class="counter pull-right"></span>
-<table align="center" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp results">
+<!-- <span class="counter pull-right"></span> -->
+<table id="example" align="center" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp results">
   <thead>
     <tr>
       <th>Name</th>
@@ -134,9 +142,9 @@
       <th>Email</th>
       <th>Address</th>
     </tr>
-    <tr class="warning no-result">
+    <!-- <tr class="warning no-result">
       <td colspan="4"><i class="fa fa-warning"></i> No result</td>
-    </tr>
+    </tr> -->
   </thead>
   <tbody>
     <tr>
@@ -161,6 +169,7 @@
       <td>12/4/2014</td>
       <td>12/4/2014</td>
     </tr>
+
   </tbody>
 </table>
 
