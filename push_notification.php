@@ -25,6 +25,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+
+<!-- search functionality -->
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+<link rel="stylesheet" href="css/search.css">
+ <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="js/search.js"></script>
+
+
 </head>
 <body ng-app="" style="overflow-x:hidden">
 
@@ -64,7 +72,7 @@
             <i class="material-icons">search</i>
           </label>
           <div class="mdl-textfield__expandable-holder">
-            <input class="mdl-textfield__input" type="text" id="sample6">
+            <input class="search mdl-textfield__input" type="text" id="sample6">
             <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
           </div>
         </div>
@@ -103,10 +111,14 @@
     <!-- Textfield with Floating Label -->
 
 <div class="row">
-<table  align="center" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+<!-- <div class="form-group pull-right">
+<input type="text" class="search form-control" placeholder="What you looking for?">
+</div> -->
+<span class="counter pull-right"></span>
+<table align="center" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp results">
   <thead>
     <tr>
-      <th class="mdl-data-table__cell--non-numeric">Name</th>
+      <th>Name</th>
       <th>Mobile</th>
       <th>Email</th>
       <th>Type</th>
@@ -114,10 +126,13 @@
       <th>Time</th>
       <th>Message</th>
     </tr>
+    <tr class="warning no-result">
+      <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+    </tr>
   </thead>
   <tbody>
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">Pleasure</td>
+      <td>Pleasure</td>
       <td>Mathew</td>
       <td>jason@bitjini.com</td>
       <td>Pleasure</td>
@@ -126,7 +141,7 @@
       <td>Rs.2000</td>
     </tr>
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">Jason Matt</td>
+      <td>Jason Matt</td>
       <td>9123456789</td>
       <td>jason@bitjini.com</td>
       <td>Pleasure</td>
@@ -135,7 +150,7 @@
       <td>Rs.2000</td>
     </tr>
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">Jason Matt</td>
+      <td>Jason Matt</td>
       <td>9123456789</td>
       <td>jason@bitjini.com</td>
       <td>Pleasure</td>
@@ -144,7 +159,7 @@
       <td>Rs.2000</td>
     </tr>
     <tr>
-      <td class="mdl-data-table__cell--non-numeric">Jason Matt</td>
+      <td>Jason Matt</td>
       <td>9123456789</td>
       <td>jason@bitjini.com</td>
       <td>Pleasure</td>
