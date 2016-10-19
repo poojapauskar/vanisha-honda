@@ -24,6 +24,15 @@
  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/search.js"></script>
 
+
+<!-- export -->
+<!-- <link rel="stylesheet" href="css/datatable.css"> -->
+<!-- <script src="js/jquery1.js"></script> -->
+<script src="js/jquery2.js"></script>
+<script src="js/table2excel.js"></script>
+<script src="js/exportscript.js"></script>
+
+
   <script src="js/material.min.js"></script>
   <link rel="stylesheet" href="css/material.indigo-pink.min.css">
 <link rel="stylesheet" href="css/style.css">

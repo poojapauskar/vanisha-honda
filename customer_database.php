@@ -33,6 +33,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+<!-- export -->
 <!-- <link rel="stylesheet" href="css/datatable.css"> -->
 <!-- <script src="js/jquery1.js"></script> -->
 <script src="js/jquery2.js"></script>
@@ -110,7 +111,7 @@
     </div>
     <div class="col-sm-1">
       <button id="btn-export" class="mdl-button mdl-js-button mdl-button--raised">
-        Export/Print 
+        Export/Print
       </button>
     </div>
     <!-- <div class="col-sm-1">
@@ -173,7 +174,9 @@
   </tbody>
 </table>
 
-
+<div class="no-result">
+    <h2 style="text-align:center">No result</h2>
+</div>
 
 </div>  
     
