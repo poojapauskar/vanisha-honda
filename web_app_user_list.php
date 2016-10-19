@@ -202,6 +202,12 @@
                 <label style="float: left;" for="sample1">Access Level</label>
                 <input class="mdl-textfield__input" type="text" id="sample1">
                 </div>
+
+  <select ng-model="myVar3">
+    <option ng-selected="true" value="sales">Sales
+    <option value="insurance">Insurance
+    <option value="admin">Admin
+  </select>
             </div>
           </div>
 

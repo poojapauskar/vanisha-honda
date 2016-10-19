@@ -171,7 +171,12 @@
           <div class="mdl-textfield mdl-js-textfield">
 
           <div class="row">
-            
+
+<div style="text-align:left">
+<input type="radio" ng-checked="true" ng-model="myVar" value="All">All Users<br>
+<input type="radio" ng-model="myVar" value="User">Specific User
+</div>
+
                 <div class="mdl-textfield mdl-js-textfield">
                 <label style="float: left;" for="sample1">To</label>
                 <input class="mdl-textfield__input" type="text" id="sample1">
@@ -199,12 +204,12 @@
         </div> -->
         <div class="col-sm-4">
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-4">
           <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Send</button>
         </div>
-        <div class="col-sm-2">
+        <!-- <div class="col-sm-2">
           <button style="background-color:red;color:white" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Cancel</button>
-        </div>
+        </div> -->
         <div class="col-sm-4">
         </div>
       </div>
