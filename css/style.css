@@ -1,3 +1,10 @@
+thead, tbody { display: block; }
+
+tbody {
+    height: 250px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
 .ripple1 {
     position: relative;
     /*background-color: #4CAF50;*/
