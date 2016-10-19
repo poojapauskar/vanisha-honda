@@ -189,7 +189,7 @@
 
                 <div class="mdl-textfield mdl-js-textfield">
                 <label style="float: left;" for="sample1">Customized</label>
-                <input class="mdl-textfield__input" type="text" id="sample1">
+                <textarea class="mdl-textfield__input" type="text" id="sample1"></textarea>
                 </div>
             
           </div>
