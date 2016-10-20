@@ -124,9 +124,8 @@
 
 <!-- DatePicker And Sorting -->
 
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <script src="js/jquery-1.js"></script>
-  <script src="js/jquery-ui.js"></script>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<script src="js/jquery-ui.js"></script>
   <script>
   $(function() {
     $( ".date" ).datepicker({ dateFormat: 'dd/mm/yy' });
@@ -225,7 +224,7 @@ $('.date').blur(function()
       <td>Rs.2000</td>
       <td>12/4/2014</td>
       <td>12/4/2014</td>
-      <td>02/07/2013</td>
+      <td>02/10/2016</td>
     </tr>
     <tr>
       <td>Jason Matt123</td>
@@ -237,7 +236,43 @@ $('.date').blur(function()
       <td>Rs.2000</td>
       <td>12/4/2014</td>
       <td>12/4/2014</td>
-      <td>02/07/2014</td>
+      <td>03/10/2016</td>
+    </tr>
+    <tr>
+      <td>Jason Matt123</td>
+      <td>9123456789</td>
+      <td>jason@bitjini.com</td>
+      <td>Pleasure</td>
+      <td>hjkhk22333</td>
+      <td>87979hj</td>
+      <td>Rs.2000</td>
+      <td>12/4/2014</td>
+      <td>12/4/2014</td>
+      <td>04/10/2016</td>
+    </tr>
+    <tr>
+      <td>Jason Matt123</td>
+      <td>9123456789</td>
+      <td>jason@bitjini.com</td>
+      <td>Pleasure</td>
+      <td>hjkhk22333</td>
+      <td>87979hj</td>
+      <td>Rs.2000</td>
+      <td>12/4/2014</td>
+      <td>12/4/2014</td>
+      <td>05/10/2016</td>
+    </tr>
+    <tr>
+      <td>Jason Matt123</td>
+      <td>9123456789</td>
+      <td>jason@bitjini.com</td>
+      <td>Pleasure</td>
+      <td>hjkhk22333</td>
+      <td>87979hj</td>
+      <td>Rs.2000</td>
+      <td>12/4/2014</td>
+      <td>12/4/2014</td>
+      <td>06/10/2016</td>
     </tr>
 
   </tbody>

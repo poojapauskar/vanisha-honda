@@ -1,4 +1,4 @@
-angular.module('datepickerBasicUsage', ['ngMaterial'])
+/*angular.module('datepickerBasicUsage', ['ngMaterial'])
 .controller('AppCtrl', function ($scope) {
   $scope.myDate = new Date();
   $scope.minDate = new Date(
@@ -9,4 +9,4 @@ angular.module('datepickerBasicUsage', ['ngMaterial'])
     $scope.myDate.getFullYear(),
     $scope.myDate.getMonth() + 2,
     $scope.myDate.getDate());
-});
+});*/

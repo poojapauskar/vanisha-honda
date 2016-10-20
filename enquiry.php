@@ -111,9 +111,8 @@
 
 <!-- DatePicker And Sorting -->
 
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <script src="js/jquery-1.js"></script>
-  <script src="js/jquery-ui.js"></script>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<script src="js/jquery-ui.js"></script>
   <script>
   $(function() {
     $( ".date" ).datepicker({ dateFormat: 'dd/mm/yy' });

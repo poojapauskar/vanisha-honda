@@ -111,9 +111,8 @@
 
 <!-- DatePicker And Sorting -->
 
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <script src="js/jquery-1.js"></script>
-  <script src="js/jquery-ui.js"></script>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<script src="js/jquery-ui.js"></script>
   <script>
   $(function() {
     $( ".date" ).datepicker({ dateFormat: 'dd/mm/yy' });
@@ -187,9 +186,6 @@ $('.date').blur(function()
       <th>Invoice No.</th>
       <th>Inward Date</th>
     </tr>
-    <tr class="warning no-result">
-      <td colspan="4"><i class="fa fa-warning"></i> No result</td>
-    </tr>
   </thead>
   <tbody>
     <tr>
@@ -211,14 +207,14 @@ $('.date').blur(function()
       <td>Activa</td>
       <td>91234567898</td>
       <td>HYU789</td>
-      <td>2/4/2014</td>
+      <td>2/8/2014</td>
     </tr>
     <tr>
       <td>23242</td>
       <td>Activa</td>
       <td>91234567898</td>
       <td>HYU789</td>
-      <td>2/4/2014</td>
+      <td>2/8/2014</td>
     </tr>
     <tr>
       <td>23242</td>
