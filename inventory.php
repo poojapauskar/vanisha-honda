@@ -83,8 +83,7 @@
       </form>
     </div>
 
-    <div class="col-sm-1">
-    </div>
+
 
 <div class="col-sm-6">
   <form>
@@ -99,13 +98,23 @@
 </div>
 
 
-    <div class="col-sm-1">
-      <button class="mdl-button mdl-js-button mdl-button--raised">
+    <div class="col-sm-2">
+
+    <form method="POST" action="inventory.php" enctype="multipart/form-data">
+    <input type ="file" name = "UploadFileName"></p><br />
+    <!-- <input type = "submit" name = "Submit" value = "Press THIS to upload"> -->
+    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised">
         Import CSV
-      </button>
+    </button>
+    </form>
+
     </div>
   </div>
 </div>
+
+
+
+
 
     <!-- Textfield with Floating Label -->
 
@@ -188,6 +197,8 @@ $('.date').blur(function()
     </tr>
   </thead>
   <tbody>
+
+   <?php if($_FILES["UploadFileName"]['size'] == 0 && $_FILES["UploadFileName"]['size'] == 0){ ?>
     <tr>
       <td>23242333</td>
       <td>Activa</td>
@@ -223,6 +234,25 @@ $('.date').blur(function()
       <td>HYU789</td>
       <td>2/4/2014</td>
     </tr>
+
+  <?php }else{ ?>
+   <?php
+   /*$_FILES["UploadFileName"]["tmp_name"]*/
+    $fp = fopen($_FILES["UploadFileName"]["tmp_name"], 'r');
+    while (( $data = fgetcsv ( $fp , 1000 , "," )) !== FALSE ) {
+        $i = 0;
+        echo "<td>";
+        foreach($data as $row) {
+           echo $row;
+           $i++ ;
+        }
+        echo "</td>";
+    }
+    fclose ( $fp );
+
+    ?> 
+
+  <?php } ?>
   </tbody>
 </table>
 </div>  
