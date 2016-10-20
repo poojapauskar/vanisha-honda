@@ -66,8 +66,7 @@
   
 <div class="container">
   <div class="row" style="margin-top:5%">
-    <div class="col-sm-2">
-    </div>
+    
     <div class="col-sm-2">
       <h6 style="margin-top:-8%;font-weight:bold">Vehicle Inventory</h6>
       <form action="#" style="margin-top:-20%">
@@ -98,10 +97,15 @@
 </div>
 
 
-    <div class="col-sm-2">
+    <div class="col-sm-4">
 
     <form method="POST" action="inventory.php" enctype="multipart/form-data">
-    <input type ="file" name = "UploadFileName"></p><br />
+    <!-- <input type ="file" name = "UploadFileName"></p><br /> -->
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="file" name = "UploadFileName">
+      <!-- <label class="mdl-textfield__label" for="sample3">Choose File</label> -->
+    </div>
     <!-- <input type = "submit" name = "Submit" value = "Press THIS to upload"> -->
     <button type="submit" class="mdl-button mdl-js-button mdl-button--raised">
         Import CSV
