@@ -19,15 +19,19 @@
 <body>
 
 
-<!-- Simple header with scrollable tabs. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    
-    <!-- Tabs -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img style="width:8%;height:8%" src="images/sample_logo.jpg"></img>
+      <a class="" href="#">Vanisha Honda</a>
+    </div>
 
+<ul style="margin-top:-5%;margin-left:50%" class="nav navbar-nav">
+ <li class="active"><a href="#">Home</a></li>
 
-<div class="dropdown" style="position:relative">
-  <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click Here <span class="caret"></span></a>
+<li>
+<div class="dropdown" style="margin-left:10%">
+  <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
   <ul class="dropdown-menu">
     <li>
       <a class="trigger right-caret">Level 1</a>
@@ -55,26 +59,52 @@
     <li><a href="#">Level 1</a></li>
   </ul>
 </div>
+</li>
 
-
-
-    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
-      <a href="#scroll-tab-2" class="mdl-layout__tab">Tab 2</a>
-    </div>
-  </header>
- <!--  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-  </div> -->
-  <main class="mdl-layout__content">
-    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-  </main>
+<li>
+<div class="dropdown" style="margin-left:20%">
+  <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Customer<span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li>
+      <a class="trigger right-caret">Level 1</a>
+      <ul class="dropdown-menu sub-menu">
+        <li><a href="#">Level 2</a></li>
+        <li>
+          <a class="trigger right-caret">Level 2</a>
+          <ul class="dropdown-menu sub-menu">
+            <li><a href="#">Level 3</a></li>
+            <li><a href="#">Level 3</a></li>
+            <li>
+              <a class="trigger right-caret">Level 3</a>
+              <ul class="dropdown-menu sub-menu">
+                <li><a href="#">Level 4</a></li>
+                <li><a href="#">Level 4</a></li>
+                <li><a href="#">Level 4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Level 2</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Level 1</a></li>
+    <li><a href="#">Level 1</a></li>
+  </ul>
 </div>
+</li>
+
+      <li><a style="margin-left:14%" href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+</div>
+
+</body>
+</html>
+
+
 
 
 </body>
