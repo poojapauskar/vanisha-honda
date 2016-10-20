@@ -1,75 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Vanisha Honda</title>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <script src="bootstrap/js/jquery.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
-  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script src="js/material.min.js"></script>
-  <link rel="stylesheet" href="css/material.indigo-pink.min.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/index.js"></script>
 </head>
-<body ng-app="">
-
-<div class="text-center">
-  <h5>Admin Portal</h5>
-</div>
-  
-<div class="container">
-  <div class="row">
-
-    <div class="col-sm-1">
-    </div>
-
-    <div class="col-sm-3">
-        <img style="width:70%;height:70%" src="images/sample_logo.jpg"></img>
-        <h4>Vanisha Honda</h4>
-    </div>
-
-    <div class="col-sm-5">
-    </div>
+<body>
 
 
-    <div class="col-sm-2">
-        <form name="myForm" method="post" action="#">
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input name="myName" class="mdl-textfield__input" ng-model="myName" required>
-          <span ng-show="myForm.myName.$touched && myForm.myName.$invalid">Username is required.</span>
-          <label class="mdl-textfield__label" for="sample3">Username</label>
-          </div>
-          </p>
+<!-- Simple header with scrollable tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    
+    <!-- Tabs -->
 
 
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input name="myPassword" class="mdl-textfield__input" ng-model="myPassword" pattern=".{8,}" type="password" required>
-          <span ng-show="myForm.myPassword.$touched && myForm.myPassword.$invalid">Password must contain atleast 8 digits.</span>
-          <label class="mdl-textfield__label" for="sample3">Password</label>
-          </div>
-          </p>
-
-          <br>
-          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-           Log In
-          </button>
-
-        </form>
-    </div>
-
-    <div class="col-sm-1">
-    </div>
-
-  </div>
+<div class="dropdown" style="position:relative">
+  <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click Here <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li>
+      <a class="trigger right-caret">Level 1</a>
+      <ul class="dropdown-menu sub-menu">
+        <li><a href="#">Level 2</a></li>
+        <li>
+          <a class="trigger right-caret">Level 2</a>
+          <ul class="dropdown-menu sub-menu">
+            <li><a href="#">Level 3</a></li>
+            <li><a href="#">Level 3</a></li>
+            <li>
+              <a class="trigger right-caret">Level 3</a>
+              <ul class="dropdown-menu sub-menu">
+                <li><a href="#">Level 4</a></li>
+                <li><a href="#">Level 4</a></li>
+                <li><a href="#">Level 4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Level 2</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Level 1</a></li>
+    <li><a href="#">Level 1</a></li>
+  </ul>
 </div>
 
-    <!-- Textfield with Floating Label -->
-    
-    
+
+
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
+      <a href="#scroll-tab-2" class="mdl-layout__tab">Tab 2</a>
+    </div>
+  </header>
+ <!--  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+  </div> -->
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+  </main>
+</div>
+
 
 </body>
 </html>
