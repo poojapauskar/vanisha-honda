@@ -88,27 +88,25 @@
     </div>
 
 
-    <div class="col-sm-5">
-
-<html ng-app="datepickerBasicUsage">
+<!-- <html ng-app="datepickerBasicUsage">
 <div ng-controller="AppCtrl" style=''>
     <md-content>
       From <md-datepicker ng-model="myDate1" md-placeholder="Enter date"></md-datepicker>
       To <md-datepicker ng-model="myDate2" md-placeholder="Enter date"></md-datepicker>
-     <!--  <h4>Date-picker with min date and max date</h4>
-      <md-datepicker ng-model="myDate" placeholder="Enter date"
-                 md-min-date="minDate" md-max-date="maxDate"></md-datepicker> -->
     </md-content>
-  </div>
+  </div> -->
+<div class="col-sm-6">
+  <form>
+    From
+    <input id="date11" class="date" type="text" placeholder="DD/MM/YYY" required="True">
+    To
+    <input id="date22" class="date" type="text" placeholder="DD/MM/YYY" required="True">
+    <button type="submit" onclick="myFunction()" class="mdl-button mdl-js-button mdl-button--raised">
+      Search
+    </button>
+  </form>
+</div>
 
-
-
-    </div>
-    <div class="col-sm-1">
-      <button class="mdl-button mdl-js-button mdl-button--raised">
-        Search
-      </button>
-    </div>
     <div class="col-sm-1">
       <button id="btn-export" class="mdl-button mdl-js-button mdl-button--raised">
         Export/Print
@@ -124,50 +122,71 @@
 
     <!-- Textfield with Floating Label -->
 
+<!-- DatePicker And Sorting -->
 
-
-<!-- Date Sorting -->
-
-<form>
-<input type="text" name="date1" id="date11"></input>
-<input type="text" name="date2" id="date22"></input>
-<button type="submit" onclick="myFunction()">Try it</button>
-</form>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery-1.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( ".date" ).datepicker({ dateFormat: 'dd/mm/yy' });
+  });
+  </script>
 
 <script>
+
 function myFunction() {
+
    var table = document.getElementById("example");
-  for (var i = 1, row; row = table.rows[i]; i++) {
-     //iterate through rows
-     //rows would be accessed using the "row" variable assigned in the for loop
-     /*for (var j = 0, col; col = row.cells[j]; j++) {*/
-      var dateFrom=document.getElementById('date11').value;
-      var dateTo=document.getElementById('date22').value;
-      var dateCheck=row.cells[9].innerText;
+   for (var i = 1, row; row = table.rows[i]; i++) {
 
-      /*var dateFrom="02/07/2012";
-      var dateTo="02/08/2013";
-      var dateCheck="05/07/2014";*/
 
-      var d1 = dateFrom.split("/");
-      var d2 = dateTo.split("/");
-      var c = dateCheck.split("/");
+      if(document.getElementById('date11').value !== '' && document.getElementById('date22').value !== '')
+      {
+        var dateFrom=document.getElementById('date11').value;
+        var dateTo=document.getElementById('date22').value;
+        var dateCheck=row.cells[9].innerText;
 
-      var from = new Date(d1[2], parseInt(d1[1])-1, d1[0]);  // -1 because months are from 0 to 11
-      var to   = new Date(d2[2], parseInt(d2[1])-1, d2[0]);
-      var check = new Date(c[2], parseInt(c[1])-1, c[0]);
+        var d1 = dateFrom.split("/");
+        var d2 = dateTo.split("/");
+        var c = dateCheck.split("/");
 
-      console.log(check > from && check < to)
+        var from = new Date(d1[2], parseInt(d1[1])-1, d1[0]); 
+        var to   = new Date(d2[2], parseInt(d2[1])-1, d2[0]);
+        var check = new Date(c[2], parseInt(c[1])-1, c[0]);
 
-      if(check > from && check < to){ alert("bot are equal");}
-      else{
+        console.log(check > from && check < to)
+
+        if(check > from && check < to){ /*alert("bot are equal");*/}
+        else{
          table.rows[i].style.display = "none";
-         alert("bot are unequal");
-      } // do it this way! (use + prefix for a variable that holds a date value)
+         /*alert("bot are unequal");*/
+        } 
+      }
   }
-    /*alert("I am an alert box!");*/
 }
+
+/*when both dates are empty display all data*/
+$('.date').blur(function()
+{
+    var value11=$.trim($("#date11").val());
+    var value22=$.trim($("#date22").val());
+
+    if(value11.length==0 && value22.length==0)
+    {
+             var table1 = document.getElementById("example");
+             for (var j = 1, row; row = table1.rows[j]; j++) {
+                   table1.rows[j].style.display = "";
+             } 
+            /* alert("hello");*/
+             
+    }
+});
 </script>
+
+<!-- End Datepicker and sorting -->
+
+
 
 
 

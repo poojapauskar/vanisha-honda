@@ -85,27 +85,21 @@
 
     <div class="col-sm-1">
     </div>
-    <div class="col-sm-5">
-
-<html ng-app="datepickerBasicUsage">
-<div ng-controller="AppCtrl" style=''>
-    <md-content>
-      From <md-datepicker ng-model="myDate1" md-placeholder="Enter date"></md-datepicker>
-      To <md-datepicker ng-model="myDate2" md-placeholder="Enter date"></md-datepicker>
-     <!--  <h4>Date-picker with min date and max date</h4>
-      <md-datepicker ng-model="myDate" placeholder="Enter date"
-                 md-min-date="minDate" md-max-date="maxDate"></md-datepicker> -->
-    </md-content>
-  </div>
 
 
+<div class="col-sm-6">
+  <form>
+    From
+    <input id="date11" class="date" type="text" placeholder="DD/MM/YYY" required="True">
+    To
+    <input id="date22" class="date" type="text" placeholder="DD/MM/YYY" required="True">
+    <button type="submit" onclick="myFunction()" class="mdl-button mdl-js-button mdl-button--raised">
+      Search
+    </button>
+  </form>
+</div>
 
-    </div>
-    <div class="col-sm-1">
-      <button class="mdl-button mdl-js-button mdl-button--raised">
-        Search
-      </button>
-    </div>
+
     <div class="col-sm-1">
       <button id="btn-export" class="mdl-button mdl-js-button mdl-button--raised">
         Export/Print
@@ -115,6 +109,72 @@
 </div>
 
     <!-- Textfield with Floating Label -->
+
+
+<!-- DatePicker And Sorting -->
+
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery-1.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( ".date" ).datepicker({ dateFormat: 'dd/mm/yy' });
+  });
+  </script>
+
+<script>
+
+function myFunction() {
+
+   var table = document.getElementById("example");
+   for (var i = 1, row; row = table.rows[i]; i++) {
+
+
+      if(document.getElementById('date11').value !== '' && document.getElementById('date22').value !== '')
+      {
+        var dateFrom=document.getElementById('date11').value;
+        var dateTo=document.getElementById('date22').value;
+        var dateCheck=row.cells[10].innerText;
+
+        var d1 = dateFrom.split("/");
+        var d2 = dateTo.split("/");
+        var c = dateCheck.split("/");
+
+        var from = new Date(d1[2], parseInt(d1[1])-1, d1[0]); 
+        var to   = new Date(d2[2], parseInt(d2[1])-1, d2[0]);
+        var check = new Date(c[2], parseInt(c[1])-1, c[0]);
+
+        console.log(check > from && check < to)
+
+        if(check > from && check < to){ /*alert("bot are equal");*/}
+        else{
+         table.rows[i].style.display = "none";
+         /*alert("bot are unequal");*/
+        } 
+      }
+  }
+}
+
+/*when both dates are empty display all data*/
+$('.date').blur(function()
+{
+    var value11=$.trim($("#date11").val());
+    var value22=$.trim($("#date22").val());
+
+    if(value11.length==0 && value22.length==0)
+    {
+             var table1 = document.getElementById("example");
+             for (var j = 1, row; row = table1.rows[j]; j++) {
+                   table1.rows[j].style.display = "";
+             } 
+            /* alert("hello");*/
+             
+    }
+});
+</script>
+
+<!-- End Datepicker and sorting -->
+
 
 <div class="row">
 <!-- <div class="form-group pull-right">
