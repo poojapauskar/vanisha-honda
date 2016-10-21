@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
   <script src="js/index.js"></script>
 </head>
 <body>
@@ -101,55 +102,50 @@
   
 <div class="container">
 
-<div style="text-align:center !important" class="row">
+<div class="row" style="">
+      <div class="col-sm-6">
+      <h3>Honda Activa 3g</h3>
+      <h6>60 Km/L Milage<br>
+      1 year Warranty<br>
+      New Colours<br>
+      And a lot more.</h6> 
+      <h3 style="color:yellow">Book Test Ride Now</h3>
+      </div>
 
-<div id="slider1" class="csslider infinity">
-  <input type="radio" name="slides" id="slides_1">
-  <input type="radio" name="slides" id="slides_2">
-  <input type="radio" name="slides" checked="checked" id="slides_3">
-  <input type="radio" name="slides" id="slides_4">
-  <input type="radio" name="slides" id="slides_5">
-  <ul>
-    <li><h2>Slide 1</h2></li>
-    <li><h2>Slide 2</h2></li>
-    <li>
-          <div class="row">
-              <div class="col-sm-6" style="text-align:center">
-                <h5>Introducing the new</h5>
-                <h4 style="margin-top:-5%">Vanisha Honda Android App</h5>
-                <a style="margin-top:-5%" href="#">Vehicle Booking</a><br>
-                <a style="margin-top:-5%" href="#">Book test ride</a>
-                        <h6 >Download Now</h6>
-                        <img style="width:50%;height:50%" src="images/google-play-badge.png"></img>
-              </div>
-              <div class="col-sm-6"  style="text-align:center">
-              <img style="width:30%;height:30%" src="images/mobile.png"></img>
-              </div>
-            </div>
-    </li>
-    <li><h2>Slide 4</h2></li>
-    <li><h2>Slide 5</h2></li>
-  </ul>
-  <div class="arrows">
-    <label for="slides_1"></label>
-    <label for="slides_2"></label>
-    <label for="slides_3"></label>
-    <label for="slides_4"></label>
-    <label for="slides_5"></label>
-    <label for="slides_1" class="goto-first"></label>
-    <label for="slides_5" class="goto-last"></label>
-  </div>
-  <div class="navigation">
-    <div>
-      <label for="slides_1"></label>
-      <label for="slides_2"></label>
-      <label for="slides_3"></label>
-      <label for="slides_4"></label>
-      <label for="slides_5"></label>
-    </div>
-  </div>
-</div>
-
+      <div class="col-sm-6">
+                <div id="slider1" class="csslider2 infinity2">
+                    <input type="radio" name="slides" id="slides_1">
+                    <input type="radio" name="slides" id="slides_2">
+                    <input type="radio" name="slides" checked="checked" id="slides_3">
+                    <input type="radio" name="slides" id="slides_4">
+                    <input type="radio" name="slides" id="slides_5">
+                    <ul>
+                      <li><img src="images/bike.jpg"></img></li>
+                      <li><img src="images/bike.jpg"></img></li>
+                      <li><img src="images/bike.jpg"></img></li>
+                      <li><img src="images/bike.jpg"></img></li>
+                      <li><img src="images/bike.jpg"></img></li>
+                    </ul>
+                    <div class="arrows">
+                      <label for="slides_1"></label>
+                      <label for="slides_2"></label>
+                      <label for="slides_3"></label>
+                      <label for="slides_4"></label>
+                      <label for="slides_5"></label>
+                      <label for="slides_1" class="goto-first"></label>
+                      <label for="slides_5" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                      <div>
+                        <label for="slides_1"></label>
+                        <label for="slides_2"></label>
+                        <label for="slides_3"></label>
+                        <label for="slides_4"></label>
+                        <label for="slides_5"></label>
+                      </div>
+                    </div>
+                </div>
+      </div>
 </div>
 
 <div class="row">
@@ -157,80 +153,52 @@
 <p>In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
 </div>
 
-<div style="text-align:center"  class="row">
-<h5 style="text-align:left !important">Testimonials</h5>
-
-    <div class="slideshow">
-        <input type="radio" name="ss1" id="ss1-item-1" class="slideshow--bullet" checked="checked" />
-        <div class="slideshow--item">
-          <p>In publishing and graphic design .In publishing and graphic design</p>
-          <label for="ss1-item-3" class="slideshow--nav slideshow--nav-previous">Go to slide 3</label>
-          <label for="ss1-item-2" class="slideshow--nav slideshow--nav-next">Go to slide 2</label>
-        </div>
-      
-        <input type="radio" name="ss1" id="ss1-item-2" class="slideshow--bullet" />
-        <div class="slideshow--item">
-          <p>In publishing and graphic design</p>
-          <label for="ss1-item-1" class="slideshow--nav slideshow--nav-previous">Go to slide 1</label>
-          <label for="ss1-item-3" class="slideshow--nav slideshow--nav-next">Go to slide 3</label>
-        </div>
-      
-        <input type="radio" name="ss1" id="ss1-item-3" class="slideshow--bullet" />
-        <div class="slideshow--item">
-          <p>In publishing and graphic design .In publishing and graphic design</p>
-          <label for="ss1-item-2" class="slideshow--nav slideshow--nav-previous">Go to slide 2</label>
-          <label for="ss1-item-4" class="slideshow--nav slideshow--nav-next">Go to slide 4</label>
-        </div>
-        
-        <input type="radio" name="ss1" id="ss1-item-4" class="slideshow--bullet" />
-        <div class="slideshow--item">
-          <p>In publishing and graphic design</p>
-          <label for="ss1-item-3" class="slideshow--nav slideshow--nav-previous">Go to slide 3</label>
-          <label for="ss1-item-1" class="slideshow--nav slideshow--nav-next">Go to slide 1</label>
-        </div>
-
-    </div>
-
-</div>
-
-
 <div class="row">
-<h5>Recent Launch</h5>
-</div>
+  <div class="col-sm-6">
+   <h5>Specifications</h5>
+        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+            <tr>
+              <th>Material</th>
+              <td>Teflon
+            </tr>
+            <tr>
+              <th>Material</th>
+              <td>Teflon
+            </tr>
+            <tr>
+              <th>Material</th>
+              <td>Teflon
+            </tr>
+            <tr>
+              <th>Material</th>
+              <td>Teflon
+            </tr>
+        </table>
+  </div>
 
-<div style="background-color:red;" class="row">
-  <div style="margin-top:90px;margin-bottom:90px">
-    <div class="col-sm-4" style="text-align:center">
-         <div class="row">
-         <img style="width:160px;height:160px" src="images/bike.jpg"></img>
-         </div>
-         <div class="row">
-          <h6 style="color:white">Activa 125</h6>
-         </div>
-    </div>
-    <div class="col-sm-4" style="text-align:center">
-           <div class="row">
-           <img style="width:160px;height:160px" src="images/bike.jpg"></img>
-           </div>
-           <div class="row">
-            <h6 style="color:white">Activa 125</h6>
-           </div>
-    </div>
-    <div class="col-sm-4" style="text-align:center">
-           <div class="row">
-           <img style="width:160px;height:160px" src="images/bike.jpg"></img>
-           </div>
-           <div class="row">
-            <h6 style="color:white">Activa 125</h6>
-           </div>
-    </div>
+  <div class="col-sm-6">
+
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" id="sample1">
+          <label class="mdl-textfield__label" for="sample1">Enter Email</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" id="sampl2">
+          <label class="mdl-textfield__label" for="sample2">Enter Mobile</label>
+        </div>
+        <br>
+        <button style="background-color:red" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          Get Quote
+        </button>
+      </form>
+
   </div>
 </div>
 
-
-
 <div style="height:100px" class="row">
 </div>
+
 
 <div style="background-color:red" class="row">
   <div class="col-sm-6" style="color:white;">
