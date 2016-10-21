@@ -20,6 +20,15 @@
 <body>
 
 
+<!-- datepicker -->
+<link rel="stylesheet" href="css/jquery-ui.css">
+<script src="js/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( ".date" ).datepicker({ dateFormat: 'dd/mm/yy' });
+  });
+  </script>
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -100,7 +109,7 @@
 </nav>
   
 <div class="container">
-<h5 style="color:red;text-align:center">Book Servicing</h5>
+<h5 style="margin-top:-1%;color:red;text-align:center">Book Servicing</h5>
 
 <div class="row">
   <div class="col-sm-6">
@@ -160,6 +169,12 @@
             <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
             <label class="mdl-textfield__label" for="sample5">Other Instructions/<br> Additional Service Requirement</label>
           </div>
+
+          <div style="align:left">
+          Select Date: <input style="" id="date11" class="date" type="text" placeholder="DD/MM/YYY" required="True">
+          </div>
+
+          <input type="checkbox" name="vehicle" value="Bike">Request Pick-Up<br>
 
           <button style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Button
