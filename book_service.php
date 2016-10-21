@@ -100,33 +100,73 @@
 </nav>
   
 <div class="container">
+<h5 style="color:red;text-align:center">Book Servicing</h5>
 
-<div style="color:red;text-align:center" class="row">
-  <h4>Products</h4>
-</div>
+<div class="row">
+  <div class="col-sm-6">
+    <img style="width:150px;height:150px" src="images/book_service.png"></img>
+  </div>
 
-<div style="margin-top:-5%" class="row">
-  <div style="margin-top:90px;margin-bottom:90px">
-    <div class="col-sm-6" style="text-align:center">
-         <div class="row">
-         <img style="width:260px;height:260px" src="images/bike.jpg"></img>
-         </div>
-         <div class="row">
-          <h6 style="color:white">Activa 125</h6>
-         </div>
-    </div>
-    <div class="col-sm-6" style="text-align:center">
-           <div class="row">
-           <img style="width:260px;height:260px" src="images/bike.jpg"></img>
-           </div>
-           <div class="row">
-            <h6 style="color:white">Activa 125</h6>
-           </div>
-    </div>
+  <div class="col-sm-6">
+      <form action="#">
+      
+          <div class="demo">
+            <!-- Standard Select -->
+            <div class="mdl-selectfield">
+              <label>Select Vehicle</label>
+              <select class="browser-default">
+                <option value="" disabled selected>Select Vehicle</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="demo" style="margin-top:2%">
+            <!-- Standard Select -->
+            <div class="mdl-selectfield">
+              <label>Servicing Type</label>
+              <select class="browser-default">
+                <option value="" disabled selected>Servicing Type</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Name</label>
+          </div>
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Email</label>
+          </div>
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Mobile</label>
+          </div>
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Vehicle Number</label>
+          </div>
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+            <label class="mdl-textfield__label" for="sample5">Address</label>
+          </div>
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+            <label class="mdl-textfield__label" for="sample5">Other Instructions/<br> Additional Service Requirement</label>
+          </div>
+
+          <button style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Button
+          </button>
+      </form>
   </div>
 </div>
-
-
 
 <div style="height:100px" class="row">
 </div>
