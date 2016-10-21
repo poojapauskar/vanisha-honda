@@ -39,16 +39,14 @@
     <div class="col-sm-2">
         <form name="myForm" method="post" action="#">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input name="myName" class="mdl-textfield__input" ng-model="myName" required>
-          <span ng-show="myForm.myName.$touched && myForm.myName.$invalid">Username is required.</span>
+          <input name="myName" class="mdl-textfield__input" ng-model="myName">
           <label class="mdl-textfield__label" for="sample3">Username</label>
           </div>
           </p>
 
 
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input name="myPassword" class="mdl-textfield__input" ng-model="myPassword" pattern=".{8,}" type="password" required>
-          <span ng-show="myForm.myPassword.$touched && myForm.myPassword.$invalid">Password must contain atleast 8 digits.</span>
+          <input name="myPassword" class="mdl-textfield__input" ng-model="myPassword" pattern=".{8,}" type="password">
           <label class="mdl-textfield__label" for="sample3">Password</label>
           </div>
           </p>
