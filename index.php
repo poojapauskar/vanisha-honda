@@ -7,6 +7,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
+  <link rel="stylesheet" href="css/slideshow.css">
+
  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <!-- Material Design icon font -->
@@ -112,7 +114,7 @@
     <li><h2>Slide 2</h2></li>
     <li>
           <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-6" style="text-align:center">
                 <h5>Introducing the new</h5>
                 <h4 style="margin-top:-5%">Vanisha Honda Android App</h5>
                 <a style="margin-top:-5%" href="#">Vehicle Booking</a><br>
@@ -120,14 +122,13 @@
                         <h6 >Download Now</h6>
                         <img style="width:50%;height:50%" src="images/google-play-badge.png"></img>
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-6"  style="text-align:center">
               <img style="width:30%;height:30%" src="images/mobile.png"></img>
               </div>
             </div>
     </li>
     <li><h2>Slide 4</h2></li>
     <li><h2>Slide 5</h2></li>
-    <li><h2>Slide 6</h2></li>
   </ul>
   <div class="arrows">
     <label for="slides_1"></label>
@@ -156,16 +157,111 @@
 <p>In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
 </div>
 
-<div class="row">
+<div style="text-align:center"  class="row">
+<h5 style="text-align:left !important">Testimonials</h5>
+
+    <div class="slideshow">
+        <input type="radio" name="ss1" id="ss1-item-1" class="slideshow--bullet" checked="checked" />
+        <div class="slideshow--item">
+          <p>In publishing and graphic design .In publishing and graphic design</p>
+          <label for="ss1-item-3" class="slideshow--nav slideshow--nav-previous">Go to slide 3</label>
+          <label for="ss1-item-2" class="slideshow--nav slideshow--nav-next">Go to slide 2</label>
+        </div>
+      
+        <input type="radio" name="ss1" id="ss1-item-2" class="slideshow--bullet" />
+        <div class="slideshow--item">
+          <p>In publishing and graphic design</p>
+          <label for="ss1-item-1" class="slideshow--nav slideshow--nav-previous">Go to slide 1</label>
+          <label for="ss1-item-3" class="slideshow--nav slideshow--nav-next">Go to slide 3</label>
+        </div>
+      
+        <input type="radio" name="ss1" id="ss1-item-3" class="slideshow--bullet" />
+        <div class="slideshow--item">
+          <p>In publishing and graphic design .In publishing and graphic design</p>
+          <label for="ss1-item-2" class="slideshow--nav slideshow--nav-previous">Go to slide 2</label>
+          <label for="ss1-item-4" class="slideshow--nav slideshow--nav-next">Go to slide 4</label>
+        </div>
+        
+        <input type="radio" name="ss1" id="ss1-item-4" class="slideshow--bullet" />
+        <div class="slideshow--item">
+          <p>In publishing and graphic design</p>
+          <label for="ss1-item-3" class="slideshow--nav slideshow--nav-previous">Go to slide 3</label>
+          <label for="ss1-item-1" class="slideshow--nav slideshow--nav-next">Go to slide 1</label>
+        </div>
+
+    </div>
+
 </div>
 
-<div class="row">
-</div>
 
 <div class="row">
+<h5>Recent Launch</h5>
 </div>
 
-<div class="row">
+<div style="background-color:red;" class="row">
+  <div style="margin-top:90px;margin-bottom:90px">
+    <div class="col-sm-4" style="text-align:center">
+         <div class="row">
+         <img style="width:160px;height:160px" src="images/bike.jpg"></img>
+         </div>
+         <div class="row">
+          <h6 style="color:white">Activa 125</h6>
+         </div>
+    </div>
+    <div class="col-sm-4" style="text-align:center">
+           <div class="row">
+           <img style="width:160px;height:160px" src="images/bike.jpg"></img>
+           </div>
+           <div class="row">
+            <h6 style="color:white">Activa 125</h6>
+           </div>
+    </div>
+    <div class="col-sm-4" style="text-align:center">
+           <div class="row">
+           <img style="width:160px;height:160px" src="images/bike.jpg"></img>
+           </div>
+           <div class="row">
+            <h6 style="color:white">Activa 125</h6>
+           </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="height:100px" class="row">
+</div>
+
+<div style="background-color:red" class="row">
+  <div class="col-sm-6" style="color:white;">
+       <div style="margin-left:10%">
+        <img style="width:8%;height:8%" src="images/sample_logo.jpg"></img>
+        <h5 style="margin-top:-5%;margin-left:10%">Vanisha Honda</h5>
+        <h6 style="font-size:12px">9123456789, 97181717817<br>
+        9123456789, 97181717817<br>
+        info@vanishahonda.com</h6>
+
+        <form>
+        <input type="text" placeholder="Enter email" id="email1" name="email1"></input>
+        <button style="color:white;background-color:blue" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          Submit
+        </button>
+        </form>
+
+       </div>
+  </div>
+  <div class="col-sm-6" style="color:white">
+       <div style="margin-left:10%">
+       <h6 style="font-size:12px;margin-top:10%">9123456789, 97181717817<br>
+        9123456789, 97181717817<br>
+        info@vanishahonda.com</h6>
+       </div>
+  </div>
+</div>
+
+
+<div style="background-color:red" class="row">
+<h4 style="font-size:12px;color:white;text-align:center">2016, Vanisha Honda. All rights reserver</h4>
 </div>
 
 </div>
