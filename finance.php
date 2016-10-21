@@ -7,6 +7,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
+<!-- upload_file -->
+<link rel="stylesheet" href="css/upload_file.css">
+ <script src="js/upload_file.js"></script>
+ <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue_grey-red.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
   <link rel="stylesheet" href="css/slideshow.css">
 
  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
@@ -155,7 +163,21 @@
           IT Returns: <input type="file" id="myFile5">
 
           <br>
-          
+
+  <div class="file_input_div">
+    <div class="file_input">
+      <label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+        <i class="material-icons">file_upload</i>
+        <input id="file_input_file" class="none" type="file" />
+      </label>
+    </div>
+    <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo">
+      <input class="file_input_text mdl-textfield__input" type="text" disabled readonly id="file_input_text" />
+      <label class="mdl-textfield__label" for="file_input_text"></label>
+    </div>
+  </div>
+
+
           <button style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Get Approval
           </button>
