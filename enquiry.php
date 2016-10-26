@@ -111,32 +111,38 @@
 <h5 style="margin-top:-1%;color:red;text-align:center">Customer Services</h5>
 
 <div class="row">
-  <div style="text-align:center" class="col-sm-6">
-    Materialize is a modern responsive CSS framework based on Material Design by Google
+  <div class="col-sm-6">
+    Materialize is a modern responsive CSS framework based on Material Design by Google. ... 
+
   </div>
-  <div style="text-align:center" class="col-sm-6">
+
+  <div class="col-sm-6">
     Enquiry Form
+      <form action="#">
+      
+          
 
-    <form action="#">
-
-          <div class="mdl-textfield mdl-js-textfield">
+          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
             <input class="mdl-textfield__input" type="text" id="sample1">
             <label class="mdl-textfield__label" for="sample1">Name</label>
           </div>
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+
+          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
             <input class="mdl-textfield__input" type="text" id="sample1">
             <label class="mdl-textfield__label" for="sample1">Email</label>
           </div>
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+
+          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
             <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Mobile</label>
+            <label class="mdl-textfield__label" for="sample1">Phone</label>
           </div>
-<br>
+
           <div class="demo">
+            <!-- Standard Select -->
             <div class="mdl-selectfield">
               <label>Select Vehicle Model</label>
               <select class="browser-default">
-                <option value="" disabled selected>Select Vehicle</option>
+                <option value="" disabled selected>Model</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
@@ -146,15 +152,15 @@
 <br>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
             <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
-            <label class="mdl-textfield__label" for="sample5">Message</label>
+            <label class="mdl-textfield__label" for="sample5">Address</label>
           </div>
-         
+
 <br>
+
           <button style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Submit
           </button>
       </form>
-
   </div>
 </div>
 
@@ -192,7 +198,6 @@
 <div style="background-color:red" class="row">
 <h4 style="font-size:12px;color:white;text-align:center">2016, Vanisha Honda. All rights reserver</h4>
 </div>
-
 
 </body>
 </html>
