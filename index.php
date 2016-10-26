@@ -37,16 +37,16 @@
 
 
     <div class="col-sm-2">
-        <form name="myForm" method="post" action="#">
+        <form name="myForm" method="post" action="admin_panel.php">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input name="myName" class="mdl-textfield__input" ng-model="myName">
           <label class="mdl-textfield__label" for="sample3">Username</label>
           </div>
           </p>
 
-
+<!-- pattern=".{8,}"  -->
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input name="myPassword" class="mdl-textfield__input" ng-model="myPassword" pattern=".{8,}" type="password">
+          <input name="myPassword" class="mdl-textfield__input" ng-model="myPassword" type="password">
           <label class="mdl-textfield__label" for="sample3">Password</label>
           </div>
           </p>
