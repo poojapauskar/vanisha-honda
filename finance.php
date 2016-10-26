@@ -42,7 +42,7 @@
 <div class="dropdown" style="margin-left:10%">
   <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
   <ul class="dropdown-menu">
-    <li>
+    <!-- <li>
       <a class="trigger right-caret">Level 1</a>
       <ul class="dropdown-menu sub-menu">
         <li><a href="#">Level 2</a></li>
@@ -65,7 +65,18 @@
       </ul>
     </li>
     <li><a href="#">Level 1</a></li>
-    <li><a href="#">Level 1</a></li>
+    <li><a href="#">Level 1</a></li> -->
+     <li>
+      <a class="trigger right-caret">Scooters</a>
+      <ul class="dropdown-menu sub-menu">
+        <li><a href="product_detail.php">Activa 123</a></li>
+        <li><a href="product_detail.php">Activa 2</a></li>
+      </ul>
+      <a class="trigger right-caret">Motorcycles</a>
+      <ul class="dropdown-menu sub-menu">
+        <li><a href="product_detail.php">Pleasure 2</a></li>
+      </ul>
+    </li>
   </ul>
 </div>
 </li>
@@ -75,8 +86,10 @@
   <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Customer<span class="caret"></span></a>
   <ul class="dropdown-menu">
     <li>
-      <a class="trigger right-caret">Level 1</a>
-      <ul class="dropdown-menu sub-menu">
+      <a class="trigger right-caret" href="book_service.php">Book Servicing</a>
+      <a class="trigger right-caret" href="insurance.php">Renew Insurance</a>
+      <a class="trigger right-caret" href="finance.php">Get Finance</a>
+     <!--  <ul class="dropdown-menu sub-menu">
         <li><a href="#">Level 2</a></li>
         <li>
           <a class="trigger right-caret">Level 2</a>
@@ -97,12 +110,12 @@
       </ul>
     </li>
     <li><a href="#">Level 1</a></li>
-    <li><a href="#">Level 1</a></li>
+    <li><a href="#">Level 1</a></li> -->
   </ul>
 </div>
 </li>
 
-      <li><a style="margin-left:14%" href="#">Contact</a></li>
+      <li><a style="margin-left:14%" href="enquiry.php">Contact</a></li>
     </ul>
   </div>
 </nav>
