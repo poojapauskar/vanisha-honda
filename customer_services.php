@@ -189,7 +189,7 @@
 
 
 <div style="background-color:red" class="row">
-<h4 style="font-size:12px;color:white;text-align:center">2016, Vanisha Honda. All rights reserver</h4>
+<h4 style="font-size:12px;color:white;text-align:center">2016, Vanisha Honda. All rights reserved</h4>
 </div>
 
 </body>
