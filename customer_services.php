@@ -108,59 +108,32 @@
 </nav>
   
 <div class="container">
-<h5 style="margin-top:-1%;color:red;text-align:center">Get Finance</h5>
+<h5 style="margin-top:-1%;color:red;text-align:center">Customer Services</h5>
 
 <div class="row">
-  <div class="col-sm-6">
-    <img style="width:150px;height:150px" src="images/book_service.png"></img>
+  <div style="text-align:center" class="col-sm-4">
+    <div class="row">
+      <img style="width:150px;height:150px" src="images/book_service.png"></img>
+    </div>
+    <div class="row">
+      Book Servicing
+    </div>
   </div>
-
-  <div class="col-sm-6">
-      <form action="#">
-      
-          <div class="demo">
-            <!-- Standard Select -->
-            <div class="mdl-selectfield">
-              <label>Select Vehicle</label>
-              <select class="browser-default">
-                <option value="" disabled selected>Model</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-            </div>
-          </div>
-
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Price</label>
-          </div>
-
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Down Payment</label>
-          </div>
-<br>
-          ID Proof: <input type="file" id="myFile1">
-          Add. Proof: <input type="file" id="myFile2">
-
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">PAN</label>
-          </div>
-<br>
-          6 Months Bank Statement: <input type="file" id="myFile3">
-          Salary Slip: <input type="file" id="myFile4">
-          IT Returns: <input type="file" id="myFile5">
-
-          <br>
-
-
-
-          <button style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-            Get Approval
-          </button>
-      </form>
+  <div style="text-align:center" class="col-sm-4">
+    <div class="row">
+      <img style="width:150px;height:150px" src="images/book_service.png"></img>
+    </div>
+    <div class="row">
+      Renew Insurance
+    </div>
+  </div>
+  <div style="text-align:center" class="col-sm-4">
+    <div class="row">
+      <img style="width:150px;height:150px" src="images/book_service.png"></img>
+    </div>
+    <div class="row">
+      Get Finance
+    </div>
   </div>
 </div>
 

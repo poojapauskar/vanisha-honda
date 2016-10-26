@@ -108,59 +108,53 @@
 </nav>
   
 <div class="container">
-<h5 style="margin-top:-1%;color:red;text-align:center">Get Finance</h5>
+<h5 style="margin-top:-1%;color:red;text-align:center">Customer Services</h5>
 
 <div class="row">
-  <div class="col-sm-6">
-    <img style="width:150px;height:150px" src="images/book_service.png"></img>
+  <div style="text-align:center" class="col-sm-6">
+    Materialize is a modern responsive CSS framework based on Material Design by Google
   </div>
+  <div style="text-align:center" class="col-sm-6">
+    Enquiry Form
 
-  <div class="col-sm-6">
-      <form action="#">
-      
+    <form action="#">
+
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Name</label>
+          </div>
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Email</label>
+          </div>
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Mobile</label>
+          </div>
+<br>
           <div class="demo">
-            <!-- Standard Select -->
             <div class="mdl-selectfield">
-              <label>Select Vehicle</label>
+              <label>Select Vehicle Model</label>
               <select class="browser-default">
-                <option value="" disabled selected>Model</option>
+                <option value="" disabled selected>Select Vehicle</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
               </select>
             </div>
           </div>
-
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Price</label>
-          </div>
-
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Down Payment</label>
-          </div>
 <br>
-          ID Proof: <input type="file" id="myFile1">
-          Add. Proof: <input type="file" id="myFile2">
-
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">PAN</label>
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+            <label class="mdl-textfield__label" for="sample5">Message</label>
           </div>
+         
 <br>
-          6 Months Bank Statement: <input type="file" id="myFile3">
-          Salary Slip: <input type="file" id="myFile4">
-          IT Returns: <input type="file" id="myFile5">
-
-          <br>
-
-
-
           <button style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-            Get Approval
+            Submit
           </button>
       </form>
+
   </div>
 </div>
 
@@ -198,6 +192,7 @@
 <div style="background-color:red" class="row">
 <h4 style="font-size:12px;color:white;text-align:center">2016, Vanisha Honda. All rights reserver</h4>
 </div>
+
 
 </body>
 </html>
