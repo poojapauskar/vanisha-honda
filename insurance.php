@@ -68,6 +68,7 @@
     <li><a href="#">Level 1</a></li>
     <li><a href="#">Level 1</a></li> -->
      <li>
+     <a class="trigger right-caret" href="product_types.php">All Products</a>
       <a class="trigger right-caret">Scooters</a>
       <ul class="dropdown-menu sub-menu">
         <li><a href="product_detail.php">Activa 123</a></li>
@@ -115,7 +116,7 @@
   </ul>
 </div>
 </li>
-
+      <li><a style="margin-left:14%" href="customer_services.php">Services</a></li>
       <li><a style="margin-left:14%" href="enquiry.php">Contact</a></li>
     </ul>
   </div>

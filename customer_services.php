@@ -67,6 +67,7 @@
     <li><a href="#">Level 1</a></li>
     <li><a href="#">Level 1</a></li> -->
      <li>
+     <a class="trigger right-caret" href="product_types.php">All Products</a>
       <a class="trigger right-caret">Scooters</a>
       <ul class="dropdown-menu sub-menu">
         <li><a href="product_detail.php">Activa 123</a></li>
@@ -114,7 +115,7 @@
   </ul>
 </div>
 </li>
-
+      <li><a style="margin-left:14%" href="customer_services.php">Services</a></li>
       <li><a style="margin-left:14%" href="enquiry.php">Contact</a></li>
     </ul>
   </div>
@@ -126,7 +127,9 @@
 <div class="row">
   <div style="text-align:center" class="col-sm-4">
     <div class="row">
+      <a href="book_service.php">
       <img style="width:150px;height:150px" src="images/book_service.png"></img>
+      </a>
     </div>
     <div class="row">
       Book Servicing
@@ -134,7 +137,9 @@
   </div>
   <div style="text-align:center" class="col-sm-4">
     <div class="row">
+      <a href="insurance.php">
       <img style="width:150px;height:150px" src="images/book_service.png"></img>
+      </a>
     </div>
     <div class="row">
       Renew Insurance
@@ -142,7 +147,9 @@
   </div>
   <div style="text-align:center" class="col-sm-4">
     <div class="row">
+      <a href="finance.php">
       <img style="width:150px;height:150px" src="images/book_service.png"></img>
+      </a>
     </div>
     <div class="row">
       Get Finance
