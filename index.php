@@ -28,7 +28,7 @@
     </div>
 
 <ul style="margin-top:-5%;margin-left:50%" class="nav navbar-nav">
- <li class="active"><a href="#">Home</a></li>
+ <li class="active"><a href="index.php">Home</a></li>
 
 <li>
 <div class="dropdown" style="margin-left:10%">
