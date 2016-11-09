@@ -20,6 +20,58 @@
 </head>
 <body>
 
+<?php
+
+if($_POST['mobile'] != ''){
+  $url_web_enquiry = 'https://vanisha-honda.herokuapp.com/web_app_enquiry/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+  $options_web_enquiry = array(
+    'http' => array(
+      'header'  => array(
+                          'EMAIL: '.$_POST['email'],
+                          'MOBILE: '.$_POST['mobile'],
+                          'V-ID: '.$_POST['v_id']
+                          ),
+      'method'  => 'GET',
+    ),
+  );
+  $context_web_enquiry = stream_context_create($options_web_enquiry);
+  $output_web_enquiry = file_get_contents($url_web_enquiry, false,$context_web_enquiry);
+  /*var_dump($output_types_subtypes);*/
+  $arr_web_enquiry = json_decode($output_web_enquiry,true);
+  if($arr_web_enquiry['status'] == 200){
+    
+  }
+}
+?>
+
+<?php
+$url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+$options_types_subtypes = array(
+  'http' => array(
+    'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+    'method'  => 'GET',
+  ),
+);
+$context_types_subtypes = stream_context_create($options_types_subtypes);
+$output_types_subtypes = file_get_contents($url_types_subtypes, false,$context_types_subtypes);
+/*var_dump($output_types_subtypes);*/
+$arr_types_subtypes = json_decode($output_types_subtypes,true);
+?>
+
+<?php
+$url_details_of_selected_vehicle = 'http://vanisha-honda.herokuapp.com/get_details_of_selected_vehicle/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+$options_details_of_selected_vehicle = array(
+  'http' => array(
+    'header'  => 'V-ID: '.$_GET['v_id'],
+    'method'  => 'GET',
+  ),
+);
+$context_details_of_selected_vehicle = stream_context_create($options_details_of_selected_vehicle);
+$output_details_of_selected_vehicle = file_get_contents($url_details_of_selected_vehicle, false,$context_details_of_selected_vehicle);
+/*var_dump($output_details_of_selected_vehicle);*/
+$arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehicle,true);
+/*echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle'];*/
+?>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -35,41 +87,16 @@
 <div class="dropdown" style="margin-left:10%">
   <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
   <ul class="dropdown-menu">
-    <!-- <li>
-      <a class="trigger right-caret">Level 1</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="#">Level 2</a></li>
-        <li>
-          <a class="trigger right-caret">Level 2</a>
-          <ul class="dropdown-menu sub-menu">
-            <li><a href="#">Level 3</a></li>
-            <li><a href="#">Level 3</a></li>
-            <li>
-              <a class="trigger right-caret">Level 3</a>
-              <ul class="dropdown-menu sub-menu">
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Level 2</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Level 1</a></li>
-    <li><a href="#">Level 1</a></li> -->
      <li>
-     <a class="trigger right-caret" href="product_types.php">All Products</a>
-      <a class="trigger right-caret">Scooters</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="product_detail.php">Activa 123</a></li>
-        <li><a href="product_detail.php">Activa 2</a></li>
-      </ul>
-      <a class="trigger right-caret">Motorcycles</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="product_detail.php">Pleasure 2</a></li>
-      </ul>
+      <!-- <a class="trigger right-caret" href="product_types.php">All Products</a> -->
+      <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
+          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
+              <ul class="dropdown-menu sub-menu">
+                <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
+                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
+                <?php } ?>
+              </ul>
+      <?php } ?>
     </li>
   </ul>
 </div>
@@ -118,9 +145,7 @@
 
 <div class="row" style="">
       <div class="col-sm-6">
-      <h3>Honda Activa 3g</h3>
-      <h6>60 Km/L Milage<br>
-      1 year Warranty<br>
+      <h3><?php echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle']; ?></h3>
       New Colours<br>
       And a lot more.</h6> 
       <h3 style="color:yellow">Book Test Ride Now</h3>
@@ -172,37 +197,72 @@
    <h5>Specifications</h5>
         <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
             <tr>
-              <th>Material</th>
-              <td>Teflon
+              <th>Price</th>
+              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['price']; ?></td>
             </tr>
             <tr>
-              <th>Material</th>
-              <td>Teflon
+              <th>Engine Displacement</th>
+              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['engine_displacement']; ?></td>
             </tr>
             <tr>
-              <th>Material</th>
-              <td>Teflon
+              <th>Power</th>
+              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['power']; ?></td>
             </tr>
             <tr>
-              <th>Material</th>
-              <td>Teflon
+              <th>Torque</th>
+              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['torque']; ?></td>
+            </tr>
+            <tr>
+              <th>Mileage</th>
+              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['mileage']; ?></td>
+            </tr>
+            <tr>
+              <th>Length</th>
+              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['length']; ?></td>
+            </tr>
+            <tr>
+              <th>Width</th>
+              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['width']; ?></td>
+            </tr>
+            <tr>
+              <th>Height</th>
+              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['height']; ?></td>
+            </tr>
+            <tr>
+              <th>Front Suspension</th>
+              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['front_suspension']; ?></td>
+            </tr>
+            <tr>
+              <th>Rear Suspension</th>
+              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['rear_suspension']; ?></td>
             </tr>
         </table>
   </div>
 
   <div class="col-sm-6">
 
-      <form action="#">
+      <form action="#" method="post">
         <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" id="sample1">
-          <label class="mdl-textfield__label" for="sample1">Enter Email</label>
+          <input class="mdl-textfield__input" type="text" id="email" name="email">
+          <label class="mdl-textfield__label" for="email">Enter Email</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" id="sampl2">
-          <label class="mdl-textfield__label" for="sample2">Enter Mobile</label>
+          <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
+          <label class="mdl-textfield__label" for="mobile">Enter Mobile</label>
         </div>
+
+        <input class="mdl-textfield__input" type="hidden" id="v_id" name="v_id" value="<?php echo $_GET['v_id'] ?>">
+
+        <input class="mdl-textfield__input" type="hidden" id="name" name="name">
+        <input class="mdl-textfield__input" type="hidden" id="address" name="address">
+        <input class="mdl-textfield__input" type="hidden" id="enquiry_type" name="enquiry_type">
+        <input class="mdl-textfield__input" type="hidden" id="finance" name="finance">
+        <input class="mdl-textfield__input" type="hidden" id="exchange" name="exchange">
+        <input class="mdl-textfield__input" type="hidden" id="message" name="message">
+        <input class="mdl-textfield__input" type="hidden" id="pincode" name="pincode">
+        <input class="mdl-textfield__input" type="hidden" id="duration" name="duration">
         <br>
-        <button style="background-color:red" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        <button type="submit" style="background-color:red" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
           Get Quote
         </button>
       </form>

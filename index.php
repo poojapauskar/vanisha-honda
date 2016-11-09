@@ -20,6 +20,20 @@
 <body>
 
 
+<?php
+$url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+$options_types_subtypes = array(
+  'http' => array(
+    'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+    'method'  => 'GET',
+  ),
+);
+$context_types_subtypes = stream_context_create($options_types_subtypes);
+$output_types_subtypes = file_get_contents($url_types_subtypes, false,$context_types_subtypes);
+/*var_dump($output_types_subtypes);*/
+$arr_types_subtypes = json_decode($output_types_subtypes,true);
+?>
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -34,41 +48,16 @@
 <div class="dropdown" style="margin-left:10%">
   <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
   <ul class="dropdown-menu">
-    <!-- <li>
-      <a class="trigger right-caret">Level 1</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="#">Level 2</a></li>
-        <li>
-          <a class="trigger right-caret">Level 2</a>
-          <ul class="dropdown-menu sub-menu">
-            <li><a href="#">Level 3</a></li>
-            <li><a href="#">Level 3</a></li>
-            <li>
-              <a class="trigger right-caret">Level 3</a>
-              <ul class="dropdown-menu sub-menu">
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Level 2</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Level 1</a></li>
-    <li><a href="#">Level 1</a></li> -->
      <li>
-      <a class="trigger right-caret" href="product_types.php">All Products</a>
-      <a class="trigger right-caret">Scooters</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="product_detail.php">Activa 123</a></li>
-        <li><a href="product_detail.php">Activa 2</a></li>
-      </ul>
-      <a class="trigger right-caret">Motorcycles</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="product_detail.php">Pleasure 2</a></li>
-      </ul>
+      <!-- <a class="trigger right-caret" href="product_types.php">All Products</a> -->
+      <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
+          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
+              <ul class="dropdown-menu sub-menu">
+                <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
+                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
+                <?php } ?>
+              </ul>
+      <?php } ?>
     </li>
   </ul>
 </div>
