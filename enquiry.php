@@ -17,7 +17,45 @@
   <script src="js/index.js"></script>
 </head>
 <body>
+<?php
+$url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+$options_types_subtypes = array(
+  'http' => array(
+    'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+    'method'  => 'GET',
+  ),
+);
+$context_types_subtypes = stream_context_create($options_types_subtypes);
+$output_types_subtypes = file_get_contents($url_types_subtypes, false,$context_types_subtypes);
+/*var_dump($output_types_subtypes);*/
+$arr_types_subtypes = json_decode($output_types_subtypes,true);
+?>
 
+<?php
+
+if($_POST['mobile'] != ''){
+  $url_web_enquiry = 'https://vanisha-honda.herokuapp.com/web_app_enquiry/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+  $options_web_enquiry = array(
+    'http' => array(
+      'header'  => array(
+                          'NAME: '.$_POST['name'],
+                          'EMAIL: '.$_POST['email'],
+                          'MOBILE: '.$_POST['mobile'],
+                          'ADDRESS: '.$_POST['address'],
+                          'V-ID: '.$_POST['v_id']
+                          ),
+      'method'  => 'GET',
+    ),
+  );
+  $context_web_enquiry = stream_context_create($options_web_enquiry);
+  $output_web_enquiry = file_get_contents($url_web_enquiry, false,$context_web_enquiry);
+  /*var_dump($output_types_subtypes);*/
+  $arr_web_enquiry = json_decode($output_web_enquiry,true);
+  if($arr_web_enquiry['status'] == 200){
+    echo "<script>alert('New Enquiry Created')</script>";
+  }
+}
+?>
 
 <!-- datepicker -->
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -42,41 +80,16 @@
 <div class="dropdown" style="margin-left:10%">
   <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
   <ul class="dropdown-menu">
-    <!-- <li>
-      <a class="trigger right-caret">Level 1</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="#">Level 2</a></li>
-        <li>
-          <a class="trigger right-caret">Level 2</a>
-          <ul class="dropdown-menu sub-menu">
-            <li><a href="#">Level 3</a></li>
-            <li><a href="#">Level 3</a></li>
-            <li>
-              <a class="trigger right-caret">Level 3</a>
-              <ul class="dropdown-menu sub-menu">
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Level 2</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Level 1</a></li>
-    <li><a href="#">Level 1</a></li> -->
      <li>
-     <a class="trigger right-caret" href="product_types.php">All Products</a>
-      <a class="trigger right-caret">Scooters</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="product_detail.php">Activa 123</a></li>
-        <li><a href="product_detail.php">Activa 2</a></li>
-      </ul>
-      <a class="trigger right-caret">Motorcycles</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="product_detail.php">Pleasure 2</a></li>
-      </ul>
+      <!-- <a class="trigger right-caret" href="product_types.php">All Products</a> -->
+      <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
+          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
+              <ul class="dropdown-menu sub-menu">
+                <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
+                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
+                <?php } ?>
+              </ul>
+      <?php } ?>
     </li>
   </ul>
 </div>
@@ -132,46 +145,54 @@
 
   <div class="col-sm-6">
     Enquiry Form
-      <form action="#">
+      <form action="#" method="post">
       
           
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Name</label>
+            <input class="mdl-textfield__input" type="text" id="name" name="name">
+            <label class="mdl-textfield__label" for="name">Name</label>
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Email</label>
+            <input class="mdl-textfield__input" type="text" id="email" name="email">
+            <label class="mdl-textfield__label" for="email">Email</label>
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Phone</label>
+            <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
+            <label class="mdl-textfield__label" for="mobile">Phone</label>
           </div>
 
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
               <label>Select Vehicle Model</label>
-              <select class="browser-default">
-                <option value="" disabled selected>Model</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+              <select class="browser-default" name="v_id" id="v_id">
+                  <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
+                    <option value="" disabled selected><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></option>
+                      <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
+                        <option value="<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></option>
+                      <?php } ?>
+                  <?php } ?>
               </select>
             </div>
           </div>
 <br>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
-            <label class="mdl-textfield__label" for="sample5">Address</label>
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"></textarea>
+            <label class="mdl-textfield__label" for="address">Address</label>
           </div>
 
 <br>
+        <input class="mdl-textfield__input" type="hidden" id="enquiry_type" name="enquiry_type">
+        <input class="mdl-textfield__input" type="hidden" id="finance" name="finance">
+        <input class="mdl-textfield__input" type="hidden" id="exchange" name="exchange">
+        <input class="mdl-textfield__input" type="hidden" id="message" name="message">
+        <input class="mdl-textfield__input" type="hidden" id="pincode" name="pincode">
+        <input class="mdl-textfield__input" type="hidden" id="duration" name="duration">
 
-          <button style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <button type="submit" style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Submit
           </button>
       </form>

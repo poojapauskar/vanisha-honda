@@ -39,7 +39,7 @@ if($_POST['mobile'] != ''){
   /*var_dump($output_types_subtypes);*/
   $arr_web_enquiry = json_decode($output_web_enquiry,true);
   if($arr_web_enquiry['status'] == 200){
-    
+    echo "<script>alert('New Enquiry Created')</script>";
   }
 }
 ?>
