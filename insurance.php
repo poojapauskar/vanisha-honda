@@ -18,7 +18,54 @@
   <script src="js/index.js"></script>
 </head>
 <body>
+<?php
+$url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+$options_types_subtypes = array(
+  'http' => array(
+    'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+    'method'  => 'GET',
+  ),
+);
+$context_types_subtypes = stream_context_create($options_types_subtypes);
+$output_types_subtypes = file_get_contents($url_types_subtypes, false,$context_types_subtypes);
+/*var_dump($output_types_subtypes);*/
+$arr_types_subtypes = json_decode($output_types_subtypes,true);
+?>
 
+<?php
+
+if($_POST['mobile'] != ''){
+  $url_insurance = 'https://vanisha-honda.herokuapp.com/web_app_insurance/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+  $options_insurance = array(
+    'http' => array(
+      'header'  => array(
+                          'NAME: '.$_POST['name'],
+                          'EMAIL: '.$_POST['email'],
+                          'MOBILE: '.$_POST['mobile'],
+                          'ADDRESS: '.$_POST['address'],
+                          'V-ID: '.$_POST['v_id'],
+                          'POLICY-NO: '.$_POST['policy_no'],
+                          'RENEWAL-AMT: '.$_POST['renewal_amt'],
+                          'PAYMENT-DATE: '.$_POST['payment_date'],
+                          'ENQUIRY-DATE: '.$_POST['enquiry_date'],
+                          'PURCHASE-DATE: '.$_POST['purchase_date'],
+                          'EXPIRY-DATE: '.$_POST['expiry_date'],
+                          'CHASSIS-NO: '.$_POST['chassis_no'],
+                          'ENGINE-NO: '.$_POST['engine_no'],
+                          'DATE: '.$_POST['date'],
+                          ),
+      'method'  => 'GET',
+    ),
+  );
+  $context_insurance = stream_context_create($options_insurance);
+  $output_insurance = file_get_contents($url_insurance, false,$context_insurance);
+  /*var_dump($output_types_subtypes);*/
+  $arr_insurance = json_decode($output_insurance,true);
+  if($arr_insurance['status'] == 200){
+    echo "<script>alert('New Insurance Created')</script>";
+  }
+}
+?>
 
 <!-- datepicker -->
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -91,28 +138,6 @@
       <a class="trigger right-caret" href="book_service.php">Book Servicing</a>
       <a class="trigger right-caret" href="insurance.php">Renew Insurance</a>
       <a class="trigger right-caret" href="finance.php">Get Finance</a>
-     <!--  <ul class="dropdown-menu sub-menu">
-        <li><a href="#">Level 2</a></li>
-        <li>
-          <a class="trigger right-caret">Level 2</a>
-          <ul class="dropdown-menu sub-menu">
-            <li><a href="#">Level 3</a></li>
-            <li><a href="#">Level 3</a></li>
-            <li>
-              <a class="trigger right-caret">Level 3</a>
-              <ul class="dropdown-menu sub-menu">
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Level 2</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Level 1</a></li>
-    <li><a href="#">Level 1</a></li> -->
   </ul>
 </div>
 </li>
@@ -131,66 +156,70 @@
   </div>
 
   <div class="col-sm-6">
-      <form action="#">
+      <form action="#" method="post">
       
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
-              <label>Select Vehicle</label>
-              <select class="browser-default">
-                <option value="" disabled selected>Select Vehicle</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-            </div>
+                  <label>Select Vehicle Model</label>
+                  <select class="browser-default" name="v_id" id="v_id">
+                      <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
+                        <option value="" disabled selected><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></option>
+                          <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
+                            <option value="<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></option>
+                          <?php } ?>
+                      <?php } ?>
+                  </select>
+                </div>
           </div>
 
           <div style="align:left;margin-top:2%">
-          Purchase Date: <input style="" id="date11" class="date" type="text" placeholder="DD/MM/YYY" required="True">
+          Purchase Date: <input style="" id="purchase_date" name="purchase_date" class="date" type="text" placeholder="DD/MM/YYY" required="True">
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Policy Number</label>
+            <input class="mdl-textfield__input" type="text" id="policy_no" name="policy_no">
+            <label class="mdl-textfield__label" for="policy_no">Policy Number</label>
           </div>
 
           <div style="align:left;margin-top:-2%">
-          Expiry Date: <input style="" id="date11" class="date" type="text" placeholder="DD/MM/YYY" required="True">
+          Expiry Date: <input style="" id="expiry_date" name="expiry_date" class="date" type="text" placeholder="DD/MM/YYY" required="True">
           </div>
 
           <div style="margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Vehicle Number</label>
+            <input class="mdl-textfield__input" type="text" id="engine_no" name="engine_no">
+            <label class="mdl-textfield__label" for="engine_no">Vehicle Number</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Chassis Number</label>
+            <input class="mdl-textfield__input" type="text" id="chassis_no" name="chassis_no">
+            <label class="mdl-textfield__label" for="chassis_no">Chassis Number</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Name</label>
+            <input class="mdl-textfield__input" type="text" id="name" name="name">
+            <label class="mdl-textfield__label" for="name">Name</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Email</label>
+            <input class="mdl-textfield__input" type="text" id="email" name="email">
+            <label class="mdl-textfield__label" for="email">Email</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Mobile</label>
+            <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
+            <label class="mdl-textfield__label" for="mobile">Mobile</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
-            <label class="mdl-textfield__label" for="sample5">Address</label>
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"></textarea>
+            <label class="mdl-textfield__label" for="address">Address</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Amount</label>
+            <input class="mdl-textfield__input" type="text" id="renewal_amt" name="renewal_amt">
+            <label class="mdl-textfield__label" for="renewal_amt">Amount</label>
           </div>
           
           <br>
-          
-          <button style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+
+<input class="mdl-textfield__input" type="hidden" id="date" name="date">
+
+          <button type="submit" style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Make Payment
           </button>
       </form>
