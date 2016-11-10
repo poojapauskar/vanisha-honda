@@ -67,10 +67,11 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 ?>
 
 <div style="" class="demo-layout-transparent mdl-layout mdl-js-layout">
-      <header style="background-color:#F1524B" class="mdl-layout__header mdl-layout__header--transparent">
-        <div class="mdl-layout__header-row">
+      <header style="background-color:#F1524B;height:80px" class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row" style="margin-top:2%">
           <!-- Title -->
-          <span class="mdl-layout-title">Vanisha Honda</span>
+          <img style="margin-top:-2%" src="images/honda_logo_white.png"></img>
+          <span style="margin-left:1%;font-size:18px;" lass="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
@@ -93,13 +94,13 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                   </ul>
             </div>
                         
-            <div class="dropdown" style="">
+            <div class="mdl-navigation__link dropdown" style="">
               <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Services<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="trigger right-caret" href="book_service.php">Book Servicing</a>
-                  <a class="trigger right-caret" href="insurance.php">Renew Insurance</a>
-                  <a class="trigger right-caret" href="finance.php">Get Finance</a>
+                  <a href="book_service.php">Book Servicing</a>
+                  <a href="insurance.php">Renew Insurance</a>
+                  <a href="finance.php">Get Finance</a>
               </ul>
             </div>
 
@@ -259,11 +260,11 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%" src="images/face.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%" src="images/face2.jpg"></img>
                       </div>
                       <div class="col-sm-8">
-                        <p>Amit Desai</p>
-                        <p style="margin-top:-14%;color:gray">IT Consultant</p>
+                        <p>Sanjay Shah</p>
+                        <p style="margin-top:-14%;color:gray">Entrepreneur</p>
                       </div>
                    </div>
                    <div class="row">
@@ -277,11 +278,11 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%" src="images/face.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%" src="images/face3.jpg"></img>
                       </div>
                       <div class="col-sm-8">
-                        <p>Amit Desai</p>
-                        <p style="margin-top:-14%;color:gray">IT Consultant</p>
+                        <p>Ayesha Bhat</p>
+                        <p style="margin-top:-14%;color:gray">Dentist</p>
                       </div>
                    </div>
                    <div class="row">
