@@ -19,7 +19,60 @@
 </head>
 <body>
 
+<?php
+$url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+$options_types_subtypes = array(
+  'http' => array(
+    'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+    'method'  => 'GET',
+  ),
+);
+$context_types_subtypes = stream_context_create($options_types_subtypes);
+$output_types_subtypes = file_get_contents($url_types_subtypes, false,$context_types_subtypes);
+/*var_dump($output_types_subtypes);*/
+$arr_types_subtypes = json_decode($output_types_subtypes,true);
+?>
 
+<?php
+
+if($_POST['req_pic_up'] == 1){
+  $pick_up='Yes';
+}else{
+  $pick_up='No';
+}
+
+if($_POST['mobile'] != ''){
+  $url_book_service = 'https://vanisha-honda.herokuapp.com/web_app_book_servicing/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+  $options_book_service = array(
+    'http' => array(
+      'header'  => array(
+                          'NAME: '.$_POST['name'],
+                          'EMAIL: '.$_POST['email'],
+                          'MOBILE: '.$_POST['mobile'],
+                          'ADDRESS: '.$_POST['address'],
+                          'V-ID: '.$_POST['v_id'],
+                          'DATE: '.$_POST['date'],
+                          'SERVICE-TYPE: '.$_POST['service_type'],
+                          'DELIVERY-DATE: '.$_POST['delivery_date'],
+                          'ADDITIONAL-SERVICE: '.$_POST['additional_service'],
+                          'COMPLAINTS: '.$_POST['complaints'],
+                          'PICK-UP: '.$pick_up,
+                          'STATUS: '.$_POST['status'],
+                          'MECHANIC-ID: '.$_POST['mechanic_id'],
+                          'ENGINE-NO: '.$_POST['engine_no'],
+                          ),
+      'method'  => 'GET',
+    ),
+  );
+  $context_book_service = stream_context_create($options_book_service);
+  $output_book_service = file_get_contents($url_book_service, false,$context_book_service);
+  /*var_dump($output_types_subtypes);*/
+  $arr_book_service = json_decode($output_book_service,true);
+  if($arr_book_service['status'] == 200){
+    echo "<script>alert('New Service Request Created')</script>";
+  }
+}
+?>
 <!-- datepicker -->
 <link rel="stylesheet" href="css/jquery-ui.css">
 <script src="js/jquery-ui.js"></script>
@@ -43,30 +96,6 @@
 <div class="dropdown" style="margin-left:10%">
   <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
   <ul class="dropdown-menu">
-    <!-- <li>
-      <a class="trigger right-caret">Level 1</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="#">Level 2</a></li>
-        <li>
-          <a class="trigger right-caret">Level 2</a>
-          <ul class="dropdown-menu sub-menu">
-            <li><a href="#">Level 3</a></li>
-            <li><a href="#">Level 3</a></li>
-            <li>
-              <a class="trigger right-caret">Level 3</a>
-              <ul class="dropdown-menu sub-menu">
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Level 2</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Level 1</a></li>
-    <li><a href="#">Level 1</a></li> -->
      <li>
      <a class="trigger right-caret" href="product_types.php">All Products</a>
       <a class="trigger right-caret">Scooters</a>
@@ -91,28 +120,6 @@
       <a class="trigger right-caret" href="book_service.php">Book Servicing</a>
       <a class="trigger right-caret" href="insurance.php">Renew Insurance</a>
       <a class="trigger right-caret" href="finance.php">Get Finance</a>
-     <!--  <ul class="dropdown-menu sub-menu">
-        <li><a href="#">Level 2</a></li>
-        <li>
-          <a class="trigger right-caret">Level 2</a>
-          <ul class="dropdown-menu sub-menu">
-            <li><a href="#">Level 3</a></li>
-            <li><a href="#">Level 3</a></li>
-            <li>
-              <a class="trigger right-caret">Level 3</a>
-              <ul class="dropdown-menu sub-menu">
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Level 2</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Level 1</a></li>
-    <li><a href="#">Level 1</a></li> -->
   </ul>
 </div>
 </li>
@@ -131,66 +138,75 @@
   </div>
 
   <div class="col-sm-6">
-      <form action="#">
+      <form action="book_service.php" method="post">
       
           <div class="demo">
             <!-- Standard Select -->
-            <div class="mdl-selectfield">
-              <label>Select Vehicle</label>
-              <select class="browser-default">
-                <option value="" disabled selected>Select Vehicle</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-            </div>
+                <div class="mdl-selectfield">
+                  <label>Select Vehicle Model</label>
+                  <select class="browser-default" name="v_id" id="v_id">
+                      <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
+                        <option value="" disabled selected><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></option>
+                          <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
+                            <option value="<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></option>
+                          <?php } ?>
+                      <?php } ?>
+                  </select>
+                </div>
           </div>
 
           <div class="demo" style="margin-top:2%">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
               <label>Servicing Type</label>
-              <select class="browser-default">
+              <select class="browser-default"  name="v_type" id="v_type">
                 <option value="" disabled selected>Servicing Type</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                <option value="1st Free">1st Free</option>
+                <option value="2nd Free">2nd Free</option>
+                <option value="3rd Free">3rd Free</option>
+                <option value="Other">Other</option>
               </select>
             </div>
           </div>
 
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Name</label>
+            <input class="mdl-textfield__input" type="text" id="name" name="name">
+            <label class="mdl-textfield__label" for="name">Name</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Email</label>
+            <input class="mdl-textfield__input" type="text" id="email" name="email">
+            <label class="mdl-textfield__label" for="email">Email</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Mobile</label>
+            <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
+            <label class="mdl-textfield__label" for="mobile">Mobile</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Vehicle Number</label>
+            <input class="mdl-textfield__input" type="text" id="engine_no" name="engine_no">
+            <label class="mdl-textfield__label" for="v_no">Vehicle Number</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
-            <label class="mdl-textfield__label" for="sample5">Address</label>
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"></textarea>
+            <label class="mdl-textfield__label" for="address">Address</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
-            <label class="mdl-textfield__label" for="sample5">Other Instructions/<br> Additional Service Requirement</label>
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="additional_service" name="additional_service"></textarea>
+            <label class="mdl-textfield__label" for="additional_service">Other Instructions/<br> Additional Service Requirement</label>
           </div>
 
           <div style="align:left">
-          Select Date: <input style="" id="date11" class="date" type="text" placeholder="DD/MM/YYY" required="True">
+          Select Date: <input style="" id="delivery_date" name="delivery_date" class="date" type="text" placeholder="DD/MM/YYY" required="True">
           </div>
 
-          <input type="checkbox" name="vehicle" value="Bike">Request Pick-Up<br>
+          <input type="checkbox" id="req_pic_up" name="req_pic_up" value="1">Request Pick-Up<br>
 
-          <button style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+<input class="mdl-textfield__input" type="hidden" id="service_type" name="service_type">
+<input class="mdl-textfield__input" type="hidden" id="date" name="date">
+<input class="mdl-textfield__input" type="hidden" id="complaints" name="complaints">
+<input class="mdl-textfield__input" type="hidden" id="status" name="status">
+<input class="mdl-textfield__input" type="hidden" id="mechanic_id" name="mechanic_id">
+
+          <button type="submit" style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Book Service
           </button>
       </form>

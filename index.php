@@ -96,11 +96,10 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                         
             <div class="mdl-navigation__link dropdown" style="">
               <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Services<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="book_service.php">Book Servicing</a>
-                  <a href="insurance.php">Renew Insurance</a>
-                  <a href="finance.php">Get Finance</a>
+              <ul id="ul_service" class="dropdown-menu">
+                <li><a href="book_service.php">Book Servicing</a></li>
+                <li><a href="insurance.php">Renew Insurance</a></li>
+                <li><a href="finance.php">Get Finance</a></li>
               </ul>
             </div>
 
@@ -112,8 +111,8 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
         <span class="mdl-layout-title">Vanisha Honda</span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="index.php">Home</a>
-          <a class="mdl-navigation__link" href="">Products</a>
-          <a class="mdl-navigation__link" href="">Services</a>
+          <a class="mdl-navigation__link" href="product_types.php">Products</a>
+          <a class="mdl-navigation__link" href="customer_services.php">Services</a>
           <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
         </nav>
       </div>
@@ -340,10 +339,10 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
   </div>
   <div class="col-sm-5" style="color:white">
        <ul id="ul1">
-            <li>Home</li>
-            <li>Products</li>
-            <li>Services</li>
-            <li>Contact Us</li>
+            <li><a style="color:white" href="index.php">Home</a></li>
+            <li><a style="color:white" href="product_types.php">Products</a></li>
+            <li><a style="color:white" href="customer_services.php">Services</a></li>
+            <li><a style="color:white" href="enquiry.php">Contact Us</a></li>
         </ul>
   </div>
   <div class="col-sm-2" style="color:white;text-align:right">
