@@ -1,6 +1,4 @@
-#first_line{
-  
-}
+
 #second_line{
   color:gray;
   font-size:11px;
@@ -274,12 +272,12 @@ body {
   opacity: 0;
 }
 .csslider > .arrows {
-  -webkit-touch-callout: none;
+ /* -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none;*/
 }
 .csslider.inside .navigation {
   bottom: 10px;
@@ -318,7 +316,7 @@ body {
   position: absolute;
   top: -50%;
   padding: 13px;
-  box-shadow: inset 2px -2px 0 1px #3a3a3a;
+  /*box-shadow: inset 2px -2px 0 1px #3a3a3a;*/
   cursor: pointer;
   -moz-transition: box-shadow 0.15s, margin 0.15s;
   -o-transition: box-shadow 0.15s, margin 0.15s;
@@ -326,7 +324,7 @@ body {
   transition: box-shadow 0.15s, margin 0.15s;
 }
 .csslider > .arrows label:hover {
-  box-shadow: inset 3px -3px 0 2px #F1524B;
+  /*box-shadow: inset 3px -3px 0 2px #F1524B;*/
   margin: 0 0px;
 }
 .csslider > .arrows label:before {
@@ -350,13 +348,13 @@ body {
 .csslider > input:nth-of-type(10):checked ~ .arrows > label:nth-of-type(9),
 .csslider > input:nth-of-type(11):checked ~ .arrows > label:nth-of-type(10) {
   display: block;
-  left: 0;
+  left: -5%;
   right: auto;
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
 }
 .csslider.infinity > input:last-of-type:checked ~ .arrows label.goto-first,
 .csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(2),
@@ -371,11 +369,11 @@ body {
 .csslider > input:nth-of-type(10):checked ~ .arrows > label:nth-of-type(11),
 .csslider > input:nth-of-type(11):checked ~ .arrows > label:nth-of-type(12) {
   display: block;
-  right: 0;
+  right: -5%;
   left: auto;
-  -moz-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
-  -o-transform: rotate(225deg);
-  -webkit-transform: rotate(225deg);
-  transform: rotate(225deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }

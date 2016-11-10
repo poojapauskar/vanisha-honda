@@ -25,6 +25,29 @@
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/index.js"></script>
+
+<style type="text/css">
+
+#ul1 li{
+  display: inline;
+}
+#ul1 li{
+  margin-left:7%;
+}
+#ul1{
+  margin-top:10%;
+}
+#ul2 li{
+  display: inline;
+}
+#ul2{
+  margin-top:25%;
+}
+#ul4 li{
+  display: inline;
+}
+
+</style>
 </head>
 <body style="background-color:#E4E5E7">
 
@@ -109,13 +132,13 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
           <li><p>Slide 2</p></li>
           <li>
                 <div class="row">
-                    <div class="col-sm-7" style="text-align:left">
-                      <h4 style="margin-top:5%;margin-left:5%;font-size:30px">Presenting Vanisha Honda <br> Android App</h4>
+                    <div class="col-sm-7" style="text-align:left;">
+                      <h4 style="margin-top:5%;font-size:30px;margin-left:5%">Presenting Vanisha Honda <br> Android App</h4>
                       <h5 style="font-size:15px;margin-left:5%">Introducing the new Vanisha Honda Android App. Now the power in your hands. Featuring new vehicle booking, insurance renewal, scheduling vehicle servicing, helpline and much more.</h5>
-                      <img style="width:30%;height:30%;margin-left:3%" src="images/google-play-badge.png"></img>
+                      <img style="width:30%;height:30%;margin-left:5%" src="images/playstore.png"></img>
                     </div>
-                    <div class="col-sm-5"  style="text-align:center">
-                    <img style="width:90%;height:90%;margin-left:5%;margin-top:5%" src="images/mobile.png"></img>
+                    <div class="col-sm-5"  style="text-align:right">
+                    <img style="width:47%;height:47%;margin-right:5%;margin-top:5%" src="images/mobile_app.png"></img>
                     </div>
                   </div>
           </li>
@@ -123,13 +146,17 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
           <li><p>Slide 5</p></li>
         </ul>
         <div class="arrows">
-          <label for="slides_1"></label>
-          <label for="slides_2"></label>
-          <label for="slides_3"></label>
-          <label for="slides_4"></label>
-          <label for="slides_5"></label>
-          <label for="slides_1" class="goto-first"></label>
-          <label for="slides_5" class="goto-last"></label>
+
+        
+        <!-- <img src="images/slider_btn_right.png"></img> -->
+
+          <label for="slides_1"><img src="images/slider_btn_left.png"></img></label>
+          <label for="slides_2"><img src="images/slider_btn_left.png"></img></label>
+          <label for="slides_3"><img src="images/slider_btn_left.png"></img></label>
+          <label for="slides_4"><img src="images/slider_btn_left.png"></img></label>
+          <label for="slides_5"><img src="images/slider_btn_left.png"></img></label>
+          <label for="slides_1" class="goto-first"><img src="images/slider_btn_left.png"></img></label>
+          <label for="slides_5" class="goto-last"><img src="images/slider_btn_left.png"></img></label>
         </div>
         <div class="navigation">
           <div>
@@ -156,7 +183,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 <div style="margin-bottom:50px;margin-top:0%">
     <div class="col-sm-3" style="text-align:center;border-right:1px solid #F0F2F7">
          <div class="row">
-         <img style="width:160px;height:160px" src="images/bike.jpg"></img>
+         <img style="width:160px;height:160px" src="images/activa.png"></img>
          </div>
          <div class="row">
           <h6 id="first_line">Activa 125</h6>
@@ -167,7 +194,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
     </div>
     <div class="col-sm-3" style="text-align:center;border-right:1px solid #F0F2F7">
            <div class="row">
-           <img style="width:160px;height:160px" src="images/bike.jpg"></img>
+           <img style="width:160px;height:160px" src="images/hornet.png"></img>
            </div>
            <div class="row">
             <h6 id="first_line">Hornet 160 R</h6>
@@ -178,7 +205,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
     </div>
     <div class="col-sm-3" style="text-align:center;border-right:1px solid #F0F2F7">
            <div class="row">
-           <img style="width:160px;height:160px" src="images/bike.jpg"></img>
+           <img style="width:160px;height:160px" src="images/navi.png"></img>
            </div>
            <div class="row">
             <h6 id="first_line">Navi</h6>
@@ -189,7 +216,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
     </div>
     <div class="col-sm-3" style="text-align:center;border-right:1px solid #F0F2F7">
            <div class="row">
-           <img style="width:160px;height:160px" src="images/bike.jpg"></img>
+           <img style="width:160px;height:160px" src="images/unicorn.png"></img>
            </div>
            <div class="row">
             <h6 id="first_line">CB Unicorn 160</h6>
@@ -203,11 +230,11 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 
 </div>
 
-<div style="text-align:center;background-color:white;margin-top:5%" class="row">
+<div style="text-align:center;background-color:white;margin-top:5%;padding-top:30px;padding-bottom:34px" class="row">
 <h5 style="text-align:center !important;font-weight:bold">What Our Customers Have To Say</h5>
 <h5 style="font-size:14px;text-align:center !important;margin-top:-5px">Wings of Trust</h5>
 
-<div class="row" style="text-align:left">
+<div class="row" style="text-align:left;margin-top:4%">
                <div class="col-sm-2">
                </div>
 
@@ -301,36 +328,54 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 </div>
 
 
-<div style="background-color:#607D8B;margint-top:5%" class="row">
-  <div class="col-sm-6" style="color:white;">
-       <div style="margin-left:10%">
-        <img style="width:8%;height:8%" src="images/sample_logo.jpg"></img>
-        <h5 style="margin-top:-5%;margin-left:10%">Vanisha Honda</h5>
-        <h6 style="font-size:12px">9123456789, 97181717817<br>
-        9123456789, 97181717817<br>
-        info@vanishahonda.com</h6>
-
-        <form>
-        <input type="text" placeholder="Enter email" id="email1" name="email1"></input>
-        <button style="color:white;background-color:blue" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-          Submit
-        </button>
-        </form>
-
+<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
+  <div class="col-sm-1" style="color:white;">
+  </div>
+  <div class="col-sm-3" style="color:white;">
+       <div style="margin-top:5%">
+        <img style="width:25%;height:25%" src="images/honda_logo_red.png"></img>
+        <h5 style="margin-top:-6%;margin-left:29%">Vanisha Honda</h5>
        </div>
   </div>
-  <div class="col-sm-6" style="color:white">
-       <div style="margin-left:10%">
-       <h6 style="font-size:12px;margin-top:10%">9123456789, 97181717817<br>
-        9123456789, 97181717817<br>
-        info@vanishahonda.com</h6>
-       </div>
+  <div class="col-sm-5" style="color:white">
+       <ul id="ul1">
+            <li>Home</li>
+            <li>Products</li>
+            <li>Services</li>
+            <li>Contact Us</li>
+        </ul>
+  </div>
+  <div class="col-sm-2" style="color:white;text-align:right">
+      <ul id="ul2">
+            <li><img src="images/twitter.png"></img></li>
+            <li><img src="images/facebook.png"></img></li>
+            <li><img src="images/google-plus.png"></img></li>
+        </ul>
+  </div>
+  <div class="col-sm-1">
   </div>
 </div>
 
-
-<div style="background-color:#607D8B" class="row">
-<h4 style="font-size:12px;color:white;text-align:center">2016, Vanisha Honda. All rights reserved</h4>
+<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
+  <div class="col-sm-1" style="color:white;">
+  </div>
+  <div class="col-sm-3" style="color:white;margin-top:3%">
+        <ul id="ul3" style="list-style: none;margin-left:-14%">
+            <li>+91-9987654321</li>
+            <li>+91-8314208821</li>
+            <li>info@vanishahonda.com</li>
+        </ul>
+  </div>
+  <div class="col-sm-2" style="color:white">
+  </div>
+  <div class="col-sm-5" style="color:#97A8B0;text-align:right">
+        <ul id="ul4" style="margin-top:17%">
+            <li>PRIVACY POLICY</li>
+            <li style="margin-left:10%">TERMS AND CONDITIONS</li>
+        </ul>
+  </div>
+  <div class="col-sm-1">
+  </div>
 </div>
 
 
@@ -338,29 +383,6 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
   </main>
 </div>
 
-
-<!-- <ul style="margin-top:-5%;margin-left:50%" class="nav navbar-nav">
- <li class="active"><a href="index.php">Home</a></li>
-
-<li>
-<div class="dropdown" style="margin-left:10%">
-  <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
-  <ul class="dropdown-menu">
-     <li>
-      <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
-          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
-              <ul class="dropdown-menu sub-menu">
-                <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
-                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
-                <?php } ?>
-              </ul>
-      <?php } ?>
-    </li>
-  </ul>
-</div>
-</li> -->
-
-  
 
 
 </body>
