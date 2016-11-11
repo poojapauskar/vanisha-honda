@@ -90,30 +90,6 @@ if($_POST['mobile'] != ''){
 <div class="dropdown" style="margin-left:10%">
   <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
   <ul class="dropdown-menu">
-    <!-- <li>
-      <a class="trigger right-caret">Level 1</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="#">Level 2</a></li>
-        <li>
-          <a class="trigger right-caret">Level 2</a>
-          <ul class="dropdown-menu sub-menu">
-            <li><a href="#">Level 3</a></li>
-            <li><a href="#">Level 3</a></li>
-            <li>
-              <a class="trigger right-caret">Level 3</a>
-              <ul class="dropdown-menu sub-menu">
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Level 2</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Level 1</a></li>
-    <li><a href="#">Level 1</a></li> -->
      <li>
      <a class="trigger right-caret" href="product_types.php">All Products</a>
       <a class="trigger right-caret">Scooters</a>
@@ -162,7 +138,7 @@ if($_POST['mobile'] != ''){
             <!-- Standard Select -->
             <div class="mdl-selectfield">
                   <label>Select Vehicle Model</label>
-                  <select class="browser-default" name="v_id" id="v_id">
+                  <select class="browser-default" name="v_id" id="v_id" required>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
                         <option value="" disabled selected><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></option>
                           <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
@@ -203,7 +179,7 @@ if($_POST['mobile'] != ''){
             <label class="mdl-textfield__label" for="email">Email</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
+            <input class="mdl-textfield__input" type="text" id="mobile" name="mobile" required>
             <label class="mdl-textfield__label" for="mobile">Mobile</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">

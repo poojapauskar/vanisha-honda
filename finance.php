@@ -18,6 +18,69 @@
 </head>
 <body>
 
+<?php
+$url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+$options_types_subtypes = array(
+  'http' => array(
+    'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+    'method'  => 'GET',
+  ),
+);
+$context_types_subtypes = stream_context_create($options_types_subtypes);
+$output_types_subtypes = file_get_contents($url_types_subtypes, false,$context_types_subtypes);
+/*var_dump($output_types_subtypes);*/
+$arr_types_subtypes = json_decode($output_types_subtypes,true);
+?>
+
+<?php
+
+if($_POST['mobile'] != ''){
+  $url_finance = 'https://vanisha-honda.herokuapp.com/web_app_finance/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+  $options_finance = array(
+    'http' => array(
+      'header'  => array(
+                          'NAME: '.$_POST['name'],
+                          'EMAIL: '.$_POST['email'],
+                          'MOBILE: '.$_POST['mobile'],
+                          'ADDRESS: '.$_POST['address'],
+                          'V-ID: '.$_POST['v_id'],
+                          'LOAN-AMT: '.$_POST['loan_amt'],
+                          'DOWN-PAYMENT: '.$_POST['down_payment'],
+                          'PRICE: '.$_POST['price'],
+                          'PAN-NO: '.$_POST['pan_no'],
+                          'DATE: '.$_POST['date'],
+                          ),
+      'method'  => 'GET',
+    ),
+  );
+  $context_finance = stream_context_create($options_finance);
+  $output_finance = file_get_contents($url_finance, false,$context_finance);
+  /*var_dump($output_types_subtypes);*/
+  $arr_finance = json_decode($output_finance,true);
+  if($arr_finance['status'] == 200){
+    echo "<script>alert('New Finance Request Created')</script>";
+  }
+}
+?>
+
+<?php 
+
+$url = 'http://127.0.0.1:8000/get_signed_url/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+$data = array('image_list' => ["image_1.jpg","image_2.png"]);
+
+$options = array(
+  'http' => array(
+    'header'  => "Content-type: application/json\r\n",
+    'method'  => 'PUT',
+    'content' => json_encode($data),
+  ),
+);
+$context  = stream_context_create($options);
+$result = file_get_contents($url, false, $context);
+var_dump($result);
+$arr = json_decode($result,true);
+
+?>
 
 <!-- datepicker -->
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -42,30 +105,6 @@
 <div class="dropdown" style="margin-left:10%">
   <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
   <ul class="dropdown-menu">
-    <!-- <li>
-      <a class="trigger right-caret">Level 1</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="#">Level 2</a></li>
-        <li>
-          <a class="trigger right-caret">Level 2</a>
-          <ul class="dropdown-menu sub-menu">
-            <li><a href="#">Level 3</a></li>
-            <li><a href="#">Level 3</a></li>
-            <li>
-              <a class="trigger right-caret">Level 3</a>
-              <ul class="dropdown-menu sub-menu">
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Level 2</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Level 1</a></li>
-    <li><a href="#">Level 1</a></li> -->
      <li>
      <a class="trigger right-caret" href="product_types.php">All Products</a>
       <a class="trigger right-caret">Scooters</a>
@@ -88,30 +127,8 @@
   <ul class="dropdown-menu">
     <li>
       <a class="trigger right-caret" href="book_service.php">Book Servicing</a>
-      <a class="trigger right-caret" href="insurance.php">Renew Insurance</a>
+      <a class="trigger right-caret" href="finance.php">Renew Insurance</a>
       <a class="trigger right-caret" href="finance.php">Get Finance</a>
-     <!--  <ul class="dropdown-menu sub-menu">
-        <li><a href="#">Level 2</a></li>
-        <li>
-          <a class="trigger right-caret">Level 2</a>
-          <ul class="dropdown-menu sub-menu">
-            <li><a href="#">Level 3</a></li>
-            <li><a href="#">Level 3</a></li>
-            <li>
-              <a class="trigger right-caret">Level 3</a>
-              <ul class="dropdown-menu sub-menu">
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-                <li><a href="#">Level 4</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Level 2</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Level 1</a></li>
-    <li><a href="#">Level 1</a></li> -->
   </ul>
 </div>
 </li>
@@ -130,48 +147,78 @@
   </div>
 
   <div class="col-sm-6">
-      <form action="#">
+      <form action="#" method="post">
       
+
+         <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="name" name="name">
+            <label class="mdl-textfield__label" for="name">Name</label>
+          </div>
+
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="email" name="email">
+            <label class="mdl-textfield__label" for="email">Email</label>
+          </div>
+
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="mobile" name="mobile" required>
+            <label class="mdl-textfield__label" for="mobile">Mobile</label>
+          </div>
+
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"></textarea>
+            <label class="mdl-textfield__label" for="address">Address</label>
+          </div>
+
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
-              <label>Select Vehicle</label>
-              <select class="browser-default">
-                <option value="" disabled selected>Model</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-            </div>
+                  <label>Select Vehicle Model</label>
+                  <select class="browser-default" name="v_id" id="v_id" required>
+                      <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
+                        <option value="" disabled selected><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></option>
+                          <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
+                            <option value="<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></option>
+                          <?php } ?>
+                      <?php } ?>
+                  </select>
+                </div>
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Price</label>
+            <input class="mdl-textfield__input" type="text" id="loan_amt" name="loan_amt">
+            <label class="mdl-textfield__label" for="loan_amt">Loan Amount</label>
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">Down Payment</label>
+            <input class="mdl-textfield__input" type="text" id="down_payment" name="down_payment">
+            <label class="mdl-textfield__label" for="down_payment">Down Payment</label>
+          </div>
+
+          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="price" name="price">
+            <label class="mdl-textfield__label" for="price">Price</label>
+          </div>
+
+<br>
+
+
+          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="pan_no" name="pan_no">
+            <label class="mdl-textfield__label" for="pan_no">PAN</label>
           </div>
 <br>
-          ID Proof: <input type="file" id="myFile1">
-          Add. Proof: <input type="file" id="myFile2">
-
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1">
-            <label class="mdl-textfield__label" for="sample1">PAN</label>
-          </div>
-<br>
-          6 Months Bank Statement: <input type="file" id="myFile3">
-          Salary Slip: <input type="file" id="myFile4">
-          IT Returns: <input type="file" id="myFile5">
+          ID Proof: <input type="file" id="id_proof" name="id_proof">
+          Add. Proof: <input type="file" id="add_proof" name="add_proof">
+          6 Months Bank Statement: <input type="file" id="bank_statement" name="bank_statement">
+          Salary Slip: <input type="file" id="salary_slip" name="salary_slip">
+          IT Returns: <input type="file" id="it_returns" name="it_returns">
 
           <br>
 
+<input class="mdl-textfield__input" type="hidden" id="date" name="date">
 
-
-          <button style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <button type="submit" style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Get Approval
           </button>
       </form>
