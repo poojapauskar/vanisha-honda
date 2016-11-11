@@ -65,8 +65,21 @@ if($_POST['mobile'] != ''){
 
 <?php 
 
+/*if($_FILES["file"]["tmp_name"] != ''){
+$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$charactersLength = strlen($characters);
+$randomString = '';
+for ($i = 0; $i < 4; $i++) {
+    $randomString .= $characters[rand(0, $charactersLength - 1)];
+}
+$id_proof_img_name= $randomString.rand(0, 9999).".jpg";
+$add_proof_img_name= $randomString.rand(0, 9999).".jpg";
+$bank_statement_img_name= $randomString.rand(0, 9999).".jpg";
+$salary_slip_img_name= $randomString.rand(0, 9999).".jpg";
+$it_returns_img_name= $randomString.rand(0, 9999).".jpg";
+
 $url = 'http://127.0.0.1:8000/get_signed_url/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
-$data = array('image_list' => ["image_1.jpg","image_2.png"]);
+$data = array('image_list' => [$id_proof_img_name]);
 
 $options = array(
   'http' => array(
@@ -77,10 +90,37 @@ $options = array(
 );
 $context  = stream_context_create($options);
 $result = file_get_contents($url, false, $context);
-var_dump($result);
 $arr = json_decode($result,true);
 
+echo $arr[0]['url'];
+
+    for($i=0;$i<1;$i++){
+        $url_upload = $arr[0]['url'];
+        $data_upload = base64_encode(file_get_contents($_FILES["file"]["tmp_name"]));
+
+        /*var_dump($data_upload);*/
+
+        $options_upload = array(
+          'http' => array(
+            'header'  => "Content-type: multipart/form-data\r\n",
+            'method'  => 'PUT',
+            'content' => $data_upload,
+          ),
+        );
+        $context_upload  = stream_context_create($options_upload);
+        $result_upload = file_get_contents($url_upload, false, $context_upload);
+        var_dump($result_upload);
+        $arr_upload = json_decode($result_upload,true);
+
+    }
+
+}*/
+
 ?>
+
+<form method="post" enctype="multipart/form-data" action="finance.php">
+<input type="file" name="file" id="file">
+<input type="submit" name="uploadImage" value="Upload Image"></form>
 
 <!-- datepicker -->
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -161,7 +201,7 @@ $arr = json_decode($result,true);
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="mobile" name="mobile" required>
+            <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
             <label class="mdl-textfield__label" for="mobile">Mobile</label>
           </div>
 
@@ -174,7 +214,7 @@ $arr = json_decode($result,true);
             <!-- Standard Select -->
             <div class="mdl-selectfield">
                   <label>Select Vehicle Model</label>
-                  <select class="browser-default" name="v_id" id="v_id" required>
+                  <select class="browser-default" name="v_id" id="v_id">
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
                         <option value="" disabled selected><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></option>
                           <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
