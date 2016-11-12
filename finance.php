@@ -58,69 +58,86 @@ if($_POST['mobile'] != ''){
   /*var_dump($output_types_subtypes);*/
   $arr_finance = json_decode($output_finance,true);
   if($arr_finance['status'] == 200){
-    echo "<script>alert('New Finance Request Created')</script>";
+
+            /*Upload Files*/
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $charactersLength = strlen($characters);
+            $randomString = '';
+            for ($i = 0; $i < 4; $i++) {
+                $randomString .= $characters[rand(0, $charactersLength - 1)];
+            }
+
+            $names=array();
+            $names[0]= $randomString.rand(0, 9999).".jpg";
+            $names[1]= $randomString.rand(0, 9999).".jpg";
+            $names[2]= $randomString.rand(0, 9999).".jpg";
+            $names[3]= $randomString.rand(0, 9999).".jpg";
+            $names[4]= $randomString.rand(0, 9999).".jpg";
+
+
+            /*Get Signed Urls*/
+            $url = 'https://vanisha-honda.herokuapp.com/get_signed_url/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+            $data = array('image_list' => [$names[0],$names[1],$names[2],$names[3],$names[4]]);
+
+            $options = array(
+              'http' => array(
+                'header'  => "Content-type: application/json\r\n",
+                'method'  => 'PUT',
+                'content' => json_encode($data),
+              ),
+            );
+            $context  = stream_context_create($options);
+            $result = file_get_contents($url, false, $context);
+            $arr = json_decode($result,true);
+
+            /*echo $arr[0]['url'];*/
+
+            $type=["id_proof","add_proof","bank_statement","salary_slip","it_returns"];
+
+            /*Upload Images in signed urls*/
+            for($i=0;$i<count($arr);$i++){
+
+                /*echo $arr[$i]['url'];*/
+                $url_upload = $arr[$i]['url'];
+                $filename = $_FILES[$type[$i]]["tmp_name"];
+                $file = fopen($filename, "rb");
+                $data = fread($file, filesize($filename));
+
+                $options_upload = array(
+                  'http' => array(
+                    'header'  => "Content-type: \r\n",
+                    'method'  => 'PUT',
+                    'content' => $data,
+                  ),
+                );
+                $context_upload  = stream_context_create($options_upload);
+                $result_upload = file_get_contents($url_upload, false, $context_upload);
+                /*var_dump($result_upload);*/
+                $arr_upload = json_decode($result_upload,true);
+                /*var_dump($arr_upload);*/
+
+
+                /*Update Documents Table*/
+                $url_update_doc_tab = 'https://vanisha-honda.herokuapp.com/documents/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+                $data_update_doc_tab = array('user_id' => $arr_finance['user_id'],'link' => $arr[$i]['url'],'document_name' => $names[$i],'document_type' => $type[$i]);
+
+                $options_update_doc_tab = array(
+                  'http' => array(
+                    'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                    'method'  => 'POST',
+                    'content' => http_build_query($data_update_doc_tab),
+                  ),
+                );
+                $context_update_doc_tab  = stream_context_create($options_update_doc_tab);
+                $result_update_doc_tab = file_get_contents($url_update_doc_tab, false, $context_update_doc_tab);
+                $arr_update_doc_tab = json_decode($result_update_doc_tab,true);
+
+            }
+
+            echo "<script>alert('New Finance Request Created')</script>";
   }
 }
 ?>
-
-<?php 
-
-/*if($_FILES["file"]["tmp_name"] != ''){
-$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-$charactersLength = strlen($characters);
-$randomString = '';
-for ($i = 0; $i < 4; $i++) {
-    $randomString .= $characters[rand(0, $charactersLength - 1)];
-}
-$id_proof_img_name= $randomString.rand(0, 9999).".jpg";
-$add_proof_img_name= $randomString.rand(0, 9999).".jpg";
-$bank_statement_img_name= $randomString.rand(0, 9999).".jpg";
-$salary_slip_img_name= $randomString.rand(0, 9999).".jpg";
-$it_returns_img_name= $randomString.rand(0, 9999).".jpg";
-
-$url = 'http://127.0.0.1:8000/get_signed_url/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
-$data = array('image_list' => [$id_proof_img_name]);
-
-$options = array(
-  'http' => array(
-    'header'  => "Content-type: application/json\r\n",
-    'method'  => 'PUT',
-    'content' => json_encode($data),
-  ),
-);
-$context  = stream_context_create($options);
-$result = file_get_contents($url, false, $context);
-$arr = json_decode($result,true);
-
-echo $arr[0]['url'];
-
-    for($i=0;$i<1;$i++){
-        $url_upload = $arr[0]['url'];
-        $data_upload = base64_encode(file_get_contents($_FILES["file"]["tmp_name"]));
-
-        /*var_dump($data_upload);*/
-
-        $options_upload = array(
-          'http' => array(
-            'header'  => "Content-type: multipart/form-data\r\n",
-            'method'  => 'PUT',
-            'content' => $data_upload,
-          ),
-        );
-        $context_upload  = stream_context_create($options_upload);
-        $result_upload = file_get_contents($url_upload, false, $context_upload);
-        var_dump($result_upload);
-        $arr_upload = json_decode($result_upload,true);
-
-    }
-
-}*/
-
-?>
-
-<form method="post" enctype="multipart/form-data" action="finance.php">
-<input type="file" name="file" id="file">
-<input type="submit" name="uploadImage" value="Upload Image"></form>
 
 <!-- datepicker -->
 <link rel="stylesheet" href="css/jquery-ui.css">
@@ -187,7 +204,7 @@ echo $arr[0]['url'];
   </div>
 
   <div class="col-sm-6">
-      <form action="#" method="post">
+      <form action="#" method="post" enctype="multipart/form-data">
       
 
          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
@@ -248,11 +265,11 @@ echo $arr[0]['url'];
             <label class="mdl-textfield__label" for="pan_no">PAN</label>
           </div>
 <br>
-          ID Proof: <input type="file" id="id_proof" name="id_proof">
-          Add. Proof: <input type="file" id="add_proof" name="add_proof">
-          6 Months Bank Statement: <input type="file" id="bank_statement" name="bank_statement">
-          Salary Slip: <input type="file" id="salary_slip" name="salary_slip">
-          IT Returns: <input type="file" id="it_returns" name="it_returns">
+          ID Proof: <input type="file" id="id_proof" name="id_proof" required>
+          Add. Proof: <input type="file" id="add_proof" name="add_proof" required>
+          6 Months Bank Statement: <input type="file" id="bank_statement" name="bank_statement" required>
+          Salary Slip: <input type="file" id="salary_slip" name="salary_slip" required>
+          IT Returns: <input type="file" id="it_returns" name="it_returns" required>
 
           <br>
 
