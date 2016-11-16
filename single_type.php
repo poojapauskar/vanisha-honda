@@ -141,12 +141,12 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
 
 <div class="row" style="margin-top:6%;text-align:center">
   <?php for($x=0;$x<count($arr_vehicles_of_particular_type);$x++){
-    /*echo $arr_vehicles_of_particular_type[1]['v_details'][0]['v_id'];
+    /*echo $arr_vehicles_of_particular_type[1]['v_details']['v_id'];
     echo $arr_vehicles_of_particular_type[1]['image_details']['link'];*/
     $image_url="http://res.cloudinary.com/hb3ayjpuz/image/upload/v1478944737/vanishahonda/".$arr_vehicles_of_particular_type[$x]['image_details']['link'];
     /*echo $image_url;echo "<br>"*/?>
-    <div class="col-sm-4">
-      <a href="product_detail.php?v_id=<?php echo $arr_vehicles_of_particular_type[$x]['v_details'][0]['v_id']?>">
+    <div class="col-sm-4" style="margin-bottom:5%">
+      <a href="product_detail.php?v_id=<?php echo $arr_vehicles_of_particular_type[$x]['v_details']['v_id']?>">
         <img style="width:220px;height:220px" src="<?php echo $image_url;?>"></img>
       </a>
     </div> 
@@ -155,7 +155,7 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
 
 
 </div>
-<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:7%" class="row">
+<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:3%" class="row">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">

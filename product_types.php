@@ -138,7 +138,7 @@ $arr_vehicle_types = json_decode($output_vehicle_types,true);
 <div class="row" style="margin-top:6%;text-align:center">
   <?php for($x=0;$x<$arr_vehicle_types['count'];$x++){
     $image_url="http://res.cloudinary.com/hb3ayjpuz/image/upload/v1478944737/vanishahonda/".$arr_vehicle_types['results'][$x]['link'];?>
-    <div class="col-sm-4">
+    <div class="col-sm-4"  style="margin-bottom:5%">
       <a href="single_type.php?type_id=<?php echo $arr_vehicle_types['results'][$x]['pk']?>">
         <img style="width:220px;height:220px" src="<?php echo $image_url;?>"></img>
       </a>
@@ -148,7 +148,7 @@ $arr_vehicle_types = json_decode($output_vehicle_types,true);
 
 
 </div>
-<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:7%" class="row">
+<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:3%" class="row">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
