@@ -381,14 +381,6 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 
 
   </main>
-</div>
-
-
-
-</body>
-</html>
-
-
 
 
 </body>
