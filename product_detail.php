@@ -224,7 +224,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
       <div id="container_2nd" style="width:390px;margin-top:9%">
         <ul class="collapsible"  data-collapsible="accordion">
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Body Dimensions</a></div>
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Body Dimensions</a></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -261,7 +261,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Engine</div>
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Engine</div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -307,7 +307,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Transmission</div>
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Transmission</div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -328,7 +328,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Tyres & Brakes</div>
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Tyres & Brakes</div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -361,7 +361,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Frame & Suspension</div>
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Frame & Suspension</div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -382,7 +382,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Electricals</div>
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Electricals</div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
