@@ -6,6 +6,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<!-- collapsable -->
+<link rel='stylesheet prefetch' href='css/table.css'>
 
   <link rel="stylesheet" href="css/slideshow.css">
 
@@ -211,150 +213,199 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
 
 
 
+
+
+
 <div class="container" style="background-color:#E4E5E7">
 
 <div class="row">
   <div class="col-sm-6">
 
-        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="background-color:white;margin-top:9%;">
-        <thead>
-          <th><h5>Specifications</h5></th>
-        </thead>
-        <tbody>
-            <tr>
-              <th>Price</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['price']; ?></td>
-            </tr>
-            <tr>
-              <th>Engine Displacement</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['engine_displacement']; ?></td>
-            </tr>
-            <tr>
-              <th>Power</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['power']; ?></td>
-            </tr>
-            <tr>
-              <th>Torque</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['torque']; ?></td>
-            </tr>
-            <tr>
-              <th>Mileage</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['mileage']; ?></td>
-            </tr>
-            <tr>
-              <th>Length</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['length']; ?></td>
-            </tr>
-            <tr>
-              <th>Width</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['width']; ?></td>
-            </tr>
-            <tr>
-              <th>Height</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['height']; ?></td>
-            </tr>
-            <tr>
-              <th>Front Suspension</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['front_suspension']; ?></td>
-            </tr>
-            <tr>
-              <th>Rear Suspension</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['rear_suspension']; ?></td>
-            </tr>
-            <tr>
-              <th>Wheel Base</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['wheel_base']; ?></td>
-            </tr>
-            <tr>
-              <th>Ground Clearance</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['ground_clearance']; ?></td>
-            </tr>
-            <tr>
-              <th>Kerb Tank</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['kerb_tank']; ?></td>
-            </tr>
-            <tr>
-              <th>Fuel Tank Capacity</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['fuel_tank_capacity']; ?></td>
-            </tr>
-            <tr>
-              <th>Engine Type</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['engine_type']; ?></td>
-            </tr>
-            <tr>
-              <th>Bore</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['bore']; ?></td>
-            </tr>
-            <tr>
-              <th>Stroke</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['stroke']; ?></td>
-            </tr>
-            <tr>
-              <th>Compassion Ratio</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['compassion_ratio']; ?></td>
-            </tr>
-            <tr>
-              <th>Valve System</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['valve_system']; ?></td>
-            </tr>
-            <tr>
-              <th>No. of Gears</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['no_of_gears']; ?></td>
-            </tr>
-            <tr>
-              <th>Gear Pattern</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['gear_pattern']; ?></td>
-            </tr>
-            <tr>
-              <th>Max Speed</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['max_speed']; ?></td>
-            </tr>
-            <tr>
-              <th>Tyre Size Front</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_size_front']; ?></td>
-            </tr>
-            <tr>
-              <th>Tyre Size Rear</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_size_rear']; ?></td>
-            </tr>
-            <tr>
-              <th>Tyre Type Front</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_type_front']; ?></td>
-            </tr>
-            <tr>
-              <th>Tyre Type Rear</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_type_rear']; ?></td>
-            </tr>
-            <tr>
-              <th>Brake Type/Size Front</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['brake_type_size_front']; ?></td>
-            </tr>
-            <tr>
-              <th>Brake Type/Size Rear</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['brake_type_size_rear']; ?></td>
-            </tr>
-            <tr>
-              <th>Frame Type</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['frame_type']; ?></td>
-            </tr>
-            <tr>
-              <th>Frame Type front</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['frame_type_front']; ?></td>
-            </tr>
-            <tr>
-              <th>Frame Type rear</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['frame_type_rear']; ?></td>
-            </tr>
-            <tr>
-              <th>Battery</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['battery']; ?></td>
-            </tr>
-            <tr>
-              <th>Head Lamp</th>
-              <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['head_lamp']; ?></td>
-            </tr>
-        </tbody>
-        </table>
+      <div id="container_2nd" style="width:390px;margin-top:9%">
+        <ul class="collapsible"  data-collapsible="accordion">
+            <li id="col_li">
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Body Dimensions</a></div>
+              <div class="collapsible-body">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
+                  <tbody>
+                      <tr>
+                        <th>Length</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['length']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Width</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['width']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Height</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['height']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Wheel Base</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['wheel_base']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Ground Clearance</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['ground_clearance']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Kerb Tank</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['kerb_tank']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Fuel Tank Capacity</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['fuel_tank_capacity']; ?></td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </li>
+            <li id="col_li">
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Engine</div>
+              <div class="collapsible-body">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
+                  <tbody>
+                      <tr>
+                        <th>Type</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['engine_type']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Displacement</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['engine_displacement']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Max net power</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['power']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Max net torque</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['torque']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Mileage</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['mileage']; ?></td>
+                      </tr>
+                      
+                      <tr>
+                        <th>Bore</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['bore']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Stroke</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['stroke']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Compression Ratio</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['compression_ratio']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Valve System</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['valve_system']; ?></td>
+                      </tr>
+                  </tbody>
+                  </table>
+              </div>
+            </li>
+            <li id="col_li">
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Transmission</div>
+              <div class="collapsible-body">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
+                  <tbody>
+                      <tr>
+                        <th>No. of Gears</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['no_of_gears']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Gear Pattern</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['gear_pattern']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Max Speed</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['max_speed']; ?></td>
+                      </tr>
+                  </tbody>
+                  </table>
+              </div>
+            </li>
+            <li id="col_li">
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Tyres & Brakes</div>
+              <div class="collapsible-body">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
+                  <tbody>
+                      <tr>
+                        <th>Tyre Size(Front)</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_size_front']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Tyre Size(Rear)</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_size_rear']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Tyre Type(Front)</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_type_front']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Tyre Type(Rear)</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_type_rear']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Brake Type/Size(Front)</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['brake_type_size_front']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Brake Type/Size(Rear)</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['brake_type_size_rear']; ?></td>
+                      </tr>
+                  </tbody>
+                  </table>
+              </div>
+            </li>
+            <li id="col_li">
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Frame & Suspension</div>
+              <div class="collapsible-body">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
+                  <tbody>
+                      <tr>
+                        <th>Frame Type</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['frame_type']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Front</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['frame_type_front']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Rear</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['frame_type_rear']; ?></td>
+                      </tr>
+                  </tbody>
+                  </table>
+              </div>
+            </li>
+            <li id="col_li">
+              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Electricals</div>
+              <div class="collapsible-body">
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
+                  <tbody>
+                      <tr>
+                        <th>Battery</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['battery']; ?></td>
+                      </tr>
+                      <tr>
+                        <th>Head Lamp</th>
+                        <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['head_lamp']; ?></td>
+                      </tr>
+                  </tbody>
+                  </table>
+              </div>
+            </li>
+        </ul>
+
+    </div>
+  <script src='https://code.jquery.com/jquery-2.0.0.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js'></script>
+
+
+        
   </div>
 
   <div class="col-sm-6">
