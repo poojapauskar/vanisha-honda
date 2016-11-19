@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/slideshow.css">
 
  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="css/material.indigo.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -39,6 +39,9 @@
 }
 #ul4 li{
   display: inline;
+}
+tr{
+  border-bottom: 1px solid #E4E5E7;
 }
 
 </style>
@@ -223,38 +226,41 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
   <div class="col-sm-6">
 
       <div id="container_2nd" style="width:390px;margin-top:9%">
-        <ul class="collapsible"  data-collapsible="accordion">
+        <ul class="collapsible"  data-collapsible="accordion" style="background-color:white">
+
+        <h5 style="color:gray;margin-left:2%">Specifications</h5>
+
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Body Dimensions</a></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Body Dimensions<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
                       <tr>
-                        <th>Length</th>
+                        <th style="text-align:left">Length</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['length']; ?></td>
                       </tr>
                       <tr>
-                        <th>Width</th>
+                        <th style="text-align:left">Width</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['width']; ?></td>
                       </tr>
                       <tr>
-                        <th>Height</th>
+                        <th style="text-align:left">Height</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['height']; ?></td>
                       </tr>
                       <tr>
-                        <th>Wheel Base</th>
+                        <th style="text-align:left">Wheel Base</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['wheel_base']; ?></td>
                       </tr>
                       <tr>
-                        <th>Ground Clearance</th>
+                        <th style="text-align:left">Ground Clearance</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['ground_clearance']; ?></td>
                       </tr>
                       <tr>
-                        <th>Kerb Tank</th>
+                        <th style="text-align:left">Kerb Tank</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['kerb_tank']; ?></td>
                       </tr>
                       <tr>
-                        <th>Fuel Tank Capacity</th>
+                        <th style="text-align:left">Fuel Tank Capacity</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['fuel_tank_capacity']; ?></td>
                       </tr>
                     </tbody>
@@ -262,45 +268,45 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Engine</div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Engine<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
                       <tr>
-                        <th>Type</th>
+                        <th style="text-align:left">Type</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['engine_type']; ?></td>
                       </tr>
                       <tr>
-                        <th>Displacement</th>
+                        <th style="text-align:left">Displacement</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['engine_displacement']; ?></td>
                       </tr>
                       <tr>
-                        <th>Max net power</th>
+                        <th style="text-align:left">Max net power</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['power']; ?></td>
                       </tr>
                       <tr>
-                        <th>Max net torque</th>
+                        <th style="text-align:left">Max net torque</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['torque']; ?></td>
                       </tr>
                       <tr>
-                        <th>Mileage</th>
+                        <th style="text-align:left">Mileage</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['mileage']; ?></td>
                       </tr>
                       
                       <tr>
-                        <th>Bore</th>
+                        <th style="text-align:left">Bore</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['bore']; ?></td>
                       </tr>
                       <tr>
-                        <th>Stroke</th>
+                        <th style="text-align:left">Stroke</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['stroke']; ?></td>
                       </tr>
                       <tr>
-                        <th>Compression Ratio</th>
+                        <th style="text-align:left">Compression Ratio</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['compression_ratio']; ?></td>
                       </tr>
                       <tr>
-                        <th>Valve System</th>
+                        <th style="text-align:left">Valve System</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['valve_system']; ?></td>
                       </tr>
                   </tbody>
@@ -308,20 +314,20 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Transmission</div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Transmission<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
                       <tr>
-                        <th>No. of Gears</th>
+                        <th style="text-align:left">No. of Gears</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['no_of_gears']; ?></td>
                       </tr>
                       <tr>
-                        <th>Gear Pattern</th>
+                        <th style="text-align:left">Gear Pattern</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['gear_pattern']; ?></td>
                       </tr>
                       <tr>
-                        <th>Max Speed</th>
+                        <th style="text-align:left">Max Speed</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['max_speed']; ?></td>
                       </tr>
                   </tbody>
@@ -329,32 +335,32 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Tyres & Brakes</div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Tyres & Brakes<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
                       <tr>
-                        <th>Tyre Size(Front)</th>
+                        <th style="text-align:left">Tyre Size(Front)</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_size_front']; ?></td>
                       </tr>
                       <tr>
-                        <th>Tyre Size(Rear)</th>
+                        <th style="text-align:left">Tyre Size(Rear)</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_size_rear']; ?></td>
                       </tr>
                       <tr>
-                        <th>Tyre Type(Front)</th>
+                        <th style="text-align:left">Tyre Type(Front)</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_type_front']; ?></td>
                       </tr>
                       <tr>
-                        <th>Tyre Type(Rear)</th>
+                        <th style="text-align:left">Tyre Type(Rear)</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['tyre_type_rear']; ?></td>
                       </tr>
                       <tr>
-                        <th>Brake Type/Size(Front)</th>
+                        <th style="text-align:left">Brake Type/Size(Front)</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['brake_type_size_front']; ?></td>
                       </tr>
                       <tr>
-                        <th>Brake Type/Size(Rear)</th>
+                        <th style="text-align:left">Brake Type/Size(Rear)</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['brake_type_size_rear']; ?></td>
                       </tr>
                   </tbody>
@@ -362,20 +368,20 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Frame & Suspension</div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Frame & Suspension<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
                       <tr>
-                        <th>Frame Type</th>
+                        <th style="text-align:left">Frame Type</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['frame_type']; ?></td>
                       </tr>
                       <tr>
-                        <th>Front</th>
+                        <th style="text-align:left">Front</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['frame_type_front']; ?></td>
                       </tr>
                       <tr>
-                        <th>Rear</th>
+                        <th style="text-align:left">Rear</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['frame_type_rear']; ?></td>
                       </tr>
                   </tbody>
@@ -383,16 +389,16 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><img src="images/arrow-down.png"></img>  Electricals</div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Electricals<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
                       <tr>
-                        <th>Battery</th>
+                        <th style="text-align:left">Battery</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['battery']; ?></td>
                       </tr>
                       <tr>
-                        <th>Head Lamp</th>
+                        <th style="text-align:left">Head Lamp</th>
                         <td><?php echo $arr_details_of_selected_vehicle[0]['v_details']['head_lamp']; ?></td>
                       </tr>
                   </tbody>
