@@ -53,6 +53,7 @@ if($_POST['mobile'] != ''){
   $options_web_enquiry = array(
     'http' => array(
       'header'  => array(
+                          'NAME: '.$_POST['name'],
                           'EMAIL: '.$_POST['email'],
                           'MOBILE: '.$_POST['mobile'],
                           'V-ID: '.$_POST['v_id']
@@ -410,7 +411,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
 
   <div class="col-sm-6">
 
-      <form action="#" method="post" style="width:320px;margin-top:9%;background-color:white;padding:5px 5px 5px 5px">
+      <form action="product_detail.php?v_id=<?php echo $_GET['v_id'] ?>" method="post" style="width:320px;margin-top:9%;background-color:white;padding:5px 5px 5px 5px">
 
       <h5 style="color:gray">Request Quotation</h5>
 
@@ -423,7 +424,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
           <label class="mdl-textfield__label" for="email">Email Address</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
+          <input class="mdl-textfield__input" type="text" id="mobile" name="mobile" required>
           <label class="mdl-textfield__label" for="mobile">Mobile</label>
         </div>
 
