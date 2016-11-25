@@ -16,8 +16,36 @@
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/index.js"></script>
+<style type="text/css">
+
+#ul1 li{
+  display: inline;
+}
+#ul1 li{
+  margin-left:7%;
+}
+#ul1{
+  margin-top:10%;
+}
+#ul2 li{
+  display: inline;
+}
+#ul2{
+  margin-top:25%;
+}
+#ul4 li{
+  display: inline;
+}
+tr{
+  border-bottom: 1px solid #E4E5E7;
+}
+.collapsible-header{
+  color:gray;
+}
+
+</style>
 </head>
-<body>
+<body  style="background-color:#E4E5E7">
 <?php
 $url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
 $options_types_subtypes = array(
@@ -76,59 +104,65 @@ if($_POST['mobile'] != ''){
   });
   </script>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <img style="width:8%;height:8%" src="images/sample_logo.jpg"></img>
-      <a class="" href="#">Vanisha Honda</a>
-    </div>
+<div style="" class="demo-layout-transparent mdl-layout mdl-js-layout">
+      <header style="background-color:#F1524B;height:80px" class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row" style="margin-top:2%">
+          <!-- Title -->
+          <img style="margin-top:-2%" src="images/honda_logo_white.png"></img>
+          <span style="margin-left:1%;font-size:18px;" lass="mdl-layout-title">Vanisha Honda</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="index.php">Home</a>
+            
+            <div class="mdl-navigation__link dropdown" style="">
+                  <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Products<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                     <li>
+                      <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
+                          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
+                              <ul class="dropdown-menu sub-menu">
+                                <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
+                                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
+                                <?php } ?>
+                              </ul>
+                      <?php } ?>
+                    </li>
+                  </ul>
+            </div>
+                        
+            <div class="mdl-navigation__link dropdown" style="">
+              <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Services<span class="caret"></span></a>
+              <ul id="ul_service" class="dropdown-menu">
+                <li><a href="book_service.php">Book Servicing</a></li>
+                <li><a href="insurance.php">Renew Insurance</a></li>
+                <li><a href="finance.php">Get Finance</a></li>
+              </ul>
+            </div>
 
-<ul style="margin-top:-5%;margin-left:50%" class="nav navbar-nav">
- <li class="active"><a href="index.php">Home</a></li>
+            <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Vanisha Honda</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="index.php">Home</a>
+          <a class="mdl-navigation__link" href="product_types.php">Products</a>
+          <a class="mdl-navigation__link" href="customer_services.php">Services</a>
+          <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
+        </nav>
+      </div>
 
-<li>
-<div class="dropdown" style="margin-left:10%">
-  <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
-  <ul class="dropdown-menu">
-     <li>
-     <a class="trigger right-caret" href="product_types.php">All Products</a>
-      <a class="trigger right-caret">Scooters</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="product_detail.php">Activa 123</a></li>
-        <li><a href="product_detail.php">Activa 2</a></li>
-      </ul>
-      <a class="trigger right-caret">Motorcycles</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="product_detail.php">Pleasure 2</a></li>
-      </ul>
-    </li>
-  </ul>
-</div>
-</li>
+<main class="mdl-layout__content">
 
-<li>
-<div class="dropdown" style="margin-left:20%">
-  <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Customer<span class="caret"></span></a>
-  <ul class="dropdown-menu">
-    <li>
-      <a class="trigger right-caret" href="book_service.php">Book Servicing</a>
-      <a class="trigger right-caret" href="insurance.php">Renew Insurance</a>
-      <a class="trigger right-caret" href="finance.php">Get Finance</a>
-  </ul>
-</div>
-</li>
-      <li><a style="margin-left:14%" href="customer_services.php">Services</a></li>
-      <li><a style="margin-left:14%" href="enquiry.php">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-  
 <div class="container">
-<h5 style="margin-top:-1%;color:red;text-align:center">Insurance Renewal</h5>
-
-<div class="row">
-  <div class="col-sm-6">
-    <img style="width:150px;height:150px" src="images/book_service.png"></img>
+<div class="row" style="margin-top:6%">
+  <div class="col-sm-6" style="margin-top:-4%">
+    <h4>Insurance Renewal</h4>
+    <img style="width:150px;height:150px" src="images/Insurance.png"></img>
+    <p style="font-size:13px">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 
   <div class="col-sm-6">
@@ -201,47 +235,59 @@ if($_POST['mobile'] != ''){
       </form>
   </div>
 </div>
-
-<div style="height:100px" class="row">
 </div>
 
-<div style="background-color:red" class="row">
-  <div class="col-sm-6" style="color:white;">
-       <div style="margin-left:10%">
-        <img style="width:8%;height:8%" src="images/sample_logo.jpg"></img>
-        <h5 style="margin-top:-5%;margin-left:10%">Vanisha Honda</h5>
-        <h6 style="font-size:12px">9123456789, 97181717817<br>
-        9123456789, 97181717817<br>
-        info@vanishahonda.com</h6>
-
-        <form>
-        <input type="text" placeholder="Enter email" id="email1" name="email1"></input>
-        <button style="color:white;background-color:blue" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-          Submit
-        </button>
-        </form>
-
+<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:11%" class="row">
+  <div class="col-sm-1" style="color:white;">
+  </div>
+  <div class="col-sm-3" style="color:white;">
+       <div style="margin-top:5%">
+        <img style="width:25%;height:25%" src="images/honda_logo_red.png"></img>
+        <h5 style="margin-top:-6%;margin-left:29%">Vanisha Honda</h5>
        </div>
   </div>
-  <div class="col-sm-6" style="color:white">
-       <div style="margin-left:10%">
-       <h6 style="font-size:12px;margin-top:10%">9123456789, 97181717817<br>
-        9123456789, 97181717817<br>
-        info@vanishahonda.com</h6>
-       </div>
+  <div class="col-sm-5" style="color:white">
+       <ul id="ul1">
+            <li><a style="color:white" href="index.php">Home</a></li>
+            <li><a style="color:white" href="product_types.php">Products</a></li>
+            <li><a style="color:white" href="customer_services.php">Services</a></li>
+            <li><a style="color:white" href="enquiry.php">Contact Us</a></li>
+        </ul>
+  </div>
+  <div class="col-sm-2" style="color:white;text-align:right">
+      <ul id="ul2">
+            <li><img src="images/twitter.png"></img></li>
+            <li><img src="images/facebook.png"></img></li>
+            <li><img src="images/google-plus.png"></img></li>
+        </ul>
+  </div>
+  <div class="col-sm-1">
   </div>
 </div>
 
-
-<div style="background-color:red" class="row">
-<h4 style="font-size:12px;color:white;text-align:center">2016, Vanisha Honda. All rights reserved</h4>
+<div style="background-color:#607D8B;border-bottom:1px solid #688491" class="row">
+  <div class="col-sm-1" style="color:white;">
+  </div>
+  <div class="col-sm-3" style="color:white;margin-top:3%">
+        <ul id="ul3" style="list-style: none;margin-left:-14%">
+            <li>+91-9987654321</li>
+            <li>+91-8314208821</li>
+            <li>info@vanishahonda.com</li>
+        </ul>
+  </div>
+  <div class="col-sm-2" style="color:white">
+  </div>
+  <div class="col-sm-5" style="color:#97A8B0;text-align:right">
+        <ul id="ul4" style="margin-top:17%">
+            <li>PRIVACY POLICY</li>
+            <li style="margin-left:10%">TERMS AND CONDITIONS</li>
+        </ul>
+  </div>
+  <div class="col-sm-1">
+  </div>
 </div>
 
-</body>
-</html>
-
-
-
+</main>
 
 </body>
 </html>

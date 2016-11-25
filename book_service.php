@@ -203,7 +203,7 @@ elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg
       <form action="book_service.php" method="post" style="background-color:white;width:300px;padding:2px 10px 10px 10px">
         
           <h6 style="font-size:18px">Booking Form</h6>
-          <p style="color:red;text-align:left"><?php echo $error_message ;echo $_POST['date'];?></p>
+          <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <div class="demo">
             <!-- Standard Select -->
                 <div class="mdl-selectfield">
