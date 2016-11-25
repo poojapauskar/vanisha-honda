@@ -6,6 +6,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<!-- datepicker -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-aria.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.css">
+<script src="js/datepicker.js"></script>  
+
 
   <link rel="stylesheet" href="css/slideshow.css">
 
@@ -47,6 +56,14 @@ tr{
 </head>
 <body  style="background-color:#E4E5E7">
 
+<link rel="stylesheet" href="css/jquery-ui.css">
+<script src="js/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( ".date" ).datepicker({ dateFormat: 'dd/mm/yy' });
+  });
+  </script>
+
 <?php
 $url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
 $options_types_subtypes = array(
@@ -69,7 +86,24 @@ if($_POST['req_pic_up'] == 1){
   $pick_up='No';
 }
 
-if($_POST['mobile'] != ''){
+if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['book_service_btn'])){
+  $error_message="Select a Vehicle";
+}elseif(($_POST['v_type'] == '' || $_POST['v_type'] == 'null') &&  isset($_POST['book_service_btn'])){
+  $error_message="Select Servicing Type";
+}elseif(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['book_service_btn'])){
+  $error_message="Mobile field is required";
+}elseif(preg_match('/[A-Za-z]/', $_POST['mobile'])  && isset($_POST['book_service_btn'])) {
+  $error_message="Mobile no must contain only digits";
+}
+elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) <10) && isset($_POST['book_service_btn']) ) {
+  $error_message="Mobile no. must contain 10-15 digits";
+}elseif( $_POST['email'] != '' && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && isset($_POST['book_service_btn']) ) {
+  $error_message="Email id not valid";
+}elseif(($_POST['engine_no'] == '' || $_POST['engine_no'] == 'null') &&  isset($_POST['book_service_btn'])){
+  $error_message="Vehicle Number is required";
+}elseif(($_POST['delivery_date'] == '' || $_POST['delivery_date'] == 'null') &&  isset($_POST['book_service_btn'])){
+  $error_message="Date is required";
+}elseif(isset($_POST['book_service_btn'])){
   $url_book_service = 'https://vanisha-honda.herokuapp.com/web_app_book_servicing/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
   $options_book_service = array(
     'http' => array(
@@ -98,6 +132,7 @@ if($_POST['mobile'] != ''){
   $arr_book_service = json_decode($output_book_service,true);
   if($arr_book_service['status'] == 200){
     echo "<script>alert('New Service Request Created')</script>";
+    $_POST = array();
   }
 }
 ?>
@@ -168,14 +203,36 @@ if($_POST['mobile'] != ''){
       <form action="book_service.php" method="post" style="background-color:white;width:300px;padding:2px 10px 10px 10px">
         
           <h6 style="font-size:18px">Booking Form</h6>
-
+          <p style="color:red;text-align:left"><?php echo $error_message ;echo $_POST['date'];?></p>
           <div class="demo">
             <!-- Standard Select -->
                 <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id" required>
+                  <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
                       
+<?php
 
-                      <option value="" disabled selected>Select Vehicle Model</option>
+if($_POST['v_id'] != ''){
+  $url_details_of_selected_vehicle = 'http://vanisha-honda.herokuapp.com/get_details_of_selected_vehicle/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+  $options_details_of_selected_vehicle = array(
+    'http' => array(
+      'header'  => array(
+                     'V-ID: '.$_POST['v_id'],
+                   ),
+      'method'  => 'GET',
+    ),
+  );
+  $context_details_of_selected_vehicle = stream_context_create($options_details_of_selected_vehicle);
+  $output_details_of_selected_vehicle = file_get_contents($url_details_of_selected_vehicle, false,$context_details_of_selected_vehicle);
+  /*var_dump($output_details_of_selected_vehicle);*/
+  $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehicle,true);
+  /*echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle'];*/
+}
+?>
+                      <?php if($_POST['v_id'] != ''){?>
+                       <option value="<?php echo $_POST['v_id'] ?>" selected><?php echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle']; 
+                      }else{?>
+                       <option value="" disabled selected><?php echo "Select Vehicle Model"; }?>
+
 
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
                         <option style="color:#F1524B" value="" disabled><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></option>
@@ -193,7 +250,12 @@ if($_POST['mobile'] != ''){
             <!-- Standard Select -->
             <div class="mdl-selectfield">
               <select style="background-color:white;border:none;color:gray;font-size:15px"  class="browser-default"  name="v_type" id="v_type">
-                <option style="color:gray" value="" disabled selected>Servicing Type</option>
+                
+                <?php if($_POST['v_type'] != ''){?>
+                       <option value="<?php echo $_POST['v_type'] ?>" selected><?php echo $_POST['v_type']; 
+                      }else{?>
+                       <option value="" disabled selected><?php echo "Select Servicing Type"; }?>
+
                 <option value="1st Free">1st Free</option>
                 <option value="2nd Free">2nd Free</option>
                 <option value="3rd Free">3rd Free</option>
@@ -203,33 +265,33 @@ if($_POST['mobile'] != ''){
           </div>
 
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="name" name="name">
+            <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name">
             <label class="mdl-textfield__label" for="name">Name</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="email" name="email">
+            <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="text" id="email" name="email">
             <label class="mdl-textfield__label" for="email">Email</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
+            <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile">
             <label class="mdl-textfield__label" for="mobile">Mobile</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="engine_no" name="engine_no">
+            <input value="<?php echo $_POST['engine_no'] ?>" class="mdl-textfield__input" type="text" id="engine_no" name="engine_no">
             <label class="mdl-textfield__label" for="v_no">Vehicle Number</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"></textarea>
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"><?php echo $_POST['address'] ?></textarea>
             <label class="mdl-textfield__label" for="address">Address</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="additional_service" name="additional_service"></textarea>
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="additional_service" name="additional_service"><?php echo $_POST['additional_service'] ?></textarea>
             <label class="mdl-textfield__label" for="additional_service">Other Instructions/<br> Additional Service Requirement</label>
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input style="border:none" id="delivery_date" name="delivery_date" class="date" type="text"required="True">
-            <label class="mdl-textfield__label" for="additional_service">Date DD/MM/YYY</label>
+            <input value="<?php echo $_POST['delivery_date'] ?>" class="mdl-textfield__input date" type="text" id="delivery_date" placeholder="Date DD/MM/YYY" name="delivery_date">
+            <!-- <label class="mdl-textfield__label" for="delivery_date"></label> -->
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
@@ -246,7 +308,7 @@ if($_POST['mobile'] != ''){
 <input class="mdl-textfield__input" type="hidden" id="mechanic_id" name="mechanic_id">
 
           <div style="text-align:right">
-          <button type="submit" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <button id="book_service_btn" name="book_service_btn" type="submit" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Submit
           </button>
           </div>
