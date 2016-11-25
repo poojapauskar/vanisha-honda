@@ -42,6 +42,7 @@ tr{
 .collapsible-header{
   color:gray;
 }
+
 </style>
 </head>
 <body  style="background-color:#E4E5E7">
