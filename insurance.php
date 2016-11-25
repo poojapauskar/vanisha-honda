@@ -46,6 +46,15 @@ tr{
 </style>
 </head>
 <body  style="background-color:#E4E5E7">
+
+<link rel="stylesheet" href="css/jquery-ui.css">
+<script src="js/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( ".date" ).datepicker({ dateFormat: 'dd/mm/yy' });
+  });
+  </script>
+
 <?php
 $url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
 $options_types_subtypes = array(
@@ -62,7 +71,30 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 
 <?php
 
-if($_POST['mobile'] != ''){
+if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insurance_btn'])){
+  $error_message="Select a Vehicle";
+}elseif(($_POST['purchase_date'] == '' || $_POST['purchase_date'] == 'null') &&  isset($_POST['insurance_btn'])){
+  $error_message="Purchase Date is required";
+}elseif(($_POST['policy_no'] == '' || $_POST['policy_no'] == 'null') &&  isset($_POST['insurance_btn'])){
+  $error_message="Policy No. is required";
+}elseif(($_POST['expiry_date'] == '' || $_POST['expiry_date'] == 'null') &&  isset($_POST['insurance_btn'])){
+  $error_message="Expiry Date is required";
+}elseif(($_POST['engine_no'] == '' || $_POST['engine_no'] == 'null') &&  isset($_POST['insurance_btn'])){
+  $error_message="Engine No. is required";
+}elseif(($_POST['chassis_no'] == '' || $_POST['chassis_no'] == 'null') &&  isset($_POST['insurance_btn'])){
+  $error_message="Chassis No. is required";
+}elseif(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['insurance_btn'])){
+  $error_message="Mobile field is required";
+}elseif(preg_match('/[A-Za-z]/', $_POST['mobile'])  && isset($_POST['insurance_btn'])) {
+  $error_message="Mobile no must contain only digits";
+}
+elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) <10) && isset($_POST['insurance_btn']) ) {
+  $error_message="Mobile no. must contain 10-15 digits";
+}elseif( $_POST['email'] != '' && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && isset($_POST['insurance_btn']) ) {
+  $error_message="Email id not valid";
+}elseif(($_POST['renewal_amt'] == '' || $_POST['renewal_amt'] == 'null') &&  isset($_POST['insurance_btn'])){
+  $error_message="Amount is required";
+}elseif(isset($_POST['insurance_btn'])){
   $url_insurance = 'https://vanisha-honda.herokuapp.com/web_app_insurance/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
   $options_insurance = array(
     'http' => array(
@@ -91,6 +123,7 @@ if($_POST['mobile'] != ''){
   $arr_insurance = json_decode($output_insurance,true);
   if($arr_insurance['status'] == 200){
     echo "<script>alert('New Insurance Created')</script>";
+    $_POST = array();
   }
 }
 ?>
@@ -162,76 +195,109 @@ if($_POST['mobile'] != ''){
   <div class="col-sm-6" style="margin-top:-4%">
     <h4>Insurance Renewal</h4>
     <img style="width:150px;height:150px" src="images/Insurance.png"></img>
-    <p style="font-size:13px">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
+    <p style="font-size:13px;margin-top:2%">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 
   <div class="col-sm-6">
-      <form action="#" method="post">
-      
+      <form action="insurance.php" method="post" style="background-color:white;width:300px;padding:2px 10px 10px 10px">
+          
+          <h6 style="font-size:18px">Insurance Form</h6>
+          <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
-                  <label>Select Vehicle Model</label>
-                  <select class="browser-default" name="v_id" id="v_id" required>
+                  <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
+                      
+<?php
+
+if($_POST['v_id'] != ''){
+  $url_details_of_selected_vehicle = 'http://vanisha-honda.herokuapp.com/get_details_of_selected_vehicle/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+  $options_details_of_selected_vehicle = array(
+    'http' => array(
+      'header'  => array(
+                     'V-ID: '.$_POST['v_id'],
+                   ),
+      'method'  => 'GET',
+    ),
+  );
+  $context_details_of_selected_vehicle = stream_context_create($options_details_of_selected_vehicle);
+  $output_details_of_selected_vehicle = file_get_contents($url_details_of_selected_vehicle, false,$context_details_of_selected_vehicle);
+  /*var_dump($output_details_of_selected_vehicle);*/
+  $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehicle,true);
+  /*echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle'];*/
+}
+?>
+                      <?php if($_POST['v_id'] != ''){?>
+                       <option value="<?php echo $_POST['v_id'] ?>" selected><?php echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle']; 
+                      }else{?>
+                       <option value="" disabled selected><?php echo "Select Vehicle Model"; }?>
+
+
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
-                        <option value="" disabled selected><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></option>
+                        <option style="color:#F1524B" value="" disabled><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></option>
                           <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
                             <option value="<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></option>
                           <?php } ?>
                       <?php } ?>
+
+
                   </select>
                 </div>
           </div>
 
-          <div style="align:left;margin-top:2%">
-          Purchase Date: <input style="" id="purchase_date" name="purchase_date" class="date" type="text" placeholder="DD/MM/YYY" required="True">
+          <div style="margin-top:2%" class="mdl-textfield mdl-js-textfield">
+            <input value="<?php echo $_POST['purchase_date'] ?>" class="mdl-textfield__input date" type="text" id="purchase_date" name="purchase_date" placeholder="Purchase Date DD/MM/YYY">
+            <!-- <label class="mdl-textfield__label" for="delivery_date"></label> -->
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="policy_no" name="policy_no">
+            <input value="<?php echo $_POST['policy_no'] ?>" class="mdl-textfield__input" type="text" id="policy_no" name="policy_no">
             <label class="mdl-textfield__label" for="policy_no">Policy Number</label>
           </div>
 
-          <div style="align:left;margin-top:-2%">
-          Expiry Date: <input style="" id="expiry_date" name="expiry_date" class="date" type="text" placeholder="DD/MM/YYY" required="True">
+          <div style="margin-top:-2%" class="mdl-textfield mdl-js-textfield">
+            <input value="<?php echo $_POST['expiry_date'] ?>" class="mdl-textfield__input date" type="text" id="expiry_date" name="expiry_date" placeholder="Expiry Date DD/MM/YYY">
+            <!-- <label class="mdl-textfield__label" for="delivery_date"></label> -->
           </div>
 
           <div style="margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="engine_no" name="engine_no">
+            <input value="<?php echo $_POST['engine_no'] ?>" class="mdl-textfield__input" type="text" id="engine_no" name="engine_no">
             <label class="mdl-textfield__label" for="engine_no">Vehicle Number</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="chassis_no" name="chassis_no">
+            <input value="<?php echo $_POST['chassis_no'] ?>" class="mdl-textfield__input" type="text" id="chassis_no" name="chassis_no">
             <label class="mdl-textfield__label" for="chassis_no">Chassis Number</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="name" name="name">
+            <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name">
             <label class="mdl-textfield__label" for="name">Name</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="email" name="email">
+            <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="text" id="email" name="email">
             <label class="mdl-textfield__label" for="email">Email</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="mobile" name="mobile" required>
+            <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile">
             <label class="mdl-textfield__label" for="mobile">Mobile</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"></textarea>
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"><?php echo $_POST['address'] ?></textarea>
             <label class="mdl-textfield__label" for="address">Address</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="renewal_amt" name="renewal_amt">
+            <input value="<?php echo $_POST['renewal_amt'] ?>" class="mdl-textfield__input" type="text" id="renewal_amt" name="renewal_amt">
             <label class="mdl-textfield__label" for="renewal_amt">Amount</label>
           </div>
           
           <br>
 
-<input class="mdl-textfield__input" type="hidden" id="date" name="date">
-
-          <button type="submit" style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-            Make Payment
-          </button>
+          <input class="mdl-textfield__input" type="hidden" id="date" name="date">
+        
+          <div style="text-align:right">
+            <button type="submit" id="insurance_btn" name="insurance_btn" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+              Make Payment
+            </button>
+          </div>
       </form>
   </div>
 </div>
