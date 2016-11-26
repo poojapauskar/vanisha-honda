@@ -295,7 +295,7 @@ if($_POST['v_id'] != ''){
         
           <div style="text-align:right">
             <button type="submit" id="insurance_btn" name="insurance_btn" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-              Make Payment
+              Submit
             </button>
           </div>
       </form>

@@ -15,8 +15,36 @@
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/index.js"></script>
+<style type="text/css">
+
+#ul1 li{
+  display: inline;
+}
+#ul1 li{
+  margin-left:7%;
+}
+#ul1{
+  margin-top:10%;
+}
+#ul2 li{
+  display: inline;
+}
+#ul2{
+  margin-top:25%;
+}
+#ul4 li{
+  display: inline;
+}
+tr{
+  border-bottom: 1px solid #E4E5E7;
+}
+.collapsible-header{
+  color:gray;
+}
+
+</style>
 </head>
-<body>
+<body  style="background-color:#E4E5E7">
 
 <?php
 $url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
@@ -33,8 +61,37 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 ?>
 
 <?php
-
-if($_POST['mobile'] != ''){
+if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['finance_btn'])){
+  $error_message="Mobile field is required";
+}elseif(preg_match('/[A-Za-z]/', $_POST['mobile'])  && isset($_POST['finance_btn'])) {
+  $error_message="Mobile no must contain only digits";
+}elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) <10) && isset($_POST['finance_btn']) ) {
+  $error_message="Mobile no. must contain 10-15 digits";
+}elseif( $_POST['email'] != '' && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && isset($_POST['finance_btn']) ) {
+  $error_message="Email id not valid";
+}elseif(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['finance_btn'])){
+  $error_message="Select a Vehicle";
+}elseif(($_POST['loan_amt'] == '' || $_POST['loan_amt'] == 'null') &&  isset($_POST['finance_btn'])){
+  $error_message="Loan Amount is required";
+}elseif(($_POST['down_payment'] == '' || $_POST['down_payment'] == 'null') &&  isset($_POST['finance_btn'])){
+  $error_message="Down Payment is required";
+}elseif(($_POST['price'] == '' || $_POST['price'] == 'null') &&  isset($_POST['finance_btn'])){
+  $error_message="Price is required";
+}elseif(($_POST['pan_no'] == '' || $_POST['pan_no'] == 'null') &&  isset($_POST['finance_btn'])){
+  $error_message="Pan No. is required";
+}elseif(!preg_match('/^([a-zA-Z]{5})(\d{4})([a-zA-Z]{1})$/', $_POST['pan_no'])  && isset($_POST['finance_btn'])) {
+  $error_message="Invalid Pan No.";
+}elseif(($_POST['id_proof'] == '' || $_POST['id_proof'] == 'null') &&  isset($_POST['finance_btn'])){
+  $error_message="Id Proof is required";
+}elseif(($_POST['add_proof'] == '' || $_POST['add_proof'] == 'null') &&  isset($_POST['finance_btn'])){
+  $error_message="Address Proof is required";
+}elseif(($_POST['bank_statement'] == '' || $_POST['bank_statement'] == 'null') &&  isset($_POST['finance_btn'])){
+  $error_message="Bank Statement is required";
+}elseif(($_POST['salary_slip'] == '' || $_POST['salary_slip'] == 'null') &&  isset($_POST['finance_btn'])){
+  $error_message="Salary Slip is required";
+}elseif(($_POST['it_returns'] == '' || $_POST['it_returns'] == 'null') &&  isset($_POST['finance_btn'])){
+  $error_message="IT Returns is required";
+}elseif(isset($_POST['finance_btn'])){
   $url_finance = 'https://vanisha-honda.herokuapp.com/web_app_finance/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
   $options_finance = array(
     'http' => array(
@@ -135,6 +192,7 @@ if($_POST['mobile'] != ''){
             }
 
             echo "<script>alert('New Finance Request Created')</script>";
+            $_POST = array();
   }
 }
 ?>
@@ -148,112 +206,148 @@ if($_POST['mobile'] != ''){
   });
   </script>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <img style="width:8%;height:8%" src="images/sample_logo.jpg"></img>
-      <a class="" href="#">Vanisha Honda</a>
-    </div>
+<div style="" class="demo-layout-transparent mdl-layout mdl-js-layout">
+      <header style="background-color:#F1524B;height:80px" class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row" style="margin-top:2%">
+          <!-- Title -->
+          <img style="margin-top:-2%" src="images/honda_logo_white.png"></img>
+          <span style="margin-left:1%;font-size:18px;" lass="mdl-layout-title">Vanisha Honda</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="index.php">Home</a>
+            
+            <div class="mdl-navigation__link dropdown" style="">
+                  <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Products<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                     <li>
+                      <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
+                          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
+                              <ul class="dropdown-menu sub-menu">
+                                <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
+                                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
+                                <?php } ?>
+                              </ul>
+                      <?php } ?>
+                    </li>
+                  </ul>
+            </div>
+                        
+            <div class="mdl-navigation__link dropdown" style="">
+              <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Services<span class="caret"></span></a>
+              <ul id="ul_service" class="dropdown-menu">
+                <li><a href="book_service.php">Book Servicing</a></li>
+                <li><a href="insurance.php">Renew Insurance</a></li>
+                <li><a href="finance.php">Get Finance</a></li>
+              </ul>
+            </div>
 
-<ul style="margin-top:-5%;margin-left:50%" class="nav navbar-nav">
- <li class="active"><a href="index.php">Home</a></li>
+            <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Vanisha Honda</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="index.php">Home</a>
+          <a class="mdl-navigation__link" href="product_types.php">Products</a>
+          <a class="mdl-navigation__link" href="customer_services.php">Services</a>
+          <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
+        </nav>
+      </div>
 
-<li>
-<div class="dropdown" style="margin-left:10%">
-  <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Products<span class="caret"></span></a>
-  <ul class="dropdown-menu">
-     <li>
-     <a class="trigger right-caret" href="product_types.php">All Products</a>
-      <a class="trigger right-caret">Scooters</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="product_detail.php">Activa 123</a></li>
-        <li><a href="product_detail.php">Activa 2</a></li>
-      </ul>
-      <a class="trigger right-caret">Motorcycles</a>
-      <ul class="dropdown-menu sub-menu">
-        <li><a href="product_detail.php">Pleasure 2</a></li>
-      </ul>
-    </li>
-  </ul>
-</div>
-</li>
+<main class="mdl-layout__content">
 
-<li>
-<div class="dropdown" style="margin-left:20%">
-  <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Customer<span class="caret"></span></a>
-  <ul class="dropdown-menu">
-    <li>
-      <a class="trigger right-caret" href="book_service.php">Book Servicing</a>
-      <a class="trigger right-caret" href="finance.php">Renew Insurance</a>
-      <a class="trigger right-caret" href="finance.php">Get Finance</a>
-  </ul>
-</div>
-</li>
-      <li><a style="margin-left:14%" href="customer_services.php">Services</a></li>
-      <li><a style="margin-left:14%" href="enquiry.php">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-  
 <div class="container">
-<h5 style="margin-top:-1%;color:red;text-align:center">Get Finance</h5>
-
-<div class="row">
-  <div class="col-sm-6">
-    <img style="width:150px;height:150px" src="images/book_service.png"></img>
+<div class="row" style="margin-top:6%">
+  <div class="col-sm-6" style="margin-top:-4%">
+    <h4>Get Finance</h4>
+    <img style="width:150px;height:150px" src="images/Finance_2.png"></img>
+    <p style="font-size:13px;margin-top:2%">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 
   <div class="col-sm-6">
-      <form action="#" method="post" enctype="multipart/form-data">
+      <form action="finance.php" method="post" style="background-color:white;width:300px;padding:2px 10px 10px 10px">
+        
+          <h6 style="font-size:18px">Get Finance</h6>
+          <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
       
 
          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="name" name="name">
+            <input value="<?php echo $_POST['name']; ?>" class="mdl-textfield__input" type="text" id="name" name="name">
             <label class="mdl-textfield__label" for="name">Name</label>
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="email" name="email">
+            <input value="<?php echo $_POST['email']; ?>" class="mdl-textfield__input" type="text" id="email" name="email">
             <label class="mdl-textfield__label" for="email">Email</label>
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
+            <input value="<?php echo $_POST['mobile']; ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile">
             <label class="mdl-textfield__label" for="mobile">Mobile</label>
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"></textarea>
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"><?php echo $_POST['address']; ?></textarea>
             <label class="mdl-textfield__label" for="address">Address</label>
           </div>
 
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
-                  <label>Select Vehicle Model</label>
-                  <select class="browser-default" name="v_id" id="v_id">
+                  <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
+                      
+<?php
+
+if($_POST['v_id'] != ''){
+  $url_details_of_selected_vehicle = 'http://vanisha-honda.herokuapp.com/get_details_of_selected_vehicle/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+  $options_details_of_selected_vehicle = array(
+    'http' => array(
+      'header'  => array(
+                     'V-ID: '.$_POST['v_id'],
+                   ),
+      'method'  => 'GET',
+    ),
+  );
+  $context_details_of_selected_vehicle = stream_context_create($options_details_of_selected_vehicle);
+  $output_details_of_selected_vehicle = file_get_contents($url_details_of_selected_vehicle, false,$context_details_of_selected_vehicle);
+  /*var_dump($output_details_of_selected_vehicle);*/
+  $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehicle,true);
+  /*echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle'];*/
+}
+?>
+                      <?php if($_POST['v_id'] != ''){?>
+                       <option value="<?php echo $_POST['v_id'] ?>" selected><?php echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle']; 
+                      }else{?>
+                       <option value="" disabled selected><?php echo "Select Vehicle Model"; }?>
+
+
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
-                        <option value="" disabled selected><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></option>
+                        <option style="color:#F1524B" value="" disabled><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></option>
                           <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
                             <option value="<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></option>
                           <?php } ?>
                       <?php } ?>
+
+
                   </select>
                 </div>
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="loan_amt" name="loan_amt">
+            <input value="<?php echo $_POST['loan_amt']; ?>" class="mdl-textfield__input" type="text" id="loan_amt" name="loan_amt">
             <label class="mdl-textfield__label" for="loan_amt">Loan Amount</label>
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="down_payment" name="down_payment">
+            <input value="<?php echo $_POST['down_payment']; ?>" class="mdl-textfield__input" type="text" id="down_payment" name="down_payment">
             <label class="mdl-textfield__label" for="down_payment">Down Payment</label>
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="price" name="price">
+            <input value="<?php echo $_POST['price']; ?>" class="mdl-textfield__input" type="text" id="price" name="price">
             <label class="mdl-textfield__label" for="price">Price</label>
           </div>
 
@@ -261,67 +355,103 @@ if($_POST['mobile'] != ''){
 
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="pan_no" name="pan_no">
+            <input value="<?php echo $_POST['pan_no']; ?>" class="mdl-textfield__input" type="text" id="pan_no" name="pan_no">
             <label class="mdl-textfield__label" for="pan_no">PAN</label>
           </div>
 <br>
-          ID Proof: <input type="file" id="id_proof" name="id_proof" required>
-          Add. Proof: <input type="file" id="add_proof" name="add_proof" required>
-          6 Months Bank Statement: <input type="file" id="bank_statement" name="bank_statement" required>
-          Salary Slip: <input type="file" id="salary_slip" name="salary_slip" required>
-          IT Returns: <input type="file" id="it_returns" name="it_returns" required>
+
+          <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
+            <input type="file" id="id_proof" name="id_proof">
+            <label class="mdl-textfield__label" style="margin-top:-10%" for="id_proof">ID Proof</label>
+          </div>
+
+          <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
+            <input type="file" id="add_proof" name="add_proof">
+            <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof">Address Proof</label>
+          </div>
+
+          <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
+            <input type="file" id="bank_statement" name="bank_statement">
+            <label class="mdl-textfield__label" style="margin-top:-10%" for="bank_statement">Bank Statement</label>
+          </div>
+
+          <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
+            <input type="file" id="salary_slip" name="salary_slip">
+            <label class="mdl-textfield__label" style="margin-top:-10%" for="salary_slip">Salary Slip</label>
+          </div>
+
+          <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
+            <input type="file" id="it_returns" name="it_returns">
+            <label class="mdl-textfield__label" style="margin-top:-10%" for="it_returns">IT Returns</label>
+          </div>
 
           <br>
 
 <input class="mdl-textfield__input" type="hidden" id="date" name="date">
 
-          <button type="submit" style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <div style="text-align:right">
+          <button type="submit" id="finance_btn" name="finance_btn" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Get Approval
           </button>
+          </div>
+
       </form>
   </div>
 </div>
-
-<div style="height:100px" class="row">
 </div>
 
-<div style="background-color:red" class="row">
-  <div class="col-sm-6" style="color:white;">
-       <div style="margin-left:10%">
-        <img style="width:8%;height:8%" src="images/sample_logo.jpg"></img>
-        <h5 style="margin-top:-5%;margin-left:10%">Vanisha Honda</h5>
-        <h6 style="font-size:12px">9123456789, 97181717817<br>
-        9123456789, 97181717817<br>
-        info@vanishahonda.com</h6>
-
-        <form>
-        <input type="text" placeholder="Enter email" id="email1" name="email1"></input>
-        <button style="color:white;background-color:blue" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-          Submit
-        </button>
-        </form>
-
+  
+<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:11%" class="row">
+  <div class="col-sm-1" style="color:white;">
+  </div>
+  <div class="col-sm-3" style="color:white;">
+       <div style="margin-top:5%">
+        <img style="width:25%;height:25%" src="images/honda_logo_red.png"></img>
+        <h5 style="margin-top:-6%;margin-left:29%">Vanisha Honda</h5>
        </div>
   </div>
-  <div class="col-sm-6" style="color:white">
-       <div style="margin-left:10%">
-       <h6 style="font-size:12px;margin-top:10%">9123456789, 97181717817<br>
-        9123456789, 97181717817<br>
-        info@vanishahonda.com</h6>
-       </div>
+  <div class="col-sm-5" style="color:white">
+       <ul id="ul1">
+            <li><a style="color:white" href="index.php">Home</a></li>
+            <li><a style="color:white" href="product_types.php">Products</a></li>
+            <li><a style="color:white" href="customer_services.php">Services</a></li>
+            <li><a style="color:white" href="enquiry.php">Contact Us</a></li>
+        </ul>
+  </div>
+  <div class="col-sm-2" style="color:white;text-align:right">
+      <ul id="ul2">
+            <li><img src="images/twitter.png"></img></li>
+            <li><img src="images/facebook.png"></img></li>
+            <li><img src="images/google-plus.png"></img></li>
+        </ul>
+  </div>
+  <div class="col-sm-1">
   </div>
 </div>
 
-
-<div style="background-color:red" class="row">
-<h4 style="font-size:12px;color:white;text-align:center">2016, Vanisha Honda. All rights reserved</h4>
+<div style="background-color:#607D8B;border-bottom:1px solid #688491" class="row">
+  <div class="col-sm-1" style="color:white;">
+  </div>
+  <div class="col-sm-3" style="color:white;margin-top:3%">
+        <ul id="ul3" style="list-style: none;margin-left:-14%">
+            <li>+91-9987654321</li>
+            <li>+91-8314208821</li>
+            <li>info@vanishahonda.com</li>
+        </ul>
+  </div>
+  <div class="col-sm-2" style="color:white">
+  </div>
+  <div class="col-sm-5" style="color:#97A8B0;text-align:right">
+        <ul id="ul4" style="margin-top:17%">
+            <li>PRIVACY POLICY</li>
+            <li style="margin-left:10%">TERMS AND CONDITIONS</li>
+        </ul>
+  </div>
+  <div class="col-sm-1">
+  </div>
 </div>
 
-</body>
-</html>
-
-
-
+</main>
 
 </body>
 </html>
