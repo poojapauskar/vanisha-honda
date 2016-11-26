@@ -432,15 +432,15 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
       <h5 style="color:gray">Request Quotation</h5>
       <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
 
-        <div class="mdl-textfield mdl-js-textfield">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" type="text" id="name" name="name">
           <label class="mdl-textfield__label" for="name">Full Name</label>
         </div>
-        <div class="mdl-textfield mdl-js-textfield">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" type="text" id="email" name="email">
           <label class="mdl-textfield__label" for="email">Email Address</label>
         </div>
-        <div class="mdl-textfield mdl-js-textfield">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
           <label class="mdl-textfield__label" for="mobile">Mobile</label>
         </div>

@@ -274,22 +274,22 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
       
 
-         <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+         <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['name']; ?>" class="mdl-textfield__input" type="text" id="name" name="name">
             <label class="mdl-textfield__label" for="name">Name</label>
           </div>
 
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['email']; ?>" class="mdl-textfield__input" type="text" id="email" name="email">
             <label class="mdl-textfield__label" for="email">Email</label>
           </div>
 
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['mobile']; ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile">
             <label class="mdl-textfield__label" for="mobile">Mobile</label>
           </div>
 
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"><?php echo $_POST['address']; ?></textarea>
             <label class="mdl-textfield__label" for="address">Address</label>
           </div>
@@ -336,17 +336,17 @@ if($_POST['v_id'] != ''){
                 </div>
           </div>
 
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
+          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['loan_amt']; ?>" class="mdl-textfield__input" type="text" id="loan_amt" name="loan_amt">
             <label class="mdl-textfield__label" for="loan_amt">Loan Amount</label>
           </div>
 
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
+          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['down_payment']; ?>" class="mdl-textfield__input" type="text" id="down_payment" name="down_payment">
             <label class="mdl-textfield__label" for="down_payment">Down Payment</label>
           </div>
 
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
+          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['price']; ?>" class="mdl-textfield__input" type="text" id="price" name="price">
             <label class="mdl-textfield__label" for="price">Price</label>
           </div>
@@ -354,7 +354,7 @@ if($_POST['v_id'] != ''){
 <br>
 
 
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield">
+          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['pan_no']; ?>" class="mdl-textfield__input" type="text" id="pan_no" name="pan_no">
             <label class="mdl-textfield__label" for="pan_no">PAN</label>
           </div>

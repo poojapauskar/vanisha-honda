@@ -254,32 +254,32 @@ if($_POST['v_id'] != ''){
             </div>
           </div>
 
-          <div class="mdl-textfield mdl-js-textfield">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name">
             <label class="mdl-textfield__label" for="name">Name</label>
           </div>
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="text" id="email" name="email">
             <label class="mdl-textfield__label" for="email">Email</label>
           </div>
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile">
             <label class="mdl-textfield__label" for="mobile">Mobile</label>
           </div>
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['engine_no'] ?>" class="mdl-textfield__input" type="text" id="engine_no" name="engine_no">
             <label class="mdl-textfield__label" for="v_no">Vehicle Number</label>
           </div>
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"><?php echo $_POST['address'] ?></textarea>
             <label class="mdl-textfield__label" for="address">Address</label>
           </div>
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <textarea class="mdl-textfield__input" type="text" rows= "3" id="additional_service" name="additional_service"><?php echo $_POST['additional_service'] ?></textarea>
             <label class="mdl-textfield__label" for="additional_service">Other Instructions/<br> Additional Service Requirement</label>
           </div>
 
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['delivery_date'] ?>" class="mdl-textfield__input date" type="text" id="delivery_date" placeholder="Date DD/MM/YYY" name="delivery_date">
             <!-- <label class="mdl-textfield__label" for="delivery_date"></label> -->
           </div>
