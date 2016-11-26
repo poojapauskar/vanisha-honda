@@ -87,8 +87,7 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
   $error_message="Mobile field is required";
 }elseif(preg_match('/[A-Za-z]/', $_POST['mobile'])  && isset($_POST['insurance_btn'])) {
   $error_message="Mobile no must contain only digits";
-}
-elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) <10) && isset($_POST['insurance_btn']) ) {
+}elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) <10) && isset($_POST['insurance_btn']) ) {
   $error_message="Mobile no. must contain 10-15 digits";
 }elseif( $_POST['email'] != '' && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && isset($_POST['insurance_btn']) ) {
   $error_message="Email id not valid";

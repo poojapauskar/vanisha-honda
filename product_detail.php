@@ -53,7 +53,15 @@ tr{
 
 <?php
 
-if($_POST['mobile'] != ''){
+if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['submit_btn'])){
+  $error_message="Mobile field is required";
+}elseif(preg_match('/[A-Za-z]/', $_POST['mobile'])  && isset($_POST['submit_btn'])) {
+  $error_message="Mobile no must contain only digits";
+}elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) <10) && isset($_POST['submit_btn']) ) {
+  $error_message="Mobile no. must contain 10-15 digits";
+}elseif( $_POST['email'] != '' && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && isset($_POST['submit_btn']) ) {
+  $error_message="Email id not valid";
+}elseif(isset($_POST['submit_btn'])){
   $url_web_enquiry = 'https://vanisha-honda.herokuapp.com/web_app_enquiry/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
   $options_web_enquiry = array(
     'http' => array(
@@ -422,6 +430,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
       <form action="product_detail.php?v_id=<?php echo $_GET['v_id'] ?>" method="post" style="width:320px;margin-top:9%;background-color:white;padding:5px 5px 5px 5px">
 
       <h5 style="color:gray">Request Quotation</h5>
+      <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
 
         <div class="mdl-textfield mdl-js-textfield">
           <input class="mdl-textfield__input" type="text" id="name" name="name">
@@ -432,7 +441,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
           <label class="mdl-textfield__label" for="email">Email Address</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" id="mobile" name="mobile" required>
+          <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
           <label class="mdl-textfield__label" for="mobile">Mobile</label>
         </div>
 
@@ -448,7 +457,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
         <input class="mdl-textfield__input" type="hidden" id="duration" name="duration">
         <br>
         <div style="text-align:right">
-          <button type="submit" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <button id="submit_btn" name="submit_btn" type="submit" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Submit
           </button>
         </div>
