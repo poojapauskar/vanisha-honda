@@ -250,9 +250,12 @@ if($_POST['v_id'] != ''){
         <input class="mdl-textfield__input" type="hidden" id="pincode" name="pincode">
         <input class="mdl-textfield__input" type="hidden" id="duration" name="duration">
 
-          <button id="enq_btn" name="enq_btn" type="submit" style="background-color:red;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        <div style="text-align:right">
+          <button id="enq_btn" name="enq_btn" type="submit" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             Submit
           </button>
+        </div>
+        
       </form>
   </div>
 </div>
