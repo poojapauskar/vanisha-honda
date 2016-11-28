@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style type="text/css">
-#map-canvas{
-  height: 500px;
-  width: 500px;
-  border: 3px solid black;
-}
-</style>
-<script type="text/javascript">
-  // if HTML DOM Element that contains the map is found...
+// if HTML DOM Element that contains the map is found...
 if (document.getElementById('map-canvas')){
  
     // Coordinates to center the map
@@ -26,14 +15,3 @@ if (document.getElementById('map-canvas')){
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
 }
-</script>
-</head>
-<body>
-
-<h1>My First Google Map</h1>
-
-<div id="map-canvas"></div>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
-
-</body>
-</html>
