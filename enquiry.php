@@ -165,8 +165,8 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
   <div class="col-sm-6" style="margin-top:-4%">
     <h4>Contact Us</h4>
     <h5 style="font-size:18px;margin-top:-1%">Drop Us a mail at: <span style="font-size:14px">info@vanishahonda.com</span></h5>
-    <h5 style="font-size:18px;margin-top:-1%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Reach Us on: <span style="font-size:14px">+91-9876543210</span></h5>
-    <h5 style="margin-top:-2%"><span style="font-size:14px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp +91-9876012345</span></h5>
+    <h5 style="font-size:18px;margin-top:-1%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Reach Us on: <span style="font-size:14px">+91-9876543210</span></h5>
+    <h5 style="margin-top:-2%"><span style="font-size:14px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp +91-9876012345</span></h5>
     <p style="font-size:13px;margin-top:2%">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 
