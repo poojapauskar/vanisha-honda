@@ -258,7 +258,7 @@ if($_POST['v_id'] != ''){
 </div>
 </div>
 
-<div style="background-color:#607D8B;margin-top:8%" class="row">
+<div style="background-color:#607D8B;margin-top:5%" class="row">
   <div class="col-sm-1">
   </div>
   <div class="col-sm-4" style="color:white;margin-top:1%"> 
