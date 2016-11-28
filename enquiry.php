@@ -44,20 +44,6 @@ tr{
 
 </style>
 
-
-<!-- maps -->
-<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<style>
-      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-      #map-canvas{
-  height: 150px;
-  width: 100%;
-}
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-
 </head>
 <body  style="background-color:#E4E5E7">
 <?php
@@ -292,10 +278,25 @@ if($_POST['v_id'] != ''){
 </div>
 
 
+
+<!-- maps start-->
+<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      #map-canvas{
+  height: 150px;
+  width: 100%;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 <div id="map-canvas"></div>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYNU-mlRq2sPcsN_Cia4tm0p6oujPy998&v=3.exp&sensor=false" type="text/javascript"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/map.js"></script>
+<!-- maps end -->
+
+
 
 <div style="background-color:#607D8B;border-bottom:1px solid #688491;" class="row">
   <div class="col-sm-1" style="color:white;">
