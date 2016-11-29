@@ -42,6 +42,9 @@ tr{
 .collapsible-header{
   color:gray;
 }
+.serv:hover{
+  text-decoration: none;
+}
 
 </style>
 </head>
@@ -120,7 +123,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
  <div style="margin-top:5.5%;">
   <div style="text-align:center;margin-bottom:13%" class="col-sm-4">
     <div class="row">
-      <a href="book_service.php">
+      <a class="serv" href="book_service.php">
       <img style="width:200px;height:200px" src="images/book_servicing.png"></img>
       <p style="margin-top:-30%;color:white;font-size:25px">Book Servicing</p>
       </a>
@@ -128,7 +131,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
   </div>
   <div style="text-align:center;margin-bottom:5%" class="col-sm-4">
     <div class="row">
-      <a href="insurance.php">
+      <a class="serv" href="insurance.php">
       <img style="width:200px;height:200px" src="images/Insurance.png"></img>
       <p style="margin-top:-30%;color:white;font-size:25px">Insurance <br>Renewal</p>
       </a>
@@ -136,7 +139,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
   </div>
   <div style="text-align:center;margin-bottom:5%" class="col-sm-4">
     <div class="row">
-      <a href="finance.php">
+      <a class="serv" href="finance.php">
       <img style="width:200px;height:200px" src="images/Finance.png"></img>
       <p style="margin-top:-30%;color:white;font-size:25px">Get Finance</p>
       </a>
