@@ -170,7 +170,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
   
 
 
-<div class="row" style="text-align:left;background-color:white">
+<div class="row" style="text-align:left;background-color:white;margin-top:1%">
   <div class="container">
       <div class="col-sm-6">
       <h3><?php echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle']; ?></h3>

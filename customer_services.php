@@ -115,9 +115,10 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 
 <main class="mdl-layout__content">
     
-<div class="container">
-<div class="row" style="margin-top:8%">
-  <div style="text-align:center" class="col-sm-4">
+
+<div class="row" style="background-color:white;margin-top:1%;text-align:center">
+ <div style="margin-top:5.5%;">
+  <div style="text-align:center;margin-bottom:13%" class="col-sm-4">
     <div class="row">
       <a href="book_service.php">
       <img style="width:200px;height:200px" src="images/book_servicing.png"></img>
@@ -125,7 +126,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
       </a>
     </div>
   </div>
-  <div style="text-align:center" class="col-sm-4">
+  <div style="text-align:center;margin-bottom:5%" class="col-sm-4">
     <div class="row">
       <a href="insurance.php">
       <img style="width:200px;height:200px" src="images/Insurance.png"></img>
@@ -133,7 +134,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
       </a>
     </div>
   </div>
-  <div style="text-align:center" class="col-sm-4">
+  <div style="text-align:center;margin-bottom:5%" class="col-sm-4">
     <div class="row">
       <a href="finance.php">
       <img style="width:200px;height:200px" src="images/Finance.png"></img>
@@ -141,10 +142,11 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
       </a>
     </div>
   </div>
-</div>
+ </div>
 </div>
 
-<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:11%" class="row">
+
+<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:1%" class="row">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
