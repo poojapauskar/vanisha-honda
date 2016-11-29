@@ -42,7 +42,7 @@ tr{
 .collapsible-header{
   color:gray;
 }
-.serv:hover{
+.serv,.serv:hover,.serv:visited,.serv:active,.serv:focus{
   text-decoration: none;
 }
 
