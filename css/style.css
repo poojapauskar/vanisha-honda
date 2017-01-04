@@ -1,0 +1,379 @@
+
+#second_line{
+  color:gray;
+  font-size:11px;
+  margin-top: -7%;
+}
+#third_line{
+  margin-top: -4%;
+}
+#fourth_line{
+  color:gray;
+  font-size:11px;
+  margin-top: -7%;
+}
+
+#heading{
+  text-align:center;
+  border-radius:5px;
+  background-color:#F1524B;
+  padding:15px 0px 15px 0px;
+  color:white;
+  margin-top:0%
+}
+
+#content{
+  padding:15px 15px 15px 25px;
+}
+
+.demo-layout-transparent {
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+/* ==========  Select Field Variables ========== */
+$color-black: "0,0,0";
+$select-background-color: transparent;
+$select-border-color: unquote("rgba(#{$color-black}, 0.12)") !default;
+$select-font-size: 16px;
+$select-color: unquote("rgba(#{$color-black}, 0.26)") !default;
+$select-padding: 4px;
+
+/* ==========  Select Field ========== */
+
+/* Style Select Field */
+select {
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  padding: $select-padding 0;
+  font-size: $select-font-size;
+  color: $select-color;
+  border: none;
+  border-bottom: 1px solid $select-border-color;
+}
+
+/* Remove focus */
+select:focus {
+  outline: none}
+
+/* Hide label */
+.mdl-selectfield label {display: none;}
+/* Use custom arrow */
+.mdl-selectfield select {appearance: none}
+.mdl-selectfield {
+  font-family: 'Roboto','Helvetica','Arial',sans-serif;
+  position: relative;
+    &:after {
+        position: absolute;
+        top: 0.75em;
+        right: 0.5em;
+        /* Styling the down arrow */
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: '';
+        border-left: .25em solid transparent;
+        border-right: .25em solid transparent;
+        border-top: .375em solid $select-border-color;
+        pointer-events: none;
+    }
+}
+
+/* ==========  Demo CSS ========== */
+body {
+  padding: 0.1px;
+  background: #fafafa;
+  font-family: 'Roboto','Helvetica','Arial',sans-serif;
+}
+.demo {
+  width: 200px;
+  /*padding: 20px;*/
+ /* margin: 0 auto;*/
+ /* top: 50%;*/
+  /*margin-top: -2em;*/
+  /*position: absolute;*/
+ /* right: 0;
+  left: 0;*/
+}
+
+
+
+.dropdown-menu>li
+{   position:relative;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+    cursor:pointer;
+}
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    display:none;
+    margin-top: -1px;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+    border-left-color:#fff;
+    box-shadow:none;
+}
+.right-caret:after,.left-caret:after
+ {  content:"";
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    display: inline-block;
+    height: 0;
+    vertical-align: middle;
+    width: 0;
+    margin-left:5px;
+}
+.right-caret:after
+{   border-left: 5px solid #F1524B;
+}
+.left-caret:after
+{   border-right: 5px solid #F1524B;
+}
+
+.csslider {
+  -moz-perspective: 1300px;
+  -ms-perspective: 1300px;
+  -webkit-perspective: 1300px;
+  perspective: 1300px;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  margin-bottom: 22px;
+}
+.csslider > input {
+  display: none;
+}
+.csslider > input:nth-of-type( 10):checked ~ ul li:first-of-type {
+  margin-left: -900%;
+}
+.csslider > input:nth-of-type( 9):checked ~ ul li:first-of-type {
+  margin-left: -800%;
+}
+.csslider > input:nth-of-type( 8):checked ~ ul li:first-of-type {
+  margin-left: -700%;
+}
+.csslider > input:nth-of-type( 7):checked ~ ul li:first-of-type {
+  margin-left: -600%;
+}
+.csslider > input:nth-of-type( 6):checked ~ ul li:first-of-type {
+  margin-left: -500%;
+}
+.csslider > input:nth-of-type( 5):checked ~ ul li:first-of-type {
+  margin-left: -400%;
+}
+.csslider > input:nth-of-type( 4):checked ~ ul li:first-of-type {
+  margin-left: -300%;
+}
+.csslider > input:nth-of-type( 3):checked ~ ul li:first-of-type {
+  margin-left: -200%;
+}
+.csslider > input:nth-of-type( 2):checked ~ ul li:first-of-type {
+  margin-left: -100%;
+}
+.csslider > input:nth-of-type( 1):checked ~ ul li:first-of-type {
+  margin-left: 0%;
+}
+.csslider > ul {
+  position: relative;
+  width: 820px;
+  height: 275px;
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
+  /*background-color: #3a3a3a;*/
+  /*border: 10px solid #3a3a3a;*/
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.csslider > ul > li {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 15px;
+  font-size: initial;
+  line-height: normal;
+  /*-moz-transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+  transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);*/
+
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  white-space: normal;
+}
+.csslider > ul > li.scrollable {
+  overflow-y: scroll;
+}
+.csslider > .navigation {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  z-index: 10;
+  margin-bottom: -10px;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.csslider > .navigation > div {
+  margin-left: -100%;
+}
+.csslider > .navigation label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 4px;
+  padding: 4px;
+  background: #3a3a3a;
+}
+.csslider > .navigation label:hover:after {
+  opacity: 1;
+}
+.csslider > .navigation label:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -6px;
+  margin-top: -6px;
+  background: #F1524B;
+  border-radius: 50%;
+  padding: 6px;
+  opacity: 0;
+}
+.csslider > .arrows {
+ /* -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;*/
+}
+.csslider.inside .navigation {
+  bottom: 10px;
+  margin-bottom: 10px;
+}
+.csslider.inside .navigation label {
+  border: 1px solid #7e7e7e;
+}
+.csslider > input:nth-of-type(1):checked ~ .navigation label:nth-of-type(1):after,
+.csslider > input:nth-of-type(2):checked ~ .navigation label:nth-of-type(2):after,
+.csslider > input:nth-of-type(3):checked ~ .navigation label:nth-of-type(3):after,
+.csslider > input:nth-of-type(4):checked ~ .navigation label:nth-of-type(4):after,
+.csslider > input:nth-of-type(5):checked ~ .navigation label:nth-of-type(5):after,
+.csslider > input:nth-of-type(6):checked ~ .navigation label:nth-of-type(6):after,
+.csslider > input:nth-of-type(7):checked ~ .navigation label:nth-of-type(7):after,
+.csslider > input:nth-of-type(8):checked ~ .navigation label:nth-of-type(8):after,
+.csslider > input:nth-of-type(9):checked ~ .navigation label:nth-of-type(9):after,
+.csslider > input:nth-of-type(10):checked ~ .navigation label:nth-of-type(10):after,
+.csslider > input:nth-of-type(11):checked ~ .navigation label:nth-of-type(11):after {
+  opacity: 1;
+}
+.csslider > .arrows {
+  position: absolute;
+  left: -31px;
+  top: 50%;
+  width: 100%;
+  height: 26px;
+  padding: 0 31px;
+  z-index: 0;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.csslider > .arrows label {
+  display: none;
+  position: absolute;
+  top: -50%;
+  padding: 13px;
+  /*box-shadow: inset 2px -2px 0 1px #3a3a3a;*/
+  cursor: pointer;
+  -moz-transition: box-shadow 0.15s, margin 0.15s;
+  -o-transition: box-shadow 0.15s, margin 0.15s;
+  -webkit-transition: box-shadow 0.15s, margin 0.15s;
+  transition: box-shadow 0.15s, margin 0.15s;
+}
+.csslider > .arrows label:hover {
+  /*box-shadow: inset 3px -3px 0 2px #F1524B;*/
+  margin: 0 0px;
+}
+.csslider > .arrows label:before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  height: 300%;
+  width: 300%;
+}
+.csslider.infinity > input:first-of-type:checked ~ .arrows label.goto-last,
+.csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(0),
+.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(1),
+.csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(2),
+.csslider > input:nth-of-type(4):checked ~ .arrows > label:nth-of-type(3),
+.csslider > input:nth-of-type(5):checked ~ .arrows > label:nth-of-type(4),
+.csslider > input:nth-of-type(6):checked ~ .arrows > label:nth-of-type(5),
+.csslider > input:nth-of-type(7):checked ~ .arrows > label:nth-of-type(6),
+.csslider > input:nth-of-type(8):checked ~ .arrows > label:nth-of-type(7),
+.csslider > input:nth-of-type(9):checked ~ .arrows > label:nth-of-type(8),
+.csslider > input:nth-of-type(10):checked ~ .arrows > label:nth-of-type(9),
+.csslider > input:nth-of-type(11):checked ~ .arrows > label:nth-of-type(10) {
+  display: block;
+  left: -5%;
+  right: auto;
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+.csslider.infinity > input:last-of-type:checked ~ .arrows label.goto-first,
+.csslider > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(2),
+.csslider > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(3),
+.csslider > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(4),
+.csslider > input:nth-of-type(4):checked ~ .arrows > label:nth-of-type(5),
+.csslider > input:nth-of-type(5):checked ~ .arrows > label:nth-of-type(6),
+.csslider > input:nth-of-type(6):checked ~ .arrows > label:nth-of-type(7),
+.csslider > input:nth-of-type(7):checked ~ .arrows > label:nth-of-type(8),
+.csslider > input:nth-of-type(8):checked ~ .arrows > label:nth-of-type(9),
+.csslider > input:nth-of-type(9):checked ~ .arrows > label:nth-of-type(10),
+.csslider > input:nth-of-type(10):checked ~ .arrows > label:nth-of-type(11),
+.csslider > input:nth-of-type(11):checked ~ .arrows > label:nth-of-type(12) {
+  display: block;
+  right: -5%;
+  left: auto;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

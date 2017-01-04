@@ -1,0 +1,269 @@
+.dropdown-menu>li
+{   position:relative;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+    cursor:pointer;
+}
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    display:none;
+    margin-top: -1px;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+    border-left-color:#fff;
+    box-shadow:none;
+}
+.right-caret:after,.left-caret:after
+ {  content:"";
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    display: inline-block;
+    height: 0;
+    vertical-align: middle;
+    width: 0;
+    margin-left:5px;
+}
+.right-caret:after
+{   border-left: 5px solid #ffaf46;
+}
+.left-caret:after
+{   border-right: 5px solid #ffaf46;
+}
+
+.csslider2 {
+  -moz-perspective: 1300px;
+  -ms-perspective: 1300px;
+  -webkit-perspective: 1300px;
+  perspective: 1300px;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  margin-bottom: 22px;
+}
+.csslider2 > input {
+  display: none;
+}
+.csslider2 > input:nth-of-type( 10):checked ~ ul li:first-of-type {
+  margin-left: -900%;
+}
+.csslider2 > input:nth-of-type( 9):checked ~ ul li:first-of-type {
+  margin-left: -800%;
+}
+.csslider2 > input:nth-of-type( 8):checked ~ ul li:first-of-type {
+  margin-left: -700%;
+}
+.csslider2 > input:nth-of-type( 7):checked ~ ul li:first-of-type {
+  margin-left: -600%;
+}
+.csslider2 > input:nth-of-type( 6):checked ~ ul li:first-of-type {
+  margin-left: -500%;
+}
+.csslider2 > input:nth-of-type( 5):checked ~ ul li:first-of-type {
+  margin-left: -400%;
+}
+.csslider2 > input:nth-of-type( 4):checked ~ ul li:first-of-type {
+  margin-left: -300%;
+}
+.csslider2 > input:nth-of-type( 3):checked ~ ul li:first-of-type {
+  margin-left: -200%;
+}
+.csslider2 > input:nth-of-type( 2):checked ~ ul li:first-of-type {
+  margin-left: -100%;
+}
+.csslider2 > input:nth-of-type( 1):checked ~ ul li:first-of-type {
+  margin-left: 0%;
+}
+.csslider2 > ul {
+  position: relative;
+  width: 440px;
+  height: 275px;
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
+  /*background-color: #3a3a3a;*/
+  /*border: 10px solid #3a3a3a;*/
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.csslider2 > ul > li {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 15px;
+  font-size: initial;
+  line-height: normal;
+  -moz-transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+  transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  white-space: normal;
+}
+.csslider2 > ul > li.scrollable {
+  overflow-y: scroll;
+}
+.csslider2 > .navigation {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  z-index: 10;
+  margin-bottom: -10px;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.csslider2 > .navigation > div {
+  margin-left: -100%;
+}
+.csslider2 > .navigation label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 4px;
+  padding: 4px;
+  background: #3a3a3a;
+}
+.csslider2 > .navigation label:hover:after {
+  opacity: 1;
+}
+.csslider2 > .navigation label:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -6px;
+  margin-top: -6px;
+  background: #71ad37;
+  border-radius: 50%;
+  padding: 6px;
+  opacity: 0;
+}
+.csslider2 > .arrows {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.csslider2.inside .navigation {
+  bottom: 10px;
+  margin-bottom: 10px;
+}
+.csslider2.inside .navigation label {
+  border: 1px solid #7e7e7e;
+}
+.csslider2 > input:nth-of-type(1):checked ~ .navigation label:nth-of-type(1):after,
+.csslider2 > input:nth-of-type(2):checked ~ .navigation label:nth-of-type(2):after,
+.csslider2 > input:nth-of-type(3):checked ~ .navigation label:nth-of-type(3):after,
+.csslider2 > input:nth-of-type(4):checked ~ .navigation label:nth-of-type(4):after,
+.csslider2 > input:nth-of-type(5):checked ~ .navigation label:nth-of-type(5):after,
+.csslider2 > input:nth-of-type(6):checked ~ .navigation label:nth-of-type(6):after,
+.csslider2 > input:nth-of-type(7):checked ~ .navigation label:nth-of-type(7):after,
+.csslider2 > input:nth-of-type(8):checked ~ .navigation label:nth-of-type(8):after,
+.csslider2 > input:nth-of-type(9):checked ~ .navigation label:nth-of-type(9):after,
+.csslider2 > input:nth-of-type(10):checked ~ .navigation label:nth-of-type(10):after,
+.csslider2 > input:nth-of-type(11):checked ~ .navigation label:nth-of-type(11):after {
+  opacity: 1;
+}
+.csslider2 > .arrows {
+  position: absolute;
+  left: -31px;
+  top: 50%;
+  width: 100%;
+  height: 26px;
+  padding: 0 31px;
+  z-index: 0;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.csslider2 > .arrows label {
+  display: none;
+  position: absolute;
+  top: -50%;
+  padding: 13px;
+  box-shadow: inset 2px -2px 0 1px #3a3a3a;
+  cursor: pointer;
+  -moz-transition: box-shadow 0.15s, margin 0.15s;
+  -o-transition: box-shadow 0.15s, margin 0.15s;
+  -webkit-transition: box-shadow 0.15s, margin 0.15s;
+  transition: box-shadow 0.15s, margin 0.15s;
+}
+.csslider2 > .arrows label:hover {
+  box-shadow: inset 3px -3px 0 2px #71ad37;
+  margin: 0 0px;
+}
+.csslider2 > .arrows label:before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  height: 300%;
+  width: 300%;
+}
+.csslider2.infinity2 > input:first-of-type:checked ~ .arrows label.goto-last,
+.csslider2 > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(0),
+.csslider2 > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(1),
+.csslider2 > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(2),
+.csslider2 > input:nth-of-type(4):checked ~ .arrows > label:nth-of-type(3),
+.csslider2 > input:nth-of-type(5):checked ~ .arrows > label:nth-of-type(4),
+.csslider2 > input:nth-of-type(6):checked ~ .arrows > label:nth-of-type(5),
+.csslider2 > input:nth-of-type(7):checked ~ .arrows > label:nth-of-type(6),
+.csslider2 > input:nth-of-type(8):checked ~ .arrows > label:nth-of-type(7),
+.csslider2 > input:nth-of-type(9):checked ~ .arrows > label:nth-of-type(8),
+.csslider2 > input:nth-of-type(10):checked ~ .arrows > label:nth-of-type(9),
+.csslider2 > input:nth-of-type(11):checked ~ .arrows > label:nth-of-type(10) {
+  display: block;
+  left: 0;
+  right: auto;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.csslider2.infinity2 > input:last-of-type:checked ~ .arrows label.goto-first,
+.csslider2 > input:nth-of-type(1):checked ~ .arrows > label:nth-of-type(2),
+.csslider2 > input:nth-of-type(2):checked ~ .arrows > label:nth-of-type(3),
+.csslider2 > input:nth-of-type(3):checked ~ .arrows > label:nth-of-type(4),
+.csslider2 > input:nth-of-type(4):checked ~ .arrows > label:nth-of-type(5),
+.csslider2 > input:nth-of-type(5):checked ~ .arrows > label:nth-of-type(6),
+.csslider2 > input:nth-of-type(6):checked ~ .arrows > label:nth-of-type(7),
+.csslider2 > input:nth-of-type(7):checked ~ .arrows > label:nth-of-type(8),
+.csslider2 > input:nth-of-type(8):checked ~ .arrows > label:nth-of-type(9),
+.csslider2 > input:nth-of-type(9):checked ~ .arrows > label:nth-of-type(10),
+.csslider2 > input:nth-of-type(10):checked ~ .arrows > label:nth-of-type(11),
+.csslider2 > input:nth-of-type(11):checked ~ .arrows > label:nth-of-type(12) {
+  display: block;
+  right: 0;
+  left: auto;
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
