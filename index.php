@@ -47,6 +47,11 @@
   display: inline;
 }
 
+#a:hover{
+  border-bottom: 2px solid white;
+
+}
+
 </style>
 </head>
 <body style="background-color:#E4E5E7">
@@ -70,7 +75,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
       <header style="background-color:#F1524B;height:80px" class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row" style="margin-top:2%">
           <!-- Title -->
-          <img style="margin-top:-2%" src="images/honda_logo_white.png"></img>
+          <img style="margin-top:-3.7%" src="images/honda_logo_white.png"></img>
           <span style="margin-left:1%;font-size:18px;" lass="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
@@ -110,10 +115,10 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Vanisha Honda</span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="index.php">Home</a>
-          <a class="mdl-navigation__link" href="product_types.php">Products</a>
-          <a class="mdl-navigation__link" href="customer_services.php">Services</a>
-          <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
+          <a class="mdl-navigation__link" href="index.php"><i class="material-icons">home</i>&nbspHome</a>
+          <a class="mdl-navigation__link" href="product_types.php"><i class="material-icons">directions_bike</i>&nbspProducts</a>
+          <a class="mdl-navigation__link" href="customer_services.php"><i class="material-icons">build</i>&nbspServices</a>
+          <a class="mdl-navigation__link" href="enquiry.php"><i class="material-icons">contact_phone</i>&nbspContact Us</a>
         </nav>
       </div>
 
@@ -339,10 +344,10 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
   </div>
   <div class="col-sm-5" style="color:white">
        <ul id="ul1">
-            <li><a style="color:white" href="index.php">Home</a></li>
-            <li><a style="color:white" href="product_types.php">Products</a></li>
-            <li><a style="color:white" href="customer_services.php">Services</a></li>
-            <li><a style="color:white" href="enquiry.php">Contact Us</a></li>
+            <li><a style="color:white" href="index.php">HOME</a></li>
+            <li><a style="color:white" href="product_types.php">PRODUCTS</a></li>
+            <li><a style="color:white" href="customer_services.php">SERVICES</a></li>
+            <li><a style="color:white" href="enquiry.php">CONTACT US</a></li>
         </ul>
   </div>
   <div class="col-sm-2" style="color:white;text-align:right">
