@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/index.js"></script>
@@ -33,9 +34,11 @@
 }
 #ul1 li{
   margin-left:7%;
+  font-size: 12px;
+
 }
 #ul1{
-  margin-top:10%;
+  margin-top:8.5%;
 }
 #ul2 li{
   display: inline;
@@ -47,11 +50,34 @@
   display: inline;
 }
 
-#a:hover{
-  border-bottom: 2px solid white;
-
+h6{
+  font-size:15px;
 }
 
+#name{
+  font-family:'Roboto', sans-serif;
+  font-size:13px;
+}
+
+#fourth_line{
+  font-size:13px;
+}
+.material-icons {
+   
+    margin-right: 20px;
+    margin-top: -9px;
+}
+#menu{
+  font-weight:bold;
+  font-size:15px;
+  font-family: 'Roboto', sans-serif;
+  color:#FFFFFF;
+}
+
+.mdl-layout__drawer-button{
+  margin-top:40px;
+  margin-left:40px;
+}
 </style>
 </head>
 <body style="background-color:#E4E5E7">
@@ -71,20 +97,20 @@ $output_types_subtypes = file_get_contents($url_types_subtypes, false,$context_t
 $arr_types_subtypes = json_decode($output_types_subtypes,true);
 ?>
 
-<div style="" class="demo-layout-transparent mdl-layout mdl-js-layout">
-      <header style="background-color:#F1524B;height:80px" class="mdl-layout__header mdl-layout__header--transparent">
-        <div class="mdl-layout__header-row" style="margin-top:2%">
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+      <header style="background-color:#F1524B;height:110px" class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
-          <img style="margin-top:-3.7%" src="images/honda_logo_white.png"></img>
-          <span style="margin-left:1%;font-size:18px;" lass="mdl-layout-title">Vanisha Honda</span>
+          <img style="margin-top:-3.8%;margin-left:40px;" src="images/honda_logo_white.png" width="60" height="60"></img>
+          <span style="margin-left:1%;font-size:20px;" class="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="index.php">Home</a>
+            <a class="mdl-navigation__link" href="index.php" id="menu">HOME</a>
             
             <div class="mdl-navigation__link dropdown" style="">
-                  <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Products<span class="caret"></span></a>
+                  <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">PRODUCTS<span class="caret"></span></a>
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
@@ -99,8 +125,8 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                   </ul>
             </div>
                         
-            <div class="mdl-navigation__link dropdown" style="">
-              <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Services<span class="caret"></span></a>
+            <div class="mdl-navigation__link dropdown">
+              <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<span class="caret"></span></a>
               <ul id="ul_service" class="dropdown-menu">
                 <li><a href="book_service.php">Book Servicing</a></li>
                 <li><a href="insurance.php">Renew Insurance</a></li>
@@ -108,24 +134,24 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
               </ul>
             </div>
 
-            <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
+            <a class="mdl-navigation__link" href="enquiry.php" id="menu">CONTACT US</a>
           </nav>
         </div>
       </header>
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Vanisha Honda</span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="index.php"><i class="material-icons">home</i>&nbspHome</a>
-          <a class="mdl-navigation__link" href="product_types.php"><i class="material-icons">directions_bike</i>&nbspProducts</a>
-          <a class="mdl-navigation__link" href="customer_services.php"><i class="material-icons">build</i>&nbspServices</a>
-          <a class="mdl-navigation__link" href="enquiry.php"><i class="material-icons">contact_phone</i>&nbspContact Us</a>
+          <a class="mdl-navigation__link" href="index.php"><i class="material-icons">home</i>Home</a>
+          <a class="mdl-navigation__link" href="product_types.php"><i class="material-icons">directions_bike</i>Products</a>
+          <a class="mdl-navigation__link" href="customer_services.php"><i class="material-icons">build</i>Services</a>
+          <a class="mdl-navigation__link" href="enquiry.php"><i class="material-icons">contact_phone</i>Contact Us</a>
         </nav>
       </div>
 
 <main class="mdl-layout__content">
 
   <div style="margin-top:1%">
-    <div style="text-align:center !important;background-color:white" class="row">
+    <div style="text-align:center !important;background-color:#FFFFFF" class="row">
       <div id="slider1" class="csslider infinity">
         <input type="radio" name="slides" id="slides_1">
         <input type="radio" name="slides" id="slides_2">
@@ -138,7 +164,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
           <li>
                 <div class="row">
                     <div class="col-sm-7" style="text-align:left;">
-                      <h4 style="margin-top:5%;font-size:30px;margin-left:5%">Presenting Vanisha Honda <br> Android App</h4>
+                      <h4 style="margin-top:5%;font-size:37px;margin-left:5%">Presenting Vanisha Honda <br> Android App</h4>
                       <h5 style="font-size:15px;margin-left:5%">Introducing the new Vanisha Honda Android App. Now the power in your hands. Featuring new vehicle booking, insurance renewal, scheduling vehicle servicing, helpline and much more.</h5>
                       <img style="width:30%;height:30%;margin-left:5%" src="images/playstore.png"></img>
                     </div>
@@ -177,18 +203,18 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 
 
 <div class="container">
-<div class="row" style="background-color:white;margin-top:5%">
-<h5 id="heading">About Us</h5>
-<p id="content">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
+<div class="row" style="background-color:#FFFFFF;margin-top:5%">
+<h5 id="heading" style="font-weight:500;font-family: 'Roboto', sans-serif;font-size:20px;">ABOUT US</h5>
+<p id="content" style="font-size:13px;">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
 </div>
 
 
-<div class="row" style="background-color:white;margin-top:5%">
-<h5 id="heading">New Launched Vehicles</h5>
+<div class="row" style="background-color:#FFFFFF;margin-top:5%">
+<h5 id="heading">NEW LAUNCHED VEHICLES</h5>
 <div style="margin-bottom:50px;margin-top:0%">
     <div class="col-sm-3" style="text-align:center;border-right:1px solid #F0F2F7">
          <div class="row">
-         <img style="width:160px;height:160px" src="images/activa.png"></img>
+         <img style="width:180px;height:160px" src="images/activa.png"></img>
          </div>
          <div class="row">
           <h6 id="first_line">Activa 125</h6>
@@ -199,7 +225,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
     </div>
     <div class="col-sm-3" style="text-align:center;border-right:1px solid #F0F2F7">
            <div class="row">
-           <img style="width:160px;height:160px" src="images/hornet.png"></img>
+           <img style="width:180px;height:160px" src="images/hornet.png"></img>
            </div>
            <div class="row">
             <h6 id="first_line">Hornet 160 R</h6>
@@ -210,7 +236,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
     </div>
     <div class="col-sm-3" style="text-align:center;border-right:1px solid #F0F2F7">
            <div class="row">
-           <img style="width:160px;height:160px" src="images/navi.png"></img>
+           <img style="width:180px;height:160px" src="images/navi.png"></img>
            </div>
            <div class="row">
             <h6 id="first_line">Navi</h6>
@@ -221,7 +247,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
     </div>
     <div class="col-sm-3" style="text-align:center;border-right:1px solid #F0F2F7">
            <div class="row">
-           <img style="width:160px;height:160px" src="images/unicorn.png"></img>
+           <img style="width:180px;height:160px" src="images/unicorn.png"></img>
            </div>
            <div class="row">
             <h6 id="first_line">CB Unicorn 160</h6>
@@ -235,9 +261,9 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 
 </div>
 
-<div style="text-align:center;background-color:white;margin-top:5%;padding-top:30px;padding-bottom:34px" class="row">
-<h5 style="text-align:center !important;font-weight:bold">What Our Customers Have To Say</h5>
-<h5 style="font-size:14px;text-align:center !important;margin-top:-5px">Wings of Trust</h5>
+<div style="text-align:center;background-color:#FFFFFF;margin-top:5%;padding-top:30px;padding-bottom:34px" class="row">
+<h5 style="text-align:center !important;font-weight:bold;font-size:34px;font-family: 'Roboto Condensed', sans-serif;">What Our Customers Have To Say</h5>
+<h5 style="font-size:16px;font-style:italic;font-family:'Roboto', sans-serif;text-align:center !important;margin-top:-5px;">Wings of Trust</h5>
 
 <div class="row" style="text-align:left;margin-top:4%">
                <div class="col-sm-2">
@@ -249,12 +275,12 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                         <img style="width:60px;height:60px;border-radius:50%" src="images/face.jpg"></img>
                       </div>
                       <div class="col-sm-8">
-                        <p>Amit Desai</p>
-                        <p style="margin-top:-14%;color:gray">IT Consultant</p>
+                        <p id="name">Amit Desai</p>
+                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;">IT Consultant</p>
                       </div>
                    </div>
                    <div class="row">
-                      <p>"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                      <p style="text-align:justify;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
@@ -267,12 +293,12 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                         <img style="width:60px;height:60px;border-radius:50%" src="images/face2.jpg"></img>
                       </div>
                       <div class="col-sm-8">
-                        <p>Sanjay Shah</p>
-                        <p style="margin-top:-14%;color:gray">Entrepreneur</p>
+                        <p id="name">Sanjay Shah</p>
+                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;">Entrepreneur</p>
                       </div>
                    </div>
                    <div class="row">
-                     <p>"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                     <p style="text-align:justify;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
@@ -285,12 +311,12 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                         <img style="width:60px;height:60px;border-radius:50%" src="images/face3.jpg"></img>
                       </div>
                       <div class="col-sm-8">
-                        <p>Ayesha Bhat</p>
-                        <p style="margin-top:-14%;color:gray">Dentist</p>
+                        <p id="name">Ayesha Bhat</p>
+                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;">Dentist</p>
                       </div>
                    </div>
                    <div class="row">
-                    <p>"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                    <p style="text-align:justify;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
@@ -334,23 +360,23 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 
 
 <div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
-  <div class="col-sm-1" style="color:white;">
+  <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
-  <div class="col-sm-3" style="color:white;">
+  <div class="col-sm-3" style="color:#FFFFFF;">
        <div style="margin-top:5%">
-        <img style="width:25%;height:25%" src="images/honda_logo_red.png"></img>
-        <h5 style="margin-top:-6%;margin-left:29%">Vanisha Honda</h5>
+        <img style="width:20%;height:20%" src="images/honda_logo_red.png"></img>
+        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
        </div>
   </div>
-  <div class="col-sm-5" style="color:white">
+  <div class="col-sm-5" style="color:#FFFFFF">
        <ul id="ul1">
-            <li><a style="color:white" href="index.php">HOME</a></li>
-            <li><a style="color:white" href="product_types.php">PRODUCTS</a></li>
-            <li><a style="color:white" href="customer_services.php">SERVICES</a></li>
-            <li><a style="color:white" href="enquiry.php">CONTACT US</a></li>
+            <li><a style="color:#FFFFFF" href="index.php">HOME</a></li>
+            <li><a style="color:#FFFFFF" href="product_types.php">PRODUCTS</a></li>
+            <li><a style="color:#FFFFFF" href="customer_services.php">SERVICES</a></li>
+            <li><a style="color:#FFFFFF" href="enquiry.php">CONTACT US</a></li>
         </ul>
   </div>
-  <div class="col-sm-2" style="color:white;text-align:right">
+  <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
             <li><img src="images/twitter.png"></img></li>
             <li><img src="images/facebook.png"></img></li>
@@ -362,16 +388,16 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 </div>
 
 <div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
-  <div class="col-sm-1" style="color:white;">
+  <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
-  <div class="col-sm-3" style="color:white;margin-top:3%">
-        <ul id="ul3" style="list-style: none;margin-left:-14%">
+  <div class="col-sm-3" style="color:#FFFFFF;margin-top:3%">
+        <ul id="ul3" style="list-style: none;margin-left:-14%;font:italic 13px Roboto,sans-serif;">
             <li>+91-9987654321</li>
             <li>+91-8314208821</li>
             <li>info@vanishahonda.com</li>
         </ul>
   </div>
-  <div class="col-sm-2" style="color:white">
+  <div class="col-sm-2" style="color:#FFFFFF">
   </div>
   <div class="col-sm-5" style="color:#97A8B0;text-align:right">
         <ul id="ul4" style="margin-top:17%">

@@ -24,7 +24,7 @@
   margin-left:7%;
 }
 #ul1{
-  margin-top:10%;
+  margin-top:8.5%;
 }
 #ul2 li{
   display: inline;
@@ -40,6 +40,23 @@ tr{
 }
 .collapsible-header{
   color:gray;
+}
+
+.material-icons {
+   
+    margin-right: 20px;
+    margin-top: -9px;
+}
+#menu{
+  font-weight:bold;
+  font-size:15px;
+  font-family: 'Roboto', sans-serif;
+  color:#FFFFFF;
+}
+
+.mdl-layout__drawer-button{
+  margin-top:40px;
+  margin-left:40px;
 }
 
 </style>
@@ -128,20 +145,20 @@ elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg
 ?>
 
 
-<div style="" class="demo-layout-transparent mdl-layout mdl-js-layout">
-      <header style="background-color:#F1524B;height:80px" class="mdl-layout__header mdl-layout__header--transparent">
-        <div class="mdl-layout__header-row" style="margin-top:2%">
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+      <header style="background-color:#F1524B;height:110px" class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
-          <img style="margin-top:-2%" src="images/honda_logo_white.png"></img>
-          <span style="margin-left:1%;font-size:18px;" lass="mdl-layout-title">Vanisha Honda</span>
+          <img style="margin-top:-3.8%;margin-left:40px;" src="images/honda_logo_white.png" width="60" height="60"></img>
+          <span style="margin-left:1%;font-size:20px;" class="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="index.php">Home</a>
+            <a class="mdl-navigation__link" href="index.php" id="menu">HOME</a>
             
             <div class="mdl-navigation__link dropdown" style="">
-                  <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Products<span class="caret"></span></a>
+                  <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">PRODUCTS<span class="caret"></span></a>
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
@@ -156,26 +173,25 @@ elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg
                   </ul>
             </div>
                         
-            <div class="mdl-navigation__link dropdown" style="">
-              <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Services<span class="caret"></span></a>
+        <div class="mdl-navigation__link dropdown">
+              <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<span class="caret"></span></a>
               <ul id="ul_service" class="dropdown-menu">
                 <li><a href="book_service.php">Book Servicing</a></li>
                 <li><a href="insurance.php">Renew Insurance</a></li>
                 <li><a href="finance.php">Get Finance</a></li>
               </ul>
             </div>
-
-            <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
+             <a class="mdl-navigation__link" href="enquiry.php" id="menu">CONTACT US</a>
           </nav>
         </div>
       </header>
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Vanisha Honda</span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="index.php">Home</a>
-          <a class="mdl-navigation__link" href="product_types.php">Products</a>
-          <a class="mdl-navigation__link" href="customer_services.php">Services</a>
-          <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
+          <a class="mdl-navigation__link" href="index.php"><i class="material-icons">home</i>Home</a>
+          <a class="mdl-navigation__link" href="product_types.php"><i class="material-icons">directions_bike</i>Products</a>
+          <a class="mdl-navigation__link" href="customer_services.php"><i class="material-icons">build</i>Services</a>
+          <a class="mdl-navigation__link" href="enquiry.php"><i class="material-icons">contact_phone</i>Contact Us</a>
         </nav>
       </div>
 
