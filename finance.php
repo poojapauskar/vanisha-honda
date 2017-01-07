@@ -41,6 +41,34 @@ tr{
 .collapsible-header{
   color:gray;
 }
+/*Below code is for color and top,bottom bar after mouse is Hover in the Drpdown menu*/
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #FFFFFF  !important;
+    text-decoration: none !important;
+
+    background-color: #f8b6b3 !important;
+
+ /*   border-bottom: 1px solid #FFFFFF !important;
+    border-top: 1px solid #FFFFFF !important;*/
+}
+/*This code is for  dropdown menu bar*/
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #FFFFFF;
+    white-space: nowrap;
+    text-decoration: none;
+    z-index: -1;
+
+}
+/*When we hover this on Nav bar menu items a White line comes down */
+.homonhov:hover {
+    border-bottom: 4px solid #FFFFFF !important;
+    text-decoration: none !important; 
+    position: relative !important;}
 
 </style>
 </head>
@@ -216,10 +244,10 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="index.php">Home</a>
+            <a class="mdl-navigation__link homonhov" href="index.php" style="line-height:35px;">Home</a>
             
-            <div class="mdl-navigation__link dropdown" style="">
-                  <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Products<span class="caret"></span></a>
+            <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
+                  <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Products<!-- <span class="caret"></span> --></a>
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
@@ -234,8 +262,8 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
                   </ul>
             </div>
                         
-            <div class="mdl-navigation__link dropdown" style="">
-              <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Services<span class="caret"></span></a>
+            <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
+              <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Services<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
                 <li><a href="book_service.php">Book Servicing</a></li>
                 <li><a href="insurance.php">Renew Insurance</a></li>
@@ -243,7 +271,7 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
               </ul>
             </div>
 
-            <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
+            <a class="mdl-navigation__link homonhov" href="enquiry.php" style="line-height:35px;">Contact Us</a>
           </nav>
         </div>
       </header>

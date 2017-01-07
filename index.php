@@ -78,6 +78,57 @@ h6{
   margin-top:40px;
   margin-left:40px;
 }
+
+.mdl-layout__header-row .mdl-navigation__link {
+    display: block;
+    opacity: 1;
+    line-height: 64px;
+    padding: 0 24px;
+    text-decoration: none !important;
+
+}
+
+
+.dropdown-menu{
+ background-color:  #F1524B !important; 
+text-transform: capitalize !important;
+
+
+}
+.dropdown-menu{
+ background-color:  #F1524B !important; 
+ 
+ }
+
+ /*Below code is for color and top,bottom bar after mouse is Hover in the Drpdown menu*/
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #FFFFFF  !important;
+    text-decoration: none !important;
+
+    background-color: #f8b6b3 !important;
+
+ /*   border-bottom: 1px solid #FFFFFF !important;
+    border-top: 1px solid #FFFFFF !important;*/
+}
+/*This code is for  dropdown menu bar*/
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #FFFFFF;
+    white-space: nowrap;
+    text-decoration: none;
+    z-index: -1;
+
+}
+/*When we hover this on Nav bar menu items a White line comes down */
+.homonhov:hover {
+    border-bottom: 4px solid #FFFFFF !important;
+    text-decoration: none !important; 
+    position: relative !important;}
+
 </style>
 </head>
 <body style="background-color:#E4E5E7">
@@ -107,10 +158,10 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="index.php" id="menu">HOME</a>
+            <a class="mdl-navigation__link homonhov" href="index.php" id="menu" style="line-height:35px;">HOME</a>
             
-            <div class="mdl-navigation__link dropdown" style="">
-                  <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">PRODUCTS<span class="caret"></span></a>
+            <div class="mdl-navigation__link dropdown homonhov"  style="line-height:35px;">
+                  <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">PRODUCTS<!-- <span class="caret"></span> --></a>
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
@@ -125,8 +176,8 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                   </ul>
             </div>
                         
-            <div class="mdl-navigation__link dropdown">
-              <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<span class="caret"></span></a>
+           <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
+              <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
                 <li><a href="book_service.php">Book Servicing</a></li>
                 <li><a href="insurance.php">Renew Insurance</a></li>
@@ -134,7 +185,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
               </ul>
             </div>
 
-            <a class="mdl-navigation__link" href="enquiry.php" id="menu">CONTACT US</a>
+            <a class="mdl-navigation__link homonhov" href="enquiry.php" id="menu" style="line-height:35px;">CONTACT US</a>
           </nav>
         </div>
       </header>

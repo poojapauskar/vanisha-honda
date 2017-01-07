@@ -26,7 +26,8 @@
   display: inline;
 }
 #ul1 li{
-  margin-left:7%;
+   margin-left:7%;
+  font-size: 12px;
 }
 #ul1{
   margin-top:8.5%;
@@ -46,7 +47,18 @@ tr{
 .collapsible-header{
   color:gray;
 }
+h6{
+  font-size:15px;
+}
 
+#name{
+  font-family:'Roboto', sans-serif;
+  font-size:13px;
+}
+
+#fourth_line{
+  font-size:13px;
+}
 .material-icons {
    
     margin-right: 20px;
@@ -58,16 +70,67 @@ tr{
   font-family: 'Roboto', sans-serif;
   color:#FFFFFF;
 }
+
 .mdl-layout__drawer-button{
   margin-top:40px;
   margin-left:40px;
 }
 
-#ul1 li{
-  margin-left:7%;
-  font-size: 12px;
-  margin-top:8.5%;
+
+.mdl-layout__header-row .mdl-navigation__link {
+    display: block;
+    opacity: 1;
+    line-height: 64px;
+    padding: 0 24px;
+    text-decoration: none !important;
+
 }
+
+
+.dropdown-menu{
+ background-color:  #F1524B !important; 
+text-transform: capitalize !important;
+
+
+}
+
+
+
+.dropdown-menu{
+ background-color:  #F1524B !important; 
+ 
+ }
+
+ /*Below code is for color and top,bottom bar after mouse is Hover in the Drpdown menu*/
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #FFFFFF  !important;
+    text-decoration: none !important;
+
+    background-color: #f8b6b3 !important;
+
+ /*   border-bottom: 1px solid #FFFFFF !important;
+    border-top: 1px solid #FFFFFF !important;*/
+}
+/*This code is for  dropdown menu bar*/
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #FFFFFF;
+    white-space: nowrap;
+    text-decoration: none;
+    z-index: -1;
+
+}
+/*When we hover this on Nav bar menu items a White line comes down */
+.homonhov:hover {
+    border-bottom: 4px solid #FFFFFF !important;
+    text-decoration: none !important; 
+    position: relative !important;}
+
+
 </style>
 
 </head>
@@ -147,10 +210,10 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link"  id="menu" href="index.php">HOME</a>
+            <a class="mdl-navigation__link homonhov" href="index.php" id="menu" style="line-height:35px;">HOME</a>
             
-            <div class="mdl-navigation__link dropdown" style="">
-                  <a href="#" class="btn dropdown-toggle" style="color:white"  id="menu"  id="menu" data-toggle="dropdown">PRODUCTS<span class="caret"></span></a>
+            <div class="mdl-navigation__link dropdown homonhov"  style="line-height:35px;">
+                  <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">PRODUCTS<!-- <span class="caret"></span> --></a>
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
@@ -165,8 +228,8 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
                   </ul>
             </div>
                         
-            <div class="mdl-navigation__link dropdown" style="">
-              <a href="#" class="btn dropdown-toggle" style="color:white"  id="menu" data-toggle="dropdown">SERVICES<span class="caret"></span></a>
+           <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
+              <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
                 <li><a href="book_service.php">Book Servicing</a></li>
                 <li><a href="insurance.php">Renew Insurance</a></li>
@@ -174,7 +237,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
               </ul>
             </div>
 
-            <a class="mdl-navigation__link"  id="menu" href="enquiry.php">CONTACT US</a>
+            <a class="mdl-navigation__link homonhov" href="enquiry.php" id="menu" style="line-height:35px;">CONTACT US</a>
           </nav>
         </div>
       </header>

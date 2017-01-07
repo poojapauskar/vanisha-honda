@@ -44,6 +44,89 @@
 #ul4 li{
   display: inline;
 }
+h6{
+  font-size:15px;
+}
+
+#name{
+  font-family:'Roboto', sans-serif;
+  font-size:13px;
+}
+
+#fourth_line{
+  font-size:13px;
+}
+.material-icons {
+   
+    margin-right: 20px;
+    margin-top: -9px;
+}
+#menu{
+  font-weight:bold;
+  font-size:15px;
+  font-family: 'Roboto', sans-serif;
+  color:#FFFFFF;
+}
+
+.mdl-layout__drawer-button{
+  margin-top:40px;
+  margin-left:40px;
+}
+
+
+.mdl-layout__header-row .mdl-navigation__link {
+    display: block;
+    opacity: 1;
+    line-height: 64px;
+    padding: 0 24px;
+    text-decoration: none !important;
+
+}
+
+
+.dropdown-menu{
+ background-color:  #F1524B !important; 
+text-transform: capitalize !important;
+
+
+}
+
+
+
+.dropdown-menu{
+ background-color:  #F1524B !important; 
+ 
+ }
+
+ /*Below code is for color and top,bottom bar after mouse is Hover in the Drpdown menu*/
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #FFFFFF  !important;
+    text-decoration: none !important;
+
+    background-color: #f8b6b3 !important;
+
+ /*   border-bottom: 1px solid #FFFFFF !important;
+    border-top: 1px solid #FFFFFF !important;*/
+}
+/*This code is for  dropdown menu bar*/
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #FFFFFF;
+    white-space: nowrap;
+    text-decoration: none;
+    z-index: -1;
+
+}
+/*When we hover this on Nav bar menu items a White line comes down */
+.homonhov:hover {
+    border-bottom: 4px solid #FFFFFF !important;
+    text-decoration: none !important; 
+    position: relative !important;}
+
 
 </style>
 </head>
@@ -91,11 +174,11 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="index.php">Home</a>
+           <nav class="mdl-navigation">
+            <a class="mdl-navigation__link homonhov" href="index.php" id="menu" style="line-height:35px;">HOME</a>
             
-            <div class="mdl-navigation__link dropdown" style="">
-                  <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Products<span class="caret"></span></a>
+            <div class="mdl-navigation__link dropdown homonhov"  style="line-height:35px;">
+                  <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">PRODUCTS<!-- <span class="caret"></span> --></a>
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
@@ -110,8 +193,8 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
                   </ul>
             </div>
                         
-            <div class="mdl-navigation__link dropdown" style="">
-              <a href="#" class="btn dropdown-toggle" style="color:white" data-toggle="dropdown">Services<span class="caret"></span></a>
+           <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
+              <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
                 <li><a href="book_service.php">Book Servicing</a></li>
                 <li><a href="insurance.php">Renew Insurance</a></li>
@@ -119,7 +202,7 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
               </ul>
             </div>
 
-            <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
+            <a class="mdl-navigation__link homonhov" href="enquiry.php" id="menu" style="line-height:35px;">CONTACT US</a>
           </nav>
         </div>
       </header>
@@ -162,12 +245,12 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
         <h5 style="margin-top:-6%;margin-left:29%">Vanisha Honda</h5>
        </div>
   </div>
-  <div class="col-sm-5" style="color:white">
+    <div class="col-sm-5" style="color:#FFFFFF">
        <ul id="ul1">
-            <li><a style="color:white" href="index.php">Home</a></li>
-            <li><a style="color:white" href="product_types.php">Products</a></li>
-            <li><a style="color:white" href="customer_services.php">Services</a></li>
-            <li><a style="color:white" href="enquiry.php">Contact Us</a></li>
+            <li><a style="color:#FFFFFF" href="index.php">HOME</a></li>
+            <li><a style="color:#FFFFFF" href="product_types.php">PRODUCTS</a></li>
+            <li><a style="color:#FFFFFF" href="customer_services.php">SERVICES</a></li>
+            <li><a style="color:#FFFFFF" href="enquiry.php">CONTACT US</a></li>
         </ul>
   </div>
   <div class="col-sm-2" style="color:white;text-align:right">
@@ -185,7 +268,7 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;margin-top:3%">
-        <ul id="ul3" style="list-style: none;margin-left:-14%">
+        <ul id="ul3" style="list-style: none;margin-left:-14%;font:italic 13px Roboto,sans-serif;">
             <li>+91-9987654321</li>
             <li>+91-8314208821</li>
             <li>info@vanishahonda.com</li>
