@@ -16,16 +16,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-  <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/slideshow.css">
 
- <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
 
 <style type="text/css">
 
@@ -57,6 +57,13 @@ h6{
 #name{
   font-family:'Roboto', sans-serif;
   font-size:13px;
+}
+
+#service{
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  color:#FFFFFF;
+  font-weight:bold;
 }
 
 #fourth_line{
@@ -105,7 +112,7 @@ text-transform: capitalize !important;
     color: #FFFFFF  !important;
     text-decoration: none !important;
 
-    background-color: #f8b6b3 !important;
+    background-color: #F9524B !important;
 
  /*   border-bottom: 1px solid #FFFFFF !important;
     border-top: 1px solid #FFFFFF !important;*/
@@ -165,23 +172,23 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
-                          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
+                          <a class="trigger right-caret" id="service"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
                               <ul class="dropdown-menu sub-menu">
                                 <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
-                                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
+                                  <li id="service"><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
                                 <?php } ?>
                               </ul>
                       <?php } ?>
                     </li>
                   </ul>
-            </div>
+            </div> 
                         
            <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
               <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
-                <li><a href="book_service.php">Book Servicing</a></li>
-                <li><a href="insurance.php">Renew Insurance</a></li>
-                <li><a href="finance.php">Get Finance</a></li>
+                <li><a href=" id="service"_service.php" id="service">Book Servicing</a></li>
+                <li><a href="insurance.php" id="service">Renew Insurance</a></li>
+                <li><a href="finance.php" id="service">Get Finance</a></li>
               </ul>
             </div>
 

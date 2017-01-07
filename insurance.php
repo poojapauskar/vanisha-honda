@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/material.indigo.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/index.js"></script>
 <style type="text/css">
@@ -23,9 +23,10 @@
 }
 #ul1 li{
   margin-left:7%;
+  font-size: 12px;
 }
 #ul1{
-  margin-top:10%;
+  margin-top:8.5%;
 }
 #ul2 li{
   display: inline;
@@ -67,10 +68,9 @@ h6{
 }
 
 .mdl-layout__drawer-button{
-  margin-top:20px;
-  margin-left:20px;
+  margin-top:40px;
+  margin-left:50px;
 }
-
 
 .mdl-layout__header-row .mdl-navigation__link {
     display: block;
@@ -88,9 +88,6 @@ text-transform: capitalize !important;
 
 
 }
-
-
-
 .dropdown-menu{
  background-color:  #F1524B !important; 
  
@@ -124,7 +121,6 @@ text-transform: capitalize !important;
     border-bottom: 4px solid #FFFFFF !important;
     text-decoration: none !important; 
     position: relative !important;}
-
 
 </style>
 </head>
@@ -219,17 +215,18 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
   });
   </script>
 
-<div style="" class="demo-layout-transparent mdl-layout mdl-js-layout">
-      <header style="background-color:#F1524B;height:80px" class="mdl-layout__header mdl-layout__header--transparent">
-        <div class="mdl-layout__header-row" style="margin-top:2%">
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+      <header style="background-color:#F1524B;height:110px" class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
-          <img style="margin-top:-3%" src="images/honda_logo_white.png"></img>
-          <span style="margin-left:1%;font-size:18px;" lass="mdl-layout-title">Vanisha Honda</span>
+          <img style="margin-top:-3.8%;margin-left:40px;" src="images/honda_logo_white.png" width="60" height="60"></img>
+          <span style="margin-left:1%;font-size:20px;" class="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
           <nav class="mdl-navigation">
-          <a class="mdl-navigation__link homonhov" href="index.php" id="menu" style="line-height:35px;">HOME</a>
+            <a class="mdl-navigation__link homonhov" href="index.php" id="menu" style="line-height:35px;">HOME</a>
             
             <div class="mdl-navigation__link dropdown homonhov"  style="line-height:35px;">
                   <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">PRODUCTS<!-- <span class="caret"></span> --></a>
@@ -247,7 +244,6 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
                   </ul>
             </div>
                         
-                        
            <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
               <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
@@ -262,7 +258,7 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
         </div>
       </header>
       <div class="mdl-layout__drawer">
-         <span class="mdl-layout-title">Vanisha Honda</span>
+        <span class="mdl-layout-title">Vanisha Honda</span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="index.php"><i class="material-icons">home</i>Home</a>
           <a class="mdl-navigation__link" href="product_types.php"><i class="material-icons">directions_bike</i>Products</a>
@@ -391,9 +387,9 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-3" style="color:white;">
        <div style="margin-top:5%">
-        <img style="width:25%;height:25%" src="images/honda_logo_red.png"></img>
-        <h5 style="margin-top:-6%;margin-left:29%">Vanisha Honda</h5>
-       </div>
+       <img style="width:20%;height:20%" src="images/honda_logo_red.png"></img>
+        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
+      </div>
   </div>
   <div class="col-sm-5" style="color:#FFFFFF">
        <ul id="ul1">

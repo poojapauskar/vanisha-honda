@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/material.indigo.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/index.js"></script>
 
@@ -31,9 +31,11 @@
 }
 #ul1 li{
   margin-left:7%;
+  font-size: 12px;
+
 }
 #ul1{
-  margin-top:10%;
+  margin-top:8.5%;
 }
 #ul2 li{
   display: inline;
@@ -66,6 +68,12 @@ h6{
   font-size:15px;
   font-family: 'Roboto', sans-serif;
   color:#FFFFFF;
+}
+#service{
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  color:#FFFFFF;
+  font-weight:bold;
 }
 
 .mdl-layout__drawer-button{
@@ -165,16 +173,16 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
 /*echo count($arr_vehicles_of_particular_type[0]['v_details']);*/
 ?>
 
-<div style="" class="demo-layout-transparent mdl-layout mdl-js-layout">
-      <header style="background-color:#F1524B;height:80px" class="mdl-layout__header mdl-layout__header--transparent">
-        <div class="mdl-layout__header-row" style="margin-top:2%">
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+      <header style="background-color:#F1524B;height:110px" class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
-          <img style="margin-top:-2%" src="images/honda_logo_white.png"></img>
-          <span style="margin-left:1%;font-size:18px;" lass="mdl-layout-title">Vanisha Honda</span>
+          <img style="margin-top:-3.8%;margin-left:40px;" src="images/honda_logo_white.png" width="60" height="60"></img>
+          <span style="margin-left:1%;font-size:20px;" class="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
-           <nav class="mdl-navigation">
+          <nav class="mdl-navigation">
             <a class="mdl-navigation__link homonhov" href="index.php" id="menu" style="line-height:35px;">HOME</a>
             
             <div class="mdl-navigation__link dropdown homonhov"  style="line-height:35px;">
@@ -182,10 +190,10 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
-                          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
+                          <a class="trigger right-caret" id="service"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
                               <ul class="dropdown-menu sub-menu">
                                 <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
-                                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
+                                  <li id="service"><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
                                 <?php } ?>
                               </ul>
                       <?php } ?>
@@ -196,9 +204,9 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
            <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
               <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
-                <li><a href="book_service.php">Book Servicing</a></li>
-                <li><a href="insurance.php">Renew Insurance</a></li>
-                <li><a href="finance.php">Get Finance</a></li>
+                <li><a href="book_service.php" id="service">Book Servicing</a></li>
+                <li><a href="insurance.php" id="service">Renew Insurance</a></li>
+                <li><a href="finance.php" id="service">Get Finance</a></li>
               </ul>
             </div>
 
@@ -209,10 +217,10 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Vanisha Honda</span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="index.php">Home</a>
-          <a class="mdl-navigation__link" href="product_types.php">Products</a>
-          <a class="mdl-navigation__link" href="customer_services.php">Services</a>
-          <a class="mdl-navigation__link" href="enquiry.php">Contact Us</a>
+          <a class="mdl-navigation__link" href="index.php"><i class="material-icons">home</i>Home</a>
+          <a class="mdl-navigation__link" href="product_types.php"><i class="material-icons">directions_bike</i>Products</a>
+          <a class="mdl-navigation__link" href="customer_services.php"><i class="material-icons">build</i>Services</a>
+          <a class="mdl-navigation__link" href="enquiry.php"><i class="material-icons">contact_phone</i>Contact Us</a>
         </nav>
       </div>
 
@@ -241,8 +249,8 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
   </div>
   <div class="col-sm-3" style="color:white;">
        <div style="margin-top:5%">
-        <img style="width:25%;height:25%" src="images/honda_logo_red.png"></img>
-        <h5 style="margin-top:-6%;margin-left:29%">Vanisha Honda</h5>
+        <img style="width:20%;height:20%" src="images/honda_logo_red.png"></img>
+        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
        </div>
   </div>
     <div class="col-sm-5" style="color:#FFFFFF">

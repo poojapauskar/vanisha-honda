@@ -56,6 +56,13 @@ h6{
   font-size:13px;
 }
 
+#service{
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  color:#FFFFFF;
+  font-weight:bold;
+}
+
 #fourth_line{
   font-size:13px;
 }
@@ -76,7 +83,6 @@ h6{
   margin-left:40px;
 }
 
-
 .mdl-layout__header-row .mdl-navigation__link {
     display: block;
     opacity: 1;
@@ -93,9 +99,6 @@ text-transform: capitalize !important;
 
 
 }
-
-
-
 .dropdown-menu{
  background-color:  #F1524B !important; 
  
@@ -128,9 +131,8 @@ text-transform: capitalize !important;
 .homonhov:hover {
     border-bottom: 4px solid #FFFFFF !important;
     text-decoration: none !important; 
-    position: relative !important;}
-
-
+ 
+}
 </style>
 
 </head>
@@ -243,7 +245,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
       </header>
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Vanisha Honda</span>
-       <nav class="mdl-navigation">
+        <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="index.php"><i class="material-icons">home</i>Home</a>
           <a class="mdl-navigation__link" href="product_types.php"><i class="material-icons">directions_bike</i>Products</a>
           <a class="mdl-navigation__link" href="customer_services.php"><i class="material-icons">build</i>Services</a>
