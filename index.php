@@ -186,7 +186,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
            <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
               <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
-                <li><a href=" id="service"_service.php" id="service">Book Servicing</a></li>
+                <li><a href="book_service.php" id="service">Book Servicing</a></li>
                 <li><a href="insurance.php" id="service">Renew Insurance</a></li>
                 <li><a href="finance.php" id="service">Get Finance</a></li>
               </ul>
