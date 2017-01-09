@@ -87,16 +87,11 @@ h6{
 .dropdown-menu{
  background-color:  #F1524B !important; 
 text-transform: capitalize !important;
-
+border-radius :0px !important;
 
 }
 
 
-
-.dropdown-menu{
- background-color:  #F1524B !important; 
- 
- }
 
  /*Below code is for color and top,bottom bar after mouse is Hover in the Drpdown menu*/
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
