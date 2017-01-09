@@ -115,11 +115,8 @@ elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg
       <header style="background-color:#F1524B;height:110px" class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
-<<<<<<< HEAD
           <img style="margin-top:-3.8%;margin-left:30px;" src="images/honda_logo_white.png" width="60" height="60"></img>
-=======
-          <img style="margin-top:-3.8%;margin-left:40px;" src="images/honda_logo_white.png" width="60" height="60"></img>
->>>>>>> aiffin changes 2
+
           <span style="margin-left:1%;font-size:20px;" class="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
@@ -303,11 +300,8 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-3" style="color:white;">
        <div style="margin-top:5%">
-<<<<<<< HEAD
-        <img width=60 height=60 src="images/honda_logo_red.png"></img>
-=======
-        <img style="width:20%;height:20%" src="images/honda_logo_red.png"></img>
->>>>>>> aiffin changes 2
+        <img width="60" height="60" src="images/honda_logo_red.png"></img>
+
         <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
        </div>
   </div>

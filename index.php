@@ -82,9 +82,12 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
               <ul id="ul_service" class="dropdown-menu">
                 <li><a href="book_service.php" id="service">Book Servicing</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> nav bar css
+=======
+>>>>>>> f5e91b1aad5a012f17dd3b84578cbbd68e298cd0
                 <li><a href="insurance.php" id="service">Renew Insurance</a></li>
                 <li><a href="finance.php" id="service">Get Finance</a></li>
               </ul>
