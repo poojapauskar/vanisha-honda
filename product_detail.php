@@ -18,122 +18,8 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
-
-<style type="text/css">
-
-#ul1 li{
-  display: inline;
-}
-#ul1 li{
-   margin-left:7%;
-  font-size: 12px;
-}
-#ul1{
-  margin-top:8.5%;
-}
-#ul2 li{
-  display: inline;
-}
-#ul2{
-  margin-top:25%;
-}
-#ul4 li{
-  display: inline;
-}
-tr{
-  border-bottom: 1px solid #E4E5E7;
-}
-.collapsible-header{
-  color:gray;
-}
-h6{
-  font-size:15px;
-}
-
-#name{
-  font-family:'Roboto', sans-serif;
-  font-size:13px;
-}
-
-#service{
-  text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-  color:#FFFFFF;
-  font-weight:bold;
-}
-
-#fourth_line{
-  font-size:13px;
-}
-.material-icons {
-   
-    margin-right: 20px;
-    margin-top: -9px;
-}
-#menu{
-  font-weight:bold;
-  font-size:15px;
-  font-family: 'Roboto', sans-serif;
-  color:#FFFFFF;
-}
-
-.mdl-layout__drawer-button{
-  margin-top:40px;
-  margin-left:40px;
-}
-
-.mdl-layout__header-row .mdl-navigation__link {
-    display: block;
-    opacity: 1;
-    line-height: 64px;
-    padding: 0 24px;
-    text-decoration: none !important;
-
-}
-
-
-.dropdown-menu{
- background-color:  #F1524B !important; 
-text-transform: capitalize !important;
-
-
-}
-.dropdown-menu{
- background-color:  #F1524B !important; 
- 
- }
-
- /*Below code is for color and top,bottom bar after mouse is Hover in the Drpdown menu*/
-.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-    color: #FFFFFF  !important;
-    text-decoration: none !important;
-
-    background-color: #f8b6b3 !important;
-
- /*   border-bottom: 1px solid #FFFFFF !important;
-    border-top: 1px solid #FFFFFF !important;*/
-}
-/*This code is for  dropdown menu bar*/
-.dropdown-menu>li>a {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: 400;
-    line-height: 1.42857143;
-    color: #FFFFFF;
-    white-space: nowrap;
-    text-decoration: none;
-    z-index: -1;
-
-}
-/*When we hover this on Nav bar menu items a White line comes down */
-.homonhov:hover {
-    border-bottom: 4px solid #FFFFFF !important;
-    text-decoration: none !important; 
- 
-}
-</style>
 
 </head>
 <body  style="background-color:#E4E5E7">
@@ -206,7 +92,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
       <header style="background-color:#F1524B;height:110px" class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
-          <img style="margin-top:-3.8%;margin-left:40px;" src="images/honda_logo_white.png" width="60" height="60"></img>
+          <img style="margin-top:-3.8%;margin-left:30px;" src="images/honda_logo_white.png" width="60" height="60"></img>
           <span style="margin-left:1%;font-size:20px;" class="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
@@ -219,10 +105,10 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
-                          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
+                          <a class="trigger right-caret" id="service"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
                               <ul class="dropdown-menu sub-menu">
                                 <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
-                                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
+                                  <li id="service"><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
                                 <?php } ?>
                               </ul>
                       <?php } ?>
@@ -560,7 +446,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;">
        <div style="margin-top:5%">
-        <img style="width:20%;height:20%" src="images/honda_logo_red.png"></img>
+        <img width="60" height="60" src="images/honda_logo_red.png"></img>
         <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
        </div>
   </div>
