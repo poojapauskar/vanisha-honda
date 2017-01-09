@@ -15,113 +15,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
 <style type="text/css">
 
-#ul1 li{
-  display: inline;
-}
-#ul1 li{
-  margin-left:7%;
-  font-size: 12px;
-}
-#ul1{
-  margin-top:8.5%;
-}
-#ul2 li{
-  display: inline;
-}
-#ul2{
-  margin-top:25%;
-}
-#ul4 li{
-  display: inline;
-}
 tr{
   border-bottom: 1px solid #E4E5E7;
 }
 .collapsible-header{
   color:gray;
 }
-h6{
-  font-size:15px;
-}
-
-#name{
-  font-family:'Roboto', sans-serif;
-  font-size:13px;
-}
-
-#fourth_line{
-  font-size:13px;
-}
-.material-icons {
-   
-    margin-right: 20px;
-    margin-top: -9px;
-}
-#menu{
-  font-weight:bold;
-  font-size:15px;
-  font-family: 'Roboto', sans-serif;
-  color:#FFFFFF;
-}
-
-.mdl-layout__drawer-button{
-  margin-top:40px;
-  margin-left:50px;
-}
-
-.mdl-layout__header-row .mdl-navigation__link {
-    display: block;
-    opacity: 1;
-    line-height: 64px;
-    padding: 0 24px;
-    text-decoration: none !important;
-
-}
-
-
-.dropdown-menu{
- background-color:  #F1524B !important; 
-text-transform: capitalize !important;
-
-
-}
-.dropdown-menu{
- background-color:  #F1524B !important; 
- 
- }
-
- /*Below code is for color and top,bottom bar after mouse is Hover in the Drpdown menu*/
-.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-    color: #FFFFFF  !important;
-    text-decoration: none !important;
-
-    background-color: #f8b6b3 !important;
-
- /*   border-bottom: 1px solid #FFFFFF !important;
-    border-top: 1px solid #FFFFFF !important;*/
-}
-/*This code is for  dropdown menu bar*/
-.dropdown-menu>li>a {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: 400;
-    line-height: 1.42857143;
-    color: #FFFFFF;
-    white-space: nowrap;
-    text-decoration: none;
-    z-index: -1;
-
-}
-/*When we hover this on Nav bar menu items a White line comes down */
-.homonhov:hover {
-    border-bottom: 4px solid #FFFFFF !important;
-    text-decoration: none !important; 
-    position: relative !important;}
-
 </style>
 </head>
 <body  style="background-color:#E4E5E7">
@@ -233,10 +136,10 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
-                          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
+                          <a class="trigger right-caret" id="service"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
                               <ul class="dropdown-menu sub-menu">
                                 <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
-                                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
+                                  <li id="service"><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
                                 <?php } ?>
                               </ul>
                       <?php } ?>
@@ -387,7 +290,7 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-3" style="color:white;">
        <div style="margin-top:5%">
-       <img style="width:20%;height:20%" src="images/honda_logo_red.png"></img>
+       <img width="60"height="60" src="images/honda_logo_red.png"></img>
         <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
       </div>
   </div>

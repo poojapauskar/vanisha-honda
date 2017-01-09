@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/material.indigo.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/index.js"></script>
 <style type="text/css">
@@ -115,6 +115,11 @@ text-transform: capitalize !important;
     text-decoration: none;
     z-index: -1;
 
+}
+#service{
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  color:#FFFFFF;
 }
 /*When we hover this on Nav bar menu items a White line comes down */
 .homonhov:hover {
@@ -303,10 +308,10 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
-                          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
+                          <a class="trigger right-caret" id="service"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
                               <ul class="dropdown-menu sub-menu">
                                 <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
-                                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
+                                  <li id="service"><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
                                 <?php } ?>
                               </ul>
                       <?php } ?>
