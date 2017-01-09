@@ -26,7 +26,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
+<style type="text/css">
 
+
+tr{
+  border-bottom: 1px solid #E4E5E7;
+}
+.collapsible-header{
+  color:gray;
+}
+</style>
 </head>
 <body style="background-color:#E4E5E7">
 
