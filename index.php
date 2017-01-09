@@ -26,8 +26,8 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/vanisha-honda.css">
-    <script src="js/index.js"></script>
 
+    <script src="js/index.js"></script>
 
 </head>
 <body style="background-color:#E4E5E7">
@@ -52,6 +52,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
         <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
           <img style="margin-top:-3.8%;margin-left:30px;" src="images/honda_logo_white.png" width="60" height="60"></img>
+
           <span style="margin-left:1%;font-size:20px;" class="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
@@ -65,7 +66,8 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
                           <a class="trigger right-caret" id="service"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
-                              <ul class="dropdown-menu sub-menu">
+                              <ul class="dropdown-menu sub-menu" >
+
                                 <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
                                   <li id="service"><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
                                 <?php } ?>
@@ -222,7 +224,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%" src="images/face.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%;" src="images/face.jpg"></img>
                       </div>
                       <div class="col-sm-8">
                         <p id="name">Amit Desai</p>
@@ -240,7 +242,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%" src="images/face2.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%;" src="images/face2.jpg"></img>
                       </div>
                       <div class="col-sm-8">
                         <p id="name">Sanjay Shah</p>
@@ -258,7 +260,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%" src="images/face3.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%;" src="images/face3.jpg"></img>
                       </div>
                       <div class="col-sm-8">
                         <p id="name">Ayesha Bhat</p>
@@ -315,6 +317,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
   <div class="col-sm-3" style="color:#FFFFFF;">
        <div style="margin-top:5%">
         <img style="" src="images/honda_logo_red.png" width="60" height="60"></img>
+
         <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
        </div>
   </div>

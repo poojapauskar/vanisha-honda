@@ -1,4 +1,4 @@
- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+ 
 #ul1 li{
   display: inline;
 }
@@ -8,7 +8,7 @@
 
 }
 #ul1{
-  margin-top:10.5%;
+  margin-top:10.6%;
 }
 #ul2 li{
   display: inline;
@@ -27,13 +27,14 @@ h6{
 #name{
   font-family:'Roboto', sans-serif;
   font-size:13px;
-}
+  }
 
 #service{
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   color:#FFFFFF;
-  font-size:15px;
+  font-weight:700;
+  font-size:13px;
 }
 #fourth_line{
   font-size:13px;
@@ -47,6 +48,7 @@ h6{
   font-size:15px;
   font-family: 'Roboto', sans-serif;
   color:#FFFFFF;
+  font-weight:700;
 }
 
  .mdl-layout__drawer-button {
@@ -67,11 +69,9 @@ h6{
 .dropdown-menu{
  background-color:  #F1524B !important; 
 text-transform: capitalize !important;
+border-radius: 0px !important;
 }
-.dropdown-menu{
- background-color:  #F1524B !important; 
- 
- }
+
 
  /*Below code is for color and top,bottom bar after mouse is Hover in the Drpdown menu*/
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
@@ -88,13 +88,16 @@ text-transform: capitalize !important;
     display: block;
     padding: 3px 20px;
     clear: both;
-    font-weight: 400;
-    line-height: 1.42857143;
-    color: #FFFFFF;
+/*    font-weight: 400;
+*/    line-height: 1.42857143;
     white-space: nowrap;
     text-decoration: none;
     z-index: -1;
-
+text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  color:#FFFFFF;
+  font-weight:700;
+  font-size:13px;
 }
 /*When we hover this on Nav bar menu items a White line comes down */
 .homonhov:hover {

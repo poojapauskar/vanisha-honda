@@ -25,6 +25,7 @@ tr{
 .collapsible-header{
   color:gray;
 }
+
 </style>
 </head>
 <body  style="background-color:#E4E5E7">
@@ -123,7 +124,8 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
       <header style="background-color:#F1524B;height:110px" class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
-          <img style="margin-top:-3.8%;margin-left:40px;" src="images/honda_logo_white.png" width="60" height="60"></img>
+          <img style="margin-top:-3.8%;margin-left:30px;" src="images/honda_logo_white.png" width="60" height="60"></img>
+
           <span style="margin-left:1%;font-size:20px;" class="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
@@ -150,9 +152,9 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
            <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
               <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
-                <li><a href="book_service.php">Book Servicing</a></li>
-                <li><a href="insurance.php">Renew Insurance</a></li>
-                <li><a href="finance.php">Get Finance</a></li>
+                <li><a href="book_service.php"  id="service">Book Servicing</a></li>
+                <li><a href="insurance.php" id="service">Renew Insurance</a></li>
+                <li><a href="finance.php" id="service">Get Finance</a></li>
               </ul>
             </div>
 
@@ -291,6 +293,7 @@ if($_POST['v_id'] != ''){
   <div class="col-sm-3" style="color:white;">
        <div style="margin-top:5%">
        <img width="60"height="60" src="images/honda_logo_red.png"></img>
+
         <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
       </div>
   </div>
