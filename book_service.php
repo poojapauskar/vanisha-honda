@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/vanisha-honda.css"
+  <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
 <style type="text/css">
 

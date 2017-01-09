@@ -130,7 +130,7 @@ $arr_vehicle_types = json_decode($output_vehicle_types,true);
   </div>
   <div class="col-sm-3" style="color:white;">
        <div style="margin-top:5%">
-        <img width=60 height=60 src="images/honda_logo_red.png"></img>
+        <img width="60" height="60" src="images/honda_logo_red.png"></img>
         <h5 style="margin-top:-6%;margin-left:29%">Vanisha Honda</h5>
        </div>
   </div>

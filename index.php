@@ -28,7 +28,9 @@
     <link rel="stylesheet" href="css/vanisha-honda.css">
     <script src="js/index.js"></script>
 
+<style type="text/css">
 
+</style>
 </head>
 <body style="background-color:#E4E5E7">
 
@@ -65,7 +67,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
                           <a class="trigger right-caret" id="service"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
-                              <ul class="dropdown-menu sub-menu">
+                              <ul class="dropdown-menu sub-menu" >
                                 <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
                                   <li id="service"><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
                                 <?php } ?>
@@ -78,7 +80,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
            <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
               <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
-                <li><a href=" id="service"_service.php" id="service">Book Servicing</a></li>
+                <li><a href="book_service.php" id="service">Book Servicing</a></li>
                 <li><a href="insurance.php" id="service">Renew Insurance</a></li>
                 <li><a href="finance.php" id="service">Get Finance</a></li>
               </ul>
@@ -222,7 +224,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%" src="images/face.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%;" src="images/face.jpg"></img>
                       </div>
                       <div class="col-sm-8">
                         <p id="name">Amit Desai</p>
@@ -240,7 +242,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%" src="images/face2.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%;" src="images/face2.jpg"></img>
                       </div>
                       <div class="col-sm-8">
                         <p id="name">Sanjay Shah</p>
@@ -258,7 +260,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%" src="images/face3.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%;" src="images/face3.jpg"></img>
                       </div>
                       <div class="col-sm-8">
                         <p id="name">Ayesha Bhat</p>
