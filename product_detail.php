@@ -31,6 +31,14 @@ tr{
 .collapsible-header{
   color:gray;
 }
+.left-caret::after{
+  border-right: 5px solid #F9524B  !important;
+
+}
+.right-caret::after{
+  border-left: 5px solid #F9524B !important;
+
+}
 </style>
 </head>
 <body  style="background-color:#E4E5E7">
