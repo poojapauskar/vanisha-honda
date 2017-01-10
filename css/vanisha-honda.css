@@ -24,9 +24,10 @@ h6{
   font-size:15px;
 }
 
-#name{
+#name1{
   font-family:'Roboto', sans-serif;
   font-size:13px;
+  margin-left: -14.10%;
   }
 
 #service{
@@ -45,7 +46,7 @@ h6{
     margin-top: -9px;
 }
 #menu{
-  font-size:15px;
+  font-size:13px;
   font-family: 'Roboto', sans-serif;
   color:#FFFFFF;
   font-weight:700;
@@ -85,15 +86,15 @@ border-radius: 0px !important;
 }
 /*This code is for  dropdown menu bar*/
 .dropdown-menu>li>a {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
+  display: block;
+  padding: 3px 20px;
+  clear: both;
 /*    font-weight: 400;
-*/    line-height: 1.42857143;
-    white-space: nowrap;
-    text-decoration: none;
-    z-index: -1;
-text-transform: uppercase;
+*/line-height: 1.42857143;
+  white-space: nowrap;
+  text-decoration: none;
+  z-index: -1;
+  text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   color:#FFFFFF;
   font-weight:700;
