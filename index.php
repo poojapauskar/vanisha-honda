@@ -265,6 +265,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       <div class="col-sm-8">
                         <p id="name1">Ayesha Bhat</p>
                         <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;margin-left:-12%;">Dentist</p>
+
                       </div>
                    </div>
                    <div class="row">
