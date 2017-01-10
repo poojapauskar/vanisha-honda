@@ -26,6 +26,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
+<style type="text/css">
+
+
+tr{
+  border-bottom: 1px solid #E4E5E7;
+}
+.collapsible-header{
+  color:gray;
+}
+</style>
 </head>
 <body style="background-color:#E4E5E7">
 
@@ -63,6 +73,7 @@ $arr_vehicle_types = json_decode($output_vehicle_types,true);
         <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
           <img style="margin-top:-3.8%;margin-left:30px;" src="images/honda_logo_white.png" width="60" height="60"></img>
+
           <span style="margin-left:1%;font-size:20px;" class="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>

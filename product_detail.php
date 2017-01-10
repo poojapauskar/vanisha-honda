@@ -21,6 +21,17 @@
   <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
 
+
+<style type="text/css">
+
+
+tr{
+  border-bottom: 1px solid #E4E5E7;
+}
+.collapsible-header{
+  color:gray;
+}
+</style>
 </head>
 <body  style="background-color:#E4E5E7">
 
@@ -86,6 +97,13 @@ $output_details_of_selected_vehicle = file_get_contents($url_details_of_selected
 /*var_dump($output_details_of_selected_vehicle);*/
 $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehicle,true);
 /*echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle'];*/
+                      
+error_log(print_r($url_details_of_selected_vehicle,true));
+error_log(print_r($options_details_of_selected_vehicle,true));
+error_log(print_r($context_details_of_selected_vehicle,true));
+error_log(print_r($output_details_of_selected_vehicle,true));
+error_log(print_r($arr_details_of_selected_vehicle,true));
+
 ?>
 
 <div class="demo-layout-transparent mdl-layout mdl-js-layout">
@@ -93,6 +111,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
         <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
           <img style="margin-top:-3.8%;margin-left:30px;" src="images/honda_logo_white.png" width="60" height="60"></img>
+
           <span style="margin-left:1%;font-size:20px;" class="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
@@ -160,7 +179,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
 
       <div style="text-align:right" class="col-sm-6">
        <img src="<?php echo 'http://res.cloudinary.com/hb3ayjpuz/image/upload/v1478944737/vanishahonda/'.$arr_details_of_selected_vehicle[0]['image_details']['link']; ?>"></img>
-      </div>
+ </div>
   </div>
 </div>
       <!-- <div class="col-sm-6">
@@ -447,6 +466,7 @@ $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehic
   <div class="col-sm-3" style="color:#FFFFFF;">
        <div style="margin-top:5%">
         <img width="60" height="60" src="images/honda_logo_red.png"></img>
+
         <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
        </div>
   </div>
