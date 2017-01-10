@@ -227,7 +227,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                         <img style="width:60px;height:60px;border-radius:50%;" src="images/face.jpg"></img>
                       </div>
                       <div class="col-sm-8">
-                        <p id="name">Amit Desai</p>
+                        <p id="name1">Amit Desai</p>
                         <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;">IT Consultant</p>
                       </div>
                    </div>
@@ -245,7 +245,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                         <img style="width:60px;height:60px;border-radius:50%;" src="images/face2.jpg"></img>
                       </div>
                       <div class="col-sm-8">
-                        <p id="name">Sanjay Shah</p>
+                        <p id="name1">Sanjay Shah</p>
                         <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;">Entrepreneur</p>
                       </div>
                    </div>
@@ -263,7 +263,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                         <img style="width:60px;height:60px;border-radius:50%;" src="images/face3.jpg"></img>
                       </div>
                       <div class="col-sm-8">
-                        <p id="name">Ayesha Bhat</p>
+                        <p id="name1">Ayesha Bhat</p>
                         <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;">Dentist</p>
                       </div>
                    </div>
