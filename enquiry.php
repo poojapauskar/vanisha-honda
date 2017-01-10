@@ -5,16 +5,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   <link rel="stylesheet" href="css/slideshow.css">
-
- <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-    <link rel="stylesheet" href="css/material.indigo.min.css">
+  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <link rel="stylesheet" href="css/material.indigo.min.css">
     <!-- Material Design icon font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/vanisha-honda.css">
+  <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
 
 </head>
@@ -83,8 +81,8 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
       <header style="background-color:#F1524B;height:110px" class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
-          <img style="margin-top:-3.8%" src="images/honda_logo_white.png"></img>
-          <span style="margin-left:1%;font-size:18px;" lass="mdl-layout-title">Vanisha Honda</span>
+          <img style="margin-top:-3.8%;margin-left:30px;" width="60" height="60" src="images/honda_logo_white.png"></img>
+          <span style="margin-left:1%;font-size:20px;" lass="mdl-layout-title">Vanisha Honda</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
@@ -96,10 +94,10 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
                   <ul class="dropdown-menu">
                      <li>
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
-                          <a class="trigger right-caret"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
+                          <a class="trigger right-caret" id="service"><?php echo $arr_types_subtypes[$x]['vehicle_type'] ?></a>
                               <ul class="dropdown-menu sub-menu">
                                 <?php for($y=0;$y<count($arr_types_subtypes[$x]['subtype']);$y++){?>
-                                  <li><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
+                                  <li id="service"><a href="product_detail.php?v_id=<?php echo $arr_types_subtypes[$x]['subtype'][$y]['v_id'] ?>"><?php echo $arr_types_subtypes[$x]['subtype'][$y]['vehicle'] ?></a></li>
                                 <?php } ?>
                               </ul>
                       <?php } ?>
@@ -110,9 +108,9 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
            <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
               <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
-                <li><a href="book_service.php">Book Servicing</a></li>
-                <li><a href="insurance.php">Renew Insurance</a></li>
-                <li><a href="finance.php">Get Finance</a></li>
+                <li><a href="book_service.php" id="service">Book Servicing</a></li>
+                <li><a href="insurance.php" id="service">Renew Insurance</a></li>
+                <li><a href="finance.php" id="service">Get Finance</a></li>
               </ul>
             </div>
 
@@ -133,14 +131,13 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
 
 <main class="mdl-layout__content">
 
-
 <div class="container">
 <div class="row" style="margin-top:6%">
   <div class="col-sm-6" style="margin-top:-4%">
     <h4>Contact Us</h4>
     <h5 style="font-size:18px;margin-top:-1%">Drop Us a mail at: <span style="font-size:14px">info@vanishahonda.com</span></h5>
-    <h5 style="font-size:18px;margin-top:-1%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Reach Us on: <span style="font-size:14px">+91-9876543210</span></h5>
-    <h5 style="margin-top:-2%"><span style="font-size:14px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp +91-9876012345</span></h5>
+    <h5 style="font-size:18px;margin-top:-1%;margin-left:7%">Reach Us on: <span style="font-size:14px">+91-9876543210</span></h5>
+    <h5 style="margin-top:-2%"><span style="font-size:14px;margin-left:28%">+91-9876012345</span></h5>
     <p style="font-size:13px;margin-top:2%">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 

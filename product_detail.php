@@ -10,21 +10,17 @@
 <link rel='stylesheet prefetch' href='css/table.css'>
 <link rel="stylesheet" href="css/slideshow.css">
 
- <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
- <link rel="stylesheet" href="css/material.indigo.min.css">
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<link rel="stylesheet" href="css/material.indigo.min.css">
     <!-- Material Design icon font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/style2.css">
-  <link rel="stylesheet" href="css/vanisha-honda.css">
-  <script src="js/index.js"></script>
-
-
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style2.css">
+<link rel="stylesheet" href="css/vanisha-honda.css">
+<script src="js/index.js"></script>
 <style type="text/css">
-
-
 tr{
   border-bottom: 1px solid #E4E5E7;
 }
