@@ -156,13 +156,13 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 
 <div class="container">
 <div class="row" style="background-color:#FFFFFF;margin-top:5%">
-<h5 id="heading" style="font-weight:500;font-family: 'Roboto', sans-serif;font-size:20px;">ABOUT US</h5>
+<h5 id="heading" style="font-weight:500;font-family: 'Roboto', sans-serif;font-size:18px;">ABOUT US</h5>
 <p id="content" style="font-size:13px;">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
 </div>
 
 
 <div class="row" style="background-color:#FFFFFF;margin-top:5%">
-<h5 id="heading">NEW LAUNCHED VEHICLES</h5>
+<h5 id="heading" style="font-weight:500;font-family: 'Roboto', sans-serif;font-size:18px;">NEW LAUNCHED VEHICLES</h5>
 <div style="margin-bottom:50px;margin-top:0%">
     <div class="col-sm-3" style="text-align:center;border-right:1px solid #F0F2F7">
          <div class="row">
@@ -224,11 +224,11 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%;" src="images/face.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%;float:right;" src="images/face.jpg"></img>
                       </div>
                       <div class="col-sm-8">
                         <p id="name1">Amit Desai</p>
-                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;">IT Consultant</p>
+                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;margin-left:-12%">IT Consultant</p>
                       </div>
                    </div>
                    <div class="row">
@@ -242,11 +242,11 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%;" src="images/face2.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%;float:right;" src="images/face2.jpg"></img>
                       </div>
                       <div class="col-sm-8">
                         <p id="name1">Sanjay Shah</p>
-                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;">Entrepreneur</p>
+                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;margin-left:-12%;">Entrepreneur</p>
                       </div>
                    </div>
                    <div class="row">
@@ -260,11 +260,11 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%;" src="images/face3.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%;float:right;" src="images/face3.jpg"></img>
                       </div>
                       <div class="col-sm-8">
                         <p id="name1">Ayesha Bhat</p>
-                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;">Dentist</p>
+                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;margin-left:-12%;">Dentist</p>
                       </div>
                    </div>
                    <div class="row">
