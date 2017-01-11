@@ -160,8 +160,10 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile">
-            <label class="mdl-textfield__label" for="mobile">Phone</label>
+            <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
+            <label class="mdl-textfield__label" for="mobile inputnocheck">Phone</label>
+              <!-- class "mdl-textfield__error" -->
+          <span class="mdl-textfield__error">Input is not a phone number</span>
           </div>
 
           <div class="demo">
@@ -222,7 +224,7 @@ if($_POST['v_id'] != ''){
         <input class="mdl-textfield__input" type="hidden" id="duration" name="duration">
 
         <div style="text-align:right">
-          <button id="enq_btn" name="enq_btn" type="submit" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <button id="enq_btn" name="enq_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);" class="mdl-button mdl-js-button mdl-js-ripple-effect">
             Submit
           </button>
         </div>

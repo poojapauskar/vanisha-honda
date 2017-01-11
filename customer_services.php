@@ -137,7 +137,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
   </div>
   <div class="col-sm-3" style="color:white;">
        <div style="margin-top:5%">
-       <img style="width:20%;height:20%" src="images/honda_logo_red.png"></img>
+       <img width="60" height="60" src="images/honda_logo_red.png"></img>
         <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
        </div>
   </div>

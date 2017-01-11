@@ -248,8 +248,10 @@ if($_POST['v_id'] != ''){
             <label class="mdl-textfield__label" for="email">Email</label>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile">
-            <label class="mdl-textfield__label" for="mobile">Mobile</label>
+            <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
+            <label class="mdl-textfield__label" for="mobile inputnocheck" >Mobile</label>
+              <!-- class "mdl-textfield__error" -->
+          <span class="mdl-textfield__error">Input is not a phone number</span>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['engine_no'] ?>" class="mdl-textfield__input" type="text" id="engine_no" name="engine_no">
@@ -283,7 +285,7 @@ if($_POST['v_id'] != ''){
 <input class="mdl-textfield__input" type="hidden" id="mechanic_id" name="mechanic_id">
 
           <div style="text-align:right">
-          <button id="book_service_btn" name="book_service_btn" type="submit" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <button id="book_service_btn" name="book_service_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);" class="mdl-button mdl-js-button mdl-js-ripple-effect">
             Submit
           </button>
           </div>
