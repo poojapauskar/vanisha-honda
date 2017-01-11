@@ -175,7 +175,7 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
 <div class="row" style="margin-top:6%">
   <div class="col-sm-6" style="margin-top:-4%">
     <h4>Insurance Renewal</h4>
-    <img style="width:150px;height:150px" src="images/Insurance.png"></img>
+    <img style="width:150px;height:150px" src="images/Insurance_2.png"></img>
     <p style="font-size:13px;margin-top:2%">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 
