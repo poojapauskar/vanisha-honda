@@ -275,7 +275,7 @@ if($_POST['v_id'] != ''){
           <input class="mdl-textfield__input" type="hidden" id="date" name="date">
         
           <div style="text-align:right">
-            <button type="submit" id="insurance_btn" name="insurance_btn" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            <button type="submit" id="insurance_btn" name="insurance_btn" style="background-color: #fff;color: rgb(0, 0, 255);" class="mdl-button mdl-js-button mdl-js-ripple-effect">
               Submit
             </button>
           </div>

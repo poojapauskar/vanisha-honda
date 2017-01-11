@@ -423,7 +423,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
 
   <div class="col-sm-6">
 
-      <form action="product_detail.php?v_id=<?php echo $_GET['v_id'] ?>" method="post" style="width:320px;margin-top:9%;background-color:white;padding:5px 5px 5px 5px">
+      <form action="product_detail.php?v_id=<?php echo $_GET['v_id'] ?>" method="post" style="width:320px;height: 355px;margin-top:9%;background-color:white;padding:5px 5px 5px 5px">
 
       <h5 style="color:gray">Request Quotation</h5>
       <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
@@ -437,8 +437,10 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
           <label class="mdl-textfield__label" for="email">Email Address</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="mobile" name="mobile">
-          <label class="mdl-textfield__label" for="mobile">Mobile</label>
+          <input class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
+         <label class="mdl-textfield__label" for="mobile inputnocheck">Mobile</label>
+          <!-- class "mdl-textfield__error" -->
+          <span class="mdl-textfield__error">Input is not a phone number</span>
         </div>
 
         <input class="mdl-textfield__input" type="hidden" id="v_id" name="v_id" value="<?php echo $_GET['v_id'] ?>">
@@ -453,7 +455,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
         <input class="mdl-textfield__input" type="hidden" id="duration" name="duration">
         <br>
         <div style="text-align:right">
-          <button id="submit_btn" name="submit_btn" type="submit" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <button id="submit_btn" name="submit_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);margin-top: 45px;" class="mdl-button mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">
             Submit
           </button>
         </div>
