@@ -431,18 +431,17 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
-          <input class="mdl-textfield__input" type="text" id="name" name="name" placeholder="FullName">
+          <input class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name">
           
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email Address</label>
-          <input class="mdl-textfield__input" type="text" id="email" name="email">
+          <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
+          <input class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email Address">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 
           <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;">Mobile</label>
           <input class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
-         
           <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a phone number</span>
         </div>
