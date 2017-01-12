@@ -437,7 +437,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
           <label class="mdl-textfield__label" for="email">Email Address</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
+          <input placeholder="+91-" class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" >
          <label class="mdl-textfield__label" for="mobile inputnocheck">Mobile</label>
           <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a phone number</span>
@@ -455,7 +455,9 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
         <input class="mdl-textfield__input" type="hidden" id="duration" name="duration">
         <br>
         <div style="text-align:right">
-          <button id="submit_btn" name="submit_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);margin-top: 45px;" class="mdl-button mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">
+          <button id="submit_btn" name="submit_btn" type="submit" 
+          style="background-color: #fff;color: rgb(0, 0, 255);margin-top:05px;" 
+          class="mdl-button mdl-js-button mdl-js-ripple-effect">
             Submit
           </button>
         </div>
