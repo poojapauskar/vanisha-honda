@@ -439,7 +439,10 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
           <input class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email Address">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<<<<<<< HEAD
 
+=======
+>>>>>>> fc2468c3ff468d639ffbbe80c4b8a15dc1c64c5f
           <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;">Mobile</label>
           <input class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
           <!-- class "mdl-textfield__error" -->

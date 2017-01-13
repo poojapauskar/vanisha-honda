@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
   <script type="text/javascript"></script>
+<<<<<<< HEAD
   <style type="text/css">
 label {
     display: inline-block;
@@ -23,6 +24,8 @@ label {
     font-size:13px;
 }
   </style>
+=======
+>>>>>>> fc2468c3ff468d639ffbbe80c4b8a15dc1c64c5f
 </head>
 <body  style="background-color:#E4E5E7">
 <?php
@@ -155,9 +158,14 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
           <h6 style="font-size:18px;">Enquiry Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<<<<<<< HEAD
           <label class="mui-textfield" for="name" style="color:#cccccc;">Name</label>
           <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name">
           
+=======
+          <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name">
+          <label class="mui-textfield" for="name">Name</label>
+>>>>>>> fc2468c3ff468d639ffbbe80c4b8a15dc1c64c5f
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -178,6 +186,25 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
             <!-- Standard Select -->
             <div class="mdl-selectfield">
                   <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
+
+
+<!-- <form>
+  <legend>Title</legend>
+  <div class="mui-textfield">
+    <input type="text">
+    <label>Input 1</label>
+  </div>
+  <div class="mui-textfield">
+    <input type="text">
+    <label>Input 2</label>
+  </div>
+  <div class="mui-textfield">
+    <textarea></textarea>
+    <label>Textarea</label>
+  </div>
+  <button type="submit" class="mui-btn mui-btn--raised">Submit</button>
+</form>
+ -->
                       
 <?php
 
