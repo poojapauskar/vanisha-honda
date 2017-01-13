@@ -174,7 +174,10 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
               <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a phone number</span>
           </div>
+<<<<<<< HEAD
           <!-- Added label over the SelectField -->
+=======
+>>>>>>> cfd189acba3257d4a6edbb21a00dd6a53f5fef8d
           <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;">Vehicle</label>
 
           <div class="demo">
