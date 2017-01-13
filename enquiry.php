@@ -22,6 +22,7 @@ label {
     margin-bottom: 5px;
     font-size:13px;
 }
+</style>
 
 </head>
 <body  style="background-color:#E4E5E7">
@@ -177,27 +178,7 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
-
-
-<!-- <form>
-  <legend>Title</legend>
-  <div class="mui-textfield">
-    <input type="text">
-    <label>Input 1</label>
-  </div>
-  <div class="mui-textfield">
-    <input type="text">
-    <label>Input 2</label>
-  </div>
-  <div class="mui-textfield">
-    <textarea></textarea>
-    <label>Textarea</label>
-  </div>
-  <button type="submit" class="mui-btn mui-btn--raised">Submit</button>
-</form>
- -->
-                      
+                  <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">                    
 <?php
 
 if($_POST['v_id'] != ''){
