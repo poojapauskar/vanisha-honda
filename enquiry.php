@@ -180,8 +180,9 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
+
                   <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
-                       
+
 <?php
 
 if($_POST['v_id'] != ''){
