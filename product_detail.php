@@ -235,7 +235,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
       <div id="container_2nd" style="width:390px;margin-top:9%">
         <ul class="collapsible"  data-collapsible="accordion" style="background-color:white">
 
-        <h5 style="color:gray;margin-left:2%">Specifications</h5>
+        <h5 style="color:black;margin-left:2%">Specifications</h5>
 
             <li id="col_li">
               <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Body Dimensions<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
@@ -426,7 +426,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
 
       <form action="product_detail.php?v_id=<?php echo $_GET['v_id'] ?>" method="post" style="width:320px;height: 355px;margin-top:9%;background-color:white;padding:5px 5px 5px 5px">
 
-      <h5 style="color:gray">Request Quotation</h5>
+      <h5 style="color:black;">Request Quotation</h5>
       <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

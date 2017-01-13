@@ -202,10 +202,11 @@ if($_POST['v_id'] != ''){
   $arr_details_of_selected_vehicle = json_decode($output_details_of_selected_vehicle,true);
   /*echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle'];*/
 }
-?>
+?>                    
                       <?php if($_POST['v_id'] != ''){?>
                        <option value="<?php echo $_POST['v_id'] ?>" selected><?php echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle']; 
                       }else{?>
+
                        <option value="" disabled selected><?php echo "Select Vehicle Model"; }?>
 
 
@@ -240,35 +241,39 @@ if($_POST['v_id'] != ''){
           </div>
 
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name">
-            <label class="mdl-textfield__label" for="name">Name</label>
+            <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
+            <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name"> 
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="text" id="email" name="email">
-            <label class="mdl-textfield__label" for="email">Email</label>
+            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
+            <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email Address">
+            
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;" >Mobile</label>
             <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
-            <label class="mdl-textfield__label" for="mobile inputnocheck" >Mobile</label>
+            
               <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a phone number</span>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label class="mdl-textfield__label" for="v_no" style="color:#cccccc;">Vehicle Number</label>
             <input value="<?php echo $_POST['engine_no'] ?>" class="mdl-textfield__input" type="text" id="engine_no" name="engine_no">
-            <label class="mdl-textfield__label" for="v_no">Vehicle Number</label>
+            
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"><?php echo $_POST['address'] ?></textarea>
-            <label class="mdl-textfield__label" for="address">Address</label>
+            <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Address</label>
+            <textarea placeholder="Address" class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"><?php echo $_POST['address'] ?></textarea>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label class="mdl-textfield__label" for="additional_service" style="color:#cccccc;">Other Instructions/<br> Additional Service Requirement</label>
             <textarea class="mdl-textfield__input" type="text" rows= "3" id="additional_service" name="additional_service"><?php echo $_POST['additional_service'] ?></textarea>
-            <label class="mdl-textfield__label" for="additional_service">Other Instructions/<br> Additional Service Requirement</label>
+            
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+             <label class="mdl-textfield__label" for="delivery_date" style="color:#cccccc;">Date</label>
             <input value="<?php echo $_POST['delivery_date'] ?>" class="mdl-textfield__input date" type="text" id="delivery_date" placeholder="Date DD/MM/YYY" name="delivery_date">
-            <!-- <label class="mdl-textfield__label" for="delivery_date"></label> -->
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
