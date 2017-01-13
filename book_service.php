@@ -179,10 +179,12 @@ elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg
         
           <h6 style="font-size:18px">Booking Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
+          <!-- Added label over the SelectField -->
+          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;font-size: 13px">Vehicle</label>
           <div class="demo">
             <!-- Standard Select -->
                 <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
+                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px;line-height:35px" class="browser-default" name="v_id" id="v_id">
                       
 <?php
 
@@ -221,11 +223,12 @@ if($_POST['v_id'] != ''){
                   </select>
                 </div>
           </div>
-
+<!-- Added label over the SelectField -->
+          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;font-size: 13px;line-height:10px">Servicing</label>
           <div class="demo" style="margin-top:2%">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
-              <select style="background-color:white;border:none;color:gray;font-size:15px"  class="browser-default"  name="v_type" id="v_type">
+              <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px"  class="browser-default"  name="v_type" id="v_type">
                 
                 <?php if($_POST['v_type'] != ''){?>
                        <option value="<?php echo $_POST['v_type'] ?>" selected><?php echo $_POST['v_type']; 

@@ -184,10 +184,12 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
           
           <h6 style="font-size:18px">Insurance Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
+         <!-- Added label over the SelectField -->
+          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;">Vehicle</label>
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
+                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px" class="browser-default" name="v_id" id="v_id">
                       
 <?php
 

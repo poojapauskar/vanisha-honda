@@ -269,11 +269,13 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
             <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Address</label>
             <textarea class="mdl-textfield__input" type="text" rows= "1" id="address" name="address" placeholder="Address"><?php echo $_POST['address']; ?></textarea>
           </div>
+<!-- Added label over the SelectField -->
+          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;">Vehicle</label>
 
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
+                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px" class="browser-default" name="v_id" id="v_id">
                       
 <?php
 
@@ -311,7 +313,7 @@ if($_POST['v_id'] != ''){
                   </select>
                 </div>
           </div>
-
+<br>
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label class="mdl-textfield__label" for="loan_amt" style="color:#cccccc;">Loan Amount</label>
             <input value="<?php echo $_POST['loan_amt']; ?>" class="mdl-textfield__input" type="text" id="loan_amt" name="loan_amt" placeholder="Loan Amt">
