@@ -73,6 +73,10 @@ text-transform: capitalize !important;
 border-radius: 0px !important;
 }
 
+.mdl-layout__header--transparent.mdl-layout__header--transparent {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
 
  /*Below code is for color and top,bottom bar after mouse is Hover in the Drpdown menu*/
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
