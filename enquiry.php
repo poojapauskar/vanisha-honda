@@ -22,6 +22,7 @@ label {
     margin-bottom: 5px;
     font-size:13px;
 }
+
 </style>
 </head>
 <body  style="background-color:#E4E5E7">
@@ -158,6 +159,7 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
 
           <label class="mui-textfield" for="name" style="color:#cccccc;">Name</label>
           <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name">
+
 
           </div>
 
