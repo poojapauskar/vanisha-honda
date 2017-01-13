@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
   <script type="text/javascript"></script>
-<<<<<<< HEAD
   <style type="text/css">
 label {
     display: inline-block;
@@ -23,9 +22,7 @@ label {
     margin-bottom: 5px;
     font-size:13px;
 }
-  </style>
-=======
->>>>>>> fc2468c3ff468d639ffbbe80c4b8a15dc1c64c5f
+
 </head>
 <body  style="background-color:#E4E5E7">
 <?php
@@ -158,14 +155,9 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
           <h6 style="font-size:18px;">Enquiry Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-<<<<<<< HEAD
+
           <label class="mui-textfield" for="name" style="color:#cccccc;">Name</label>
           <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name">
-          
-=======
-          <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name">
-          <label class="mui-textfield" for="name">Name</label>
->>>>>>> fc2468c3ff468d639ffbbe80c4b8a15dc1c64c5f
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
