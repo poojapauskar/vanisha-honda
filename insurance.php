@@ -226,48 +226,48 @@ if($_POST['v_id'] != ''){
                 </div>
           </div>
 
-          <div style="margin-top:2%" class="mdl-textfield mdl-js-textfield">
+          <div style="margin-top:2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label class="mdl-textfield__label" for="delivery_date" style="color:#cccccc;">Purchase Date</label> 
             <input value="<?php echo $_POST['purchase_date'] ?>" class="mdl-textfield__input date" type="text" id="purchase_date" name="purchase_date" placeholder="Purchase Date DD/MM/YYY">
-            <!-- <label class="mdl-textfield__label" for="delivery_date"></label> -->
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['policy_no'] ?>" class="mdl-textfield__input" type="text" id="policy_no" name="policy_no">
-            <label class="mdl-textfield__label" for="policy_no">Policy Number</label>
-          </div>
-
-          <div style="margin-top:-2%" class="mdl-textfield mdl-js-textfield">
-            <input value="<?php echo $_POST['expiry_date'] ?>" class="mdl-textfield__input date" type="text" id="expiry_date" name="expiry_date" placeholder="Expiry Date DD/MM/YYY">
-            <!-- <label class="mdl-textfield__label" for="delivery_date"></label> -->
+            <label class="mdl-textfield__label" for="policy_no" style="color:#cccccc;">Policy Number</label>
+            <input value="<?php echo $_POST['policy_no'] ?>" class="mdl-textfield__input" type="text" id="policy_no" name="policy_no" placeholder="Policy Number">
           </div>
 
           <div style="margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['engine_no'] ?>" class="mdl-textfield__input" type="text" id="engine_no" name="engine_no">
-            <label class="mdl-textfield__label" for="engine_no">Vehicle Number</label>
+            <label class="mdl-textfield__label" for="delivery_date" style="color:#cccccc;">Expiry Date</label>
+            <input value="<?php echo $_POST['expiry_date'] ?>" class="mdl-textfield__input date" type="text" id="expiry_date" name="expiry_date" placeholder="Expiry Date DD/MM/YYY">
+          </div>
+
+          <div style="margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label class="mdl-textfield__label" for="engine_no" style="color:#cccccc;">Vehicle Number</label>
+            <input value="<?php echo $_POST['engine_no'] ?>" class="mdl-textfield__input" type="text" id="engine_no" name="engine_no" placeholder="Vehicle Number">
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['chassis_no'] ?>" class="mdl-textfield__input" type="text" id="chassis_no" name="chassis_no">
-            <label class="mdl-textfield__label" for="chassis_no">Chassis Number</label>
+            <label class="mdl-textfield__label" for="chassis_no" style="color:#cccccc;">Chassis Number</label>
+            <input value="<?php echo $_POST['chassis_no'] ?>" class="mdl-textfield__input" type="text" id="chassis_no" name="chassis_no" placeholder="Chassis Number">
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name">
-            <label class="mdl-textfield__label" for="name">Name</label>
+            <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
+            <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name">
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="text" id="email" name="email">
-            <label class="mdl-textfield__label" for="email">Email</label>
+            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
+            <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email Address">
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile">
-            <label class="mdl-textfield__label" for="mobile">Mobile</label>
+            <label class="mdl-textfield__label" for="mobile" style="color:#cccccc;" >Mobile</label>
+            <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" placeholder="+91">
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"><?php echo $_POST['address'] ?></textarea>
-            <label class="mdl-textfield__label" for="address">Address</label>
+            <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Address</label>
+            <textarea class="mdl-textfield__input" type="text" rows= "1" id="address" name="address" placeholder="Address"><?php echo $_POST['address'] ?></textarea>
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['renewal_amt'] ?>" class="mdl-textfield__input" type="text" id="renewal_amt" name="renewal_amt">
-            <label class="mdl-textfield__label" for="renewal_amt">Amount</label>
+            <label class="mdl-textfield__label" for="renewal_amt" style="color:#cccccc;">Amount</label>
+            <input value="<?php echo $_POST['renewal_amt'] ?>" class="mdl-textfield__input" type="text" id="renewal_amt" name="renewal_amt" placeholder="Amount">
           </div>
           
           <br>

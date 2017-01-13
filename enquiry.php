@@ -16,12 +16,12 @@
   <script src="js/index.js"></script>
   <script type="text/javascript"></script>
   <style type="text/css">
-label {
+  label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
     font-size:13px;
-}
+  }
 
 </style>
 </head>
@@ -117,7 +117,7 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
            <div class="mdl-navigation__link dropdown homonhov" style="line-height:35px;">
               <a href="#" class="btn dropdown-toggle" id="menu" data-toggle="dropdown">SERVICES<!-- <span class="caret"></span> --></a>
               <ul id="ul_service" class="dropdown-menu">
-                <li><a href="book_service.php" id="service">Book Servicing</a></li>
+                <li><a href="book_service.php" id="service">Book Servicingm</a></li>
                 <li><a href="insurance.php" id="service">Renew Insurance</a></li>
                 <li><a href="finance.php" id="service">Get Finance</a></li>
               </ul>
@@ -144,9 +144,9 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
 <div class="row" style="margin-top:6%">
   <div class="col-sm-6" style="margin-top:-4%">
     <h4>Contact Us</h4>
-    <h5 style="font-size:18px;margin-top:-1%">Drop Us a mail at: <span style="font-size:14px">info@vanishahonda.com</span></h5>
-    <h5 style="font-size:18px;margin-top:-1%;margin-left:7%">Reach Us on: <span style="font-size:14px">+91-9876543210</span></h5>
-    <h5 style="margin-top:-2%"><span style="font-size:14px;margin-left:28%">+91-9876012345</span></h5>
+    <h5 style="font-size:18px;margin-top:-1%";>Drop Us a mail at: <span style="font-size:14px;margin-left:4%;">info@vanishahonda.com</span></h5>
+    <h5 style="font-size:18px;margin-top:-1%;margin-left:7%">Reach Us on: <span style="font-size:14px;margin-left:4%;">+91-9876543210</span></h5>
+    <h5 style="margin-top:-2%"><span style="font-size:14px;margin-left:31%">+91-9876012345</span></h5>
     <p style="font-size:13px;margin-top:2%">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 
@@ -223,7 +223,7 @@ if($_POST['v_id'] != ''){
 <br>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
              <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Message</label>
-            <textarea placeholder="Message/Instructions" class="mdl-textfield__input" type="text" rows= "3" id="address" name="address" ><?php echo $_POST['address'] ?></textarea>
+            <textarea placeholder="Message/Instructions" class="mdl-textfield__input" type="text" rows= "1" id="address" name="address" ><?php echo $_POST['address'] ?></textarea>
            
           </div>
 
