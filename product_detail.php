@@ -36,7 +36,6 @@ tr{
 
 }
 
-
 </style>
 </head>
 <body  style="background-color:#E4E5E7">
@@ -460,7 +459,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
         <br>
         <div style="text-align:right">
           <button id="submit_btn" name="submit_btn" type="submit" 
-          style="background-color: #fff;color: rgb(0, 0, 255);margin-top:05px;" 
+          style="background-color: #fff;color: rgb(0, 0, 255);margin-top:41px;" 
           class="mdl-button mdl-js-button mdl-js-ripple-effect">
             Submit
           </button>
