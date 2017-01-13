@@ -35,6 +35,7 @@ tr{
   border-left: 5px solid #F9524B !important;
 
 }
+
 </style>
 </head>
 <body  style="background-color:#E4E5E7">
@@ -429,16 +430,18 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
       <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="name" name="name">
-          <label class="mdl-textfield__label" for="name">Full Name</label>
+          <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
+          <input class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name">
+          
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="email" name="email">
-          <label class="mdl-textfield__label" for="email">Email Address</label>
+          <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
+          <input class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email Address">
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+
+          <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;">Mobile</label>
           <input class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
-         <label class="mdl-textfield__label" for="mobile inputnocheck">Mobile</label>
           <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a phone number</span>
         </div>
@@ -455,7 +458,9 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
         <input class="mdl-textfield__input" type="hidden" id="duration" name="duration">
         <br>
         <div style="text-align:right">
-          <button id="submit_btn" name="submit_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);margin-top: 45px;" class="mdl-button mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">
+          <button id="submit_btn" name="submit_btn" type="submit" 
+          style="background-color: #fff;color: rgb(0, 0, 255);margin-top:05px;" 
+          class="mdl-button mdl-js-button mdl-js-ripple-effect">
             Submit
           </button>
         </div>
