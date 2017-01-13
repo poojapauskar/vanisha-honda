@@ -15,6 +15,15 @@
   <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
   <script type="text/javascript"></script>
+  <style type="text/css">
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-size:13px;
+}
+
+</style>
 </head>
 <body  style="background-color:#E4E5E7">
 <?php
@@ -144,21 +153,26 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
   <div class="col-sm-6">
     <form action="enquiry.php" method="post" style="background-color:white;width:300px;padding:2px 10px 10px 10px">
         
-          <h6 style="font-size:18px">Enquiry Form</h6>
+          <h6 style="font-size:18px;">Enquiry Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name">
-          <label class="mui-textfield" for="name">Name</label>
+
+          <label class="mui-textfield" for="name" style="color:#cccccc;">Name</label>
+          <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name">
+
+
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="text" id="email" name="email">
-            <label class="mdl-textfield__label" for="email">Email</label>
+            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
+            <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email Address">
+            
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;">Mobile</label>
             <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
-            <label class="mdl-textfield__label" for="mobile inputnocheck">Phone</label>
+            
               <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a phone number</span>
           </div>
@@ -167,26 +181,7 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
             <!-- Standard Select -->
             <div class="mdl-selectfield">
                   <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
-
-
-<!-- <form>
-  <legend>Title</legend>
-  <div class="mui-textfield">
-    <input type="text">
-    <label>Input 1</label>
-  </div>
-  <div class="mui-textfield">
-    <input type="text">
-    <label>Input 2</label>
-  </div>
-  <div class="mui-textfield">
-    <textarea></textarea>
-    <label>Textarea</label>
-  </div>
-  <button type="submit" class="mui-btn mui-btn--raised">Submit</button>
-</form>
- -->
-                      
+                       
 <?php
 
 if($_POST['v_id'] != ''){
@@ -227,8 +222,9 @@ if($_POST['v_id'] != ''){
 
 <br>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"><?php echo $_POST['address'] ?></textarea>
-            <label class="mdl-textfield__label" for="address">Address</label>
+             <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Message</label>
+            <textarea placeholder="Message/Instructions" class="mdl-textfield__input" type="text" rows= "3" id="address" name="address" ><?php echo $_POST['address'] ?></textarea>
+           
           </div>
 
 <br>
