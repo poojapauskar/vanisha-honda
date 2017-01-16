@@ -49,7 +49,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 
 <div class="demo-layout-transparent mdl-layout mdl-js-layout">
       <header style="background-color:#F1524B;height:110px" class="mdl-layout__header mdl-layout__header--transparent">
-        <div class="mdl-layout__header-row" style="margin-top:4.5%">
+        <div class="mdl-layout__header-row row" style="margin-top:4.5%">
           <!-- Title -->
           <img style="margin-top:-3.8%;margin-left:30px;" src="images/honda_logo_white.png" width="60" height="60"></img>
 
@@ -103,7 +103,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 <main class="mdl-layout__content">
 
   <div style="margin-top:1%">
-    <div style="text-align:center !important;background-color:#FFFFFF" class="row">
+    <div style="text-align:center !important;background-color:#FFFFFF" class="">
       <div id="slider1" class="csslider infinity">
         <input type="radio" name="slides" id="slides_1">
         <input type="radio" name="slides" id="slides_2">
@@ -217,7 +217,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 <h5 style="text-align:center !important;font-weight:bold;font-size:34px;font-family: 'Roboto Condensed', sans-serif;">What Our Customers Have To Say</h5>
 <h5 style="font-size:16px;font-style:italic;font-family:'Roboto', sans-serif;text-align:center !important;margin-top:-5px;">Wings of Trust</h5>
 
-<div class="row" style="text-align:left;margin-top:4%">
+<div class="row" style="text-align:justify;margin-top:4%">
                <div class="col-sm-2">
                </div>
 
@@ -232,7 +232,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                    </div>
                    <div class="row">
-                      <p style="text-align:justify;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                      <p style="text-align:-webkit-left;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
@@ -250,7 +250,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                    </div>
                    <div class="row">
-                     <p style="text-align:justify;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                     <p style="text-align:-webkit-left;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
@@ -260,7 +260,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%;float:right;" src="images/face3.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%;float:right;" src="images/face3.png"></img>
                       </div>
                       <div class="col-sm-8">
                         <p id="name1">Ayesha Bhat</p>
@@ -269,7 +269,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                    </div>
                    <div class="row">
-                    <p style="text-align:justify;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                    <p style="text-align:-webkit-left;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
