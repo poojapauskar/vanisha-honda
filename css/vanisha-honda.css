@@ -109,3 +109,8 @@ border-radius: 0px !important;
     border-bottom: 4px solid #FFFFFF !important;
     text-decoration: none !important; 
     position: relative !important;}
+
+.mdl-mega-footer {
+    padding: 3px 40px;
+    color: #9e9e9e;
+}
