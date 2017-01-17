@@ -1,4 +1,4 @@
- 
+   
 #ul1 li{
   display: inline;
 }
@@ -23,10 +23,6 @@
 h6{
   font-size:15px;
 }
-
-.mdl-layout__header--transparent.mdl-layout__header--transparent {
-     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
- }
 
 #name1{
   font-family:'Roboto', sans-serif;
@@ -54,6 +50,10 @@ h6{
   font-family: 'Roboto', sans-serif;
   color:#FFFFFF;
   font-weight:700;
+}
+
+#heading{
+  
 }
 
  .mdl-layout__drawer-button {
