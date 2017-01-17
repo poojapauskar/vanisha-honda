@@ -30,6 +30,18 @@ h6{
      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
   }*/
 
+#heading {
+    text-align: center;
+    /* border-radius: 5px; */
+    border-bottom-left-radius: 0em;
+    border-bottom-right-radius: 0em;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #F1524B;
+    padding: 15px 0px 15px 0px;
+    color: white;
+    margin-top: -1%;
+}
 #name1{
   font-family:'Roboto', sans-serif;
   font-size:13px;
