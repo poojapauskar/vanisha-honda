@@ -34,11 +34,14 @@
 
 }
 
-/*body {
-  width: 1054px;
-  height: 1054px;
-  background-color: #FFF;
-}*/
+p {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0;
+    margin: 0 0 16px;
+    line-height: 24px;
+    margin-top: 1em;
+  }
     </style>
 
 </head>
@@ -63,6 +66,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
       <header style="background-color:#F1524B;height:110px;-webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;  /* Chrome and Safari         */
      -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;  /* Firefox 3.6               */
      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;" class="mdl-layout__header mdl-layout__header--transparent">
+
         <div class="mdl-layout__header-row " style="margin-top:4.5%">
           <!-- Title -->
           <img style="margin-top:-3.8%;margin-left:30px;" src="images/honda_logo_white.png" width="60" height="60"></img>
@@ -242,7 +246,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                       <div class="col-sm-8">
                         <p id="name1">Amit Desai</p>
-                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;margin-left:-12%">IT Consultant</p>
+                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;margin-left:-17%">IT Consultant</p>
                       </div>
                    </div>
                    <div class="row">
@@ -260,7 +264,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                       <div class="col-sm-8">
                         <p id="name1">Sanjay Shah</p>
-                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;margin-left:-12%;">Entrepreneur</p>
+                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;margin-left:-15%;">Entrepreneur</p>
                       </div>
                    </div>
                    <div class="row">
@@ -278,7 +282,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                       <div class="col-sm-8">
                         <p id="name1">Ayesha Bhat</p>
-                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;margin-left:-12%;">Dentist</p>
+                        <p style="margin-top:-14%;color:gray;font:italic 13px Roboto,sans-serif;margin-left:-18%;">Dentist</p>
 
                       </div>
                    </div>
@@ -347,9 +351,11 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-            <li><img src="images/twitter.png"></img></li>
-            <li><img src="images/facebook.png"></img></li>
-            <li><img src="images/google-plus.png"></img></li>
+            <li><a href="https://twitter.com/">
+            <img src="images/twitter.png" /></a></li>
+            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/"> 
+<img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>
   <div class="col-sm-1">
