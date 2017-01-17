@@ -248,7 +248,7 @@ if($_POST['v_id'] != ''){
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
-            <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email Address">
+            <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="email" id="email" name="email" placeholder="Email Address">
             
           </div>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
