@@ -24,6 +24,10 @@ h6{
   font-size:15px;
 }
 
+.mdl-layout__header--transparent.mdl-layout__header--transparent {
+     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+ }
+
 #name1{
   font-family:'Roboto', sans-serif;
   font-size:13px;
@@ -105,3 +109,8 @@ border-radius: 0px !important;
     border-bottom: 4px solid #FFFFFF !important;
     text-decoration: none !important; 
     position: relative !important;}
+
+.mdl-mega-footer {
+    padding: 3px 40px;
+    color: #9e9e9e;
+}

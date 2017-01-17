@@ -251,29 +251,31 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
       
 
          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['name']; ?>" class="mdl-textfield__input" type="text" id="name" name="name">
-            <label class="mdl-textfield__label" for="name">Name</label>
+            <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
+            <input value="<?php echo $_POST['name']; ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="FullName">
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['email']; ?>" class="mdl-textfield__input" type="text" id="email" name="email">
-            <label class="mdl-textfield__label" for="email">Email</label>
+            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
+            <input value="<?php echo $_POST['email']; ?>" class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email Address">
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['mobile']; ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile">
-            <label class="mdl-textfield__label" for="mobile">Mobile</label>
+            <label class="mdl-textfield__label" for="mobile" style="color:#cccccc;">Mobile</label>
+            <input value="<?php echo $_POST['mobile']; ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" placeholder="+91">
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="address"><?php echo $_POST['address']; ?></textarea>
-            <label class="mdl-textfield__label" for="address">Address</label>
+            <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Address</label>
+            <textarea class="mdl-textfield__input" type="text" rows= "1" id="address" name="address" placeholder="Address"><?php echo $_POST['address']; ?></textarea>
           </div>
+<!-- Added label over the SelectField -->
+          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;">Vehicle</label>
 
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
+                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px" class="browser-default" name="v_id" id="v_id">
                       
 <?php
 
@@ -311,54 +313,55 @@ if($_POST['v_id'] != ''){
                   </select>
                 </div>
           </div>
-
+<br>
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['loan_amt']; ?>" class="mdl-textfield__input" type="text" id="loan_amt" name="loan_amt">
-            <label class="mdl-textfield__label" for="loan_amt">Loan Amount</label>
+            <label class="mdl-textfield__label" for="loan_amt" style="color:#cccccc;">Loan Amount</label>
+            <input value="<?php echo $_POST['loan_amt']; ?>" class="mdl-textfield__input" type="text" id="loan_amt" name="loan_amt" placeholder="Loan Amt">
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['down_payment']; ?>" class="mdl-textfield__input" type="text" id="down_payment" name="down_payment">
-            <label class="mdl-textfield__label" for="down_payment">Down Payment</label>
+            <label class="mdl-textfield__label" for="down_payment" style="color:#cccccc;">Down Payment</label>
+            <input value="<?php echo $_POST['down_payment']; ?>" class="mdl-textfield__input" type="text" id="down_payment" name="down_payment" placeholder="Down payment">
           </div>
 
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['price']; ?>" class="mdl-textfield__input" type="text" id="price" name="price">
-            <label class="mdl-textfield__label" for="price">Price</label>
+          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
+             <label class="mdl-textfield__label" for="price" style="color:#cccccc;">Price</label>
+            <input value="<?php echo $_POST['price']; ?>" class="mdl-textfield__input" type="text" id="price" name="price" placeholder="price">
           </div>
 
 <br>
 
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['pan_no']; ?>" class="mdl-textfield__input" type="text" id="pan_no" name="pan_no">
-            <label class="mdl-textfield__label" for="pan_no">PAN</label>
+             <label class="mdl-textfield__label" for="pan_no" style="color:#cccccc;">PAN</label>
+            <input value="<?php echo $_POST['pan_no']; ?>" class="mdl-textfield__input" type="text" id="pan_no" name="pan_no" placeholder="PAN">
           </div>
 <br>
 
           <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
             <input type="file" id="id_proof" name="id_proof">
-            <label class="mdl-textfield__label" style="margin-top:-10%" for="id_proof">ID Proof</label>
+            <label class="mdl-textfield__label" style="margin-top:-10%" for="id_proof" style="color:#cccccc;">ID Proof</label>
           </div>
 
           <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
             <input type="file" id="add_proof" name="add_proof">
-            <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof">Address Proof</label>
+            <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Address Proof</label>
           </div>
 
           <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
-            <input type="file" id="bank_statement" name="bank_statement">
-            <label class="mdl-textfield__label" style="margin-top:-10%" for="bank_statement">Bank Statement</label>
+            <label class="mdl-textfield__label" style="margin-top:-10%" for="bank_statement" style="color:#cccccc;">Bank Statement</label>
+            <input type="file" id="bank_statement" name="bank_statement" placeholder="Bank Details">
+            
           </div>
 
           <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
-            <input type="file" id="salary_slip" name="salary_slip">
-            <label class="mdl-textfield__label" style="margin-top:-10%" for="salary_slip">Salary Slip</label>
+            <label class="mdl-textfield__label" style="margin-top:-10%" for="salary_slip" style="color:#cccccc;">Salary Slip</label>
+            <input type="file" id="salary_slip" name="salary_slip" placeholder="Salary Slip">
           </div>
 
           <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
-            <input type="file" id="it_returns" name="it_returns">
-            <label class="mdl-textfield__label" style="margin-top:-10%" for="it_returns">IT Returns</label>
+            <label class="mdl-textfield__label" style="margin-top:-10%" for="it_returns" style="color:#cccccc;">IT Returns</label>
+            <input type="file" id="it_returns" name="it_returns" placeholder="IT Returns">
           </div>
 
           <br>

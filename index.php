@@ -28,6 +28,18 @@
     <link rel="stylesheet" href="css/vanisha-honda.css">
 
     <script src="js/index.js"></script>
+    <style type="text/css">
+      .mdl-mini-footer {
+    padding: 10px 16px !important;
+
+}
+
+/*body {
+  width: 1054px;
+  height: 1054px;
+  background-color: #FFF;
+}*/
+    </style>
 
 </head>
 <body style="background-color:#E4E5E7">
@@ -49,7 +61,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 
 <div class="demo-layout-transparent mdl-layout mdl-js-layout">
       <header style="background-color:#F1524B;height:110px" class="mdl-layout__header mdl-layout__header--transparent">
-        <div class="mdl-layout__header-row" style="margin-top:4.5%">
+        <div class="mdl-layout__header-row " style="margin-top:4.5%">
           <!-- Title -->
           <img style="margin-top:-3.8%;margin-left:30px;" src="images/honda_logo_white.png" width="60" height="60"></img>
 
@@ -103,7 +115,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 <main class="mdl-layout__content">
 
   <div style="margin-top:1%">
-    <div style="text-align:center !important;background-color:#FFFFFF" class="row">
+    <div style="text-align:center !important;background-color:#FFFFFF" class="">
       <div id="slider1" class="csslider infinity">
         <input type="radio" name="slides" id="slides_1">
         <input type="radio" name="slides" id="slides_2">
@@ -154,7 +166,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
     </div>
 
 
-<div class="container">
+ <div class="container">
 <div class="row" style="background-color:#FFFFFF;margin-top:5%">
 <h5 id="heading" style="font-weight:500;font-family: 'Roboto', sans-serif;font-size:18px;">ABOUT US</h5>
 <p id="content" style="font-size:13px;">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
@@ -213,11 +225,11 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 
 </div>
 
-<div style="text-align:center;background-color:#FFFFFF;margin-top:5%;padding-top:30px;padding-bottom:34px" class="row">
+<div style="text-align:center;background-color:#FFFFFF;margin-top:5%;padding-top:30px;padding-bottom:0px" class="mdl-layout">
 <h5 style="text-align:center !important;font-weight:bold;font-size:34px;font-family: 'Roboto Condensed', sans-serif;">What Our Customers Have To Say</h5>
 <h5 style="font-size:16px;font-style:italic;font-family:'Roboto', sans-serif;text-align:center !important;margin-top:-5px;">Wings of Trust</h5>
 
-<div class="row" style="text-align:left;margin-top:4%">
+<div class="mdl-layout__content" style="text-align:justify;margin-top:4%;padding-bottom: 25px;">
                <div class="col-sm-2">
                </div>
 
@@ -232,7 +244,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                    </div>
                    <div class="row">
-                      <p style="text-align:justify;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                      <p style="text-align:-webkit-left;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
@@ -250,7 +262,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                    </div>
                    <div class="row">
-                     <p style="text-align:justify;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                     <p style="text-align:-webkit-left;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
@@ -260,7 +272,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                <div class="col-sm-2">
                    <div class="row">
                       <div class="col-sm-4">
-                        <img style="width:60px;height:60px;border-radius:50%;float:right;" src="images/face3.jpg"></img>
+                        <img style="width:60px;height:60px;border-radius:50%;float:right;" src="images/face3.png"></img>
                       </div>
                       <div class="col-sm-8">
                         <p id="name1">Ayesha Bhat</p>
@@ -269,7 +281,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                    </div>
                    <div class="row">
-                    <p style="text-align:justify;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                    <p style="text-align:-webkit-left;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
@@ -307,19 +319,20 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
           <label for="ss1-item-1" class="slideshow--nav slideshow--nav-next">Go to slide 1</label>
         </div>
 
-    </div> -->
+    </div> 
 
-</div>
+</div>-->
 
 
-<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
+<div style="background-color:#607D8B;margin-top:0%;border-bottom:1px solid #688491" class="mdl-mega-footer
+">
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;">
-       <div style="margin-top:5%">
-        <img style="" src="images/honda_logo_red.png" width="60" height="60"></img>
+       <div style="margin-top:5%;">
+        <img style="margin-left: -290px;" src="images/honda_logo_red.png" width="60" height="60"></img>
 
-        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
+        <h5 style="margin-top:-6.5%;margin-left:-25%">Vanisha Honda</h5>
        </div>
   </div>
   <div class="col-sm-5" style="color:#FFFFFF">
@@ -341,14 +354,15 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
   </div>
 </div>
 
-<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
+<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="mdl-mega-footer
+">
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;margin-top:3%">
-        <ul id="ul3" style="list-style: none;margin-left:-14%;font:italic 13px Roboto,sans-serif;">
+        <ul id="ul3" style="list-style: none;margin-left:-100%;padding-left:5px;font:italic 13px Roboto,sans-serif;">
             <li>+91-9987654321</li>
             <li>+91-8314208821</li>
-            <li>info@vanishahonda.com</li>
+            <li style="padding-left:40px;">info@vanishahonda.com</li>
         </ul>
   </div>
   <div class="col-sm-2" style="color:#FFFFFF">

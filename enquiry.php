@@ -22,7 +22,6 @@ label {
     margin-bottom: 5px;
     font-size:13px;
 }
-
 </style>
 </head>
 <body  style="background-color:#E4E5E7">
@@ -41,7 +40,6 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
 ?>
 
 <?php
-
 if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_btn'])){
   $error_message="Mobile field is required";
 }elseif(preg_match('/[A-Za-z]/', $_POST['mobile'])  && isset($_POST['enq_btn'])) {
@@ -157,7 +155,7 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 
-          <label class="mui-textfield" for="name" style="color:#cccccc;">Name</label>
+          <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
           <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name">
 
 
@@ -176,14 +174,19 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
               <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a phone number</span>
           </div>
+<<<<<<< HEAD
+          <!-- Added label over the SelectField -->
+=======
+>>>>>>> cfd189acba3257d4a6edbb21a00dd6a53f5fef8d
+          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;">Vehicle</label>
 
           <div class="demo">
             <!-- Standard Select -->
-            <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px" class="browser-default" name="v_id" id="v_id">
+            <div class="mdl-selectfield mdl-js-selectfield">  
+                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px" class="mdl-selectfield__select" name="v_id" id="v_id">
+                  
                        
 <?php
-
 if($_POST['v_id'] != ''){
   $url_details_of_selected_vehicle = 'http://vanisha-honda.herokuapp.com/get_details_of_selected_vehicle/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
   $options_details_of_selected_vehicle = array(
@@ -204,7 +207,7 @@ if($_POST['v_id'] != ''){
                       <?php if($_POST['v_id'] != ''){?>
                        <option value="<?php echo $_POST['v_id'] ?>" selected><?php echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle']; 
                       }else{?>
-                       <option value="" disabled selected><?php echo "Select Vehicle Model"; }?>
+                       <option value="" disabled selected> <?php echo "Select Vehicle Model"; }?>
 
 
                       <?php for($x=0;$x<count($arr_types_subtypes);$x++){?>
@@ -223,7 +226,7 @@ if($_POST['v_id'] != ''){
 <br>
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
              <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Message</label>
-            <textarea placeholder="Message/Instructions" class="mdl-textfield__input" type="text" rows= "3" id="address" name="address" ><?php echo $_POST['address'] ?></textarea>
+            <textarea placeholder="Message/Instructions" class="mdl-textfield__input" type="text" rows= "1" id="address" name="address" ><?php echo $_POST['address'] ?></textarea>
            
           </div>
 
@@ -343,4 +346,3 @@ if($_POST['v_id'] != ''){
 
 </body>
 </html>
-
