@@ -25,7 +25,7 @@ tr{
 
 </style>
 </head>
-<body  style="background-color:#E4E5E7">
+<body  style="background-color:#E4E5E7;overflow-x:hidden">
 
 <link rel="stylesheet" href="css/jquery-ui.css">
 <script src="js/jquery-ui.js"></script>

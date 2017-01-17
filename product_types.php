@@ -37,7 +37,7 @@ tr{
 }
 </style>
 </head>
-<body style="background-color:#E4E5E7">
+<body style="background-color:#E4E5E7;overflow-x:hidden">
 
 
 <?php
