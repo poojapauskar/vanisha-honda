@@ -24,7 +24,7 @@ label {
 }
 </style>
 </head>
-<body  style="background-color:#E4E5E7;overflow-x:hidden">
+<body  style="background-color:#E4E5E7;overflow-x:hidden;">
 <?php
 $url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
 $options_types_subtypes = array(
