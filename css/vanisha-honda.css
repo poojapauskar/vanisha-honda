@@ -137,3 +137,8 @@ border-radius: 0px !important;
 .mdl-layout__drawer-button{
   outline: none !important;
 }
+
+/*To prevent scrolling horizontal*/
+html{
+  overflow-x:hidden !important;
+}
