@@ -308,10 +308,10 @@ if($_POST['v_id'] != ''){
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
-       <div style="margin-top:5%">
+       <div style="margin-top:5%;margin-left:-16%">
         <img width="60" height="60" src="images/honda_logo_red.png"></img>
 
-        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
+        <h5 style="margin-top:-6%;margin-left:23%">Vanisha Honda</h5>
        </div>
   </div>
   
@@ -327,8 +327,10 @@ if($_POST['v_id'] != ''){
       <ul id="ul2">
             <li><a href="https://twitter.com/">
             <img src="images/twitter.png" /></a></li>
-            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://www.facebook.com/">
+            <img src="images/facebook.png"></img></a></li>
             <li><a href="https://plus.google.com/"> 
+            <img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>
   <div class="col-sm-1">
@@ -339,7 +341,7 @@ if($_POST['v_id'] != ''){
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;margin-top:3%">
-        <ul id="ul3" style="list-style: none;margin-left:-14%">
+        <ul id="ul3" style="list-style: none;margin-left:-33%;font:italic 13px Roboto,sans-serif;">
             <li>+91-9987654321</li>
             <li>+91-8314208821</li>
             <li>info@vanishahonda.com</li>

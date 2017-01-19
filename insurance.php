@@ -292,14 +292,14 @@ if($_POST['v_id'] != ''){
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
-       <div style="margin-top:5%">
-       <img width="60"height="60" src="images/honda_logo_red.png"></img>
+       <div style="margin-top:5%;margin-left:-24%">
+        <img width="60" height="60" src="images/honda_logo_red.png"></img>
 
-        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
-      </div>
+        <h5 style="margin-top:-5.5%;margin-left:22%">Vanisha Honda</h5>
+       </div>
   </div>
   <div class="col-sm-5" style="color:#FFFFFF">
-       <ul id="ul1">
+       <ul id="ul1" style="margin-top:11%">
             <li><a style="color:#FFFFFF" href="index.php">HOME</a></li>
             <li><a style="color:#FFFFFF" href="product_types.php">PRODUCTS</a></li>
             <li><a style="color:#FFFFFF" href="customer_services.php">SERVICES</a></li>
@@ -322,7 +322,7 @@ if($_POST['v_id'] != ''){
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;margin-top:3%">
-         <ul id="ul3" style="list-style: none;margin-left:-14%;font:italic 13px Roboto,sans-serif;">
+         <ul id="ul3" style="list-style: none;margin-left:-36%;font:italic 13px Roboto,sans-serif;">
             <li>+91-9987654321</li>
             <li>+91-8314208821</li>
             <li>info@vanishahonda.com</li>

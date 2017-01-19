@@ -386,15 +386,14 @@ if($_POST['v_id'] != ''){
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
-       <div style="margin-top:5%">
-
+         <div style="margin-top:5%;margin-left:-24%">
         <img width="60" height="60" src="images/honda_logo_red.png"></img>
 
-        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
+        <h5 style="margin-top:-5.5%;margin-left:22%">Vanisha Honda</h5>
        </div>
   </div>
   <div class="col-sm-5" style="color:#FFFFFF">
-       <ul id="ul1">
+        <ul id="ul1" style="margin-top:11%">
             <li><a style="color:#FFFFFF" href="index.php">HOME</a></li>
             <li><a style="color:#FFFFFF" href="product_types.php">PRODUCTS</a></li>
             <li><a style="color:#FFFFFF" href="customer_services.php">SERVICES</a></li>
