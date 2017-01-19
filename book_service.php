@@ -325,9 +325,10 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-2" style="color:white;text-align:right">
       <ul id="ul2">
-            <li><img src="images/twitter.png"></img></li>
-            <li><img src="images/facebook.png"></img></li>
-            <li><img src="images/google-plus.png"></img></li>
+            <li><a href="https://twitter.com/">
+            <img src="images/twitter.png" /></a></li>
+            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/"> 
         </ul>
   </div>
   <div class="col-sm-1">

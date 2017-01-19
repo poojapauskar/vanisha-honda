@@ -248,7 +248,7 @@ if($_POST['v_id'] != ''){
 </div>
 </div>
 
-<div style="background-color:#607D8B;margin-top:5%" class="row">
+<div style="background-color:#607D8B;margin-top:5%" class="mdl-mini-footer">
   <div class="col-sm-1">
   </div>
   <div class="col-sm-4" style="color:white;margin-top:1%"> 
@@ -280,7 +280,7 @@ if($_POST['v_id'] != ''){
 }
 </style>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
-<div id="map-canvas"></div>
+<div id="map-canvas" class="col-sm-6"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYNU-mlRq2sPcsN_Cia4tm0p6oujPy998&v=3.exp&sensor=false" type="text/javascript"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/map.js"></script>
@@ -307,9 +307,10 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-            <li><img src="images/twitter.png"></img></li>
-            <li><img src="images/facebook.png"></img></li>
-            <li><img src="images/google-plus.png"></img></li>
+            <li><a href="https://twitter.com/">
+            <img src="images/twitter.png" /></a></li>
+            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/"> 
         </ul>
   </div>
   <div class="col-sm-1">

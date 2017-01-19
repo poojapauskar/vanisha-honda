@@ -169,7 +169,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
   
 
 
-<div class="row" style="text-align:left;background-color:white;margin-top:1%">
+<div class="mdl-layout" style="text-align:left;background-color:white;margin-top:1%">
   <div class="container" style="margin-left:100px;">
       <div class="col-sm-6">
       <h3><?php echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle']; ?></h3>
@@ -473,7 +473,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
 
 </div>
 
-<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
+<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;">
@@ -493,16 +493,17 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-            <li><img src="images/twitter.png"></img></li>
-            <li><img src="images/facebook.png"></img></li>
-            <li><img src="images/google-plus.png"></img></li>
+           <li><a href="https://twitter.com/">
+            <img src="images/twitter.png" /></a></li>
+            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/"> 
         </ul>
   </div>
   <div class="col-sm-1">
   </div>
 </div>
 
-<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
+<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;margin-top:3%">
