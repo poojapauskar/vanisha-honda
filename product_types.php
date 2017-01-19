@@ -27,8 +27,6 @@
     <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
 <style type="text/css">
-
-
 tr{
   border-bottom: 1px solid #E4E5E7;
 }
@@ -121,11 +119,13 @@ $arr_vehicle_types = json_decode($output_vehicle_types,true);
           <a class="mdl-navigation__link" href="enquiry.php"><i class="material-icons">contact_phone</i>Contact Us</a>
         </nav>
       </div>
+
+
+
 <main class="mdl-layout__content">
 
 
-
-<div class="row" style="background-color:white;margin-top:1%;text-align:center">
+<div class="mdl-layout" style="background-color:white;margin-top:1%;text-align:center">
   <div style="margin-top:5%">
   <?php for($x=0;$x<$arr_vehicle_types['count'];$x++){
     $image_url="http://res.cloudinary.com/hb3ayjpuz/image/upload/v1478944737/vanishahonda/".$arr_vehicle_types['results'][$x]['link'];?>
@@ -138,7 +138,7 @@ $arr_vehicle_types = json_decode($output_vehicle_types,true);
   </div>
 </div>
 
-<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:1%" class="row">
+<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:1%" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
@@ -157,16 +157,17 @@ $arr_vehicle_types = json_decode($output_vehicle_types,true);
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-            <li><img src="images/twitter.png"></img></li>
-            <li><img src="images/facebook.png"></img></li>
-            <li><img src="images/google-plus.png"></img></li>
+           <li><a href="https://twitter.com/">
+            <img src="images/twitter.png" /></a></li>
+            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/"> 
         </ul>
   </div>
   <div class="col-sm-1">
   </div>
 </div>
 
-<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
+<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;margin-top:3%">

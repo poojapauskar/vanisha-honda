@@ -16,6 +16,10 @@
   <script src="js/index.js"></script>
   <script type="text/javascript"></script>
   <style type="text/css">
+      .mdl-mini-footer {
+    padding: 10px 16px !important;
+
+}
 label {
     display: inline-block;
     max-width: 100%;
@@ -24,7 +28,7 @@ label {
 }
 </style>
 </head>
-<body  style="background-color:#E4E5E7;overflow-x:hidden">
+<body  style="background-color:#E4E5E7;overflow-x:hidden;">
 <?php
 $url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
 $options_types_subtypes = array(
@@ -142,7 +146,7 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
 
 <div class="container">
 <div class="row" style="margin-top:6%">
-  <div class="col-sm-6" style="margin-top:-4%">
+  <div class="col-sm-6"  style="margin-top:-4%;margin-left:3%;">
     <h4>Contact Us</h4>
     <h5 style="font-size:18px;margin-top:-1%">Drop Us a mail at: <span style="font-size:14px">info@vanishahonda.com</span></h5>
     <h5 style="font-size:18px;margin-top:-1%;margin-left:7%">Reach Us on: <span style="font-size:14px">+91-9876543210</span></h5>
@@ -150,7 +154,7 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
     <p style="font-size:13px;margin-top:2%">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 
-  <div class="col-sm-6">
+  <div class="col-sm-5" style="margin-top:2%;margin-left:5%">
     <form action="enquiry.php" method="post" style="background-color:white;width:300px;padding:2px 10px 10px 10px">
         
           <h6 style="font-size:18px;">Enquiry Form</h6>
@@ -248,7 +252,7 @@ if($_POST['v_id'] != ''){
 </div>
 </div>
 
-<div style="background-color:#607D8B;margin-top:5%" class="row">
+<div style="background-color:#607D8B;margin-top:5%" class="mdl-mini-footer">
   <div class="col-sm-1">
   </div>
   <div class="col-sm-4" style="color:white;margin-top:1%"> 
@@ -280,7 +284,7 @@ if($_POST['v_id'] != ''){
 }
 </style>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
-<div id="map-canvas"></div>
+<div id="map-canvas" class="col-sm-6"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYNU-mlRq2sPcsN_Cia4tm0p6oujPy998&v=3.exp&sensor=false" type="text/javascript"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/map.js"></script>
@@ -307,9 +311,10 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-            <li><img src="images/twitter.png"></img></li>
-            <li><img src="images/facebook.png"></img></li>
-            <li><img src="images/google-plus.png"></img></li>
+            <li><a href="https://twitter.com/">
+            <img src="images/twitter.png" /></a></li>
+            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/"> 
         </ul>
   </div>
   <div class="col-sm-1">
