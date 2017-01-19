@@ -18,7 +18,7 @@
   <script src="js/index.js"></script>
 
 </head>
-<body  style="background-color:#E4E5E7;overflow-x:hidden">
+<body  style="background-color:#E4E5E7;overflow-x:hidden;overflow-y: hidden">
 
 <?php
 $url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
@@ -382,7 +382,7 @@ if($_POST['v_id'] != ''){
 </div>
 
   
-<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:11%" class="row">
+<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:11%" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
@@ -412,7 +412,7 @@ if($_POST['v_id'] != ''){
   </div>
 </div>
 
-<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
+<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;margin-top:3%">

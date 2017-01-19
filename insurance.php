@@ -288,7 +288,7 @@ if($_POST['v_id'] != ''){
 </div>
 </div>
 
-<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:11%" class="row">
+<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:11%" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
@@ -317,7 +317,7 @@ if($_POST['v_id'] != ''){
   </div>
 </div>
 
-<div style="background-color:#607D8B;border-bottom:1px solid #688491" class="row">
+<div style="background-color:#607D8B;border-bottom:1px solid #688491" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;margin-top:3%">
