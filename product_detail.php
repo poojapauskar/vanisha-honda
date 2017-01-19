@@ -170,7 +170,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
 
 
 <div class="row" style="text-align:left;background-color:white;margin-top:1%">
-  <div class="container" style="margin-left:100px;">
+  <div class="container">
       <div class="col-sm-6">
       <h3><?php echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle']; ?></h3>
       <p><?php echo $arr_details_of_selected_vehicle[0]['v_details']['description']; ?></p>
@@ -178,7 +178,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
                 <div class="col-sm-2">
                   <img style="transform:scale(0.80);" src="images/CBS.png"></img>
                 </div>
-                <div class="col-sm-10" style="padding-left:20px;margin-top:3%">
+                <div class="col-sm-10">
                   <img style="transform:scale(0.80)" src="images/HET.png"></img>
                 </div>
               </div>
@@ -234,7 +234,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
 <div class="row">
   <div class="col-sm-6">
 
-      <div id="container_2nd" style="width:390px;margin-top:9%;margin-left:5%">
+      <div id="container_2nd" style="width:390px;margin-top:9%">
         <ul class="collapsible"  data-collapsible="accordion" style="background-color:white">
 
         <h5 style="color:black;margin-left:2%">Specifications</h5>
