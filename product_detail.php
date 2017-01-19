@@ -240,7 +240,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
         <h5 style="color:black;margin-left:2%">Specifications</h5>
 
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Body Dimensions<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Body Dimensions<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -277,7 +277,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Engine<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Engine<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -323,7 +323,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Transmission<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Transmission<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -344,7 +344,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Tyres & Brakes<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Tyres & Brakes<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -377,7 +377,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Frame & Suspension<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Frame & Suspension<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -398,7 +398,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Electricals<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Electricals<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
