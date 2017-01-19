@@ -169,8 +169,9 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
   
 
 
-<div class="row" style="text-align:left;background-color:white;margin-top:1%">
-  <div class="container">
+
+<div class="mdl-layout" style="text-align:left;background-color:white;margin-top:1%">
+  <div class="container" style="margin-left:100px;">
       <div class="col-sm-6">
       <h3><?php echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle']; ?></h3>
       <p><?php echo $arr_details_of_selected_vehicle[0]['v_details']['description']; ?></p>
@@ -240,7 +241,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
         <h5 style="color:black;margin-left:2%">Specifications</h5>
 
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Body Dimensions<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Body Dimensions<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -277,7 +278,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Engine<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Engine<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -323,7 +324,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Transmission<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Transmission<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -344,7 +345,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Tyres & Brakes<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Tyres & Brakes<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -377,7 +378,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Frame & Suspension<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Frame & Suspension<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -398,7 +399,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
               </div>
             </li>
             <li id="col_li">
-              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Electricals<img src="images/arrow-down-1.png" style="transform:scale(0.5);float:right"></img></div>
+              <div class="collapsible-header" style="overflow:hidden"><i class="mdi-navigation-chevron-right"></i>Electricals<img src="images/arrow-down.png" style="transform:scale(0.5);float:right"></img></div>
               <div class="collapsible-body">
                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:390px;">
                   <tbody>
@@ -473,7 +474,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
 
 </div>
 
-<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
+<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;">
@@ -493,16 +494,17 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-            <li><img src="images/twitter.png"></img></li>
-            <li><img src="images/facebook.png"></img></li>
-            <li><img src="images/google-plus.png"></img></li>
+           <li><a href="https://twitter.com/">
+            <img src="images/twitter.png" /></a></li>
+            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/"> 
         </ul>
   </div>
   <div class="col-sm-1">
   </div>
 </div>
 
-<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
+<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;margin-top:3%">

@@ -238,14 +238,14 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
 <main class="mdl-layout__content">
 
 <div class="container">
-<div class="row" style="margin-top:6%">
+<div class="row" style="margin-top:6%;margin-left:3%">
   <div class="col-sm-6" style="margin-top:-4%">
     <h4>Get Finance</h4>
     <img style="width:150px;height:150px" src="images/Finance_2.png"></img>
     <p style="font-size:13px;margin-top:2%">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 
-  <div class="col-sm-6">
+  <div class="col-sm-5" style="margin-top:2%;margin-left:5%">
       <form action="finance.php" method="post" style="background-color:white;width:300px;padding:2px 10px 10px 10px">
         
           <h6 style="font-size:18px">Get Finance</h6>
@@ -403,9 +403,10 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-            <li><img src="images/twitter.png"></img></li>
-            <li><img src="images/facebook.png"></img></li>
-            <li><img src="images/google-plus.png"></img></li>
+            <li><a href="https://twitter.com/">
+            <img src="images/twitter.png" /></a></li>
+            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/"> 
         </ul>
   </div>
   <div class="col-sm-1">

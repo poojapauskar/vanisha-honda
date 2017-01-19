@@ -134,6 +134,10 @@ border-radius: 0px !important;
     color: #9e9e9e;
 }
 
+.mdl-mini-footer {
+    padding: 3px 40px;
+    color: #9e9e9e;
+}
 .mdl-layout__drawer-button{
   outline: none !important;
 }
