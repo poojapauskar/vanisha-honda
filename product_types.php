@@ -35,6 +35,10 @@ tr{
 .collapsible-header{
   color:gray;
 }
+.row {
+    margin-right: -26px;
+    margin-left: -73px;
+}
 </style>
 </head>
 <body style="background-color:#E4E5E7;overflow-x:hidden">
@@ -124,7 +128,7 @@ $arr_vehicle_types = json_decode($output_vehicle_types,true);
 <main class="mdl-layout__content">
 
 
-
+<div class="container" style="height: 339px;width: 1264px">
 <div class="row" style="background-color:white;margin-top:1%;text-align:center">
   <div style="margin-top:5%">
   <?php for($x=0;$x<$arr_vehicle_types['count'];$x++){
@@ -137,17 +141,19 @@ $arr_vehicle_types = json_decode($output_vehicle_types,true);
   <?php } ?>
   </div>
 </div>
-
-<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:1%" class="row">
+</div>
+<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:3%" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
        <div style="margin-top:5%">
+
         <img width="60" height="60" src="images/honda_logo_red.png"></img>
-        <h5 style="margin-top:-6%;margin-left:29%">Vanisha Honda</h5>
+
+        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
        </div>
   </div>
- <div class="col-sm-5" style="color:#FFFFFF">
+  <div class="col-sm-5" style="color:#FFFFFF">
        <ul id="ul1">
             <li><a style="color:#FFFFFF" href="index.php">HOME</a></li>
             <li><a style="color:#FFFFFF" href="product_types.php">PRODUCTS</a></li>
@@ -166,7 +172,7 @@ $arr_vehicle_types = json_decode($output_vehicle_types,true);
   </div>
 </div>
 
-<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="row">
+<div style="background-color:#607D8B;margint-top:5%;border-bottom:1px solid #688491" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;margin-top:3%">
