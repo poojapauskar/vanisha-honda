@@ -250,7 +250,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                    </div>
                    <div class="row">
-                      <p style="text-align:-webkit-left;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                      <p style="text-align:-webkit-left;letter-spacing: 0.01em;width: 228px">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
@@ -268,7 +268,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                    </div>
                    <div class="row">
-                     <p style="text-align:-webkit-left;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                     <p style="text-align:-webkit-left;letter-spacing: 0.01em;width: 228px">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
@@ -287,7 +287,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       </div>
                    </div>
                    <div class="row">
-                    <p style="text-align:-webkit-left;">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
+                    <p style="text-align:-webkit-left;letter-spacing: 0.01em;width: 228px">"I am a happy customer for a period of 4 year. I own an Activa 3G, which I can completely rely on Vanisha Honda for any maintainence. Undivided attention to customers".</p>
                    </div>
                </div>
 
@@ -355,7 +355,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
             <img src="images/twitter.png" /></a></li>
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
             <li><a href="https://plus.google.com/"> 
-<img src="images/google-plus.png"></img></a></li>
+            <img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>
   <div class="col-sm-1">
