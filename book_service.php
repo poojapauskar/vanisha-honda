@@ -331,7 +331,6 @@ if($_POST['v_id'] != ''){
             <img src="images/facebook.png"></img></a></li>
             <li><a href="https://plus.google.com/"> 
             <img src="images/google-plus.png"></img></a></li>
-
         </ul>
   </div>
   <div class="col-sm-1">
