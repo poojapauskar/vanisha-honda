@@ -171,7 +171,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
 
 <div class="mdl-layout" style="text-align:left;background-color:white;margin-top:1%">
   <div class="container" style="margin-left:100px;">
-      <div class="col-sm-6">
+      <div class="col-sm-6" style="margin-left:-17px;">
       <h3><?php echo $arr_details_of_selected_vehicle[0]['v_details']['vehicle']; ?></h3>
       <p><?php echo $arr_details_of_selected_vehicle[0]['v_details']['description']; ?></p>
               <div class="row" style="margin-left:-4%">
@@ -232,9 +232,9 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
 <div class="container" style="background-color:#E4E5E7">
 
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-6" style="margin-left:-20px;">
 
-      <div id="container_2nd" style="width:390px;margin-top:9%;margin-left:5%">
+      <div id="container_2nd" style="width:390px;margin-top:9%;margin-left:9%">
         <ul class="collapsible"  data-collapsible="accordion" style="background-color:white">
 
         <h5 style="color:black;margin-left:2%">Specifications</h5>
@@ -477,14 +477,14 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;">
-       <div style="margin-top:5%">
+       <div style="margin-top:5%;margin-left:-24%">
         <img width="60" height="60" src="images/honda_logo_red.png"></img>
 
-        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
+        <h5 style="margin-top:-5.5%;margin-left:22%">Vanisha Honda</h5>
        </div>
   </div>
   <div class="col-sm-5" style="color:#FFFFFF">
-       <ul id="ul1">
+       <ul id="ul1" style="margin-top:11%">
             <li><a style="color:#FFFFFF" href="index.php">HOME</a></li>
             <li><a style="color:#FFFFFF" href="product_types.php">PRODUCTS</a></li>
             <li><a style="color:#FFFFFF" href="customer_services.php">SERVICES</a></li>
@@ -497,6 +497,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
             <img src="images/twitter.png" /></a></li>
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
             <li><a href="https://plus.google.com/"> 
+            <img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>
   <div class="col-sm-1">
@@ -507,7 +508,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;margin-top:3%">
-        <ul id="ul3" style="list-style: none;margin-left:-14%;font:italic 13px Roboto,sans-serif;">
+        <ul id="ul3" style="list-style:none;margin-left:-33%;font:italic 13px Roboto,sans-serif;">
             <li>+91-9987654321</li>
             <li>+91-8314208821</li>
             <li>info@vanishahonda.com</li>
