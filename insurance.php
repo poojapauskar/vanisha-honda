@@ -177,7 +177,7 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
 <div class="row" style="margin-top:6%">
   <div class="col-sm-6" style="margin-top:-4%;margin-left:3%;">
     <h4>Insurance Renewal</h4>
-    <img style="width:150px;height:150px" src="images/Insurance_2.png"></img>
+    <img style="" src="images/Insurance_2.png"></img>
     <p style="font-size:13px;margin-top:2%">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 
@@ -191,7 +191,8 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px" class="browser-default" name="v_id" id="v_id">
+                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px;border-bottom: 1px solid #e4e5e7;
+    width: 140%;" class="browser-default" name="v_id" id="v_id">
                       
 <?php
 
@@ -292,14 +293,14 @@ if($_POST['v_id'] != ''){
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
-       <div style="margin-top:5%">
-       <img width="60"height="60" src="images/honda_logo_red.png"></img>
+       <div style="margin-top:5%;margin-left:-24%">
+        <img width="60" height="60" src="images/honda_logo_red.png"></img>
 
-        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
-      </div>
+        <h5 style="margin-top:-5.5%;margin-left:22%">Vanisha Honda</h5>
+       </div>
   </div>
   <div class="col-sm-5" style="color:#FFFFFF">
-       <ul id="ul1">
+       <ul id="ul1" style="margin-top:11%">
             <li><a style="color:#FFFFFF" href="index.php">HOME</a></li>
             <li><a style="color:#FFFFFF" href="product_types.php">PRODUCTS</a></li>
             <li><a style="color:#FFFFFF" href="customer_services.php">SERVICES</a></li>
@@ -312,6 +313,7 @@ if($_POST['v_id'] != ''){
             <img src="images/twitter.png" /></a></li>
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
             <li><a href="https://plus.google.com/"> 
+            <img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>
   <div class="col-sm-1">
@@ -322,7 +324,7 @@ if($_POST['v_id'] != ''){
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;margin-top:3%">
-         <ul id="ul3" style="list-style: none;margin-left:-14%;font:italic 13px Roboto,sans-serif;">
+         <ul id="ul3" style="list-style: none;margin-left:-36%;font:italic 13px Roboto,sans-serif;">
             <li>+91-9987654321</li>
             <li>+91-8314208821</li>
             <li>info@vanishahonda.com</li>

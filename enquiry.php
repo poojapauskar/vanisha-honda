@@ -148,34 +148,31 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
 <div class="row" style="margin-top:6%">
   <div class="col-sm-6"  style="margin-top:-4%;margin-left:3%;">
     <h4>Contact Us</h4>
-    <h5 style="font-size:18px;margin-top:-1%">Drop Us a mail at: <span style="font-size:14px">info@vanishahonda.com</span></h5>
-    <h5 style="font-size:18px;margin-top:-1%;margin-left:7%">Reach Us on: <span style="font-size:14px">+91-9876543210</span></h5>
-    <h5 style="margin-top:-2%"><span style="font-size:14px;margin-left:28%">+91-9876012345</span></h5>
+    <h5 style="font-size:18px;margin-top:-1%">Drop Us a mail at: <span style="font-size:14px;margin-left:6%">info@vanishahonda.com</span></h5>
+    <h5 style="font-size:18px;margin-top:-1%;margin-left:7%">Reach Us on: <span style="font-size:14px;margin-left:6%">+91-9876543210</span></h5>
+    <h5 style="margin-top:-2%"><span style="font-size:14px;margin-left:33%">+91-9876012345</span></h5>
     <p style="font-size:13px;margin-top:2%">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 
-  <div class="col-sm-5" style="margin-top:2%;margin-left:5%">
+  <div class="col-sm-4" style="margin-top:2%;margin-left:6%">
     <form action="enquiry.php" method="post" style="background-color:white;width:300px;padding:2px 10px 10px 10px">
         
           <h6 style="font-size:18px;">Enquiry Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-
-          <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
           <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name">
-
-
+          <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
             <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="email" id="email" name="email" placeholder="Email Address">
+            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
             
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;">Mobile</label>
             <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
+            <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;">Mobile</label>
             
               <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a phone number</span>
@@ -186,7 +183,8 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield mdl-js-selectfield">  
-                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px" class="mdl-selectfield__select" name="v_id" id="v_id">
+                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px;border-bottom: 1px solid #e4e5e7;
+    width: 140%;" class="mdl-selectfield__select" name="v_id" id="v_id">
                   
                        
 <?php
@@ -255,7 +253,7 @@ if($_POST['v_id'] != ''){
 <div style="background-color:#607D8B;margin-top:5%" class="mdl-mini-footer">
   <div class="col-sm-1">
   </div>
-  <div class="col-sm-4" style="color:white;margin-top:1%"> 
+  <div class="col-sm-4" style="color:white;margin-top:1%;margin-left:-4%"> 
           <h5 style="font-size:14px;font-weight:bold">Head Office</h5>
           <h6 style="font-size:12px;margin-top:-3%">#4855/83, Near 3rd Railway Gate, Udyambag</h6>
           <h6 style="font-size:12px;margin-top:-5%">Belagavi-590001, Karnataka-India</h6>
@@ -296,9 +294,9 @@ if($_POST['v_id'] != ''){
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
-       <div style="margin-top:5%">
+       <div style="margin-top:3%;margin-left:-10%">
          <img width="60" height="60" src="images/honda_logo_red.png"></img>
-        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
+        <h5 style="margin-top:-6%;margin-left:23%;">Vanisha Honda</h5>
        </div>
   </div>
   <div class="col-sm-5" style="color:#FFFFFF">
@@ -315,6 +313,7 @@ if($_POST['v_id'] != ''){
             <img src="images/twitter.png" /></a></li>
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
             <li><a href="https://plus.google.com/"> 
+            <img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>
   <div class="col-sm-1">
@@ -325,7 +324,7 @@ if($_POST['v_id'] != ''){
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;margin-top:3%">
-        <ul id="ul3" style="list-style: none;margin-left:-14%;font:italic 13px Roboto,sans-serif;">
+        <ul id="ul3" style="list-style: none;margin-left:-25%;font:italic 13px Roboto,sans-serif;">
             <li>+91-9987654321</li>
             <li>+91-8314208821</li>
             <li>info@vanishahonda.com</li>
