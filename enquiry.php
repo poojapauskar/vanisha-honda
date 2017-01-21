@@ -160,22 +160,19 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
           <h6 style="font-size:18px;">Enquiry Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-
-          <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
           <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name">
-
-
+          <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
             <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="email" id="email" name="email" placeholder="Email Address">
+            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
             
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;">Mobile</label>
             <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
+            <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;">Mobile</label>
             
               <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a phone number</span>
@@ -186,7 +183,8 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield mdl-js-selectfield">  
-                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px" class="mdl-selectfield__select" name="v_id" id="v_id">
+                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px;border-bottom: 1px solid #e4e5e7;
+    width: 140%;" class="mdl-selectfield__select" name="v_id" id="v_id">
                   
                        
 <?php

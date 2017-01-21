@@ -256,23 +256,23 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
       
 
          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
             <input value="<?php echo $_POST['name']; ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="FullName">
+            <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
             <input value="<?php echo $_POST['email']; ?>" class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email Address">
+            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="mobile" style="color:#cccccc;">Mobile</label>
             <input value="<?php echo $_POST['mobile']; ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" placeholder="+91">
+            <label class="mdl-textfield__label" for="mobile" style="color:#cccccc;">Mobile</label>
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Address</label>
             <textarea class="mdl-textfield__input" type="text" rows= "1" id="address" name="address" placeholder="Address"><?php echo $_POST['address']; ?></textarea>
+            <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Address</label>
           </div>
 <!-- Added label over the SelectField -->
           <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;">Vehicle</label>
@@ -280,7 +280,8 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px" class="browser-default" name="v_id" id="v_id">
+                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px;border-bottom: 1px solid #e4e5e7;
+    width: 140%;" class="browser-default" name="v_id" id="v_id">
                       
 <?php
 
@@ -458,7 +459,8 @@ if($_POST['v_id'] != ''){
             <img src="images/twitter.png" /></a></li>
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
             <li><a href="https://plus.google.com/"> 
-<img src="images/google-plus.png"></img></a></li>
+            <img src="images/google-plus.png"></img></a></li>
+
         </ul>
   </div>
   <div class="col-sm-1">

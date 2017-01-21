@@ -169,6 +169,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
   
 
 
+
 <div class="mdl-layout" style="text-align:left;background-color:white;margin-top:1%">
   <div class="container" style="margin-left:100px;">
       <div class="col-sm-6" style="margin-left:-17px;">
@@ -178,7 +179,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
                 <div class="col-sm-2">
                   <img style="transform:scale(0.80);" src="images/CBS.png"></img>
                 </div>
-                <div class="col-sm-10" style="padding-left:20px;margin-top:3%">
+                <div class="col-sm-10">
                   <img style="transform:scale(0.80)" src="images/HET.png"></img>
                 </div>
               </div>
@@ -233,6 +234,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
 
 <div class="row">
   <div class="col-sm-6" style="margin-left:-20px;">
+
 
       <div id="container_2nd" style="width:390px;margin-top:9%;margin-left:9%">
         <ul class="collapsible"  data-collapsible="accordion" style="background-color:white">
@@ -508,7 +510,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;margin-top:3%">
-        <ul id="ul3" style="list-style: none;margin-left:-33%;font:italic 13px Roboto,sans-serif;">
+        <ul id="ul3" style="list-style:none;margin-left:-33%;font:italic 13px Roboto,sans-serif;">
             <li>+91-9987654321</li>
             <li>+91-8314208821</li>
             <li>info@vanishahonda.com</li>
