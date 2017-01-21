@@ -497,6 +497,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
             <img src="images/twitter.png" /></a></li>
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
             <li><a href="https://plus.google.com/"> 
+            <img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>
   <div class="col-sm-1">
@@ -507,7 +508,7 @@ error_log(print_r($arr_details_of_selected_vehicle,true));
   <div class="col-sm-1" style="color:#FFFFFF;">
   </div>
   <div class="col-sm-3" style="color:#FFFFFF;margin-top:3%">
-        <ul id="ul3" style="list-style: none;margin-left:-33%;font:italic 13px Roboto,sans-serif;">
+        <ul id="ul3" style="list-style:none;margin-left:-33%;font:italic 13px Roboto,sans-serif;">
             <li>+91-9987654321</li>
             <li>+91-8314208821</li>
             <li>info@vanishahonda.com</li>
