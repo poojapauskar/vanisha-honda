@@ -349,7 +349,7 @@ if($_POST['v_id'] != ''){
   <div style="align:left;margin-top:5%;" class=" file-field input-field " >
 <label class="mdl-textfield__label" style="margin-top:-10%" for="id_proof" style="color:#cccccc;">ID Proof</label>
       <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;" >
-        <span>Upload</span>
+        <span style="margin-left:-15%;margin-top:20%;">Upload</span>
         <input type="file" id="id_proof" name="id_proof">
       </div>
       <div class="file-path-wrapper">
@@ -364,7 +364,7 @@ if($_POST['v_id'] != ''){
                <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Address Proof</label>
              <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;" >
-             <span>Upload</span>
+             <span style="margin-left:-15%;margin-top:20%;">Upload</span>
               <input type="file" id="add_proof" name="add_proof">
              </div>
            <div class="file-path-wrapper">
@@ -381,7 +381,7 @@ if($_POST['v_id'] != ''){
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="bank_statement" style="color:#cccccc;">Bank Statement</label>
              <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;">
-             <span>Upload</span>
+             <span style="margin-left:-15%;margin-top:20%;">Upload</span>
               <input type="file" id="bank_statement" name="bank_statement">
              </div>
            <div class="file-path-wrapper">
@@ -396,8 +396,9 @@ if($_POST['v_id'] != ''){
           </div> -->
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="salary_slip" style="color:#cccccc;">Salary Slip</label>
-             <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;">
-             <span>Upload</span>
+              <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;" >
+             <span style="margin-left:-15%;margin-top:20%;">Upload</span>
+        
               <input type="file" id="salary_slip" name="salary_slip">
              </div>
            <div class="file-path-wrapper">
@@ -414,7 +415,7 @@ if($_POST['v_id'] != ''){
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="it_returns" style="color:#cccccc;">Address Proof</label>
              <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;">
-             <span>Upload</span>
+             <span style="margin-left:-15%;margin-top:20%;">Upload</span>
               <input type="file" id="it_returns" name="it_returns">
              </div>
            <div class="file-path-wrapper">
