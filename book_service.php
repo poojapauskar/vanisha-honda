@@ -180,7 +180,7 @@ elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg
           <h6 style="font-size:18px">Booking Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <!-- Added label over the SelectField -->
-          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:-1%;">Vehicle</label>
+          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:-1%;font-size:13px;">Vehicle</label>
           <div class="demo">
             <!-- Standard Select -->
                <div class="mdl-selectfield">
@@ -232,9 +232,9 @@ if($_POST['v_id'] != ''){
           <!-- Added label over the SelectField -->
           
             <!-- Standard Select -->
-            <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:9%">Servicing Type</label>
+            <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:9%;font-size:13px;">Servicing Type</label>
             <div class="mdl-selectfield">
-              <select style="background-color:white;border:none;color:gray;font-size:15px;border-bottom: 1px solid #e1e1e1;width: 140%; padding-top:5px;z-index:1;position: absolute;margin-top:-2%;"  class="browser-default"  name="v_type" id="v_type">
+              <select style="background-color:white;border:none;color:gray;font-size:15px;border-bottom: 1px solid #e1e1e1;width: 140%; padding-top:3px;z-index:1;position: absolute;margin-top:-2%;"  class="browser-default"  name="v_type" id="v_type">
                 
                 <?php if($_POST['v_type'] != ''){?>
                        <option value="<?php echo $_POST['v_type'] ?>" selected><?php echo $_POST['v_type']; 
@@ -251,7 +251,7 @@ if($_POST['v_id'] != ''){
 
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-top:10%">
             <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name"> 
-            <label class="mdl-textfield__label" for="name" style="color:#cccccc;margin-top:-2%">Name</label>
+            <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
           </div>
 
           <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -313,7 +313,7 @@ if($_POST['v_id'] != ''){
 </div>
 
   
-<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:11%" class="row">
+<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:11%" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
@@ -348,7 +348,7 @@ if($_POST['v_id'] != ''){
   </div>
 </div>
 
-<div style="background-color:#607D8B;border-bottom:1px solid #688491" class="row">
+<div style="background-color:#607D8B;border-bottom:1px solid #688491" class="mdl-mini-footer">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;margin-top:3%">

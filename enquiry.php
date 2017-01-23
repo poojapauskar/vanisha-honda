@@ -16,15 +16,16 @@
   <script src="js/index.js"></script>
   <script type="text/javascript"></script>
   <style type="text/css">
-      .mdl-mini-footer {
-    padding: 10px 16px !important;
-
-}
+ 
 label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
     font-size:13px;
+}
+     .mdl-mini-footer {
+    padding: 10px 16px !important;
+
 }
 </style>
 </head>
@@ -240,7 +241,7 @@ if($_POST['v_id'] != ''){
         <input class="mdl-textfield__input" type="hidden" id="duration" name="duration">
 
         <div style="text-align:right">
-          <button id="enq_btn" name="enq_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);" class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+          <button id="enq_btn" name="enq_btn" type="submit" style="background-color: #fff;font-weight:normal;color: rgb(0, 0, 255);" class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect">
             Submit
           </button>
         </div>
