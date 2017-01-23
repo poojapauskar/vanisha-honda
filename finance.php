@@ -346,7 +346,7 @@ if($_POST['v_id'] != ''){
 
   <div style="align:left;margin-top:5%;" class=" file-field input-field " >
 <label class="mdl-textfield__label" style="margin-top:-10%" for="id_proof" style="color:#cccccc;">ID PROOF</label>
-      <div class="btn1" >
+      <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;" >
         <span>Choose File</span>
         <input type="file" id="id_proof" name="id_proof">
       </div>
@@ -361,7 +361,7 @@ if($_POST['v_id'] != ''){
           </div> -->
                <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Address Proof</label>
-             <div class="btn1" >
+             <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;" >
              <span>CHOOSE FILE</span>
               <input type="file" id="add_proof" name="add_proof">
              </div>
@@ -378,7 +378,7 @@ if($_POST['v_id'] != ''){
           </div> -->
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="bank_statement" style="color:#cccccc;">Bank Statement</label>
-             <div class="btn1" >
+             <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;"" >
              <span>CHOOSE FILE</span>
               <input type="file" id="bank_statement" name="bank_statement">
              </div>
@@ -394,7 +394,7 @@ if($_POST['v_id'] != ''){
           </div> -->
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="salary_slip" style="color:#cccccc;">Salary Slip</label>
-             <div class="btn1" >
+             <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;">
              <span>CHOOSE FILE</span>
               <input type="file" id="salary_slip" name="salary_slip">
              </div>
@@ -411,7 +411,7 @@ if($_POST['v_id'] != ''){
 
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="it_returns" style="color:#cccccc;">Address Proof</label>
-             <div class="btn1" >
+             <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;">
              <span>CHOOSE FILE</span>
               <input type="file" id="it_returns" name="it_returns">
              </div>
@@ -423,7 +423,8 @@ if($_POST['v_id'] != ''){
         <input class="mdl-textfield__input" type="hidden" id="date" name="date">
 
           <div style="text-align:right">
-          <button type="submit" id="finance_btn" name="finance_btn" style="background-color:#fff;color: rgb(0, 0, 255);" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+          <button type="submit" id="finance_btn" name="finance_btn" style="background-color:#fff;color: rgb(0, 0, 255);" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised
+          ">
             Get Approval
           </button>
           </div>
@@ -455,10 +456,10 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-                 <li><a href="https://twitter.com/">
+                 <li><a href="https://twitter.com/" target="_blank">
             <img src="images/twitter.png" /></a></li>
-            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
-            <li><a href="https://plus.google.com/"> 
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/" target="_blank"> 
             <img src="images/google-plus.png"></img></a></li>
 
         </ul>

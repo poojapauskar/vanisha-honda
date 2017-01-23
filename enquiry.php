@@ -240,7 +240,7 @@ if($_POST['v_id'] != ''){
         <input class="mdl-textfield__input" type="hidden" id="duration" name="duration">
 
         <div style="text-align:right">
-          <button id="enq_btn" name="enq_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+          <button id="enq_btn" name="enq_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);" class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect">
             Submit
           </button>
         </div>
@@ -309,10 +309,10 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-            <li><a href="https://twitter.com/">
+            <li><a href="https://twitter.com/" target="_blank">
             <img src="images/twitter.png" /></a></li>
-            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
-            <li><a href="https://plus.google.com/"> 
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/" target="_blank"> 
             <img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>

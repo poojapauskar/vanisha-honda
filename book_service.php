@@ -319,7 +319,7 @@ if($_POST['v_id'] != ''){
 <input class="mdl-textfield__input" type="hidden" id="mechanic_id" name="mechanic_id">
 
           <div style="text-align:right">
-          <button id="book_service_btn" name="book_service_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+          <button id="book_service_btn" name="book_service_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);" class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect">
             Submit
           </button>
           </div>
@@ -352,11 +352,11 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-2" style="color:white;text-align:right">
       <ul id="ul2">
-                     <li><a href="https://twitter.com/">
+                     <li><a href="https://twitter.com/" target="_blank">
             <img src="images/twitter.png" /></a></li>
-            <li><a href="https://www.facebook.com/">
+            <li><a href="https://www.facebook.com/" target="_blank">
             <img src="images/facebook.png"></img></a></li>
-            <li><a href="https://plus.google.com/"> 
+            <li><a href="https://plus.google.com/" target="_blank"> 
             <img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>

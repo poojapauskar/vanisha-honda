@@ -7,6 +7,7 @@
 }
 .file-field input.file-path {
     width: 100%
+    text-align:-webkit-center;
 }
 .file-field .btn11,
 .file-field .btn11-large {
