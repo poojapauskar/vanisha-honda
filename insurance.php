@@ -190,9 +190,11 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
           <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;">Vehicle</label>
           <div class="demo">
             <!-- Standard Select -->
-            <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px;border-bottom: 1px solid #e4e5e7;
-    width: 140%;" class="browser-default" name="v_id" id="v_id">
+             <div class="mdl-selectfield">
+              <select style="background-color:white;border:none;color:gray;font-size:15px;border-bottom: 1px solid #e1e1e1;padding-top:5px;
+    width: 140%;z-index:4;position: absolute;margin-top:-8px;" onfocus='this.size=10;' 
+onblur='this.size=1;' 
+onchange='this.size=1; this.blur();' class="browser-default"  name="v_type" id="v_type">
                       
 <?php
 
@@ -231,7 +233,7 @@ if($_POST['v_id'] != ''){
                 </div>
           </div>
 
-          <div style="margin-top:2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:8%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label class="mdl-textfield__label" for="delivery_date" style="color:#cccccc;">Purchase Date</label> 
             <input value="<?php echo $_POST['purchase_date'] ?>" class="mdl-textfield__input date" type="text" id="purchase_date" name="purchase_date" placeholder="Purchase Date DD/MM/YYY">
           </div>

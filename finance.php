@@ -279,9 +279,11 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
 
           <div class="demo">
             <!-- Standard Select -->
-            <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px;border-bottom: 1px solid #e4e5e7;
-    width: 140%;" class="browser-default" name="v_id" id="v_id">
+             <div class="mdl-selectfield">
+              <select style="background-color:white;border:none;color:gray;font-size:15px;border-bottom: 1px solid #e1e1e1;padding-top:5px;
+    width: 140%;z-index:4;position: absolute;margin-top:-8px;" onfocus='this.size=10;' 
+onblur='this.size=1;' 
+onchange='this.size=1; this.blur();' class="browser-default"  name="v_type" id="v_type">
                       
 <?php
 
@@ -320,7 +322,7 @@ if($_POST['v_id'] != ''){
                 </div>
           </div>
 <br>
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="align:left;margin-top:3%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label class="mdl-textfield__label" for="loan_amt" style="color:#cccccc;">Loan Amount</label>
             <input value="<?php echo $_POST['loan_amt']; ?>" class="mdl-textfield__input" type="text" id="loan_amt" name="loan_amt" placeholder="Loan Amt">
           </div>
