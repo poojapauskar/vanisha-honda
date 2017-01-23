@@ -159,9 +159,7 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
           <label for="slides_1" class="goto-first"><img src="images/slider_btn_left.png"></img></label>
           <label for="slides_5" class="goto-last"><img src="images/slider_btn_left.png"></img></label>
         </div>
-
         <div class="navigation" style="bottom:1%">
-
           <div>
             <label for="slides_1"></label>
             <label for="slides_2"></label>
