@@ -187,7 +187,7 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
           <h6 style="font-size:18px">Insurance Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
          <!-- Added label over the SelectField -->
-          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;">Vehicle</label>
+          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;font-size:13px;">Vehicle</label>
           <div class="demo">
             <!-- Standard Select -->
              <div class="mdl-selectfield">
@@ -233,7 +233,7 @@ if($_POST['v_id'] != ''){
                 </div>
           </div>
 
-          <div style="margin-top:8%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:11%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label class="mdl-textfield__label" for="delivery_date" style="color:#cccccc;">Purchase Date</label> 
             <input value="<?php echo $_POST['purchase_date'] ?>" class="mdl-textfield__input date" type="text" id="purchase_date" name="purchase_date" placeholder="Purchase Date DD/MM/YYY">
           </div>
