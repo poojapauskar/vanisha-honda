@@ -3,6 +3,9 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="css/slideshow.css">
 
  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
@@ -13,26 +16,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 <style type="text/css">
 
-.mdl-textfield__input {
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, .12);
-    display: block;
-    font-size: 16px;
-    font-family: "Helvetica", "Arial", sans-serif;
-    margin: 0;
-    padding: 4px 0;
-    padding-top: 7px;
-    /* margin-left: 3px; */
-    width: 100%;
-    background: 0 0;
-    text-align: left;
-    color: inherit;
-}
 tr{
   border-bottom: 1px solid #E4E5E7;
 }
@@ -42,7 +27,7 @@ tr{
 
 </style>
 </head>
-<body  style="background-color:#E4E5E7;overflow-x:hidden">
+<body  style="background-color:#E4E5E7">
 
 <link rel="stylesheet" href="css/jquery-ui.css">
 <script src="js/jquery-ui.js"></script>
@@ -127,9 +112,7 @@ elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg
 
 
 <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-      <header style="background-color:#F1524B;height:110px;-webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;  /* Chrome and Safari         */
-     -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;  /* Firefox 3.6               */
-     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;" class="mdl-layout__header mdl-layout__header--transparent">
+      <header style="background-color:#F1524B;height:110px" class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row" style="margin-top:4.5%">
           <!-- Title -->
           <img style="margin-top:-3.8%;margin-left:30px;" src="images/honda_logo_white.png" width="60" height="60"></img>
@@ -309,7 +292,6 @@ if($_POST['v_id'] != ''){
             <input type="checkbox" id="req_pic_up" name="req_pic_up" value="1">
             <label class="mdl-textfield__label" for="additional_service">&nbsp &nbsp Use Current Location</label>
           </div>
-
           
 
 <input class="mdl-textfield__input" type="hidden" id="service_type" name="service_type">
@@ -331,14 +313,14 @@ if($_POST['v_id'] != ''){
 </div>
 
   
-<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:11%" class="mdl-mini-footer">
+<div style="background-color:#607D8B;border-bottom:1px solid #688491;margin-top:11%" class="row">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
-       <div style="margin-top:5%;margin-left:-16%">
+       <div style="margin-top:5%">
         <img width="60" height="60" src="images/honda_logo_red.png"></img>
 
-        <h5 style="margin-top:-6%;margin-left:23%">Vanisha Honda</h5>
+        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
        </div>
   </div>
   
@@ -352,23 +334,20 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-2" style="color:white;text-align:right">
       <ul id="ul2">
-                     <li><a href="https://twitter.com/">
-            <img src="images/twitter.png" /></a></li>
-            <li><a href="https://www.facebook.com/">
-            <img src="images/facebook.png"></img></a></li>
-            <li><a href="https://plus.google.com/"> 
-            <img src="images/google-plus.png"></img></a></li>
+            <li><img src="images/twitter.png"></img></li>
+            <li><img src="images/facebook.png"></img></li>
+            <li><img src="images/google-plus.png"></img></li>
         </ul>
   </div>
   <div class="col-sm-1">
   </div>
 </div>
 
-<div style="background-color:#607D8B;border-bottom:1px solid #688491" class="mdl-mini-footer">
+<div style="background-color:#607D8B;border-bottom:1px solid #688491" class="row">
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;margin-top:3%">
-        <ul id="ul3" style="list-style: none;margin-left:-33%;font:italic 13px Roboto,sans-serif;">
+        <ul id="ul3" style="list-style: none;margin-left:-14%">
             <li>+91-9987654321</li>
             <li>+91-8314208821</li>
             <li>info@vanishahonda.com</li>
@@ -390,4 +369,3 @@ if($_POST['v_id'] != ''){
 
 </body>
 </html>
-
