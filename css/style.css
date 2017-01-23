@@ -145,10 +145,11 @@ body {
   -ms-perspective: 1300px;
   -webkit-perspective: 1300px;
   perspective: 1300px;
-  display: inline-block;
+  display: inline-flex;
   text-align: left;
   position: relative;
   margin-bottom: 22px;
+  max-height: 253px;
 }
 .csslider > input {
   display: none;
