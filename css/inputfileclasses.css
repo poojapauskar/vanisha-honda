@@ -221,9 +221,10 @@ textarea.materialize-textarea.validate+label {
 .file-field .btn1,
 .file-field .btn1-large {
     float: left;
-    height: 2.7rem;
-    line-height: 3rem
-    margin-top:6px;
+    width: 90px;
+    height: 34px;
+    line-height: 3rem;
+    margin-top:6px
 }
 .btn1:hover,
 .btn1-large:hover,
