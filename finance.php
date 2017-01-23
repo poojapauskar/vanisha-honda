@@ -345,10 +345,10 @@ if($_POST['v_id'] != ''){
 <br>
 
   <div style="align:left;margin-top:5%;" class=" file-field input-field " >
-<label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">ID PROOF</label>
+<label class="mdl-textfield__label" style="margin-top:-10%" for="id_proof" style="color:#cccccc;">ID PROOF</label>
       <div class="btn1" >
         <span>Choose File</span>
-        <input type="file" id="pan_no" name="pan_no">
+        <input type="file" id="id_proof" name="id_proof">
       </div>
       <div class="file-path-wrapper">
         <input class="file-path validate" type="text1" placeholder="No file Choosen">
@@ -377,7 +377,7 @@ if($_POST['v_id'] != ''){
             
           </div> -->
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
-              <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Bank Statement</label>
+              <label class="mdl-textfield__label" style="margin-top:-10%" for="bank_statement" style="color:#cccccc;">Bank Statement</label>
              <div class="btn1" >
              <span>CHOOSE FILE</span>
               <input type="file" id="bank_statement" name="bank_statement">
@@ -393,7 +393,7 @@ if($_POST['v_id'] != ''){
             <input type="file" id="salary_slip" name="salary_slip" placeholder="Salary Slip">
           </div> -->
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
-              <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Salary Slip</label>
+              <label class="mdl-textfield__label" style="margin-top:-10%" for="salary_slip" style="color:#cccccc;">Salary Slip</label>
              <div class="btn1" >
              <span>CHOOSE FILE</span>
               <input type="file" id="salary_slip" name="salary_slip">
@@ -410,7 +410,7 @@ if($_POST['v_id'] != ''){
           </div>-->
 
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
-              <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Address Proof</label>
+              <label class="mdl-textfield__label" style="margin-top:-10%" for="it_returns" style="color:#cccccc;">Address Proof</label>
              <div class="btn1" >
              <span>CHOOSE FILE</span>
               <input type="file" id="it_returns" name="it_returns">
