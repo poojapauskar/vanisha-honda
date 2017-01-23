@@ -157,7 +157,7 @@ $arr_vehicle_types = json_decode($output_vehicle_types,true);
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-           <li><a href="https://twitter.com/">
+                    <li><a href="https://twitter.com/">
             <img src="images/twitter.png" /></a></li>
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
             <li><a href="https://plus.google.com/"> 

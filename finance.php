@@ -5,9 +5,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<!-- Code for File Upload-->
+  <script src="js/ajaxmaterial.js"></script>
+<link rel="stylesheet" type="text/css" href="css/inputfileclasses.css">
+<!-- End of importing -->
   <link rel="stylesheet" href="css/slideshow.css">
-
+<script type="scoped.json"></script>
  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <link rel="stylesheet" href="css/material.indigo.min.css">
     <!-- Material Design icon font -->
@@ -245,7 +248,7 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
     <p style="font-size:13px;margin-top:2%">In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
   </div>
 
-  <div class="col-sm-5" style="margin-top:2%;margin-left:5%">
+  <div class="col-sm-5" style="margin-top:-1%;margin-left:5%">
       <form action="finance.php" method="post" style="background-color:white;width:300px;padding:2px 10px 10px 10px">
         
           <h6 style="font-size:18px">Get Finance</h6>
@@ -341,38 +344,86 @@ if($_POST['v_id'] != ''){
           </div>
 <br>
 
-          <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
-            <input type="file" id="id_proof" name="id_proof">
-            <label class="mdl-textfield__label" style="margin-top:-10%" for="id_proof" style="color:#cccccc;">ID Proof</label>
-          </div>
+  <div style="align:left;margin-top:5%;" class=" file-field input-field " >
+<label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">ID PROOF</label>
+      <div class="btn1" >
+        <span>Choose File</span>
+        <input type="file" id="pan_no" name="pan_no">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text1" placeholder="No file Choosen">
+      </div>
+  </div>
 
-          <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
+          <!-- <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
             <input type="file" id="add_proof" name="add_proof">
             <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Address Proof</label>
+          </div> -->
+               <div style="align:left;margin-top:5%;" class=" file-field input-field " >
+              <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Address Proof</label>
+             <div class="btn1" >
+             <span>CHOOSE FILE</span>
+              <input type="file" id="add_proof" name="add_proof">
+             </div>
+           <div class="file-path-wrapper">
+              <input class="file-path validate" type="text1" placeholder="No file Choosen">
+            </div>
           </div>
 
-          <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
+
+          <!-- <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
             <label class="mdl-textfield__label" style="margin-top:-10%" for="bank_statement" style="color:#cccccc;">Bank Statement</label>
             <input type="file" id="bank_statement" name="bank_statement" placeholder="Bank Details">
             
+          </div> -->
+            <div style="align:left;margin-top:5%;" class=" file-field input-field " >
+              <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Bank Statement</label>
+             <div class="btn1" >
+             <span>CHOOSE FILE</span>
+              <input type="file" id="bank_statement" name="bank_statement">
+             </div>
+           <div class="file-path-wrapper">
+              <input class="file-path validate" type="text1" placeholder="No file Choosen">
+            </div>
           </div>
 
-          <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
+
+          <!-- <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
             <label class="mdl-textfield__label" style="margin-top:-10%" for="salary_slip" style="color:#cccccc;">Salary Slip</label>
             <input type="file" id="salary_slip" name="salary_slip" placeholder="Salary Slip">
+          </div> -->
+            <div style="align:left;margin-top:5%;" class=" file-field input-field " >
+              <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Salary Slip</label>
+             <div class="btn1" >
+             <span>CHOOSE FILE</span>
+              <input type="file" id="salary_slip" name="salary_slip">
+             </div>
+           <div class="file-path-wrapper">
+              <input class="file-path validate" type="text1" placeholder="No file Choosen">
+            </div>
           </div>
 
-          <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
+
+         <!--  <div style="align:left;margin-top:5%" class="mdl-textfield mdl-js-textfield">
             <label class="mdl-textfield__label" style="margin-top:-10%" for="it_returns" style="color:#cccccc;">IT Returns</label>
             <input type="file" id="it_returns" name="it_returns" placeholder="IT Returns">
+          </div>-->
+
+            <div style="align:left;margin-top:5%;" class=" file-field input-field " >
+              <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Address Proof</label>
+             <div class="btn1" >
+             <span>CHOOSE FILE</span>
+              <input type="file" id="it_returns" name="it_returns">
+             </div>
+           <div class="file-path-wrapper">
+              <input class="file-path validate" type="text1" placeholder="No file Choosen">
+            </div>
           </div>
 
-          <br>
-
-<input class="mdl-textfield__input" type="hidden" id="date" name="date">
+        <input class="mdl-textfield__input" type="hidden" id="date" name="date">
 
           <div style="text-align:right">
-          <button type="submit" id="finance_btn" name="finance_btn" style="background-color:blue;color:white" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <button type="submit" id="finance_btn" name="finance_btn" style="background-color:#fff;color: rgb(0, 0, 255);" class="mdl-button mdl-js-button mdl-js-ripple-effect">
             Get Approval
           </button>
           </div>
@@ -387,14 +438,15 @@ if($_POST['v_id'] != ''){
   <div class="col-sm-1" style="color:white;">
   </div>
   <div class="col-sm-3" style="color:white;">
-         <div style="margin-top:5%;margin-left:-24%">
+       <div style="margin-top:5%">
+
         <img width="60" height="60" src="images/honda_logo_red.png"></img>
 
-        <h5 style="margin-top:-5.5%;margin-left:22%">Vanisha Honda</h5>
+        <h5 style="margin-top:-6%;margin-left:25%">Vanisha Honda</h5>
        </div>
   </div>
   <div class="col-sm-5" style="color:#FFFFFF">
-        <ul id="ul1" style="margin-top:11%">
+       <ul id="ul1">
             <li><a style="color:#FFFFFF" href="index.php">HOME</a></li>
             <li><a style="color:#FFFFFF" href="product_types.php">PRODUCTS</a></li>
             <li><a style="color:#FFFFFF" href="customer_services.php">SERVICES</a></li>
@@ -403,11 +455,12 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-            <li><a href="https://twitter.com/">
+                 <li><a href="https://twitter.com/">
             <img src="images/twitter.png" /></a></li>
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
             <li><a href="https://plus.google.com/"> 
             <img src="images/google-plus.png"></img></a></li>
+
         </ul>
   </div>
   <div class="col-sm-1">
@@ -443,4 +496,3 @@ if($_POST['v_id'] != ''){
 
 </body>
 </html>
-
