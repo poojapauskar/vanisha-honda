@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/honda_logo_red.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/honda_logo_red.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -19,6 +19,55 @@
   <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
 <style type="text/css">
+<style>
+.checkbox {
+  position: relative;
+  top: -0.375rem;
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+}
+
+.checkbox:before {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #cccccc ;
+
+}
+
+.checkbox:checked:before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+   height: .5rem;
+  border-color: #f1524b;
+  border-top-style: none;
+  border-right-style: none;
+}
+
+.checkbox:after {
+  content: "";
+  position: absolute;
+  top: -0.125rem;
+  left: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 50px auto;
+}
 
  .mdl-textfield__input {
     border: none;
@@ -315,11 +364,10 @@ if($_POST['v_id'] != ''){
             <label class="mdl-textfield__label" for="delivery_date" style="color:#cccccc;font-size:13px;">Date</label>
           </div>
 
-          <div style="margin-top:-4%" class="mdl-textfield mdl-js-textfield">
-            <input type="checkbox" id="req_pic_up" name="req_pic_up" value="1">
-            <label class="mdl-textfield__label" for="additional_service"font-size:13px;>&nbsp &nbsp Use Current Location</label>
+         <div style="margin-top:-5%" class="wrapper">
+         <label for="additional_service" style="margin-top: 3px;color:#cccccc;position:absolute;margin-top:3%;">
+            <input type="checkbox" id="req_pic_up" name="req_pic_up" value="1" class="checkbox" style="position:absolute;margin-top:3%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use Current Location</label>
           </div>
-          
 
 <input class="mdl-textfield__input" type="hidden" id="service_type" name="service_type">
 <input class="mdl-textfield__input" type="hidden" id="date" name="date">
@@ -327,7 +375,7 @@ if($_POST['v_id'] != ''){
 <input class="mdl-textfield__input" type="hidden" id="status" name="status">
 <input class="mdl-textfield__input" type="hidden" id="mechanic_id" name="mechanic_id">
 
-          <div style="text-align:right">
+          <div style="text-align:right;margin-top:1%;">
           <button id="book_service_btn" name="book_service_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);" class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect">
             Submit
           </button>
