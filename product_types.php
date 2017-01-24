@@ -4,6 +4,7 @@
 
    <!-- Material Design Lite -->
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/honda_logo_red.png">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
