@@ -18,6 +18,20 @@
   <script src="js/index.js"></script>
 <style type="text/css">
 
+ .mdl-textfield__input {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    display: block;
+    font-size: 15px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    margin: 0;
+    padding: 4px 0;
+    width: 100%;
+    background: 0 0;
+    text-align: left;
+    color: inherit;
+}
+
 tr{
   border-bottom: 1px solid #E4E5E7;
 }
@@ -184,8 +198,19 @@ elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg
           <div class="demo">
             <!-- Standard Select -->
                <div class="mdl-selectfield">
-              <select style="background-color:white;border:none;color:gray;font-size:15px;border-bottom: 1px solid #e1e1e1;padding-top:5px;
-    width: 140%;z-index:4;position: absolute;margin-top:-8px;" onfocus='this.size=10;' 
+              <select style="
+    background-color: white;
+    border: none;
+    color: darkgrey;
+    font-size: 15px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-top: 5px;
+    width: 142%;
+    z-index: 4;
+    position: absolute;
+    margin-top: -8px;
+    margin-left: -2%;
+" onfocus='this.size=10;' 
 onblur='this.size=1;' 
 onchange='this.size=1; this.blur();' class="browser-default"  name="v_type" id="v_type">
                       
@@ -232,10 +257,11 @@ if($_POST['v_id'] != ''){
           <!-- Added label over the SelectField -->
           
             <!-- Standard Select -->
-            <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:9%;font-size:13px;">Servicing Type</label>
+            <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:13%;font-size:13px;">Servicing Type</label>
             <div class="mdl-selectfield">
-              <select style="background-color:white;border:none;color:gray;font-size:15px;border-bottom: 1px solid #e1e1e1;width: 140%; padding-top:3px;z-index:1;position: absolute;margin-top:-2%;"  class="browser-default"  name="v_type" id="v_type">
-                
+              <select style="background-color:white;border:none;color:darkgray;font-size:15px;border-bottom: 1px solid #e1e1e1;width: 142%; padding-top:3px;z-index:1;position: absolute;margin-top: -8px;
+    margin-left: -2%;"  class="browser-default"  name="v_type" id="v_type">
+        
                 <?php if($_POST['v_type'] != ''){?>
                        <option value="<?php echo $_POST['v_type'] ?>" selected><?php echo $_POST['v_type']; 
                       }else{?>
@@ -251,46 +277,45 @@ if($_POST['v_id'] != ''){
 
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-top:10%">
             <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name"> 
-            <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
+            <label class="mdl-textfield__label" for="name" style="color:#cccccc;font-size:13px;">Name</label>
           </div>
 
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:-4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="email" id="email" name="email" placeholder="Email Address">
-            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label> 
+            <label class="mdl-textfield__label" for="email" style="color:#cccccc;font-size:13px;">Email</label> 
           </div>
 
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:-4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
-            <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;" >Mobile</label>
+            <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;font-size:13px;" >Mobile</label>
             
               <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a phone number</span>
           </div>
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:-4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['engine_no'] ?>" class="mdl-textfield__input" type="text" id="engine_no" name="engine_no" placeholder="Registration Number">
-            <label class="mdl-textfield__label" for="v_no" style="color:#cccccc;">Vehicle Registration</label>
+            <label class="mdl-textfield__label" for="v_no" style="color:#cccccc;font-size:13px;">Vehicle Registration</label>
             
           </div>
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:-4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <textarea placeholder="Address" class="mdl-textfield__input" type="text" rows= "1" id="address" name="address"><?php echo $_POST['address'] ?></textarea>
-            <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Address</label>
+            <label class="mdl-textfield__label" for="address" style="color:#cccccc;font-size:13px;">Address</label>
           </div>
 
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:-4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <textarea class="mdl-textfield__input" type="text" rows= "1" id="additional_service" name="additional_service" placeholder="instructions/Requirement/complains"><?php echo $_POST['additional_service'] ?></textarea>
-            <label class="mdl-textfield__label" for="additional_service" style="color:#cccccc;">Instructions/Complains</label>
+            <label class="mdl-textfield__label" for="additional_service" style="color:#cccccc;font-size:13px;">Instructions/Complains</label>
             
           </div>
-
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:-4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
              
             <input value="<?php echo $_POST['delivery_date'] ?>" class="mdl-textfield__input date" type="text" id="delivery_date" placeholder="Date DD/MM/YYY" name="delivery_date">
-            <label class="mdl-textfield__label" for="delivery_date" style="color:#cccccc;">Date</label>
+            <label class="mdl-textfield__label" for="delivery_date" style="color:#cccccc;font-size:13px;">Date</label>
           </div>
 
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield">
+          <div style="margin-top:-4%" class="mdl-textfield mdl-js-textfield">
             <input type="checkbox" id="req_pic_up" name="req_pic_up" value="1">
-            <label class="mdl-textfield__label" for="additional_service">&nbsp &nbsp Use Current Location</label>
+            <label class="mdl-textfield__label" for="additional_service"font-size:13px;>&nbsp &nbsp Use Current Location</label>
           </div>
           
 
