@@ -4,6 +4,7 @@
 
    <!-- Material Design Lite -->
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+   <link rel="icon" type="image/png" sizes="16x16" href="images/honda_logo_red.png">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -155,10 +156,10 @@ $arr_vehicles_of_particular_type = json_decode($output_vehicles_of_particular_ty
   </div>
   <div class="col-sm-2" style="color:white;text-align:right">
       <ul id="ul2">
-                     <li><a href="https://twitter.com/">
+                     <li><a href="https://twitter.com/" target="_blank">
             <img src="images/twitter.png" /></a></li>
-            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
-            <li><a href="https://plus.google.com/"> 
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/" > 
             <img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>

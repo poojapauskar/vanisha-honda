@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/honda_logo_red.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -19,6 +20,21 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
+  <style type="text/css">
+    .mdl-textfield__input {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    display: block;
+    font-size: 15px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    margin: 0;
+    padding: 4px 0;
+    width: 100%;
+    background: 0 0;
+    text-align: left;
+    color: inherit;
+}
+  </style>
 
 </head>
 <body  style="background-color:#E4E5E7;overflow-x:hidden;overflow-y: hidden">
@@ -255,33 +271,46 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
       
 
-         <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+         <div style="margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['name']; ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="FullName">
             <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
           </div>
 
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['email']; ?>" class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email Address">
             <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
           </div>
 
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input value="<?php echo $_POST['mobile']; ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" placeholder="+91">
             <label class="mdl-textfield__label" for="mobile" style="color:#cccccc;">Mobile</label>
           </div>
 
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <textarea class="mdl-textfield__input" type="text" rows= "1" id="address" name="address" placeholder="Address"><?php echo $_POST['address']; ?></textarea>
+          <div style="margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <textarea class="mdl-textfield__input" style="margin-bottom:-3%;" type="text" rows= "1" id="address" name="address" placeholder="Address"><?php echo $_POST['address']; ?></textarea>
             <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Address</label>
           </div>
 <!-- Added label over the SelectField -->
-          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;">Vehicle</label>
+          <label class="mdl-selectfield__label" for="v_id" style="margin-top:-8%;color:#cccccc;font-size:13px;padding-top:5px">Vehicle</label>
 
           <div class="demo">
             <!-- Standard Select -->
-            <div class="mdl-selectfield">
-                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px;border-bottom: 1px solid #e4e5e7;
-    width: 140%;" class="browser-default" name="v_id" id="v_id">
+             <div class="mdl-selectfield">
+              <select style="
+    background-color: white;
+    border: none;
+    color: darkgrey;
+    font-size: 15px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-top: 5px;
+    width: 142%;
+    z-index: 4;
+    position: absolute;
+    margin-top: -8px;
+    margin-left: -2%;
+" onfocus='this.size=10;' 
+onblur='this.size=1;' 
+onchange='this.size=1; this.blur();' class="browser-default"  name="v_type" id="v_type">
                       
 <?php
 
@@ -320,7 +349,7 @@ if($_POST['v_id'] != ''){
                 </div>
           </div>
 <br>
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="align:left;margin-top:4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label class="mdl-textfield__label" for="loan_amt" style="color:#cccccc;">Loan Amount</label>
             <input value="<?php echo $_POST['loan_amt']; ?>" class="mdl-textfield__input" type="text" id="loan_amt" name="loan_amt" placeholder="Loan Amt">
           </div>
@@ -344,10 +373,10 @@ if($_POST['v_id'] != ''){
           </div>
 <br>
 
-  <div style="align:left;margin-top:5%;" class=" file-field input-field " >
-<label class="mdl-textfield__label" style="margin-top:-10%" for="id_proof" style="color:#cccccc;">ID PROOF</label>
-      <div class="btn1" >
-        <span>Choose File</span>
+  <div style="align:left;margin-top:4%;" class=" file-field input-field " >
+<label class="mdl-textfield__label" style="margin-top:-10%" for="id_proof" style="color:#cccccc;">ID Proof</label>
+      <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;" >
+        <span style="margin-left:-1%;position:absolute;margin-top:-1%;">Upload</span>
         <input type="file" id="id_proof" name="id_proof">
       </div>
       <div class="file-path-wrapper">
@@ -361,8 +390,8 @@ if($_POST['v_id'] != ''){
           </div> -->
                <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="add_proof" style="color:#cccccc;">Address Proof</label>
-             <div class="btn1" >
-             <span>CHOOSE FILE</span>
+             <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;" >
+             <span style="margin-left:-1%;position:absolute;margin-top:-1%;">Upload</span>
               <input type="file" id="add_proof" name="add_proof">
              </div>
            <div class="file-path-wrapper">
@@ -378,8 +407,8 @@ if($_POST['v_id'] != ''){
           </div> -->
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="bank_statement" style="color:#cccccc;">Bank Statement</label>
-             <div class="btn1" >
-             <span>CHOOSE FILE</span>
+             <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;">
+             <span style="margin-left:-1%;position:absolute;margin-top:-1%;">Upload</span>
               <input type="file" id="bank_statement" name="bank_statement">
              </div>
            <div class="file-path-wrapper">
@@ -394,8 +423,9 @@ if($_POST['v_id'] != ''){
           </div> -->
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="salary_slip" style="color:#cccccc;">Salary Slip</label>
-             <div class="btn1" >
-             <span>CHOOSE FILE</span>
+              <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;" >
+             <span style="margin-left:-1%;position:absolute;margin-top:-1%;">Upload</span>
+        
               <input type="file" id="salary_slip" name="salary_slip">
              </div>
            <div class="file-path-wrapper">
@@ -411,8 +441,8 @@ if($_POST['v_id'] != ''){
 
             <div style="align:left;margin-top:5%;" class=" file-field input-field " >
               <label class="mdl-textfield__label" style="margin-top:-10%" for="it_returns" style="color:#cccccc;">Address Proof</label>
-             <div class="btn1" >
-             <span>CHOOSE FILE</span>
+             <div class="btn1 mdl-button--raised"  style="background-color: #f1524b;">
+             <span style="margin-left:-1%;position:absolute;margin-top:-1%;">Upload</span>
               <input type="file" id="it_returns" name="it_returns">
              </div>
            <div class="file-path-wrapper">
@@ -423,7 +453,8 @@ if($_POST['v_id'] != ''){
         <input class="mdl-textfield__input" type="hidden" id="date" name="date">
 
           <div style="text-align:right">
-          <button type="submit" id="finance_btn" name="finance_btn" style="background-color:#fff;color: rgb(0, 0, 255);" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+          <button type="submit" id="finance_btn" name="finance_btn" style="background-color:#fff;color: rgb(0, 0, 255);" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised
+          ">
             Get Approval
           </button>
           </div>
@@ -455,10 +486,10 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-                 <li><a href="https://twitter.com/">
+                 <li><a href="https://twitter.com/" target="_blank">
             <img src="images/twitter.png" /></a></li>
-            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
-            <li><a href="https://plus.google.com/"> 
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/" target="_blank"> 
             <img src="images/google-plus.png"></img></a></li>
 
         </ul>

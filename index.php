@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/material.indigo.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/honda_logo_red.png">
 
     
 
@@ -138,8 +139,8 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
                       <h5 style="font-size:15px;margin-left:5%">Introducing the new Vanisha Honda Android App. Now the power in your hands. Featuring new vehicle booking, insurance renewal, scheduling vehicle servicing, helpline and much more.</h5>
                       <img style="width:30%;height:30%;margin-left:5%" src="images/playstore.png"></img>
                     </div>
-                    <div class="col-sm-5"  style="text-align:right">
-                    <img style="width:47%;height:47%;margin-right:5%;margin-top:5%" src="images/mobile_app.png"></img>
+                    <div class="col-sm-5"  style="text-align:right;height:299px;">
+                    <img style="width:55%;height:109%;margin-right:5%;margin-top:0%" src="images/mobile_app.png"></img>
                     </div>
                   </div>
           </li>
@@ -159,7 +160,8 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
           <label for="slides_1" class="goto-first"><img src="images/slider_btn_left.png"></img></label>
           <label for="slides_5" class="goto-last"><img src="images/slider_btn_left.png"></img></label>
         </div>
-        <div class="navigation">
+
+        <div class="navigation" style="bottom:1%">
           <div>
             <label for="slides_1"></label>
             <label for="slides_2"></label>
@@ -351,10 +353,10 @@ $arr_types_subtypes = json_decode($output_types_subtypes,true);
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-            <li><a href="https://twitter.com/">
+            <li><a href="https://twitter.com/" target="_blank"">
             <img src="images/twitter.png" /></a></li>
-            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
-            <li><a href="https://plus.google.com/"> 
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/" target="_blank"> 
             <img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>

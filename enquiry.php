@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/honda_logo_red.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -16,15 +17,30 @@
   <script src="js/index.js"></script>
   <script type="text/javascript"></script>
   <style type="text/css">
-      .mdl-mini-footer {
-    padding: 10px 16px !important;
 
+.mdl-textfield__input {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    display: block;
+    font-size: 15px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    margin: 0;
+    padding: 4px 0;
+    width: 100%;
+    background: 0 0;
+    text-align: left;
+    color: inherit;
 }
+ 
 label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
     font-size:13px;
+}
+     .mdl-mini-footer {
+    padding: 10px 16px !important;
+
 }
 </style>
 </head>
@@ -160,32 +176,46 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
           <h6 style="font-size:18px;">Enquiry Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <label class="mdl-textfield__label" for="name" style="color:#cccccc;font-size:13px;">Name</label>
           <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name">
-          <label class="mdl-textfield__label" for="name" style="color:#cccccc;">Name</label>
+          
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+           <label class="mdl-textfield__label" for="email" style="color:#cccccc;font-size:13px;">Email</label>
             <input value="<?php echo $_POST['email'] ?>" class="mdl-textfield__input" type="email" id="email" name="email" placeholder="Email Address">
-            <label class="mdl-textfield__label" for="email" style="color:#cccccc;">Email</label>
+           
             
           </div>
 
           <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-">
-            <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;">Mobile</label>
+            <input value="<?php echo $_POST['mobile'] ?>" class="mdl-textfield__input" type="text" id="mobile" name="mobile" pattern="-?[0-9]*(\.[0-9]+)?" id="inputnocheck" placeholder="+91-" style="margin-bottom:-1%">
+            <label class="mdl-textfield__label" for="mobile inputnocheck" style="color:#cccccc;font-size:13px;">Mobile</label>
             
               <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a phone number</span>
           </div>
 
-          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;">Vehicle</label>
+          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;font-size:13px;">Vehicle</label>
 
           <div class="demo">
             <!-- Standard Select -->
             <div class="mdl-selectfield mdl-js-selectfield">  
-                  <select style="background-color:white;border:none;color:gray;font-size:15px;margin-left: -2px;border-bottom: 1px solid #e4e5e7;
-    width: 140%;" class="mdl-selectfield__select" name="v_id" id="v_id">
-                  
+                  <select style="
+    background-color: white;
+    border: none;
+    color: darkgrey;
+    font-size: 15px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-top: 5px;
+    width: 142%;
+    z-index: 4;
+    position: absolute;
+    margin-top: -8px;
+    margin-left: -2%;
+" onfocus='this.size=10;' 
+onblur='this.size=1;' 
+onchange='this.size=1; this.blur();' class="browser-default"  name="v_type" id="v_type">
                        
 <?php
 if($_POST['v_id'] != ''){
@@ -225,8 +255,8 @@ if($_POST['v_id'] != ''){
 
 
 <br>
-          <div style="margin-top:-5%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-             <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Message</label>
+          <div style="margin-top:4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+             <label class="mdl-textfield__label" for="address" style="color:#cccccc;font-size:13px;">Message</label>
             <textarea placeholder="Message/Instructions" class="mdl-textfield__input" type="text" rows= "1" id="address" name="address" ><?php echo $_POST['address'] ?></textarea>
            
           </div>
@@ -240,7 +270,7 @@ if($_POST['v_id'] != ''){
         <input class="mdl-textfield__input" type="hidden" id="duration" name="duration">
 
         <div style="text-align:right">
-          <button id="enq_btn" name="enq_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+          <button id="enq_btn" name="enq_btn" type="submit" style="background-color: #fff;font-weight:normal;color: rgb(0, 0, 255);" class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect">
             Submit
           </button>
         </div>
@@ -309,10 +339,10 @@ if($_POST['v_id'] != ''){
   </div>
   <div class="col-sm-2" style="color:#FFFFFF;text-align:right">
       <ul id="ul2">
-            <li><a href="https://twitter.com/">
+            <li><a href="https://twitter.com/" target="_blank">
             <img src="images/twitter.png" /></a></li>
-            <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></img></a></li>
-            <li><a href="https://plus.google.com/"> 
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></img></a></li>
+            <li><a href="https://plus.google.com/" target="_blank"> 
             <img src="images/google-plus.png"></img></a></li>
         </ul>
   </div>
