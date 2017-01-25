@@ -2,16 +2,18 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-   <!-- <link href="//cdn.muicss.com/mui-0.9.9-rc2/css/mui.min.css" rel="stylesheet" type="text/css" />-->
-     <link rel="stylesheet" href="css/mui.css">
-    <script src="js/mui.js"></script>
   <link rel="icon" type="image/png" sizes="16x16" href="images/honda_logo_red.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="css/slideshow.css">
+  <!----select---->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>   
+  <link rel="stylesheet" href="css/mdl.css">
+     
+<script defer src="https://rawgit.com/MEYVN-digital/mdl-selectfield/master/mdl-selectfield.min.js"></script>   
 
 
  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
@@ -24,10 +26,6 @@
   <script src="js/index.js"></script>
 <style type="text/css">
 <style>
-#ab .mui-select .mui-select__menu
-{
-  margin-top:100px;
-}
 
 .checkbox {
   position: relative;
@@ -91,8 +89,6 @@
     text-align: left;
     color: inherit;
 }
-
-
 
 tr{
   border-bottom: 1px solid #E4E5E7;
@@ -256,12 +252,12 @@ elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg
           <h6 style="font-size:18px">Booking Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <!-- Added label over the SelectField -->
-          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:-1%;font-size:13px;">Vehicle</label>
-          <div class="demo">
+          <div class="demo" style="margin-bottom:-6%">
             <!-- Standard Select -->
-              <div class="mui-select" id="ab">
-              <select name="v_type" id="v_type1" >
-                      
+            <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:9%;margin-left:5%;font-size:13px;">Vehicle</label>
+               <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" >
+              <select style="" class="mdl-selectfield__select""  name="v_type" id="v_type">
+                
 <?php
 
 if($_POST['v_id'] != ''){
@@ -296,19 +292,20 @@ if($_POST['v_id'] != ''){
                           <?php } ?>
                       <?php } ?>
 </div>
-</div>
+
                   </select>
                   
+                                        <span class="mdl-selectfield__error">Input is not a empty!</span>
                 </div>
           </div>
 
-          <div class="demo" style="margin-top:-12%">
+          <div class="demo" style="margin-top:3%">
           <!-- Added label over the SelectField -->
           
             <!-- Standard Select -->
-            <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:13%;font-size:13px;">Servicing Type</label>
-             <div class="mui-select">
-              <select name="v_type" id="v_type" >
+           <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:21%;margin-left:5%;font-size:13px;">Servicing Type</label>
+             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" >
+              <select style="" class="mdl-selectfield__select""  name="v_type" id="v_type">
         
                 <?php if($_POST['v_type'] != ''){?>
                        <option value="<?php echo $_POST['v_type'] ?>" selected><?php echo $_POST['v_type']; 
@@ -320,6 +317,7 @@ if($_POST['v_id'] != ''){
                 <option value="3rd Free">3rd Free</option>
                 <option value="Other">Other</option>
               </select>
+              <span class="mdl-selectfield__error">Input is not a empty!</span>
             </div>
           </div>
 
