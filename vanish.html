@@ -24,11 +24,6 @@
   <script src="js/index.js"></script>
 <style type="text/css">
 <style>
-#ab .mui-select .mui-select__menu
-{
-  margin-top:100px;
-}
-
 .checkbox {
   position: relative;
   top: -0.375rem;
@@ -91,8 +86,6 @@
     text-align: left;
     color: inherit;
 }
-
-
 
 tr{
   border-bottom: 1px solid #E4E5E7;
@@ -259,8 +252,8 @@ elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg
           <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:-1%;font-size:13px;">Vehicle</label>
           <div class="demo">
             <!-- Standard Select -->
-              <div class="mui-select" id="ab">
-              <select name="v_type" id="v_type1" >
+              <div class="mui-select">
+              <select name="v_type" id="v_type" >
                       
 <?php
 
