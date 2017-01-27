@@ -102,7 +102,7 @@
 .mdl-selectfield__box .mdl-selectfield__box-value {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0;ss
     color: #a9a9a9;
     font-size: 15px;
     -webkit-user-select: none;
@@ -139,7 +139,7 @@
     border: none;
     border-radius: 2px;
     opacity: 0;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5), 0 3px 1px -2px rgba(0,0,0,.5), 0 1px 5px 0 rgba(0, 0, 0, .26);
+    box-shadow: 0 2px 5px 0 #ccc, 0 3px 1px -2px #ccc, 0 1px 5px 0 #ccc;
     -webkit-transition: opacity .2s cubic-bezier(0.4, 0, 0.2, 1);
     transition: opacity .2s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -1;
