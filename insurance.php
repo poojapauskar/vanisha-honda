@@ -2,7 +2,14 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/honda_logo_red.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/honda_logo_red.png">
+  <!---select field-->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>   
+  <link rel="stylesheet" href="css/mdl.css">
+  <script defer src="https://rawgit.com/MEYVN-digital/mdl-selectfield/master/mdl-selectfield.min.js"></script>   
+ <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+ <!---bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -202,26 +209,12 @@ if(($_POST['v_id'] == '' || $_POST['v_id'] == 'null') &&  isset($_POST['insuranc
           <h6 style="font-size:18px">Insurance Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
          <!-- Added label over the SelectField -->
-          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;font-size:13px;">Vehicle</label>
-          <div class="demo">
+          <div class="demo" style="margin-bottom:-6%">
             <!-- Standard Select -->
-             <div class="mdl-selectfield">
-              <select style="
-    background-color: white;
-    border: none;
-    color: darkgrey;
-    font-size: 15px;
-    border-bottom: 1px solid #e1e1e1;
-    padding-top: 5px;
-    width: 140%;
-    z-index: 4;
-    position: absolute;
-    margin-top: -8px;
-    margin-left: -2%;
-" onfocus='this.size=10;' 
-onblur='this.size=1;' 
-onchange='this.size=1; this.blur();' class="browser-default"  name="v_type" id="v_type">
-                      
+            <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:9%;margin-left:5%;font-size:13px;">Vehicle</label>
+               <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" >
+              <select style="" class="mdl-selectfield__select""  name="v_type" id="v_type">
+             
 <?php
 
 if($_POST['v_id'] != ''){
@@ -259,7 +252,7 @@ if($_POST['v_id'] != ''){
                 </div>
           </div>
 
-          <div style="margin-top:11%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label class="mdl-textfield__label" for="delivery_date" style="color:#cccccc;font-size:13px;">Purchase Date</label> 
             <input value="<?php echo $_POST['purchase_date'] ?>" class="mdl-textfield__input date" type="text" id="purchase_date" name="purchase_date" placeholder="Purchase Date DD/MM/YYY">
           </div>

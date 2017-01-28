@@ -49,7 +49,7 @@ h6{
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   color:#FFFFFF;
-  font-weight:700;
+  font-weight:500;
   font-size:13px;
 }
 #fourth_line{
@@ -120,7 +120,7 @@ border-radius: 0px !important;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   color:#FFFFFF;
-  font-weight:700;
+  font-weight:500;
   font-size:13px;
 }
 /*When we hover this on Nav bar menu items a White line comes down */

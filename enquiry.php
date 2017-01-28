@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/honda_logo_red.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/honda_logo_red.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -14,6 +14,14 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/vanisha-honda.css">
+  <!--select-->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>   
+  <link rel="stylesheet" href="css/mdl.css">
+  <script defer src="https://rawgit.com/MEYVN-digital/mdl-selectfield/master/mdl-selectfield.min.js"></script>   
+  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <link rel="stylesheet" href="css/material.indigo.min.css">
+
   <script src="js/index.js"></script>
   <script type="text/javascript"></script>
   <style type="text/css">
@@ -196,26 +204,11 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['enq_
           <span class="mdl-textfield__error">Input is not a phone number</span>
           </div>
 
-          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;font-size:13px;">Vehicle</label>
-
           <div class="demo">
             <!-- Standard Select -->
-            <div class="mdl-selectfield mdl-js-selectfield">  
-                  <select style="
-    background-color: white;
-    border: none;
-    color: darkgrey;
-    font-size: 15px;
-    border-bottom: 1px solid #e1e1e1;
-    padding-top: 5px;
-    width: 142%;
-    z-index: 4;
-    position: absolute;
-    margin-top: -8px;
-    margin-left: -2%;
-" onfocus='this.size=10;' 
-onblur='this.size=1;' 
-onchange='this.size=1; this.blur();' class="browser-default"  name="v_type" id="v_type">
+             <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;font-size:13px;margin-top:225px;margin-left:23px;">Vehicle</label>
+              <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" >
+              <select style="" class="mdl-selectfield__select"  name="v_type" id="v_type">
                        
 <?php
 if($_POST['v_id'] != ''){
@@ -255,7 +248,7 @@ if($_POST['v_id'] != ''){
 
 
 <br>
-          <div style="margin-top:4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="margin-top:-9%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
              <label class="mdl-textfield__label" for="address" style="color:#cccccc;font-size:13px;">Message</label>
             <textarea placeholder="Message/Instructions" class="mdl-textfield__input" type="text" rows= "1" id="address" name="address" ><?php echo $_POST['address'] ?></textarea>
            

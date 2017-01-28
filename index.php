@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/material.indigo.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/honda_logo_red.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/honda_logo_red.png">
 
     
 

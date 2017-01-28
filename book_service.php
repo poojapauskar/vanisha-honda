@@ -2,12 +2,18 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/honda_logo_red.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/honda_logo_red.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="css/slideshow.css">
+  <!----select---->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>   
+  <link rel="stylesheet" href="css/mdl.css">
+     
+<script defer src="https://rawgit.com/MEYVN-digital/mdl-selectfield/master/mdl-selectfield.min.js"></script>   
 
 
  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
@@ -19,6 +25,56 @@
   <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
 <style type="text/css">
+<style>
+
+.checkbox {
+  position: relative;
+  top: -0.375rem;
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+}
+
+.checkbox:before {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #cccccc ;
+
+}
+
+.checkbox:checked:before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+   height: .5rem;
+  border-color: #f1524b;
+  border-top-style: none;
+  border-right-style: none;
+}
+
+.checkbox:after {
+  content: "";
+  position: absolute;
+  top: -0.125rem;
+  left: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 50px auto;
+}
 
  .mdl-textfield__input {
     border: none;
@@ -196,26 +252,12 @@ elseif( (strlen(preg_replace("/[^0-9]/","",$_POST['mobile'])) >15 || strlen(preg
           <h6 style="font-size:18px">Booking Form</h6>
           <p style="color:red;text-align:left"><?php echo $error_message ;?></p>
           <!-- Added label over the SelectField -->
-          <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:-1%;font-size:13px;">Vehicle</label>
-          <div class="demo">
+          <div class="demo" style="margin-bottom:-6%">
             <!-- Standard Select -->
-               <div class="mdl-selectfield">
-              <select style="
-    background-color: white;
-    border: none;
-    color: darkgrey;
-    font-size: 15px;
-    border-bottom: 1px solid #e1e1e1;
-    padding-top: 5px;
-    width: 142%;
-    z-index: 4;
-    position: absolute;
-    margin-top: -8px;
-    margin-left: -2%;
-" onfocus='this.size=10;' 
-onblur='this.size=1;' 
-onchange='this.size=1; this.blur();' class="browser-default"  name="v_type" id="v_type">
-                      
+            <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:9%;margin-left:5%;font-size:13px;">Vehicle</label>
+               <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" >
+              <select style="" class="mdl-selectfield__select""  name="v_type" id="v_type">
+                
 <?php
 
 if($_POST['v_id'] != ''){
@@ -252,6 +294,8 @@ if($_POST['v_id'] != ''){
 </div>
 
                   </select>
+                  
+                                        <span class="mdl-selectfield__error">Input is not a empty!</span>
                 </div>
           </div>
 
@@ -259,10 +303,9 @@ if($_POST['v_id'] != ''){
           <!-- Added label over the SelectField -->
           
             <!-- Standard Select -->
-            <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:13%;font-size:13px;">Servicing Type</label>
-            <div class="mdl-selectfield">
-              <select style="background-color:white;border:none;color:darkgray;font-size:15px;border-bottom: 1px solid #e1e1e1;width: 142%; padding-top:3px;z-index:1;position: absolute;margin-top: -8px;
-    margin-left: -2%;"  class="browser-default"  name="v_type" id="v_type">
+           <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:21%;margin-left:5%;font-size:13px;">Servicing Type</label>
+             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" >
+              <select style="" class="mdl-selectfield__select""  name="v_type" id="v_type">
         
                 <?php if($_POST['v_type'] != ''){?>
                        <option value="<?php echo $_POST['v_type'] ?>" selected><?php echo $_POST['v_type']; 
@@ -274,10 +317,11 @@ if($_POST['v_id'] != ''){
                 <option value="3rd Free">3rd Free</option>
                 <option value="Other">Other</option>
               </select>
+              <span class="mdl-selectfield__error">Input is not a empty!</span>
             </div>
           </div>
 
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-top:10%">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-top:-4%">
             <input value="<?php echo $_POST['name'] ?>" class="mdl-textfield__input" type="text" id="name" name="name" placeholder="Full Name"> 
             <label class="mdl-textfield__label" for="name" style="color:#cccccc;font-size:13px;">Name</label>
           </div>
@@ -315,11 +359,10 @@ if($_POST['v_id'] != ''){
             <label class="mdl-textfield__label" for="delivery_date" style="color:#cccccc;font-size:13px;">Date</label>
           </div>
 
-          <div style="margin-top:-4%" class="mdl-textfield mdl-js-textfield">
-            <input type="checkbox" id="req_pic_up" name="req_pic_up" value="1">
-            <label class="mdl-textfield__label" for="additional_service"font-size:13px;>&nbsp &nbsp Use Current Location</label>
+         <div style="margin-top:-5%" class="wrapper">
+         <label for="additional_service" style="margin-top: 3px;color:#cccccc;position:absolute;margin-top:3%;">
+            <input type="checkbox" id="req_pic_up" name="req_pic_up" value="1" class="checkbox" style="position:absolute;margin-top:3%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use Current Location</label>
           </div>
-          
 
 <input class="mdl-textfield__input" type="hidden" id="service_type" name="service_type">
 <input class="mdl-textfield__input" type="hidden" id="date" name="date">
@@ -327,7 +370,7 @@ if($_POST['v_id'] != ''){
 <input class="mdl-textfield__input" type="hidden" id="status" name="status">
 <input class="mdl-textfield__input" type="hidden" id="mechanic_id" name="mechanic_id">
 
-          <div style="text-align:right">
+          <div style="text-align:right;margin-top:1%;">
           <button id="book_service_btn" name="book_service_btn" type="submit" style="background-color: #fff;color: rgb(0, 0, 255);" class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect">
             Submit
           </button>

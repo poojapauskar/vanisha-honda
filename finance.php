@@ -2,21 +2,31 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/honda_logo_red.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/honda_logo_red.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- Code for File Upload-->
-  <script src="js/ajaxmaterial.js"></script>
-<link rel="stylesheet" type="text/css" href="css/inputfileclasses.css">
-<!-- End of importing -->
-  <link rel="stylesheet" href="css/slideshow.css">
-<script type="scoped.json"></script>
+  <!--select field-->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>   
+  <link rel="stylesheet" href="css/mdl.css">
+     
+<script defer src="https://rawgit.com/MEYVN-digital/mdl-selectfield/master/mdl-selectfield.min.js"></script>   
+
+
  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <link rel="stylesheet" href="css/material.indigo.min.css">
+<!-- Code for File Upload-->
+  <script src="js/ajaxmaterial.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/inputfileclasses.css">
+<!-- End of importing -->
+  <link rel="stylesheet" href="css/slideshow.css">
+  <script type="scoped.json"></script>
+  <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <link rel="stylesheet" href="css/material.indigo.min.css">
     <!-- Material Design icon font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/vanisha-honda.css">
   <script src="js/index.js"></script>
@@ -287,30 +297,15 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
           </div>
 
           <div style="margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <textarea class="mdl-textfield__input" style="margin-bottom:-3%;" type="text" rows= "1" id="address" name="address" placeholder="Address"><?php echo $_POST['address']; ?></textarea>
+            <textarea class="mdl-textfield__input" style="margin-bottom:0%;" type="text" rows= "1" id="address" name="address" placeholder="Address"><?php echo $_POST['address']; ?></textarea>
             <label class="mdl-textfield__label" for="address" style="color:#cccccc;">Address</label>
           </div>
 <!-- Added label over the SelectField -->
-          <label class="mdl-selectfield__label" for="v_id" style="margin-top:-8%;color:#cccccc;font-size:13px;padding-top:5px">Vehicle</label>
-
-          <div class="demo">
-            <!-- Standard Select -->
-             <div class="mdl-selectfield">
-              <select style="
-    background-color: white;
-    border: none;
-    color: darkgrey;
-    font-size: 15px;
-    border-bottom: 1px solid #e1e1e1;
-    padding-top: 5px;
-    width: 142%;
-    z-index: 4;
-    position: absolute;
-    margin-top: -8px;
-    margin-left: -2%;
-" onfocus='this.size=10;' 
-onblur='this.size=1;' 
-onchange='this.size=1; this.blur();' class="browser-default"  name="v_type" id="v_type">
+          <div class="demo" >
+           <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:61%;margin-left:5%;font-size:13px;">Vehicle</label>
+               <div style="align:left;margin-top:-6%;" class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" >
+              <select style="" class="mdl-selectfield__select""  name="v_type" id="v_type">
+                
                       
 <?php
 
@@ -349,17 +344,17 @@ if($_POST['v_id'] != ''){
                 </div>
           </div>
 <br>
-          <div style="align:left;margin-top:4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="align:left;margin-top:-13%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label class="mdl-textfield__label" for="loan_amt" style="color:#cccccc;">Loan Amount</label>
             <input value="<?php echo $_POST['loan_amt']; ?>" class="mdl-textfield__input" type="text" id="loan_amt" name="loan_amt" placeholder="Loan Amt">
           </div>
 
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="align:left;margin-top:-4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label class="mdl-textfield__label" for="down_payment" style="color:#cccccc;">Down Payment</label>
             <input value="<?php echo $_POST['down_payment']; ?>" class="mdl-textfield__input" type="text" id="down_payment" name="down_payment" placeholder="Down payment">
           </div>
 
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
+          <div style="align:left;margin-top:-4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
              <label class="mdl-textfield__label" for="price" style="color:#cccccc;">Price</label>
             <input value="<?php echo $_POST['price']; ?>" class="mdl-textfield__input" type="text" id="price" name="price" placeholder="price">
           </div>
@@ -367,7 +362,7 @@ if($_POST['v_id'] != ''){
 <br>
 
 
-          <div style="align:left;margin-top:-2%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <div style="align:left;margin-top:-4%" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
              <label class="mdl-textfield__label" for="pan_no" style="color:#cccccc;">PAN</label>
             <input value="<?php echo $_POST['pan_no']; ?>" class="mdl-textfield__input" type="text" id="pan_no" name="pan_no" placeholder="PAN">
           </div>
