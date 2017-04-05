@@ -304,7 +304,7 @@ if(($_POST['mobile'] == '' || $_POST['mobile'] == 'null') &&  isset($_POST['fina
           <div class="demo" >
            <label class="mdl-selectfield__label" for="v_id" style="color:#cccccc;margin-top:61%;margin-left:5%;font-size:13px;">Vehicle</label>
                <div style="align:left;margin-top:-6%;" class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" >
-              <select style="" class="mdl-selectfield__select""  name="v_type" id="v_type">
+              <select style="" class="mdl-selectfield__select" name="v_type" id="v_type">
                 
                       
 <?php
