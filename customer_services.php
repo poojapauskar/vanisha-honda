@@ -36,7 +36,7 @@ tr{
 
 
 <?php
-$url_types_subtypes = 'https://vanisha-honda.herokuapp.com/get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
+$url_types_subtypes = 'https://vanisha-honda.herokuapp.com/web_get_vehicle_types_subtypes/?access_token=YbZtBg6XuWWbZ39R3BIn9Mb1XOn7uy';
 $options_types_subtypes = array(
   'http' => array(
     'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
